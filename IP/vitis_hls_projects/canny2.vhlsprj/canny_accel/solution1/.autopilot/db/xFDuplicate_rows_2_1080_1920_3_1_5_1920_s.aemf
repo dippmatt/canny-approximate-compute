@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1708854393578">
+  <ports id="1" name="gradx_mat_42" type="PortType" coreName="FIFO_SRL" coreId="1936946529" bitwidth="16" iftype="IfTypeRom">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="2" name="grady_mat_45" type="PortType" coreName="FIFO_SRL" coreId="639510840" bitwidth="16" iftype="IfTypeRom">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="3" name="gradx1_mat_43" type="PortType" coreName="FIFO_SRL" coreId="49" bitwidth="16" direction="DirOut" iftype="IfTypeRom">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="4" name="gradx2_mat_44" type="PortType" coreName="FIFO_SRL" coreId="49" bitwidth="16" direction="DirOut" iftype="IfTypeRom">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="5" name="grady1_mat_46" type="PortType" coreName="FIFO_SRL" coreId="132" bitwidth="16" direction="DirOut" iftype="IfTypeRom">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="6" name="grady2_mat_47" type="PortType" coreName="FIFO_SRL" coreId="132" bitwidth="16" direction="DirOut" iftype="IfTypeRom">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="7" name="img_height" type="PortType" coreName="FIFO_SRL" coreId="132" bitwidth="11" iftype="IfTypeRom">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="8" name="img_width" type="PortType" coreName="FIFO_SRL" coreId="132" bitwidth="11" iftype="IfTypeRom">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="9" name="img_height_out" type="PortType" coreName="FIFO_SRL" coreId="132" bitwidth="11" direction="DirOut" iftype="IfTypeRom">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="10" name="img_height_out1" type="PortType" coreName="FIFO_SRL" coreId="132" bitwidth="11" direction="DirOut" iftype="IfTypeRom">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="11" name="img_width_out" type="PortType" coreName="FIFO_SRL" coreId="132" bitwidth="11" direction="DirOut" iftype="IfTypeRom">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="12" name="img_width_out2" type="PortType" coreName="FIFO_SRL" coreId="132" bitwidth="11" direction="DirOut" iftype="IfTypeRom">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <edges id="70" source_obj="//@ports.6" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="72" source_obj="//@ports.7" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="75" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@ports.8"/>
+  <edges id="76" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="78" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@ports.9"/>
+  <edges id="79" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="81" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@ports.10"/>
+  <edges id="82" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="84" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@ports.11"/>
+  <edges id="85" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.5"/>
+  <edges id="86" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="89" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="90" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.1/@node_objs.0" is_back_edge="1"/>
+  <edges id="91" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.1/@node_objs.0" is_back_edge="1"/>
+  <edges id="92" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="95" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="96" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="97" source_obj="//@blocks.1/@node_objs.2" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="98" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="99" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="100" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="102" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="103" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="104" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="105" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="107" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="108" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="109" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="110" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="111" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="114" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="116" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="119" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@ports.2"/>
+  <edges id="120" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="122" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@ports.3"/>
+  <edges id="123" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="125" source_obj="//@regions.0/@basic_blocks.1/@node_objs.4" sink_obj="//@ports.4"/>
+  <edges id="126" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="128" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@ports.5"/>
+  <edges id="129" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="130" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="131" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="478" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="479" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.4"/>
+  <edges id="480" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2"/>
+  <edges id="481" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@regions.0/@basic_blocks.0"/>
+  <edges id="482" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.3"/>
+  <edges id="483" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
+  <edges id="484" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="485" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.1" is_back_edge="1"/>
+  <blocks id="38" name="entry" type="BlockType">
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>block_43</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="img_height_read" lineNumber="878" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" contextFuncName="operator_lt_16_false" bitwidth="11" opcode="read" m_display="0" m_delay="3.63" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="878" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="operator&amp;lt;&amp;lt;16, false&amp;gt;"/>
+      <dataInputObjs>img_height</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="img_width_read" lineNumber="878" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" contextFuncName="operator_lt_16_false" bitwidth="11" opcode="read" m_display="0" m_delay="3.63" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="878" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="operator&amp;lt;&amp;lt;16, false&amp;gt;"/>
+      <dataInputObjs>img_width</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="img_height_out_write_ln152" lineNumber="152" fileName="../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" contextFuncName="magnitude_0_2_2_1080_1920_1_2_s" opcode="write" m_display="0" m_delay="3.63" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp" linenumber="152" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="magnitude&amp;lt;0, 2, 2, 1080, 1920, 1, 2&amp;gt;"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>img_height_out</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="img_height_out1_write_ln152" lineNumber="152" fileName="../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" contextFuncName="magnitude_0_2_2_1080_1920_1_2_s" opcode="write" m_display="0" m_delay="3.63" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp" linenumber="152" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="magnitude&amp;lt;0, 2, 2, 1080, 1920, 1, 2&amp;gt;"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>img_height_out1</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="img_width_out_write_ln152" lineNumber="152" fileName="../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" contextFuncName="magnitude_0_2_2_1080_1920_1_2_s" opcode="write" m_display="0" m_delay="3.63" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp" linenumber="152" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="magnitude&amp;lt;0, 2, 2, 1080, 1920, 1, 2&amp;gt;"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>img_width_out</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="img_width_out2_write_ln152" lineNumber="152" fileName="../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" contextFuncName="magnitude_0_2_2_1080_1920_1_2_s" opcode="write" m_display="0" m_delay="3.63" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp" linenumber="152" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="magnitude&amp;lt;0, 2, 2, 1080, 1920, 1, 2&amp;gt;"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>img_width_out2</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="br_ln56" lineNumber="56" fileName="../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp" fileDirectory=".." coreId="132" contextFuncName="xFDuplicate_rows_2_1080_1920_3_1_5_1920_s" opcode="br" m_display="0" m_delay="1.58" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp" linenumber="56" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="xFDuplicate_rows&amp;lt;2, 1080, 1920, 3, 1, 5, 1920&amp;gt;"/>
+      <inlineStackInfo fileName="../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp" linenumber="152" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="magnitude&amp;lt;0, 2, 2, 1080, 1920, 1, 2&amp;gt;"/>
+      <controlInputObjs>block_43</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp">
+      <validLinenumbers>152</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h">
+      <validLinenumbers>878</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp">
+      <validLinenumbers>56</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="43" name="block_43" type="BlockType">
+    <controlInputObjs>entry</controlInputObjs>
+    <controlInputObjs>._crit_edge.loopexit.i</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>.exit</controlOutputObjs>
+    <controlOutputObjs>.split3.i</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="row_V" originalName="row.V" coreId="132" bitwidth="11" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <controlInputObjs>entry</controlInputObjs>
+      <controlInputObjs>._crit_edge.loopexit.i</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="row_V_3" lineNumber="691" originalName="row.V" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="row_V_3_fu_180_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="operator_add_assign_1_false" bitwidth="11" opcode="add" nodeLabel="1.0" m_display="0" m_delay="1.63" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="691" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="operator+=&amp;lt;1, false&amp;gt;"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="41" name="icmp_ln56" lineNumber="56" fileName="../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp" fileDirectory=".." rtlName="icmp_ln56_fu_186_p2" opType="icmp" coreId="177" contextFuncName="xFDuplicate_rows_2_1080_1920_3_1_5_1920_s" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="1.88" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp" linenumber="56" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="xFDuplicate_rows&amp;lt;2, 1080, 1920, 3, 1, 5, 1920&amp;gt;"/>
+      <inlineStackInfo fileName="../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp" linenumber="152" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="magnitude&amp;lt;0, 2, 2, 1080, 1920, 1, 2&amp;gt;"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="42" name="br_ln56" lineNumber="56" fileName="../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp" fileDirectory=".." coreId="177" contextFuncName="xFDuplicate_rows_2_1080_1920_3_1_5_1920_s" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp" linenumber="56" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="xFDuplicate_rows&amp;lt;2, 1080, 1920, 3, 1, 5, 1920&amp;gt;"/>
+      <inlineStackInfo fileName="../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp" linenumber="152" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="magnitude&amp;lt;0, 2, 2, 1080, 1920, 1, 2&amp;gt;"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>.split3.i</controlInputObjs>
+      <controlInputObjs>.exit</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp">
+      <validLinenumbers>152</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h">
+      <validLinenumbers>691</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp">
+      <validLinenumbers>56</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="47" name=".split3.i" type="BlockType">
+    <controlInputObjs>block_43</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>block_52</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="46" name="br_ln62" lineNumber="62" fileName="../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp" fileDirectory=".." coreId="177" contextFuncName="xFDuplicate_rows_2_1080_1920_3_1_5_1920_s" opcode="br" nodeLabel="1.0" m_display="0" m_delay="1.58" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp" linenumber="62" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="xFDuplicate_rows&amp;lt;2, 1080, 1920, 3, 1, 5, 1920&amp;gt;"/>
+      <inlineStackInfo fileName="../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp" linenumber="152" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="magnitude&amp;lt;0, 2, 2, 1080, 1920, 1, 2&amp;gt;"/>
+      <controlInputObjs>block_52</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp">
+      <validLinenumbers>152</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp">
+      <validLinenumbers>62</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="65" name="._crit_edge.loopexit.i" type="BlockType">
+    <controlInputObjs>block_52</controlInputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_43</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="64" name="br_ln0" coreId="177" opcode="br" nodeLabel="4.0" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
+      <controlInputObjs>block_43</controlInputObjs>
+    </node_objs>
+  </blocks>
+  <blocks id="67" name=".exit" type="BlockType">
+    <controlInputObjs>block_43</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="66" name="_ln152" lineNumber="152" fileName="../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp" fileDirectory=".." coreId="132" contextFuncName="magnitude_0_2_2_1080_1920_1_2_s" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp" linenumber="152" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="magnitude&amp;lt;0, 2, 2, 1080, 1920, 1, 2&amp;gt;"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp">
+      <validLinenumbers>152</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" id="169" pipe_depth="2" RegionName="Col_Loop">
+    <basic_blocks id="52" name="block_52" type="BlockType">
+      <controlInputObjs>.split3.i</controlInputObjs>
+      <controlInputObjs>.split.i</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>._crit_edge.loopexit.i</controlOutputObjs>
+      <controlOutputObjs>.split.i</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="48" name="col_V" originalName="col.V" coreId="49" bitwidth="11" opcode="phi" nodeLabel="2.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <controlInputObjs>.split3.i</controlInputObjs>
+        <controlInputObjs>.split.i</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="49" name="col_V_9" lineNumber="691" originalName="col.V" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="col_V_9_fu_191_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="operator_add_assign_1_false" bitwidth="11" opcode="add" nodeLabel="2.0" m_display="0" m_delay="1.63" m_topoIndex="15" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="691" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="operator+=&amp;lt;1, false&amp;gt;"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="50" name="icmp_ln62" lineNumber="62" fileName="../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp" fileDirectory=".." rtlName="icmp_ln62_fu_197_p2" opType="icmp" coreId="10" contextFuncName="xFDuplicate_rows_2_1080_1920_3_1_5_1920_s" bitwidth="1" opcode="icmp" nodeLabel="2.0" m_display="0" m_delay="1.88" m_topoIndex="16" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp" linenumber="62" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="xFDuplicate_rows&amp;lt;2, 1080, 1920, 3, 1, 5, 1920&amp;gt;"/>
+        <inlineStackInfo fileName="../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp" linenumber="152" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="magnitude&amp;lt;0, 2, 2, 1080, 1920, 1, 2&amp;gt;"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="51" name="br_ln62" lineNumber="62" fileName="../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp" fileDirectory=".." coreId="49" contextFuncName="xFDuplicate_rows_2_1080_1920_3_1_5_1920_s" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp" linenumber="62" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="xFDuplicate_rows&amp;lt;2, 1080, 1920, 3, 1, 5, 1920&amp;gt;"/>
+        <inlineStackInfo fileName="../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp" linenumber="152" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="magnitude&amp;lt;0, 2, 2, 1080, 1920, 1, 2&amp;gt;"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>.split.i</controlInputObjs>
+        <controlInputObjs>._crit_edge.loopexit.i</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp">
+        <validLinenumbers>152</validLinenumbers>
+      </fileValidLineNumbers>
+      <fileValidLineNumbers fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h">
+        <validLinenumbers>691</validLinenumbers>
+      </fileValidLineNumbers>
+      <fileValidLineNumbers fileName="../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp">
+        <validLinenumbers>62</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="63" name=".split.i" type="BlockType">
+      <controlInputObjs>block_52</controlInputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>block_52</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="56" name="grady_mat_45_read" lineNumber="145" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" contextFuncName="read_r" bitwidth="16" opcode="read" nodeLabel="3.0" m_display="0" m_delay="3.63" m_topoIndex="18" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="read"/>
+        <dataInputObjs>grady_mat_45</dataInputObjs>
+        <dataOutputObjs>write</dataOutputObjs>
+        <dataOutputObjs>write</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="57" name="gradx_mat_42_read" lineNumber="145" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" contextFuncName="read_r" bitwidth="16" opcode="read" nodeLabel="3.0" m_display="0" m_delay="3.63" m_topoIndex="19" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="read"/>
+        <dataInputObjs>gradx_mat_42</dataInputObjs>
+        <dataOutputObjs>write</dataOutputObjs>
+        <dataOutputObjs>write</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="58" name="gradx1_mat_43_write_ln174" lineNumber="174" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" contextFuncName="write" opcode="write" nodeLabel="3.0" m_display="0" m_delay="3.63" m_topoIndex="20" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h" linenumber="174" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="write"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>gradx1_mat_43</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="59" name="gradx2_mat_44_write_ln174" lineNumber="174" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" contextFuncName="write" opcode="write" nodeLabel="3.0" m_display="0" m_delay="3.63" m_topoIndex="21" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h" linenumber="174" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="write"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>gradx2_mat_44</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="60" name="grady1_mat_46_write_ln174" lineNumber="174" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" contextFuncName="write" opcode="write" nodeLabel="3.0" m_display="0" m_delay="3.63" m_topoIndex="22" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h" linenumber="174" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="write"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>grady1_mat_46</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="61" name="grady2_mat_47_write_ln174" lineNumber="174" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" contextFuncName="write" opcode="write" nodeLabel="3.0" m_display="0" m_delay="3.63" m_topoIndex="23" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h" linenumber="174" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="write"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>grady2_mat_47</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="62" name="br_ln0" coreId="132" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
+        <controlInputObjs>block_52</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h">
+        <validLinenumbers>145</validLinenumbers>
+        <validLinenumbers>174</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <regnodes realName="img_width_read_reg_207">
+    <nodeIds>22</nodeIds>
+  </regnodes>
+  <regnodes realName="col_V_reg_169">
+    <nodeIds>48</nodeIds>
+  </regnodes>
+  <regnodes realName="col_V_9_reg_221">
+    <nodeIds>49</nodeIds>
+  </regnodes>
+  <regnodes realName="row_V_reg_158">
+    <nodeIds>39</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln56_reg_217">
+    <nodeIds>41</nodeIds>
+  </regnodes>
+  <regnodes realName="row_V_3_reg_212">
+    <nodeIds>40</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln62_reg_226">
+    <nodeIds>50</nodeIds>
+  </regnodes>
+  <regnodes realName="img_height_read_reg_202">
+    <nodeIds>21</nodeIds>
+  </regnodes>
+  <expressionNodes realName="icmp_ln56_fu_186">
+    <nodeIds>41</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="col_V_9_fu_191">
+    <nodeIds>49</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln62_fu_197">
+    <nodeIds>50</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="row_V_phi_fu_162">
+    <nodeIds>39</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="col_V_phi_fu_173">
+    <nodeIds>48</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="row_V_3_fu_180">
+    <nodeIds>40</nodeIds>
+  </expressionNodes>
+  <ioNodes realName="write_ln174_write_fu_150">
+    <nodeIds>61</nodeIds>
+  </ioNodes>
+  <ioNodes realName="img_width_read_read_fu_76">
+    <nodeIds>22</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln152_write_fu_90">
+    <nodeIds>26</nodeIds>
+  </ioNodes>
+  <ioNodes realName="img_height_read_read_fu_70">
+    <nodeIds>21</nodeIds>
+  </ioNodes>
+  <ioNodes realName="grady_mat_45_read_read_fu_114">
+    <nodeIds>56</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln152_write_fu_106">
+    <nodeIds>30</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln152_write_fu_82">
+    <nodeIds>24</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln174_write_fu_126">
+    <nodeIds>58</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln174_write_fu_134">
+    <nodeIds>59</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln152_write_fu_98">
+    <nodeIds>28</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln174_write_fu_142">
+    <nodeIds>60</nodeIds>
+  </ioNodes>
+  <ioNodes realName="gradx_mat_42_read_read_fu_120">
+    <nodeIds>57</nodeIds>
+  </ioNodes>
+  <ioPorts name="gradx1_mat_43">
+    <contents name="write">
+      <nodeIds>58</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="gradx2_mat_44">
+    <contents name="write">
+      <nodeIds>59</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="gradx_mat_42">
+    <contents name="read">
+      <nodeIds>57</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="grady1_mat_46">
+    <contents name="write">
+      <nodeIds>60</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="grady2_mat_47">
+    <contents name="write">
+      <nodeIds>61</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="grady_mat_45">
+    <contents name="read">
+      <nodeIds>56</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="img_height">
+    <contents name="read">
+      <nodeIds>21</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="img_height_out">
+    <contents name="write">
+      <nodeIds>24</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="img_height_out1">
+    <contents name="write">
+      <nodeIds>26</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="img_width">
+    <contents name="read">
+      <nodeIds>22</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="img_width_out">
+    <contents name="write">
+      <nodeIds>28</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="img_width_out2">
+    <contents name="write">
+      <nodeIds>30</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="66" stage="1" latency="1"/>
+    </states>
+    <states id="3">
+      <operations id="48" stage="1" latency="1"/>
+      <operations id="49" stage="1" latency="1"/>
+      <operations id="50" stage="1" latency="1"/>
+      <operations id="51" stage="1" latency="1"/>
+    </states>
+    <states id="4">
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="54" stage="1" latency="1"/>
+      <operations id="55" stage="1" latency="1"/>
+      <operations id="56" stage="1" latency="1"/>
+      <operations id="57" stage="1" latency="1"/>
+      <operations id="58" stage="1" latency="1"/>
+      <operations id="59" stage="1" latency="1"/>
+      <operations id="60" stage="1" latency="1"/>
+      <operations id="61" stage="1" latency="1"/>
+      <operations id="62" stage="1" latency="1"/>
+    </states>
+    <states id="5">
+      <operations id="64" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="xFDuplicate_rows_2_1080_1920_3_1_5_1920_s" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="2076841" mMaxLatency="2076841">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>7</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>38</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="Row_Loop" mII="-1" mDepth="-1" mMinTripCount="1080" mMaxTripCount="1080" mMinLatency="2076840" mMaxLatency="2076840" mType="1">
+      <subRegions>4</subRegions>
+      <subRegions>5</subRegions>
+      <subRegions>6</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Region 1" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>43</basicBlocks>
+      <basicBlocks>47</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="5" mTag="Col_Loop" mII="1" mDepth="2" mMinTripCount="1920" mMaxTripCount="1920" mMinLatency="1920" mMaxLatency="1920" mType="1">
+      <basicBlocks>52</basicBlocks>
+      <basicBlocks>63</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="6" mTag="Region 2" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>65</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="7" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>67</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

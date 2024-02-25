@@ -1,0 +1,676 @@
+
+
+================================================================
+== Vitis HLS Report for 'xfMat2Array_64_0_1080_1920_1_1_s'
+================================================================
+* Date:           Sun Feb 25 00:53:10 2024
+
+* Version:        2020.2.2 (Build 3118627 on Tue Feb  9 05:13:49 MST 2021)
+* Project:        grayscaler
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.300 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+---------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |    Interval   | Pipeline|
+    |   min   |   max   |    min    |    max    | min |   max   |   Type  |
+    +---------+---------+-----------+-----------+-----+---------+---------+
+    |        9|  2073608|  90.000 ns|  20.736 ms|    9|  2073608|     none|
+    +---------+---------+-----------+-----------+-----+---------+---------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------+---------+---------+---------+-----------+-----------+-----+---------+----------+
+        |                   |         |  Latency (cycles) |   Latency (absolute)  |    Interval   | Pipeline |
+        |      Instance     |  Module |   min   |   max   |    min    |    max    | min |   max   |   Type   |
+        +-------------------+---------+---------+---------+-----------+-----------+-----+---------+----------+
+        |grp_Mat2Axi_fu_58  |Mat2Axi  |        8|  2073607|  80.000 ns|  20.736 ms|    7|  2073606|  dataflow|
+        +-------------------+---------+---------+---------+-----------+-----------+-----+---------+----------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|      6|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    1|    1951|   2479|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|     86|    -|
+|Register         |        -|    -|     134|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    1|    2085|   2571|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|   ~0|       1|      4|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------+---------+---------+----+------+------+-----+
+    |      Instance     |  Module | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +-------------------+---------+---------+----+------+------+-----+
+    |grp_Mat2Axi_fu_58  |Mat2Axi  |        0|   1|  1951|  2479|    0|
+    +-------------------+---------+---------+----+------+------+-----+
+    |Total              |         |        0|   1|  1951|  2479|    0|
+    +-------------------+---------+---------+----+------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +------------------------------------+----------+----+---+----+------------+------------+
+    |            Variable Name           | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +------------------------------------+----------+----+---+----+------------+------------+
+    |ap_block_state1                     |        or|   0|  0|   2|           1|           1|
+    |ap_sync_grp_Mat2Axi_fu_58_ap_done   |        or|   0|  0|   2|           1|           1|
+    |ap_sync_grp_Mat2Axi_fu_58_ap_ready  |        or|   0|  0|   2|           1|           1|
+    +------------------------------------+----------+----+---+----+------------+------------+
+    |Total                               |          |   0|  0|   6|           3|           3|
+    +------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------+----+-----------+-----+-----------+
+    |         Name        | LUT| Input Size| Bits| Total Bits|
+    +---------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm            |  14|          3|    1|          3|
+    |ap_done              |   9|          2|    1|          2|
+    |dstPtr_blk_n         |   9|          2|    1|          2|
+    |dst_mat_419_read     |   9|          2|    1|          2|
+    |m_axi_gmem2_AWVALID  |   9|          2|    1|          2|
+    |m_axi_gmem2_BREADY   |   9|          2|    1|          2|
+    |m_axi_gmem2_WVALID   |   9|          2|    1|          2|
+    |srcMat_cols_blk_n    |   9|          2|    1|          2|
+    |srcMat_rows_blk_n    |   9|          2|    1|          2|
+    +---------------------+----+-----------+-----+-----------+
+    |Total                |  86|         19|    9|         19|
+    +---------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------+----+----+-----+-----------+
+    |                  Name                  | FF | LUT| Bits| Const Bits|
+    +----------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                               |   2|   0|    2|          0|
+    |ap_done_reg                             |   1|   0|    1|          0|
+    |ap_sync_reg_grp_Mat2Axi_fu_58_ap_done   |   1|   0|    1|          0|
+    |ap_sync_reg_grp_Mat2Axi_fu_58_ap_ready  |   1|   0|    1|          0|
+    |dstPtr_read_reg_72                      |  64|   0|   64|          0|
+    |grp_Mat2Axi_fu_58_ap_start_reg          |   1|   0|    1|          0|
+    |srcMat_cols_read_reg_82                 |  32|   0|   32|          0|
+    |srcMat_rows_read_reg_77                 |  32|   0|   32|          0|
+    +----------------------------------------+----+----+-----+-----------+
+    |Total                                   | 134|   0|  134|          0|
+    +----------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------+-----+-----+------------+--------------------------------------+--------------+
+|       RTL Ports      | Dir | Bits|  Protocol  |             Source Object            |    C Type    |
++----------------------+-----+-----+------------+--------------------------------------+--------------+
+|ap_clk                |   in|    1|  ap_ctrl_hs|  xfMat2Array<64, 0, 1080, 1920, 1, 1>|  return value|
+|ap_rst                |   in|    1|  ap_ctrl_hs|  xfMat2Array<64, 0, 1080, 1920, 1, 1>|  return value|
+|ap_start              |   in|    1|  ap_ctrl_hs|  xfMat2Array<64, 0, 1080, 1920, 1, 1>|  return value|
+|ap_done               |  out|    1|  ap_ctrl_hs|  xfMat2Array<64, 0, 1080, 1920, 1, 1>|  return value|
+|ap_continue           |   in|    1|  ap_ctrl_hs|  xfMat2Array<64, 0, 1080, 1920, 1, 1>|  return value|
+|ap_idle               |  out|    1|  ap_ctrl_hs|  xfMat2Array<64, 0, 1080, 1920, 1, 1>|  return value|
+|ap_ready              |  out|    1|  ap_ctrl_hs|  xfMat2Array<64, 0, 1080, 1920, 1, 1>|  return value|
+|dst_mat_419_dout      |   in|    8|     ap_fifo|                           dst_mat_419|       pointer|
+|dst_mat_419_empty_n   |   in|    1|     ap_fifo|                           dst_mat_419|       pointer|
+|dst_mat_419_read      |  out|    1|     ap_fifo|                           dst_mat_419|       pointer|
+|m_axi_gmem2_AWVALID   |  out|    1|       m_axi|                                 gmem2|       pointer|
+|m_axi_gmem2_AWREADY   |   in|    1|       m_axi|                                 gmem2|       pointer|
+|m_axi_gmem2_AWADDR    |  out|   64|       m_axi|                                 gmem2|       pointer|
+|m_axi_gmem2_AWID      |  out|    1|       m_axi|                                 gmem2|       pointer|
+|m_axi_gmem2_AWLEN     |  out|   32|       m_axi|                                 gmem2|       pointer|
+|m_axi_gmem2_AWSIZE    |  out|    3|       m_axi|                                 gmem2|       pointer|
+|m_axi_gmem2_AWBURST   |  out|    2|       m_axi|                                 gmem2|       pointer|
+|m_axi_gmem2_AWLOCK    |  out|    2|       m_axi|                                 gmem2|       pointer|
+|m_axi_gmem2_AWCACHE   |  out|    4|       m_axi|                                 gmem2|       pointer|
+|m_axi_gmem2_AWPROT    |  out|    3|       m_axi|                                 gmem2|       pointer|
+|m_axi_gmem2_AWQOS     |  out|    4|       m_axi|                                 gmem2|       pointer|
+|m_axi_gmem2_AWREGION  |  out|    4|       m_axi|                                 gmem2|       pointer|
+|m_axi_gmem2_AWUSER    |  out|    1|       m_axi|                                 gmem2|       pointer|
+|m_axi_gmem2_WVALID    |  out|    1|       m_axi|                                 gmem2|       pointer|
+|m_axi_gmem2_WREADY    |   in|    1|       m_axi|                                 gmem2|       pointer|
+|m_axi_gmem2_WDATA     |  out|   64|       m_axi|                                 gmem2|       pointer|
+|m_axi_gmem2_WSTRB     |  out|    8|       m_axi|                                 gmem2|       pointer|
+|m_axi_gmem2_WLAST     |  out|    1|       m_axi|                                 gmem2|       pointer|
+|m_axi_gmem2_WID       |  out|    1|       m_axi|                                 gmem2|       pointer|
+|m_axi_gmem2_WUSER     |  out|    1|       m_axi|                                 gmem2|       pointer|
+|m_axi_gmem2_ARVALID   |  out|    1|       m_axi|                                 gmem2|       pointer|
+|m_axi_gmem2_ARREADY   |   in|    1|       m_axi|                                 gmem2|       pointer|
+|m_axi_gmem2_ARADDR    |  out|   64|       m_axi|                                 gmem2|       pointer|
+|m_axi_gmem2_ARID      |  out|    1|       m_axi|                                 gmem2|       pointer|
+|m_axi_gmem2_ARLEN     |  out|   32|       m_axi|                                 gmem2|       pointer|
+|m_axi_gmem2_ARSIZE    |  out|    3|       m_axi|                                 gmem2|       pointer|
+|m_axi_gmem2_ARBURST   |  out|    2|       m_axi|                                 gmem2|       pointer|
+|m_axi_gmem2_ARLOCK    |  out|    2|       m_axi|                                 gmem2|       pointer|
+|m_axi_gmem2_ARCACHE   |  out|    4|       m_axi|                                 gmem2|       pointer|
+|m_axi_gmem2_ARPROT    |  out|    3|       m_axi|                                 gmem2|       pointer|
+|m_axi_gmem2_ARQOS     |  out|    4|       m_axi|                                 gmem2|       pointer|
+|m_axi_gmem2_ARREGION  |  out|    4|       m_axi|                                 gmem2|       pointer|
+|m_axi_gmem2_ARUSER    |  out|    1|       m_axi|                                 gmem2|       pointer|
+|m_axi_gmem2_RVALID    |   in|    1|       m_axi|                                 gmem2|       pointer|
+|m_axi_gmem2_RREADY    |  out|    1|       m_axi|                                 gmem2|       pointer|
+|m_axi_gmem2_RDATA     |   in|   64|       m_axi|                                 gmem2|       pointer|
+|m_axi_gmem2_RLAST     |   in|    1|       m_axi|                                 gmem2|       pointer|
+|m_axi_gmem2_RID       |   in|    1|       m_axi|                                 gmem2|       pointer|
+|m_axi_gmem2_RUSER     |   in|    1|       m_axi|                                 gmem2|       pointer|
+|m_axi_gmem2_RRESP     |   in|    2|       m_axi|                                 gmem2|       pointer|
+|m_axi_gmem2_BVALID    |   in|    1|       m_axi|                                 gmem2|       pointer|
+|m_axi_gmem2_BREADY    |  out|    1|       m_axi|                                 gmem2|       pointer|
+|m_axi_gmem2_BRESP     |   in|    2|       m_axi|                                 gmem2|       pointer|
+|m_axi_gmem2_BID       |   in|    1|       m_axi|                                 gmem2|       pointer|
+|m_axi_gmem2_BUSER     |   in|    1|       m_axi|                                 gmem2|       pointer|
+|srcMat_rows_dout      |   in|   32|     ap_fifo|                           srcMat_rows|       pointer|
+|srcMat_rows_empty_n   |   in|    1|     ap_fifo|                           srcMat_rows|       pointer|
+|srcMat_rows_read      |  out|    1|     ap_fifo|                           srcMat_rows|       pointer|
+|srcMat_cols_dout      |   in|   32|     ap_fifo|                           srcMat_cols|       pointer|
+|srcMat_cols_empty_n   |   in|    1|     ap_fifo|                           srcMat_cols|       pointer|
+|srcMat_cols_read      |  out|    1|     ap_fifo|                           srcMat_cols|       pointer|
+|dstPtr_dout           |   in|   64|     ap_fifo|                                dstPtr|       pointer|
+|dstPtr_empty_n        |   in|    1|     ap_fifo|                                dstPtr|       pointer|
+|dstPtr_read           |  out|    1|     ap_fifo|                                dstPtr|       pointer|
++----------------------+-----+-----+------------+--------------------------------------+--------------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.63>
+ST_1 : Operation 3 [1/1] (3.63ns)   --->   "%dstPtr_read = read i64 @_ssdm_op_Read.ap_fifo.i64P0A, i64 %dstPtr" [../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1592]   --->   Operation 3 'read' 'dstPtr_read' <Predicate = true> <Delay = 3.63> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 4> <FIFO>
+ST_1 : Operation 4 [1/1] (3.63ns)   --->   "%srcMat_rows_read = read i32 @_ssdm_op_Read.ap_fifo.i32P0A, i32 %srcMat_rows" [../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1592]   --->   Operation 4 'read' 'srcMat_rows_read' <Predicate = true> <Delay = 3.63> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 4> <FIFO>
+ST_1 : Operation 5 [1/1] (3.63ns)   --->   "%srcMat_cols_read = read i32 @_ssdm_op_Read.ap_fifo.i32P0A, i32 %srcMat_cols" [../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1592]   --->   Operation 5 'read' 'srcMat_cols_read' <Predicate = true> <Delay = 3.63> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 4> <FIFO>
+ST_1 : Operation 6 [2/2] (0.00ns)   --->   "%call_ln1592 = call void @Mat2Axi, i8 %dst_mat_419, i64 %gmem2, i64 %dstPtr_read, i32 %srcMat_rows_read, i32 %srcMat_cols_read" [../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1592]   --->   Operation 6 'call' 'call_ln1592' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 7 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %dst_mat_419, void @empty_18, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty"   --->   Operation 7 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 8 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %gmem2, void @empty_9, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty_3, void @empty_4, void @empty, i32 16, i32 16, i32 16, i32 16, void @empty, void @empty"   --->   Operation 8 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %dstPtr, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str"   --->   Operation 9 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %srcMat_rows, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %srcMat_cols, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %dst_mat_419, void @empty_18, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty"   --->   Operation 12 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %gmem2, void @empty_9, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty_3, void @empty_4, void @empty, i32 16, i32 16, i32 16, i32 16, void @empty, void @empty"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [1/2] (0.00ns)   --->   "%call_ln1592 = call void @Mat2Axi, i8 %dst_mat_419, i64 %gmem2, i64 %dstPtr_read, i32 %srcMat_rows_read, i32 %srcMat_cols_read" [../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1592]   --->   Operation 14 'call' 'call_ln1592' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 15 'ret' 'ret_ln0' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 0
+- Is top level: 0
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ dst_mat_419]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ gmem2]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=4; pingpong=0; private_global=0; IO mode=m_axi:ce=0
+Port [ srcMat_rows]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ srcMat_cols]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ dstPtr]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+dstPtr_read       (read         ) [ 001]
+srcMat_rows_read  (read         ) [ 001]
+srcMat_cols_read  (read         ) [ 001]
+specinterface_ln0 (specinterface) [ 000]
+specinterface_ln0 (specinterface) [ 000]
+specinterface_ln0 (specinterface) [ 000]
+specinterface_ln0 (specinterface) [ 000]
+specinterface_ln0 (specinterface) [ 000]
+specinterface_ln0 (specinterface) [ 000]
+specinterface_ln0 (specinterface) [ 000]
+call_ln1592       (call         ) [ 000]
+ret_ln0           (ret          ) [ 000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="dst_mat_419">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dst_mat_419"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="gmem2">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="gmem2"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="srcMat_rows">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="srcMat_rows"/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1000" name="srcMat_cols">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="srcMat_cols"/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1000" name="dstPtr">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dstPtr"/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1001" name="const_10">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_fifo.i64P0A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1001" name="const_12">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_fifo.i32P0A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1001" name="const_14">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="Mat2Axi"/></StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1001" name="const_16">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecInterface"/></StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1001" name="const_18">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_18"/></StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1001" name="const_20">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1001" name="const_22">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty"/></StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1001" name="const_24">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_9"/></StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1001" name="const_26">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_3"/></StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1001" name="const_28">
+<pin_list>
+<pin id="29" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_4"/></StgValue>
+</bind>
+</comp>
+
+<comp id="30" class="1001" name="const_30">
+<pin_list>
+<pin id="31" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="32" class="1001" name="const_32">
+<pin_list>
+<pin id="33" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="ap_fifo_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="34" class="1001" name="const_34">
+<pin_list>
+<pin id="35" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="36" class="1001" name="const_36">
+<pin_list>
+<pin id="37" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="38" class="1001" name="const_38">
+<pin_list>
+<pin id="39" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="ScalarProp_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="40" class="1004" name="dstPtr_read_read_fu_40">
+<pin_list>
+<pin id="41" dir="0" index="0" bw="64" slack="0"/>
+<pin id="42" dir="0" index="1" bw="64" slack="0"/>
+<pin id="43" dir="1" index="2" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="dstPtr_read/1 "/>
+</bind>
+</comp>
+
+<comp id="46" class="1004" name="srcMat_rows_read_read_fu_46">
+<pin_list>
+<pin id="47" dir="0" index="0" bw="32" slack="0"/>
+<pin id="48" dir="0" index="1" bw="32" slack="0"/>
+<pin id="49" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="srcMat_rows_read/1 "/>
+</bind>
+</comp>
+
+<comp id="52" class="1004" name="srcMat_cols_read_read_fu_52">
+<pin_list>
+<pin id="53" dir="0" index="0" bw="32" slack="0"/>
+<pin id="54" dir="0" index="1" bw="32" slack="0"/>
+<pin id="55" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="srcMat_cols_read/1 "/>
+</bind>
+</comp>
+
+<comp id="58" class="1004" name="grp_Mat2Axi_fu_58">
+<pin_list>
+<pin id="59" dir="0" index="0" bw="0" slack="0"/>
+<pin id="60" dir="0" index="1" bw="8" slack="0"/>
+<pin id="61" dir="0" index="2" bw="64" slack="0"/>
+<pin id="62" dir="0" index="3" bw="64" slack="0"/>
+<pin id="63" dir="0" index="4" bw="32" slack="0"/>
+<pin id="64" dir="0" index="5" bw="32" slack="0"/>
+<pin id="65" dir="1" index="6" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln1592/1 "/>
+</bind>
+</comp>
+
+<comp id="72" class="1005" name="dstPtr_read_reg_72">
+<pin_list>
+<pin id="73" dir="0" index="0" bw="64" slack="1"/>
+<pin id="74" dir="1" index="1" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opset="dstPtr_read "/>
+</bind>
+</comp>
+
+<comp id="77" class="1005" name="srcMat_rows_read_reg_77">
+<pin_list>
+<pin id="78" dir="0" index="0" bw="32" slack="1"/>
+<pin id="79" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="srcMat_rows_read "/>
+</bind>
+</comp>
+
+<comp id="82" class="1005" name="srcMat_cols_read_reg_82">
+<pin_list>
+<pin id="83" dir="0" index="0" bw="32" slack="1"/>
+<pin id="84" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="srcMat_cols_read "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="44"><net_src comp="10" pin="0"/><net_sink comp="40" pin=0"/></net>
+
+<net id="45"><net_src comp="8" pin="0"/><net_sink comp="40" pin=1"/></net>
+
+<net id="50"><net_src comp="12" pin="0"/><net_sink comp="46" pin=0"/></net>
+
+<net id="51"><net_src comp="4" pin="0"/><net_sink comp="46" pin=1"/></net>
+
+<net id="56"><net_src comp="12" pin="0"/><net_sink comp="52" pin=0"/></net>
+
+<net id="57"><net_src comp="6" pin="0"/><net_sink comp="52" pin=1"/></net>
+
+<net id="66"><net_src comp="14" pin="0"/><net_sink comp="58" pin=0"/></net>
+
+<net id="67"><net_src comp="0" pin="0"/><net_sink comp="58" pin=1"/></net>
+
+<net id="68"><net_src comp="2" pin="0"/><net_sink comp="58" pin=2"/></net>
+
+<net id="69"><net_src comp="40" pin="2"/><net_sink comp="58" pin=3"/></net>
+
+<net id="70"><net_src comp="46" pin="2"/><net_sink comp="58" pin=4"/></net>
+
+<net id="71"><net_src comp="52" pin="2"/><net_sink comp="58" pin=5"/></net>
+
+<net id="75"><net_src comp="40" pin="2"/><net_sink comp="72" pin=0"/></net>
+
+<net id="76"><net_src comp="72" pin="1"/><net_sink comp="58" pin=3"/></net>
+
+<net id="80"><net_src comp="46" pin="2"/><net_sink comp="77" pin=0"/></net>
+
+<net id="81"><net_src comp="77" pin="1"/><net_sink comp="58" pin=4"/></net>
+
+<net id="85"><net_src comp="52" pin="2"/><net_sink comp="82" pin=0"/></net>
+
+<net id="86"><net_src comp="82" pin="1"/><net_sink comp="58" pin=5"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: gmem2 | {1 2 }
+ - Input state : 
+	Port: xfMat2Array<64, 0, 1080, 1920, 1, 1> : dst_mat_419 | {1 2 }
+	Port: xfMat2Array<64, 0, 1080, 1920, 1, 1> : gmem2 | {}
+	Port: xfMat2Array<64, 0, 1080, 1920, 1, 1> : srcMat_rows | {1 }
+	Port: xfMat2Array<64, 0, 1080, 1920, 1, 1> : srcMat_cols | {1 }
+	Port: xfMat2Array<64, 0, 1080, 1920, 1, 1> : dstPtr | {1 }
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|-----------------------------|---------|---------|---------|---------|
+| Operation|       Functional Unit       |   DSP   |  Delay  |    FF   |   LUT   |
+|----------|-----------------------------|---------|---------|---------|---------|
+|   call   |      grp_Mat2Axi_fu_58      |    1    |  11.116 |   1519  |   747   |
+|----------|-----------------------------|---------|---------|---------|---------|
+|          |    dstPtr_read_read_fu_40   |    0    |    0    |    0    |    0    |
+|   read   | srcMat_rows_read_read_fu_46 |    0    |    0    |    0    |    0    |
+|          | srcMat_cols_read_read_fu_52 |    0    |    0    |    0    |    0    |
+|----------|-----------------------------|---------|---------|---------|---------|
+|   Total  |                             |    1    |  11.116 |   1519  |   747   |
+|----------|-----------------------------|---------|---------|---------|---------|
+
+Memories:
+N/A
+
+* Register list:
++-----------------------+--------+
+|                       |   FF   |
++-----------------------+--------+
+|   dstPtr_read_reg_72  |   64   |
+|srcMat_cols_read_reg_82|   32   |
+|srcMat_rows_read_reg_77|   32   |
++-----------------------+--------+
+|         Total         |   128  |
++-----------------------+--------+
+
+* Multiplexer (MUX) list: 
+|-------------------|------|------|------|--------||---------||---------|
+|        Comp       |  Pin | Size |  BW  | S x BW ||  Delay  ||   LUT   |
+|-------------------|------|------|------|--------||---------||---------|
+| grp_Mat2Axi_fu_58 |  p3  |   2  |  64  |   128  ||    9    |
+| grp_Mat2Axi_fu_58 |  p4  |   2  |  32  |   64   ||    9    |
+| grp_Mat2Axi_fu_58 |  p5  |   2  |  32  |   64   ||    9    |
+|-------------------|------|------|------|--------||---------||---------|
+|       Total       |      |      |      |   256  ||  4.764  ||    27   |
+|-------------------|------|------|------|--------||---------||---------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+--------+
+|           |   DSP  |  Delay |   FF   |   LUT  |
++-----------+--------+--------+--------+--------+
+|  Function |    1   |   11   |  1519  |   747  |
+|   Memory  |    -   |    -   |    -   |    -   |
+|Multiplexer|    -   |    4   |    -   |   27   |
+|  Register |    -   |    -   |   128  |    -   |
++-----------+--------+--------+--------+--------+
+|   Total   |    1   |   15   |  1647  |   774  |
++-----------+--------+--------+--------+--------+

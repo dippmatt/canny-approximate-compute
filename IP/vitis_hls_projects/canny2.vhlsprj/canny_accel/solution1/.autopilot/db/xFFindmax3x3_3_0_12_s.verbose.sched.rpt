@@ -1,0 +1,199 @@
+
+
+================================================================
+== Vitis HLS Report for 'xFFindmax3x3_3_0_12_s'
+================================================================
+* Date:           Sun Feb 25 01:46:24 2024
+
+* Version:        2020.2.2 (Build 3118627 on Tue Feb  9 05:13:49 MST 2021)
+* Project:        canny_accel
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.356 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        1|        1|  10.000 ns|  10.000 ns|    1|    1|      yes|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 1 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 6.35>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%p_high_threshold_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_high_threshold" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:38]   --->   Operation 3 'read' 'p_high_threshold_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%p_low_threshold_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_low_threshold" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:38]   --->   Operation 4 'read' 'p_low_threshold_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%angle_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %angle" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:38]   --->   Operation 5 'read' 'angle_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%p_i22_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %p_i22" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:38]   --->   Operation 6 'read' 'p_i22_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%p_i21_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %p_i21" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:38]   --->   Operation 7 'read' 'p_i21_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%p_i20_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %p_i20" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:38]   --->   Operation 8 'read' 'p_i20_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%p_i12_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %p_i12" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:38]   --->   Operation 9 'read' 'p_i12_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%p_i11_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %p_i11" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:38]   --->   Operation 10 'read' 'p_i11_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%p_i10_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %p_i10" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:38]   --->   Operation 11 'read' 'p_i10_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%p_i02_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %p_i02" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:38]   --->   Operation 12 'read' 'p_i02_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%p_i01_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %p_i01" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:38]   --->   Operation 13 'read' 'p_i01_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%p_i00_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %p_i00" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:38]   --->   Operation 14 'read' 'p_i00_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%zext_ln886 = zext i8 %p_low_threshold_read"   --->   Operation 15 'zext' 'zext_ln886' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (2.42ns)   --->   "%icmp_ln886 = icmp_slt  i16 %zext_ln886, i16 %p_i11_read"   --->   Operation 16 'icmp' 'icmp_ln886' <Predicate = true> <Delay = 2.42> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 17 [1/1] (1.55ns)   --->   "%icmp_ln870 = icmp_eq  i8 %angle_read, i8 0"   --->   Operation 17 'icmp' 'icmp_ln870' <Predicate = true> <Delay = 1.55> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 18 [1/1] (2.42ns)   --->   "%icmp_ln886_1 = icmp_sgt  i16 %p_i11_read, i16 %p_i10_read"   --->   Operation 18 'icmp' 'icmp_ln886_1' <Predicate = true> <Delay = 2.42> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 19 [1/1] (2.42ns)   --->   "%icmp_ln882 = icmp_slt  i16 %p_i11_read, i16 %p_i12_read"   --->   Operation 19 'icmp' 'icmp_ln882' <Predicate = true> <Delay = 2.42> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 20 [1/1] (0.97ns)   --->   "%xor_ln882 = xor i1 %icmp_ln882, i1 1"   --->   Operation 20 'xor' 'xor_ln882' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 21 [1/1] (1.55ns)   --->   "%icmp_ln870_5 = icmp_eq  i8 %angle_read, i8 45"   --->   Operation 21 'icmp' 'icmp_ln870_5' <Predicate = true> <Delay = 1.55> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%zext_ln886_1 = zext i8 %p_high_threshold_read"   --->   Operation 22 'zext' 'zext_ln886_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (2.42ns)   --->   "%icmp_ln886_2 = icmp_slt  i16 %zext_ln886_1, i16 %p_i11_read"   --->   Operation 23 'icmp' 'icmp_ln886_2' <Predicate = true> <Delay = 2.42> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 24 [1/1] (0.99ns)   --->   "%select_ln298 = select i1 %icmp_ln886_2, i2 3, i2 1"   --->   Operation 24 'select' 'select_ln298' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 25 [1/1] (2.42ns)   --->   "%icmp_ln886_3 = icmp_sgt  i16 %p_i11_read, i16 %p_i02_read"   --->   Operation 25 'icmp' 'icmp_ln886_3' <Predicate = true> <Delay = 2.42> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 26 [1/1] (2.42ns)   --->   "%icmp_ln886_4 = icmp_sgt  i16 %p_i11_read, i16 %p_i20_read"   --->   Operation 26 'icmp' 'icmp_ln886_4' <Predicate = true> <Delay = 2.42> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 27 [1/1] (1.55ns)   --->   "%icmp_ln870_6 = icmp_eq  i8 %angle_read, i8 90"   --->   Operation 27 'icmp' 'icmp_ln870_6' <Predicate = true> <Delay = 1.55> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 28 [1/1] (2.42ns)   --->   "%icmp_ln886_5 = icmp_sgt  i16 %p_i11_read, i16 %p_i01_read"   --->   Operation 28 'icmp' 'icmp_ln886_5' <Predicate = true> <Delay = 2.42> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 29 [1/1] (2.42ns)   --->   "%icmp_ln882_1 = icmp_slt  i16 %p_i11_read, i16 %p_i21_read"   --->   Operation 29 'icmp' 'icmp_ln882_1' <Predicate = true> <Delay = 2.42> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 30 [1/1] (0.97ns)   --->   "%xor_ln882_1 = xor i1 %icmp_ln882_1, i1 1"   --->   Operation 30 'xor' 'xor_ln882_1' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 31 [1/1] (1.55ns)   --->   "%icmp_ln870_7 = icmp_eq  i8 %angle_read, i8 135"   --->   Operation 31 'icmp' 'icmp_ln870_7' <Predicate = true> <Delay = 1.55> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 32 [1/1] (2.42ns)   --->   "%icmp_ln886_6 = icmp_sgt  i16 %p_i11_read, i16 %p_i00_read"   --->   Operation 32 'icmp' 'icmp_ln886_6' <Predicate = true> <Delay = 2.42> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 33 [1/1] (2.42ns)   --->   "%icmp_ln886_7 = icmp_sgt  i16 %p_i11_read, i16 %p_i22_read"   --->   Operation 33 'icmp' 'icmp_ln886_7' <Predicate = true> <Delay = 2.42> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 34 [1/1] (0.00ns) (grouped into LUT with out node and_ln870)   --->   "%xor_ln870 = xor i1 %icmp_ln870, i1 1"   --->   Operation 34 'xor' 'xor_ln870' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 35 [1/1] (0.97ns) (out node of the LUT)   --->   "%and_ln870 = and i1 %icmp_ln886, i1 %xor_ln870"   --->   Operation 35 'and' 'and_ln870' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 36 [1/1] (0.00ns) (grouped into LUT with out node and_ln870_1)   --->   "%xor_ln870_1 = xor i1 %icmp_ln870_5, i1 1"   --->   Operation 36 'xor' 'xor_ln870_1' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 37 [1/1] (0.97ns) (out node of the LUT)   --->   "%and_ln870_1 = and i1 %and_ln870, i1 %xor_ln870_1"   --->   Operation 37 'and' 'and_ln870_1' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 38 [1/1] (0.00ns) (grouped into LUT with out node and_ln870_2)   --->   "%xor_ln870_2 = xor i1 %icmp_ln870_6, i1 1"   --->   Operation 38 'xor' 'xor_ln870_2' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 39 [1/1] (0.97ns) (out node of the LUT)   --->   "%and_ln870_2 = and i1 %and_ln870_1, i1 %xor_ln870_2"   --->   Operation 39 'and' 'and_ln870_2' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 40 [1/1] (0.00ns) (grouped into LUT with out node select_ln105)   --->   "%and_ln105 = and i1 %and_ln870_2, i1 %icmp_ln870_7" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:105]   --->   Operation 40 'and' 'and_ln105' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 41 [1/1] (0.00ns) (grouped into LUT with out node select_ln105)   --->   "%and_ln105_1 = and i1 %icmp_ln886_7, i1 %icmp_ln886_6" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:105]   --->   Operation 41 'and' 'and_ln105_1' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 42 [1/1] (0.00ns) (grouped into LUT with out node select_ln105)   --->   "%and_ln105_2 = and i1 %and_ln105_1, i1 %and_ln105" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:105]   --->   Operation 42 'and' 'and_ln105_2' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 43 [1/1] (0.99ns) (out node of the LUT)   --->   "%select_ln105 = select i1 %and_ln105_2, i2 %select_ln298, i2 0" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:105]   --->   Operation 43 'select' 'select_ln105' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 44 [1/1] (0.97ns)   --->   "%and_ln870_3 = and i1 %and_ln870_1, i1 %icmp_ln870_6"   --->   Operation 44 'and' 'and_ln870_3' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 45 [1/1] (0.97ns)   --->   "%and_ln870_4 = and i1 %and_ln870, i1 %icmp_ln870_5"   --->   Operation 45 'and' 'and_ln870_4' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 46 [1/1] (0.97ns)   --->   "%and_ln870_5 = and i1 %icmp_ln886, i1 %icmp_ln870"   --->   Operation 46 'and' 'and_ln870_5' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 47 [1/1] (0.00ns) (grouped into LUT with out node or_ln65)   --->   "%and_ln46_2 = and i1 %icmp_ln886_1, i1 %xor_ln882" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:46]   --->   Operation 47 'and' 'and_ln46_2' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 48 [1/1] (0.00ns) (grouped into LUT with out node or_ln65)   --->   "%xor_ln46 = xor i1 %and_ln46_2, i1 1" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:46]   --->   Operation 48 'xor' 'xor_ln46' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 49 [1/1] (0.00ns) (grouped into LUT with out node or_ln65)   --->   "%and_ln46_3 = and i1 %and_ln870_5, i1 %xor_ln46" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:46]   --->   Operation 49 'and' 'and_ln46_3' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 50 [1/1] (0.00ns) (grouped into LUT with out node or_ln65)   --->   "%and_ln65_2 = and i1 %icmp_ln886_3, i1 %icmp_ln886_4" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:65]   --->   Operation 50 'and' 'and_ln65_2' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 51 [1/1] (0.00ns) (grouped into LUT with out node or_ln65)   --->   "%xor_ln65 = xor i1 %and_ln65_2, i1 1" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:65]   --->   Operation 51 'xor' 'xor_ln65' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 52 [1/1] (0.00ns) (grouped into LUT with out node or_ln65)   --->   "%and_ln65_3 = and i1 %and_ln870_4, i1 %xor_ln65" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:65]   --->   Operation 52 'and' 'and_ln65_3' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 53 [1/1] (0.97ns) (out node of the LUT)   --->   "%or_ln65 = or i1 %and_ln65_3, i1 %and_ln46_3" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:65]   --->   Operation 53 'or' 'or_ln65' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 54 [1/1] (0.00ns) (grouped into LUT with out node or_ln870_1)   --->   "%and_ln85_2 = and i1 %icmp_ln886_5, i1 %xor_ln882_1" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:85]   --->   Operation 54 'and' 'and_ln85_2' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 55 [1/1] (0.00ns) (grouped into LUT with out node or_ln870_1)   --->   "%xor_ln85 = xor i1 %and_ln85_2, i1 1" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:85]   --->   Operation 55 'xor' 'xor_ln85' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 56 [1/1] (0.00ns) (grouped into LUT with out node or_ln870_1)   --->   "%and_ln85_3 = and i1 %and_ln870_3, i1 %xor_ln85" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:85]   --->   Operation 56 'and' 'and_ln85_3' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 57 [1/1] (0.00ns) (grouped into LUT with out node or_ln870_1)   --->   "%xor_ln870_3 = xor i1 %icmp_ln870_7, i1 1"   --->   Operation 57 'xor' 'xor_ln870_3' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 58 [1/1] (0.00ns) (grouped into LUT with out node or_ln870_1)   --->   "%and_ln870_6 = and i1 %and_ln870_2, i1 %xor_ln870_3"   --->   Operation 58 'and' 'and_ln870_6' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 59 [1/1] (0.00ns) (grouped into LUT with out node or_ln870_1)   --->   "%or_ln870 = or i1 %and_ln870_6, i1 %and_ln85_3"   --->   Operation 59 'or' 'or_ln870' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 60 [1/1] (0.97ns) (out node of the LUT)   --->   "%or_ln870_1 = or i1 %or_ln870, i1 %or_ln65"   --->   Operation 60 'or' 'or_ln870_1' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 3.97>
+ST_2 : Operation 61 [1/1] (0.00ns) (grouped into LUT with out node select_ln85)   --->   "%and_ln85 = and i1 %xor_ln882_1, i1 %and_ln870_3" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:85]   --->   Operation 61 'and' 'and_ln85' <Predicate = (icmp_ln886 & !or_ln870_1)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 62 [1/1] (0.00ns) (grouped into LUT with out node select_ln85)   --->   "%and_ln85_1 = and i1 %and_ln85, i1 %icmp_ln886_5" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:85]   --->   Operation 62 'and' 'and_ln85_1' <Predicate = (icmp_ln886 & !or_ln870_1)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 63 [1/1] (0.99ns) (out node of the LUT)   --->   "%select_ln85 = select i1 %and_ln85_1, i2 %select_ln298, i2 %select_ln105" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:85]   --->   Operation 63 'select' 'select_ln85' <Predicate = (icmp_ln886 & !or_ln870_1)> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 64 [1/1] (0.00ns) (grouped into LUT with out node select_ln65)   --->   "%and_ln65 = and i1 %icmp_ln886_4, i1 %and_ln870_4" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:65]   --->   Operation 64 'and' 'and_ln65' <Predicate = (icmp_ln886 & !or_ln870_1)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 65 [1/1] (0.00ns) (grouped into LUT with out node select_ln65)   --->   "%and_ln65_1 = and i1 %and_ln65, i1 %icmp_ln886_3" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:65]   --->   Operation 65 'and' 'and_ln65_1' <Predicate = (icmp_ln886 & !or_ln870_1)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 66 [1/1] (0.99ns) (out node of the LUT)   --->   "%select_ln65 = select i1 %and_ln65_1, i2 %select_ln298, i2 %select_ln85" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:65]   --->   Operation 66 'select' 'select_ln65' <Predicate = (icmp_ln886 & !or_ln870_1)> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 67 [1/1] (0.00ns) (grouped into LUT with out node select_ln886)   --->   "%and_ln46 = and i1 %xor_ln882, i1 %and_ln870_5" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:46]   --->   Operation 67 'and' 'and_ln46' <Predicate = (icmp_ln886 & !or_ln870_1)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 68 [1/1] (0.00ns) (grouped into LUT with out node select_ln886)   --->   "%and_ln46_1 = and i1 %and_ln46, i1 %icmp_ln886_1" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:46]   --->   Operation 68 'and' 'and_ln46_1' <Predicate = (icmp_ln886 & !or_ln870_1)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 69 [1/1] (0.00ns) (grouped into LUT with out node select_ln886)   --->   "%select_ln46 = select i1 %and_ln46_1, i2 %select_ln298, i2 %select_ln65" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:46]   --->   Operation 69 'select' 'select_ln46' <Predicate = (icmp_ln886 & !or_ln870_1)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 70 [1/1] (0.99ns) (out node of the LUT)   --->   "%select_ln886 = select i1 %icmp_ln886, i2 %select_ln46, i2 0"   --->   Operation 70 'select' 'select_ln886' <Predicate = (!or_ln870_1)> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 71 [1/1] (0.99ns) (out node of the LUT)   --->   "%select_ln870 = select i1 %or_ln870_1, i2 0, i2 %select_ln886"   --->   Operation 71 'select' 'select_ln870' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 72 [1/1] (0.00ns)   --->   "%ret_ln125 = ret i2 %select_ln870" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:125]   --->   Operation 72 'ret' 'ret_ln125' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 6.36ns
+The critical path consists of the following:
+	wire read on port 'p_low_threshold' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:38) [14]  (0 ns)
+	'icmp' operation ('icmp_ln886') [26]  (2.43 ns)
+	'and' operation ('and_ln870') [45]  (0.978 ns)
+	'and' operation ('and_ln870_1') [47]  (0.978 ns)
+	'and' operation ('and_ln870_2') [49]  (0.978 ns)
+	'and' operation ('and_ln105', ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:105) [50]  (0 ns)
+	'and' operation ('and_ln105_2', ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:105) [52]  (0 ns)
+	'select' operation ('select_ln105', ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:105) [53]  (0.993 ns)
+
+ <State 2>: 3.97ns
+The critical path consists of the following:
+	'and' operation ('and_ln85', ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:85) [55]  (0 ns)
+	'and' operation ('and_ln85_1', ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:85) [56]  (0 ns)
+	'select' operation ('select_ln85', ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:85) [57]  (0.993 ns)
+	'select' operation ('select_ln65', ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:65) [61]  (0.993 ns)
+	'select' operation ('select_ln46', ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:46) [65]  (0 ns)
+	'select' operation ('select_ln886') [66]  (0.993 ns)
+	'select' operation ('this.V') [81]  (0.993 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

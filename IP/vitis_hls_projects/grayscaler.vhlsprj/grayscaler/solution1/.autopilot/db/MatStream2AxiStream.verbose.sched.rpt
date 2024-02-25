@@ -1,0 +1,243 @@
+
+
+================================================================
+== Vitis HLS Report for 'MatStream2AxiStream'
+================================================================
+* Date:           Sun Feb 25 00:53:06 2024
+
+* Version:        2020.2.2 (Build 3118627 on Tue Feb  9 05:13:49 MST 2021)
+* Project:        grayscaler
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.912 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+---------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |    Interval   | Pipeline|
+    |   min   |   max   |    min    |    max    | min |   max   |   Type  |
+    +---------+---------+-----------+-----------+-----+---------+---------+
+    |        6|  2073605|  60.000 ns|  20.736 ms|    6|  2073605|     none|
+    +---------+---------+-----------+-----------+-----+---------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------------------+---------+---------+----------+-----------+-----------+-------------+----------+
+        |                             |  Latency (cycles) | Iteration|  Initiation Interval  |     Trip    |          |
+        |          Loop Name          |   min   |   max   |  Latency |  achieved |   target  |    Count    | Pipelined|
+        +-----------------------------+---------+---------+----------+-----------+-----------+-------------+----------+
+        |- MMIterOutRow_MMIterOutCol  |        2|  2073601|         3|          1|          1|  1 ~ 2073600|       yes|
+        +-----------------------------+---------+---------+----------+-----------+-----------+-------------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 3
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 7
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 3, States = { 4 5 6 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 7 6 
+6 --> 4 
+7 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.63>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%localbuffer_V = alloca i32 1"   --->   Operation 8 'alloca' 'localbuffer_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (3.63ns)   --->   "%rows_read = read i32 @_ssdm_op_Read.ap_fifo.i32P0A, i32 %rows" [../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1324]   --->   Operation 9 'read' 'rows_read' <Predicate = true> <Delay = 3.63> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_1 : Operation 10 [1/1] (3.63ns)   --->   "%cols_bound_per_npc_read = read i32 @_ssdm_op_Read.ap_fifo.i32P0A, i32 %cols_bound_per_npc" [../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1329]   --->   Operation 10 'read' 'cols_bound_per_npc_read' <Predicate = true> <Delay = 3.63> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_1 : Operation 11 [1/1] (1.70ns)   --->   "%store_ln1324 = store i64 0, i64 %localbuffer_V" [../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1324->../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1376]   --->   Operation 11 'store' 'store_ln1324' <Predicate = true> <Delay = 1.70>
+
+State 2 <SV = 1> <Delay = 6.91>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%zext_ln1310 = zext i32 %rows_read" [../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1310->../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1376]   --->   Operation 12 'zext' 'zext_ln1310' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%zext_ln1310_1 = zext i32 %cols_bound_per_npc_read" [../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1310->../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1376]   --->   Operation 13 'zext' 'zext_ln1310_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [2/2] (6.91ns)   --->   "%mul_ln1310 = mul i64 %zext_ln1310, i64 %zext_ln1310_1" [../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1310->../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1376]   --->   Operation 14 'mul' 'mul_ln1310' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 6.91>
+ST_3 : Operation 15 [1/1] (0.00ns)   --->   "%last_blk_width_read = read i4 @_ssdm_op_Read.ap_auto.volatile.i4P0A, i4 %last_blk_width" [../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1310->../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1376]   --->   Operation 15 'read' 'last_blk_width_read' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 16 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %dst_mat_419, void @empty_18, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty"   --->   Operation 16 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 17 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %ldata1, void @empty_18, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty"   --->   Operation 17 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 18 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %cols_bound_per_npc, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str"   --->   Operation 18 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 19 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %rows, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str"   --->   Operation 19 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 20 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %dst_mat_419, void @empty_18, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty"   --->   Operation 20 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 21 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %ldata1, void @empty_18, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty"   --->   Operation 21 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 22 [1/1] (2.55ns)   --->   "%sub_i = add i32 %cols_bound_per_npc_read, i32 4294967295" [../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1329]   --->   Operation 22 'add' 'sub_i' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 23 [1/2] (6.91ns)   --->   "%mul_ln1310 = mul i64 %zext_ln1310, i64 %zext_ln1310_1" [../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1310->../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1376]   --->   Operation 23 'mul' 'mul_ln1310' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 24 [1/1] (1.58ns)   --->   "%br_ln1324 = br void" [../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1324->../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1376]   --->   Operation 24 'br' 'br_ln1324' <Predicate = true> <Delay = 1.58>
+
+State 4 <SV = 3> <Delay = 4.94>
+ST_4 : Operation 25 [1/1] (0.00ns)   --->   "%indvar_flatten = phi i64 0, void %entry, i64 %add_ln1324, void" [../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1324->../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1376]   --->   Operation 25 'phi' 'indvar_flatten' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 26 [1/1] (0.00ns)   --->   "%j = phi i31 0, void %entry, i31 %j_1, void"   --->   Operation 26 'phi' 'j' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 27 [1/1] (3.52ns)   --->   "%add_ln1324 = add i64 %indvar_flatten, i64 1" [../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1324->../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1376]   --->   Operation 27 'add' 'add_ln1324' <Predicate = true> <Delay = 3.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 28 [1/1] (0.00ns)   --->   "%zext_ln1329 = zext i31 %j" [../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1329->../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1376]   --->   Operation 28 'zext' 'zext_ln1329' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 29 [1/1] (2.47ns)   --->   "%icmp_ln1329 = icmp_slt  i32 %zext_ln1329, i32 %cols_bound_per_npc_read" [../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1329->../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1376]   --->   Operation 29 'icmp' 'icmp_ln1329' <Predicate = true> <Delay = 2.47> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 30 [1/1] (2.77ns)   --->   "%icmp_ln1324 = icmp_eq  i64 %indvar_flatten, i64 %mul_ln1310" [../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1324->../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1376]   --->   Operation 30 'icmp' 'icmp_ln1324' <Predicate = true> <Delay = 2.77> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 31 [1/1] (0.00ns)   --->   "%br_ln1324 = br i1 %icmp_ln1324, void %._crit_edge.loopexit.i, void %._crit_edge14.loopexit.i" [../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1324->../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1376]   --->   Operation 31 'br' 'br_ln1324' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 32 [1/1] (0.00ns) (grouped into LUT with out node bLast)   --->   "%select_ln1319 = select i1 %icmp_ln1329, i31 %j, i31 0" [../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1319->../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1376]   --->   Operation 32 'select' 'select_ln1319' <Predicate = (!icmp_ln1324)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.73> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 33 [1/1] (0.00ns) (grouped into LUT with out node bLast)   --->   "%zext_ln1319 = zext i31 %select_ln1319" [../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1319->../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1376]   --->   Operation 33 'zext' 'zext_ln1319' <Predicate = (!icmp_ln1324)> <Delay = 0.00>
+ST_4 : Operation 34 [1/1] (2.47ns) (out node of the LUT)   --->   "%bLast = icmp_eq  i32 %zext_ln1319, i32 %sub_i" [../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1335->../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1376]   --->   Operation 34 'icmp' 'bLast' <Predicate = (!icmp_ln1324)> <Delay = 2.47> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 35 [1/1] (2.52ns)   --->   "%add_ln1329 = add i31 %j, i31 1" [../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1329->../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1376]   --->   Operation 35 'add' 'add_ln1329' <Predicate = (!icmp_ln1324)> <Delay = 2.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 36 [1/1] (0.73ns)   --->   "%j_1 = select i1 %icmp_ln1329, i31 %add_ln1329, i31 1" [../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1329->../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1376]   --->   Operation 36 'select' 'j_1' <Predicate = (!icmp_ln1324)> <Delay = 0.73> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.73> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 6.88>
+ST_5 : Operation 37 [1/1] (0.00ns)   --->   "%filled_V = phi i7 0, void %entry, i7 %filled_V_1, void"   --->   Operation 37 'phi' 'filled_V' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 38 [1/1] (1.02ns)   --->   "%xf_bits_per_clock = select i1 %bLast, i4 %last_blk_width_read, i4 8" [../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1356->../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1376]   --->   Operation 38 'select' 'xf_bits_per_clock' <Predicate = (!icmp_ln1324)> <Delay = 1.02> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.73> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 39 [1/1] (0.00ns)   --->   "%zext_ln1336 = zext i4 %xf_bits_per_clock" [../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1336->../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1376]   --->   Operation 39 'zext' 'zext_ln1336' <Predicate = (!icmp_ln1324)> <Delay = 0.00>
+ST_5 : Operation 40 [1/1] (3.63ns)   --->   "%tmp_V = read i8 @_ssdm_op_Read.ap_fifo.volatile.i8P0A, i8 %dst_mat_419" [/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 40 'read' 'tmp_V' <Predicate = (!icmp_ln1324)> <Delay = 3.63> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 2> <FIFO>
+ST_5 : Operation 41 [1/1] (0.00ns)   --->   "%zext_ln208 = zext i8 %tmp_V"   --->   Operation 41 'zext' 'zext_ln208' <Predicate = (!icmp_ln1324)> <Delay = 0.00>
+ST_5 : Operation 42 [1/1] (1.87ns)   --->   "%sub_ln1347 = sub i7 64, i7 %zext_ln1336" [../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1347->../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1376]   --->   Operation 42 'sub' 'sub_ln1347' <Predicate = (!icmp_ln1324)> <Delay = 1.87> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 43 [1/1] (1.48ns)   --->   "%icmp_ln878 = icmp_ult  i7 %filled_V, i7 %sub_ln1347"   --->   Operation 43 'icmp' 'icmp_ln878' <Predicate = (!icmp_ln1324)> <Delay = 1.48> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 44 [1/1] (0.00ns)   --->   "%br_ln1347 = br i1 %icmp_ln878, void %_ifconv, void %._crit_edge.loopexit.i._crit_edge" [../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1347->../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1376]   --->   Operation 44 'br' 'br_ln1347' <Predicate = (!icmp_ln1324)> <Delay = 0.00>
+ST_5 : Operation 45 [1/1] (0.00ns)   --->   "%zext_ln1347 = zext i7 %filled_V"   --->   Operation 45 'zext' 'zext_ln1347' <Predicate = (!icmp_ln1324 & !icmp_ln878)> <Delay = 0.00>
+ST_5 : Operation 46 [1/1] (1.91ns)   --->   "%ret = sub i8 64, i8 %zext_ln1347"   --->   Operation 46 'sub' 'ret' <Predicate = (!icmp_ln1324 & !icmp_ln878)> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 47 [1/1] (0.00ns) (grouped into LUT with out node localbuffer_V_3)   --->   "%p_Result_s = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i32, i8 %ret, i32 7"   --->   Operation 47 'bitselect' 'p_Result_s' <Predicate = (!icmp_ln1324 & !icmp_ln878)> <Delay = 0.00>
+ST_5 : Operation 48 [1/1] (0.00ns) (grouped into LUT with out node localbuffer_V_3)   --->   "%trunc_ln455 = trunc i8 %ret"   --->   Operation 48 'trunc' 'trunc_ln455' <Predicate = (!icmp_ln1324 & !icmp_ln878)> <Delay = 0.00>
+ST_5 : Operation 49 [1/1] (0.00ns)   --->   "%trunc_ln789 = trunc i8 %ret"   --->   Operation 49 'trunc' 'trunc_ln789' <Predicate = (!icmp_ln1324 & !icmp_ln878)> <Delay = 0.00>
+ST_5 : Operation 50 [1/1] (1.82ns)   --->   "%sub_ln546 = sub i6 0, i6 %trunc_ln789"   --->   Operation 50 'sub' 'sub_ln546' <Predicate = (!icmp_ln1324 & !icmp_ln878)> <Delay = 1.82> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 51 [1/1] (0.00ns) (grouped into LUT with out node localbuffer_V_3)   --->   "%zext_ln781_1 = zext i6 %sub_ln546"   --->   Operation 51 'zext' 'zext_ln781_1' <Predicate = (!icmp_ln1324 & !icmp_ln878)> <Delay = 0.00>
+ST_5 : Operation 52 [1/1] (0.00ns) (grouped into LUT with out node localbuffer_V_3)   --->   "%r = shl i64 %zext_ln208, i64 %zext_ln781_1"   --->   Operation 52 'shl' 'r' <Predicate = (!icmp_ln1324 & !icmp_ln878)> <Delay = 0.00> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 3.14> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 53 [1/1] (0.00ns) (grouped into LUT with out node localbuffer_V_3)   --->   "%zext_ln799 = zext i7 %trunc_ln455"   --->   Operation 53 'zext' 'zext_ln799' <Predicate = (!icmp_ln1324 & !icmp_ln878)> <Delay = 0.00>
+ST_5 : Operation 54 [1/1] (0.00ns) (grouped into LUT with out node localbuffer_V_3)   --->   "%r_2 = lshr i64 %zext_ln208, i64 %zext_ln799"   --->   Operation 54 'lshr' 'r_2' <Predicate = (!icmp_ln1324 & !icmp_ln878)> <Delay = 0.00> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 3.14> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 55 [1/1] (3.14ns) (out node of the LUT)   --->   "%localbuffer_V_3 = select i1 %p_Result_s, i64 %r, i64 %r_2"   --->   Operation 55 'select' 'localbuffer_V_3' <Predicate = (!icmp_ln1324 & !icmp_ln878)> <Delay = 3.14> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.73> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 56 [1/1] (0.00ns)   --->   "%or_ln = bitconcatenate i7 @_ssdm_op_BitConcatenate.i7.i3.i4, i3 4, i4 %xf_bits_per_clock"   --->   Operation 56 'bitconcatenate' 'or_ln' <Predicate = (!icmp_ln1324 & !icmp_ln878)> <Delay = 0.00>
+ST_5 : Operation 57 [1/1] (1.58ns)   --->   "%br_ln0 = br void"   --->   Operation 57 'br' 'br_ln0' <Predicate = (!icmp_ln1324 & !icmp_ln878)> <Delay = 1.58>
+ST_5 : Operation 58 [1/1] (1.58ns)   --->   "%br_ln1347 = br void" [../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1347->../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1376]   --->   Operation 58 'br' 'br_ln1347' <Predicate = (!icmp_ln1324 & icmp_ln878)> <Delay = 1.58>
+ST_5 : Operation 59 [1/1] (0.00ns) (grouped into LUT with out node filled_V_1)   --->   "%conv_i9_i_i413_pn_i = phi i7 %or_ln, void %_ifconv, i7 %zext_ln1336, void %._crit_edge.loopexit.i._crit_edge"   --->   Operation 59 'phi' 'conv_i9_i_i413_pn_i' <Predicate = (!icmp_ln1324)> <Delay = 0.00>
+ST_5 : Operation 60 [1/1] (1.87ns) (out node of the LUT)   --->   "%filled_V_1 = add i7 %conv_i9_i_i413_pn_i, i7 %filled_V"   --->   Operation 60 'add' 'filled_V_1' <Predicate = (!icmp_ln1324)> <Delay = 1.87> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 61 [1/1] (0.00ns)   --->   "%br_ln0 = br void"   --->   Operation 61 'br' 'br_ln0' <Predicate = (!icmp_ln1324)> <Delay = 0.00>
+
+State 6 <SV = 5> <Delay = 6.78>
+ST_6 : Operation 62 [1/1] (0.00ns)   --->   "%localbuffer_V_load = load i64 %localbuffer_V"   --->   Operation 62 'load' 'localbuffer_V_load' <Predicate = (!icmp_ln1324)> <Delay = 0.00>
+ST_6 : Operation 63 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @MMIterOutRow_MMIterOutCol_str"   --->   Operation 63 'specloopname' 'specloopname_ln0' <Predicate = (!icmp_ln1324)> <Delay = 0.00>
+ST_6 : Operation 64 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 1, i64 2073600, i64 518400"   --->   Operation 64 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = (!icmp_ln1324)> <Delay = 0.00>
+ST_6 : Operation 65 [1/1] (0.00ns)   --->   "%specpipeline_ln1319 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty" [../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1319->../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1376]   --->   Operation 65 'specpipeline' 'specpipeline_ln1319' <Predicate = (!icmp_ln1324)> <Delay = 0.00>
+ST_6 : Operation 66 [1/1] (0.00ns)   --->   "%specloopname_ln1319 = specloopname void @_ssdm_op_SpecLoopName, void @empty_6" [../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1319->../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1376]   --->   Operation 66 'specloopname' 'specloopname_ln1319' <Predicate = (!icmp_ln1324)> <Delay = 0.00>
+ST_6 : Operation 67 [1/1] (0.00ns) (grouped into LUT with out node ret_2)   --->   "%zext_ln781 = zext i7 %filled_V"   --->   Operation 67 'zext' 'zext_ln781' <Predicate = (!icmp_ln1324)> <Delay = 0.00>
+ST_6 : Operation 68 [1/1] (0.00ns) (grouped into LUT with out node ret_2)   --->   "%r_3 = shl i64 %zext_ln208, i64 %zext_ln781"   --->   Operation 68 'shl' 'r_3' <Predicate = (!icmp_ln1324)> <Delay = 0.00> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 3.14> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 69 [1/1] (3.14ns) (out node of the LUT)   --->   "%ret_2 = or i64 %r_3, i64 %localbuffer_V_load"   --->   Operation 69 'or' 'ret_2' <Predicate = (!icmp_ln1324)> <Delay = 3.14> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 70 [1/1] (3.63ns)   --->   "%write_ln174 = write void @_ssdm_op_Write.ap_fifo.volatile.i64P0A, i64 %ldata1, i64 %ret_2" [/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 70 'write' 'write_ln174' <Predicate = (!icmp_ln1324 & !icmp_ln878)> <Delay = 3.63> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_6 : Operation 71 [1/1] (1.70ns)   --->   "%store_ln787 = store i64 %localbuffer_V_3, i64 %localbuffer_V"   --->   Operation 71 'store' 'store_ln787' <Predicate = (!icmp_ln1324 & !icmp_ln878)> <Delay = 1.70>
+ST_6 : Operation 72 [1/1] (1.70ns)   --->   "%store_ln1347 = store i64 %ret_2, i64 %localbuffer_V" [../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1347->../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1376]   --->   Operation 72 'store' 'store_ln1347' <Predicate = (!icmp_ln1324 & icmp_ln878)> <Delay = 1.70>
+
+State 7 <SV = 5> <Delay = 5.12>
+ST_7 : Operation 73 [1/1] (1.48ns)   --->   "%icmp_ln874 = icmp_eq  i7 %filled_V, i7 0"   --->   Operation 73 'icmp' 'icmp_ln874' <Predicate = true> <Delay = 1.48> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 74 [1/1] (0.00ns)   --->   "%br_ln1363 = br i1 %icmp_ln874, void, void %.exit" [../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1363->../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1376]   --->   Operation 74 'br' 'br_ln1363' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 75 [1/1] (0.00ns)   --->   "%localbuffer_V_load_1 = load i64 %localbuffer_V" [/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 75 'load' 'localbuffer_V_load_1' <Predicate = (!icmp_ln874)> <Delay = 0.00>
+ST_7 : Operation 76 [1/1] (3.63ns)   --->   "%write_ln174 = write void @_ssdm_op_Write.ap_fifo.volatile.i64P0A, i64 %ldata1, i64 %localbuffer_V_load_1" [/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 76 'write' 'write_ln174' <Predicate = (!icmp_ln874)> <Delay = 3.63> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_7 : Operation 77 [1/1] (0.00ns)   --->   "%br_ln1365 = br void %.exit" [../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1365->../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1376]   --->   Operation 77 'br' 'br_ln1365' <Predicate = (!icmp_ln874)> <Delay = 0.00>
+ST_7 : Operation 78 [1/1] (0.00ns)   --->   "%ret_ln1376 = ret" [../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1376]   --->   Operation 78 'ret' 'ret_ln1376' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 3.63ns
+The critical path consists of the following:
+	fifo read on port 'rows' (../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1324) [12]  (3.63 ns)
+
+ <State 2>: 6.91ns
+The critical path consists of the following:
+	'mul' operation ('mul_ln1310', ../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1310->../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1376) [19]  (6.91 ns)
+
+ <State 3>: 6.91ns
+The critical path consists of the following:
+	'mul' operation ('mul_ln1310', ../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1310->../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1376) [19]  (6.91 ns)
+
+ <State 4>: 4.95ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', ../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1329->../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1376) [24]  (0 ns)
+	'icmp' operation ('icmp_ln1329', ../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1329->../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1376) [28]  (2.47 ns)
+	'select' operation ('select_ln1319', ../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1319->../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1376) [35]  (0 ns)
+	'icmp' operation ('bLast', ../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1335->../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1376) [39]  (2.47 ns)
+
+ <State 5>: 6.89ns
+The critical path consists of the following:
+	'phi' operation ('filled.V') with incoming values : ('filled.V') [25]  (0 ns)
+	'sub' operation ('ret') [53]  (1.92 ns)
+	'sub' operation ('sub_ln546') [57]  (1.83 ns)
+	'shl' operation ('r') [59]  (0 ns)
+	'select' operation ('localbuffer.V') [62]  (3.15 ns)
+
+ <State 6>: 6.78ns
+The critical path consists of the following:
+	'load' operation ('localbuffer_V_load') on local variable 'localbuffer.V' [32]  (0 ns)
+	'or' operation ('ret') [46]  (3.15 ns)
+	fifo write on port 'ldata1' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:174) [51]  (3.63 ns)
+
+ <State 7>: 5.12ns
+The critical path consists of the following:
+	'load' operation ('localbuffer_V_load_1', /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:174) on local variable 'localbuffer.V' [79]  (0 ns)
+	fifo write on port 'ldata1' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:174) [80]  (3.63 ns)
+	blocking operation 1.49 ns on control path)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

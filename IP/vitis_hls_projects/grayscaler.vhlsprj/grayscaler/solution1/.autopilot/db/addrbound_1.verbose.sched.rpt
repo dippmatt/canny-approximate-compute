@@ -1,0 +1,130 @@
+
+
+================================================================
+== Vitis HLS Report for 'addrbound_1'
+================================================================
+* Date:           Sun Feb 25 00:53:06 2024
+
+* Version:        2020.2.2 (Build 3118627 on Tue Feb  9 05:13:49 MST 2021)
+* Project:        grayscaler
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.320 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        2|        2|  20.000 ns|  20.000 ns|    2|    2|     none|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.63>
+ST_1 : Operation 4 [1/1] (3.63ns)   --->   "%rows_read = read i22 @_ssdm_op_Read.ap_fifo.i22P0A, i22 %rows"   --->   Operation 4 'read' 'rows_read' <Predicate = true> <Delay = 3.63> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 22> <Depth = 2> <FIFO>
+ST_1 : Operation 5 [1/1] (3.63ns)   --->   "%cols_read = read i22 @_ssdm_op_Read.ap_fifo.i22P0A, i22 %cols"   --->   Operation 5 'read' 'cols_read' <Predicate = true> <Delay = 3.63> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 22> <Depth = 2> <FIFO>
+
+State 2 <SV = 1> <Delay = 6.32>
+ST_2 : Operation 6 [1/1] (6.32ns)   --->   "%mul_ln997 = mul i22 %rows_read, i22 %cols_read" [../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:997]   --->   Operation 6 'mul' 'mul_ln997' <Predicate = true> <Delay = 6.32> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 2.34>
+ST_3 : Operation 7 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i22 %cols, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str"   --->   Operation 7 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 8 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i22 %rows, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str"   --->   Operation 8 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 9 [1/1] (0.00ns)   --->   "%shl_ln = bitconcatenate i25 @_ssdm_op_BitConcatenate.i25.i22.i3, i22 %mul_ln997, i3 0" [../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:997]   --->   Operation 9 'bitconcatenate' 'shl_ln' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 10 [1/1] (2.34ns)   --->   "%add_ln997 = add i25 %shl_ln, i25 63" [../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:997]   --->   Operation 10 'add' 'add_ln997' <Predicate = true> <Delay = 2.34> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 11 [1/1] (0.00ns)   --->   "%trunc_ln = partselect i19 @_ssdm_op_PartSelect.i19.i25.i32.i32, i25 %add_ln997, i32 6, i32 24" [../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:997]   --->   Operation 11 'partselect' 'trunc_ln' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 12 [1/1] (0.00ns)   --->   "%write_ln997 = write void @_ssdm_op_Write.ap_auto.volatile.i19P0A, i19 %return_r, i19 %trunc_ln" [../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:997]   --->   Operation 12 'write' 'write_ln997' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 13 [1/1] (0.00ns)   --->   "%ret_ln301 = ret"   --->   Operation 13 'ret' 'ret_ln301' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 3.63ns
+The critical path consists of the following:
+	fifo read on port 'rows' [6]  (3.63 ns)
+
+ <State 2>: 6.32ns
+The critical path consists of the following:
+	'mul' operation ('mul_ln997', ../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:997) [8]  (6.32 ns)
+
+ <State 3>: 2.34ns
+The critical path consists of the following:
+	'add' operation ('add_ln997', ../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:997) [10]  (2.34 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

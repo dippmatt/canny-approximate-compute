@@ -1,0 +1,120 @@
+
+
+================================================================
+== Vitis HLS Report for 'last_blk_pxl_width'
+================================================================
+* Date:           Sun Feb 25 01:46:28 2024
+
+* Version:        2020.2.2 (Build 3118627 on Tue Feb  9 05:13:49 MST 2021)
+* Project:        canny_accel
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.268 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        0|        0|      0 ns|      0 ns|    0|    0|     none|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 0
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 7.26>
+ST_1 : Operation 2 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i7 %cols_bound_per_npc, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str"   --->   Operation 2 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i11 %cols, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str"   --->   Operation 3 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (3.63ns)   --->   "%cols_read = read i11 @_ssdm_op_Read.ap_fifo.i11P0A, i11 %cols" [../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:986]   --->   Operation 4 'read' 'cols_read' <Predicate = true> <Delay = 3.63> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 11> <Depth = 2> <FIFO>
+ST_1 : Operation 5 [1/1] (3.63ns)   --->   "%cols_bound_per_npc_read = read i7 @_ssdm_op_Read.ap_fifo.i7P0A, i7 %cols_bound_per_npc" [../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:986]   --->   Operation 5 'read' 'cols_bound_per_npc_read' <Predicate = true> <Delay = 3.63> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 7> <Depth = 2> <FIFO>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i7 %cols_bound_per_npc_out, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str"   --->   Operation 6 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (3.63ns)   --->   "%write_ln1376 = write void @_ssdm_op_Write.ap_fifo.i7P0A, i7 %cols_bound_per_npc_out, i7 %cols_bound_per_npc_read" [../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1376]   --->   Operation 7 'write' 'write_ln1376' <Predicate = true> <Delay = 3.63> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 7> <Depth = 2> <FIFO>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%tmp = partselect i6 @_ssdm_op_PartSelect.i6.i11.i32.i32, i11 %cols_read, i32 5, i32 10" [../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:987->../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1376]   --->   Operation 8 'partselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%zext_ln987_1 = zext i6 %tmp" [../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:987->../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1376]   --->   Operation 9 'zext' 'zext_ln987_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (1.48ns)   --->   "%icmp_ln987 = icmp_eq  i7 %zext_ln987_1, i7 %cols_bound_per_npc_read" [../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:987->../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1376]   --->   Operation 10 'icmp' 'icmp_ln987' <Predicate = true> <Delay = 1.48> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%trunc_ln989 = trunc i11 %cols_read" [../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:989->../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1376]   --->   Operation 11 'trunc' 'trunc_ln989' <Predicate = (!icmp_ln987)> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%shl_ln = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i5.i1, i5 %trunc_ln989, i1 0" [../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:989->../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1376]   --->   Operation 12 'bitconcatenate' 'shl_ln' <Predicate = (!icmp_ln987)> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%zext_ln987 = zext i6 %shl_ln" [../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:987->../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1376]   --->   Operation 13 'zext' 'zext_ln987' <Predicate = (!icmp_ln987)> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.99ns)   --->   "%select_ln987 = select i1 %icmp_ln987, i7 64, i7 %zext_ln987" [../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:987->../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1376]   --->   Operation 14 'select' 'select_ln987' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%write_ln987 = write void @_ssdm_op_Write.ap_auto.volatile.i7P0A, i7 %return_r, i7 %select_ln987" [../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:987->../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1376]   --->   Operation 15 'write' 'write_ln987' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%ret_ln1376 = ret" [../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1376]   --->   Operation 16 'ret' 'ret_ln1376' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 7.27ns
+The critical path consists of the following:
+	fifo read on port 'cols_bound_per_npc' (../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:986) [8]  (3.63 ns)
+	fifo write on port 'cols_bound_per_npc_out' (../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1376) [10]  (3.63 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

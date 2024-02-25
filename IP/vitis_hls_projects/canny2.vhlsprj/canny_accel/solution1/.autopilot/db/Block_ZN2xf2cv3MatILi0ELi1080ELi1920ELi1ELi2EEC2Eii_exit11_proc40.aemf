@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1708854390914">
+  <ports id="1" name="cols" type="PortType" coreId="49" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="2" name="rows" type="PortType" coreId="49" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="3" name="img_inp" type="PortType" coreId="49" bitwidth="64">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="4" name="img_out" type="PortType" coreId="49" bitwidth="64">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="5" name="low_threshold" type="PortType" coreId="1932408937" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="6" name="high_threshold" type="PortType" coreId="1713399662" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="7" name="in_mat_rows_out" type="PortType" lineNumber="47" originalName="in_mat.rows" fileName="../../src/canny_2/canny.cpp" fileDirectory=".." coreName="FIFO_SRL" coreId="49" contextFuncName="canny_accel" bitwidth="32" direction="DirOut" iftype="IfTypeRom">
+    <inlineStackInfo fileName="../../src/canny_2/canny.cpp" linenumber="47" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="canny_accel"/>
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="8" name="in_mat_cols_out" type="PortType" lineNumber="47" originalName="in_mat.cols" fileName="../../src/canny_2/canny.cpp" fileDirectory=".." coreName="FIFO_SRL" coreId="863515499" contextFuncName="canny_accel" bitwidth="32" direction="DirOut" iftype="IfTypeRom">
+    <inlineStackInfo fileName="../../src/canny_2/canny.cpp" linenumber="47" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="canny_accel"/>
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="9" name="dst_mat_rows_out" type="PortType" lineNumber="48" originalName="dst_mat.rows" fileName="../../src/canny_2/canny.cpp" fileDirectory=".." coreName="FIFO_SRL" coreId="828330063" contextFuncName="canny_accel" bitwidth="32" direction="DirOut" iftype="IfTypeRom">
+    <inlineStackInfo fileName="../../src/canny_2/canny.cpp" linenumber="48" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="canny_accel"/>
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="10" name="dst_mat_cols_out" type="PortType" lineNumber="48" originalName="dst_mat.cols" fileName="../../src/canny_2/canny.cpp" fileDirectory=".." coreName="FIFO_SRL" coreId="49" contextFuncName="canny_accel" bitwidth="11" direction="DirOut" iftype="IfTypeRom">
+    <inlineStackInfo fileName="../../src/canny_2/canny.cpp" linenumber="48" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="canny_accel"/>
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="11" name="img_inp_out" type="PortType" coreName="FIFO_SRL" coreId="305" bitwidth="64" direction="DirOut" iftype="IfTypeRom">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="12" name="img_out_out" type="PortType" coreName="FIFO_SRL" coreId="993" bitwidth="64" direction="DirOut" iftype="IfTypeRom">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="13" name="low_threshold_out" type="PortType" coreName="FIFO_SRL" coreId="132" bitwidth="32" direction="DirOut" iftype="IfTypeRom">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="14" name="high_threshold_out" type="PortType" coreName="FIFO_SRL" coreId="49" bitwidth="32" direction="DirOut" iftype="IfTypeRom">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <edges id="48" source_obj="//@ports.5" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="50" source_obj="//@ports.4" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="53" source_obj="//@ports.3" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="55" source_obj="//@ports.2" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="57" source_obj="//@ports.1" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="59" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.5"/>
+  <edges id="62" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@ports.10"/>
+  <edges id="63" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="65" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@ports.11"/>
+  <edges id="66" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="69" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@ports.12"/>
+  <edges id="70" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.8"/>
+  <edges id="72" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@ports.13"/>
+  <edges id="73" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.9"/>
+  <edges id="74" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.0/@node_objs.10"/>
+  <edges id="75" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="80" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@blocks.0/@node_objs.12"/>
+  <edges id="87" source_obj="//@blocks.0/@node_objs.12" sink_obj="//@blocks.0/@node_objs.13"/>
+  <edges id="90" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.0/@node_objs.14"/>
+  <edges id="91" source_obj="//@blocks.0/@node_objs.14" sink_obj="//@blocks.0/@node_objs.15"/>
+  <edges id="93" source_obj="//@blocks.0/@node_objs.15" sink_obj="//@blocks.0/@node_objs.16"/>
+  <edges id="94" source_obj="//@blocks.0/@node_objs.13" sink_obj="//@blocks.0/@node_objs.16"/>
+  <edges id="95" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@blocks.0/@node_objs.16"/>
+  <edges id="97" source_obj="//@blocks.0/@node_objs.17" sink_obj="//@ports.6"/>
+  <edges id="98" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.17"/>
+  <edges id="100" source_obj="//@blocks.0/@node_objs.18" sink_obj="//@ports.7"/>
+  <edges id="101" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.0/@node_objs.18"/>
+  <edges id="103" source_obj="//@blocks.0/@node_objs.19" sink_obj="//@ports.8"/>
+  <edges id="104" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.19"/>
+  <edges id="107" source_obj="//@blocks.0/@node_objs.20" sink_obj="//@ports.9"/>
+  <edges id="108" source_obj="//@blocks.0/@node_objs.16" sink_obj="//@blocks.0/@node_objs.20"/>
+  <blocks id="45" name="Block__ZN2xf2cv3MatILi0ELi1080ELi1920ELi1ELi2EEC2Eii.exit11_proc40" type="BlockType">
+    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="high_threshold_read" coreId="1141277392" bitwidth="32" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataInputObjs>high_threshold</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="low_threshold_read" coreId="4294967295" bitwidth="32" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataInputObjs>low_threshold</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="img_out_read" coreId="0" bitwidth="64" opcode="read" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <dataInputObjs>img_out</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="img_inp_read" coreId="1156443320" bitwidth="64" opcode="read" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <dataInputObjs>img_inp</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="rows_read" coreId="14" bitwidth="32" opcode="read" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <dataInputObjs>rows</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="cols_read" coreId="26" bitwidth="32" opcode="read" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <dataInputObjs>cols</dataInputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="img_inp_out_write_ln0" coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" opcode="write" m_display="0" m_delay="3.63" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>img_inp_out</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="img_out_out_write_ln0" coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" opcode="write" m_display="0" m_delay="3.63" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>img_out_out</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="low_threshold_out_write_ln0" coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" opcode="write" m_display="0" m_delay="3.63" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>low_threshold_out</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="32" name="high_threshold_out_write_ln0" coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" opcode="write" m_display="0" m_delay="3.63" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>high_threshold_out</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="empty" rtlName="empty_fu_163_p1" coreId="1920295712" bitwidth="11" opcode="trunc" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="add_ln41" lineNumber="41" fileName="../../src/canny_2/canny.cpp" fileDirectory=".." rtlName="add_ln41_fu_167_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="canny_accel" bitwidth="11" opcode="add" m_display="0" m_delay="1.63" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../src/canny_2/canny.cpp" linenumber="41" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="canny_accel"/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="tmp" lineNumber="41" fileName="../../src/canny_2/canny.cpp" fileDirectory=".." rtlName="tmp_fu_173_p4" coreId="0" contextFuncName="canny_accel" bitwidth="6" opcode="partselect" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../src/canny_2/canny.cpp" linenumber="41" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="canny_accel"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="npcColsNxt" lineNumber="41" originalName="npcColsNxt" fileName="../../src/canny_2/canny.cpp" fileDirectory=".." rtlName="npcColsNxt_fu_183_p3" coreId="635179240" contextFuncName="canny_accel" bitwidth="11" opcode="bitconcatenate" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../src/canny_2/canny.cpp" linenumber="41" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="canny_accel"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="empty_158" rtlName="empty_158_fu_191_p1" coreId="1811939456" bitwidth="5" opcode="trunc" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="38" name="icmp_ln42" lineNumber="42" fileName="../../src/canny_2/canny.cpp" fileDirectory=".." rtlName="icmp_ln42_fu_195_p2" opType="icmp" coreId="0" contextFuncName="canny_accel" bitwidth="1" opcode="icmp" m_display="0" m_delay="1.36" m_topoIndex="16" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../src/canny_2/canny.cpp" linenumber="42" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="canny_accel"/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="npcCols" lineNumber="42" originalName="npcCols" fileName="../../src/canny_2/canny.cpp" fileDirectory=".." rtlName="dst_mat_cols_out_din" coreName="Sel" implIndex="auto_sel" control="auto" opType="select" coreId="73" contextFuncName="canny_accel" bitwidth="11" opcode="select" m_display="0" m_delay="0.69" m_topoIndex="17" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../src/canny_2/canny.cpp" linenumber="42" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="canny_accel"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>bitconcatenate</dataInputObjs>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="in_mat_rows_out_write_ln508" lineNumber="508" fileName="../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" contextFuncName="init" opcode="write" m_display="0" m_delay="3.63" m_topoIndex="18" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" linenumber="508" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="init"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>in_mat_rows_out</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="41" name="in_mat_cols_out_write_ln509" lineNumber="509" fileName="../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" contextFuncName="init" opcode="write" m_display="0" m_delay="3.63" m_topoIndex="19" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" linenumber="509" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="init"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>in_mat_cols_out</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="42" name="dst_mat_rows_out_write_ln508" lineNumber="508" fileName="../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" contextFuncName="init" opcode="write" m_display="0" m_delay="3.63" m_topoIndex="20" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" linenumber="508" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="init"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>dst_mat_rows_out</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="dst_mat_cols_out_write_ln509" lineNumber="509" fileName="../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" contextFuncName="init" opcode="write" m_display="0" m_delay="3.63" m_topoIndex="21" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" linenumber="509" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="init"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>dst_mat_cols_out</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="_ln0" coreId="0" opcode="ret" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1"/>
+    <fileValidLineNumbers fileName="../../src/canny_2/canny.cpp">
+      <validLinenumbers>41</validLinenumbers>
+      <validLinenumbers>42</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp">
+      <validLinenumbers>508</validLinenumbers>
+      <validLinenumbers>509</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <expressionNodes realName="add_ln41_fu_167">
+    <nodeIds>34</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="empty_fu_163">
+    <nodeIds>33</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln42_fu_195">
+    <nodeIds>38</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="npcCols_fu_201">
+    <nodeIds>39</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_fu_173">
+    <nodeIds>35</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="empty_158_fu_191">
+    <nodeIds>37</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="npcColsNxt_fu_183">
+    <nodeIds>36</nodeIds>
+  </expressionNodes>
+  <ioNodes realName="low_threshold_read_read_fu_70">
+    <nodeIds>16</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln0_write_fu_108">
+    <nodeIds>28</nodeIds>
+  </ioNodes>
+  <ioNodes realName="high_threshold_read_read_fu_64">
+    <nodeIds>15</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln508_write_fu_148">
+    <nodeIds>42</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln509_write_fu_156">
+    <nodeIds>43</nodeIds>
+  </ioNodes>
+  <ioNodes realName="cols_read_read_fu_94">
+    <nodeIds>20</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln508_write_fu_132">
+    <nodeIds>40</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln0_write_fu_100">
+    <nodeIds>26</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln509_write_fu_140">
+    <nodeIds>41</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln0_write_fu_124">
+    <nodeIds>32</nodeIds>
+  </ioNodes>
+  <ioNodes realName="img_out_read_read_fu_76">
+    <nodeIds>17</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln0_write_fu_116">
+    <nodeIds>30</nodeIds>
+  </ioNodes>
+  <ioNodes realName="img_inp_read_read_fu_82">
+    <nodeIds>18</nodeIds>
+  </ioNodes>
+  <ioNodes realName="rows_read_read_fu_88">
+    <nodeIds>19</nodeIds>
+  </ioNodes>
+  <ioPorts name="cols">
+    <contents name="read">
+      <nodeIds>20</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="dst_mat_cols_out">
+    <contents name="write">
+      <nodeIds>43</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="dst_mat_rows_out">
+    <contents name="write">
+      <nodeIds>42</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="high_threshold">
+    <contents name="read">
+      <nodeIds>15</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="high_threshold_out">
+    <contents name="write">
+      <nodeIds>32</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="img_inp">
+    <contents name="read">
+      <nodeIds>18</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="img_inp_out">
+    <contents name="write">
+      <nodeIds>26</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="img_out">
+    <contents name="read">
+      <nodeIds>17</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="img_out_out">
+    <contents name="write">
+      <nodeIds>28</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="in_mat_cols_out">
+    <contents name="write">
+      <nodeIds>41</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="in_mat_rows_out">
+    <contents name="write">
+      <nodeIds>40</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="low_threshold">
+    <contents name="read">
+      <nodeIds>16</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="low_threshold_out">
+    <contents name="write">
+      <nodeIds>30</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="rows">
+    <contents name="read">
+      <nodeIds>19</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+    </states>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="Block_ZN2xf2cv3MatILi0ELi1080ELi1920ELi1ELi2EEC2Eii_exit11_proc40" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>45</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

@@ -1,0 +1,308 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'xFSuppression3x3_2_0_8_1080_1920_3_0_12_1_5_1_0_1920_5760_2_s'" level="0">
+<item name = "Date">Sun Feb 25 01:46:34 2024
+</item>
+<item name = "Version">2020.2.2 (Build 3118627 on Tue Feb  9 05:13:49 MST 2021)</item>
+<item name = "Project">canny_accel</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.300 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">1923, 2086323, 19.230 us, 20.863 ms, 1923, 2086323, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_xFFindmax3x3_3_0_12_s_fu_538">xFFindmax3x3_3_0_12_s, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="l00_buf_V_2_xfExtractPixels_1_5_3_s_fu_564">xfExtractPixels_1_5_3_s, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="l10_buf_V_2_xfExtractPixels_1_5_3_s_fu_569">xfExtractPixels_1_5_3_s, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="l20_buf_V_2_xfExtractPixels_1_5_3_s_fu_574">xfExtractPixels_1_5_3_s, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="angle_buf_V_2_xfExtractPixels_1_1_0_s_fu_579">xfExtractPixels_1_1_0_s, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- bufColLoop">1920, 1920, 2, 1, 1, 1920, yes</column>
+<column name="- rowLoop">2084400, 2084400, 1930, -, -, 1080, no</column>
+<column name=" + colLoop1">1925, 1925, 7, 1, 1, 1920, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 286, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, 17, 307, -</column>
+<column name="Memory">8, -, 0, 0, -</column>
+<column name="Multiplexer">-, -, -, 639, -</column>
+<column name="Register">-, -, 601, 64, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
+<specialColumn name="Utilization (%)">2, 0, ~0, 2, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="mux_32_16_1_1_U157">mux_32_16_1_1, 0, 0, 0, 14, 0</column>
+<column name="mux_32_16_1_1_U158">mux_32_16_1_1, 0, 0, 0, 14, 0</column>
+<column name="mux_32_16_1_1_U159">mux_32_16_1_1, 0, 0, 0, 14, 0</column>
+<column name="grp_xFFindmax3x3_3_0_12_s_fu_538">xFFindmax3x3_3_0_12_s, 0, 0, 17, 265, 0</column>
+<column name="angle_buf_V_2_xfExtractPixels_1_1_0_s_fu_579">xfExtractPixels_1_1_0_s, 0, 0, 0, 0, 0</column>
+<column name="l00_buf_V_2_xfExtractPixels_1_5_3_s_fu_564">xfExtractPixels_1_5_3_s, 0, 0, 0, 0, 0</column>
+<column name="l10_buf_V_2_xfExtractPixels_1_5_3_s_fu_569">xfExtractPixels_1_5_3_s, 0, 0, 0, 0, 0</column>
+<column name="l20_buf_V_2_xfExtractPixels_1_5_3_s_fu_574">xfExtractPixels_1_5_3_s, 0, 0, 0, 0, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="angle_V_0_U">xFSuppression3x3_2_0_8_1080_1920_3_0_12_1_5_1_0_1920_5760_2_s_angle_V_0, 1, 0, 0, 0, 1920, 8, 1, 15360</column>
+<column name="angle_V_1_U">xFSuppression3x3_2_0_8_1080_1920_3_0_12_1_5_1_0_1920_5760_2_s_angle_V_0, 1, 0, 0, 0, 1920, 8, 1, 15360</column>
+<column name="buf_V_0_U">xFSuppression3x3_2_0_8_1080_1920_3_0_12_1_5_1_0_1920_5760_2_s_buf_V_0, 2, 0, 0, 0, 1920, 16, 1, 30720</column>
+<column name="buf_V_1_U">xFSuppression3x3_2_0_8_1080_1920_3_0_12_1_5_1_0_1920_5760_2_s_buf_V_0, 2, 0, 0, 0, 1920, 16, 1, 30720</column>
+<column name="buf_V_2_U">xFSuppression3x3_2_0_8_1080_1920_3_0_12_1_5_1_0_1920_5760_2_s_buf_V_0, 2, 0, 0, 0, 1920, 16, 1, 30720</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="col_V_1_fu_598_p2">+, 0, 0, 12, 11, 1</column>
+<column name="col_V_3_fu_736_p2">+, 0, 0, 12, 11, 1</column>
+<column name="op2_assign_fu_617_p2">+, 0, 0, 12, 12, 1</column>
+<column name="read_ind_V_1_fu_837_p2">+, 0, 0, 14, 13, 1</column>
+<column name="row_V_1_fu_825_p2">+, 0, 0, 12, 12, 1</column>
+<column name="row_ind_V_1_fu_831_p2">+, 0, 0, 14, 13, 1</column>
+<column name="write_ind_V_1_fu_843_p2">+, 0, 0, 14, 13, 1</column>
+<column name="ap_block_pp0_stage0_11001">and, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state12_pp1_stage0_iter6">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_256">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_831">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_838">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op132_read_state7">and, 0, 0, 2, 1, 1</column>
+<column name="cmp_i_i147_i_i_fu_719_p2">icmp, 0, 0, 12, 12, 12</column>
+<column name="icmp_ln206_fu_742_p2">icmp, 0, 0, 11, 11, 11</column>
+<column name="icmp_ln343_fu_604_p2">icmp, 0, 0, 11, 11, 11</column>
+<column name="icmp_ln360_fu_639_p2">icmp, 0, 0, 12, 12, 12</column>
+<column name="icmp_ln870_1_fu_849_p2">icmp, 0, 0, 12, 13, 2</column>
+<column name="icmp_ln870_2_fu_863_p2">icmp, 0, 0, 12, 13, 2</column>
+<column name="icmp_ln870_3_fu_877_p2">icmp, 0, 0, 12, 13, 2</column>
+<column name="icmp_ln870_4_fu_772_p2">icmp, 0, 0, 11, 11, 1</column>
+<column name="icmp_ln870_fu_674_p2">icmp, 0, 0, 12, 13, 1</column>
+<column name="icmp_ln878_fu_633_p2">icmp, 0, 0, 11, 11, 1</column>
+<column name="ap_block_pp1_stage0_01001">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state3_pp0_stage0_iter1">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state7_pp1_stage0_iter1">or, 0, 0, 2, 1, 1</column>
+<column name="angle_buf_V_2_xfExtractPixels_1_1_0_s_fu_579_p_read1">select, 0, 0, 8, 1, 8</column>
+<column name="bottom_1_fu_680_p3">select, 0, 0, 2, 1, 1</column>
+<column name="mid_1_fu_688_p3">select, 0, 0, 2, 1, 1</column>
+<column name="read_ind_V_2_fu_869_p3">select, 0, 0, 13, 1, 1</column>
+<column name="row_ind_V_2_fu_855_p3">select, 0, 0, 13, 1, 1</column>
+<column name="top_1_fu_696_p3">select, 0, 0, 3, 1, 3</column>
+<column name="write_ind_V_2_fu_883_p3">select, 0, 0, 13, 1, 1</column>
+<column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
+<column name="ap_enable_pp1">xor, 0, 0, 2, 1, 2</column>
+<column name="ap_enable_reg_pp0_iter1">xor, 0, 0, 2, 2, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="agg_tmp109_0_i_reg_525">9, 2, 16, 32</column>
+<column name="agg_tmp12_i_i_0_i_reg_488">9, 2, 16, 32</column>
+<column name="agg_tmp20_i_i_0_i_reg_475">9, 2, 16, 32</column>
+<column name="agg_tmp23_i_i_0_i_reg_463">9, 2, 16, 32</column>
+<column name="agg_tmp2_i_i_0_i_reg_513">9, 2, 16, 32</column>
+<column name="agg_tmp31_i_i_0_i_reg_451">9, 2, 8, 16</column>
+<column name="agg_tmp9_i_i_0_i_reg_500">9, 2, 16, 32</column>
+<column name="angle_V_0_address0">20, 4, 11, 44</column>
+<column name="angle_V_0_d0">14, 3, 8, 24</column>
+<column name="angle_V_1_address0">14, 3, 11, 33</column>
+<column name="angle_V_1_d0">14, 3, 8, 24</column>
+<column name="ap_NS_fsm">48, 9, 1, 9</column>
+<column name="ap_done">9, 2, 1, 2</column>
+<column name="ap_enable_reg_pp0_iter1">14, 3, 1, 3</column>
+<column name="ap_enable_reg_pp1_iter4">9, 2, 1, 2</column>
+<column name="ap_enable_reg_pp1_iter6">9, 2, 1, 2</column>
+<column name="ap_phi_mux_agg_tmp109_0_i_phi_fu_529_p4">9, 2, 16, 32</column>
+<column name="ap_phi_mux_agg_tmp20_i_i_0_i_phi_fu_479_p4">9, 2, 16, 32</column>
+<column name="ap_phi_mux_agg_tmp31_i_i_0_i_phi_fu_455_p4">9, 2, 8, 16</column>
+<column name="ap_phi_mux_agg_tmp9_i_i_0_i_phi_fu_504_p4">9, 2, 16, 32</column>
+<column name="ap_phi_mux_col_V_2_phi_fu_443_p4">9, 2, 11, 22</column>
+<column name="bottom_fu_128">14, 3, 2, 6</column>
+<column name="buf_V_0_address0">20, 4, 11, 44</column>
+<column name="buf_V_0_d0">14, 3, 16, 48</column>
+<column name="buf_V_1_address0">20, 4, 11, 44</column>
+<column name="buf_V_1_d0">14, 3, 16, 48</column>
+<column name="buf_V_2_address0">14, 3, 11, 33</column>
+<column name="buf_V_2_d0">14, 3, 16, 48</column>
+<column name="col_V_2_reg_439">9, 2, 11, 22</column>
+<column name="col_V_reg_380">9, 2, 11, 22</column>
+<column name="grp_xFFindmax3x3_3_0_12_s_fu_538_angle">14, 3, 8, 24</column>
+<column name="grp_xFFindmax3x3_3_0_12_s_fu_538_p_i00">14, 3, 16, 48</column>
+<column name="grp_xFFindmax3x3_3_0_12_s_fu_538_p_i02">14, 3, 16, 48</column>
+<column name="grp_xFFindmax3x3_3_0_12_s_fu_538_p_i10">14, 3, 16, 48</column>
+<column name="grp_xFFindmax3x3_3_0_12_s_fu_538_p_i12">14, 3, 16, 48</column>
+<column name="grp_xFFindmax3x3_3_0_12_s_fu_538_p_i20">14, 3, 16, 48</column>
+<column name="grp_xFFindmax3x3_3_0_12_s_fu_538_p_i22">14, 3, 16, 48</column>
+<column name="high_threshold_blk_n">9, 2, 1, 2</column>
+<column name="imgheight_blk_n">9, 2, 1, 2</column>
+<column name="imgheight_out_blk_n">9, 2, 1, 2</column>
+<column name="imgwidth_blk_n">9, 2, 1, 2</column>
+<column name="imgwidth_out_blk_n">9, 2, 1, 2</column>
+<column name="low_threshold_blk_n">9, 2, 1, 2</column>
+<column name="magnitude_mat_48_blk_n">9, 2, 1, 2</column>
+<column name="mid_fu_132">14, 3, 2, 6</column>
+<column name="nms_mat_410_blk_n">9, 2, 1, 2</column>
+<column name="phase_mat_49_blk_n">9, 2, 1, 2</column>
+<column name="read_ind_V_reg_415">9, 2, 13, 26</column>
+<column name="real_start">9, 2, 1, 2</column>
+<column name="row_V_reg_391">9, 2, 12, 24</column>
+<column name="row_ind_V_reg_427">9, 2, 13, 26</column>
+<column name="top_fu_136">14, 3, 2, 6</column>
+<column name="write_ind_V_reg_403">9, 2, 13, 26</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="agg_tmp109_0_i_reg_525">16, 0, 16, 0</column>
+<column name="agg_tmp12_i_i_0_i_reg_488">16, 0, 16, 0</column>
+<column name="agg_tmp12_i_i_0_i_reg_488_pp1_iter4_reg">16, 0, 16, 0</column>
+<column name="agg_tmp20_i_i_0_i_reg_475">16, 0, 16, 0</column>
+<column name="agg_tmp23_i_i_0_i_reg_463">16, 0, 16, 0</column>
+<column name="agg_tmp23_i_i_0_i_reg_463_pp1_iter4_reg">16, 0, 16, 0</column>
+<column name="agg_tmp2_i_i_0_i_reg_513">16, 0, 16, 0</column>
+<column name="agg_tmp2_i_i_0_i_reg_513_pp1_iter4_reg">16, 0, 16, 0</column>
+<column name="agg_tmp31_i_i_0_i_reg_451">8, 0, 8, 0</column>
+<column name="agg_tmp9_i_i_0_i_reg_500">16, 0, 16, 0</column>
+<column name="angle_buf_V_2_reg_1048">8, 0, 8, 0</column>
+<column name="ap_CS_fsm">8, 0, 8, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter0">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp1_iter0">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp1_iter1">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp1_iter2">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp1_iter3">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp1_iter4">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp1_iter5">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp1_iter6">1, 0, 1, 0</column>
+<column name="bottom_fu_128">2, 0, 2, 0</column>
+<column name="cmp_i_i147_i_i_reg_969">1, 0, 1, 0</column>
+<column name="col_V_2_reg_439">11, 0, 11, 0</column>
+<column name="col_V_2_reg_439_pp1_iter1_reg">11, 0, 11, 0</column>
+<column name="col_V_3_reg_986">11, 0, 11, 0</column>
+<column name="col_V_reg_380">11, 0, 11, 0</column>
+<column name="high_threshold_read_reg_896">8, 0, 8, 0</column>
+<column name="icmp_ln206_reg_991">1, 0, 1, 0</column>
+<column name="icmp_ln343_reg_917">1, 0, 1, 0</column>
+<column name="icmp_ln870_4_reg_1016">1, 0, 1, 0</column>
+<column name="icmp_ln878_reg_937">1, 0, 1, 0</column>
+<column name="imgheight_cast2_i_reg_927">11, 0, 12, 1</column>
+<column name="imgheight_read_reg_901">11, 0, 11, 0</column>
+<column name="imgwidth_read_reg_906">11, 0, 11, 0</column>
+<column name="l00_buf_V_2_reg_1020">16, 0, 16, 0</column>
+<column name="l10_buf_V_2_reg_1026">16, 0, 16, 0</column>
+<column name="l20_buf_V_2_reg_1032">16, 0, 16, 0</column>
+<column name="low_threshold_read_reg_891">8, 0, 8, 0</column>
+<column name="mid_fu_132">2, 0, 2, 0</column>
+<column name="op2_assign_reg_932">12, 0, 12, 0</column>
+<column name="read_ind_V_2_reg_1063">13, 0, 13, 0</column>
+<column name="read_ind_V_reg_415">13, 0, 13, 0</column>
+<column name="reg_593">2, 0, 2, 0</column>
+<column name="row_V_1_reg_1053">12, 0, 12, 0</column>
+<column name="row_V_reg_391">12, 0, 12, 0</column>
+<column name="row_ind_V_2_reg_1058">13, 0, 13, 0</column>
+<column name="row_ind_V_reg_427">13, 0, 13, 0</column>
+<column name="start_once_reg">1, 0, 1, 0</column>
+<column name="top_fu_136">2, 0, 2, 0</column>
+<column name="trunc_ln213_reg_973">2, 0, 2, 0</column>
+<column name="trunc_ln214_reg_977">1, 0, 1, 0</column>
+<column name="trunc_ln230_reg_981">1, 0, 1, 0</column>
+<column name="write_ind_V_2_reg_1068">13, 0, 13, 0</column>
+<column name="write_ind_V_reg_403">13, 0, 13, 0</column>
+<column name="zext_ln221_reg_995">11, 0, 64, 53</column>
+<column name="zext_ln534_reg_921">11, 0, 64, 53</column>
+<column name="icmp_ln206_reg_991">64, 32, 1, 0</column>
+<column name="icmp_ln870_4_reg_1016">64, 32, 1, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, xFSuppression3x3&lt;2, 0, 8, 1080, 1920, 3, 0, 12, 1, 5, 1, 0, 1920, 5760, 2&gt;, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, xFSuppression3x3&lt;2, 0, 8, 1080, 1920, 3, 0, 12, 1, 5, 1, 0, 1920, 5760, 2&gt;, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, xFSuppression3x3&lt;2, 0, 8, 1080, 1920, 3, 0, 12, 1, 5, 1, 0, 1920, 5760, 2&gt;, return value</column>
+<column name="start_full_n">in, 1, ap_ctrl_hs, xFSuppression3x3&lt;2, 0, 8, 1080, 1920, 3, 0, 12, 1, 5, 1, 0, 1920, 5760, 2&gt;, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, xFSuppression3x3&lt;2, 0, 8, 1080, 1920, 3, 0, 12, 1, 5, 1, 0, 1920, 5760, 2&gt;, return value</column>
+<column name="ap_continue">in, 1, ap_ctrl_hs, xFSuppression3x3&lt;2, 0, 8, 1080, 1920, 3, 0, 12, 1, 5, 1, 0, 1920, 5760, 2&gt;, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, xFSuppression3x3&lt;2, 0, 8, 1080, 1920, 3, 0, 12, 1, 5, 1, 0, 1920, 5760, 2&gt;, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, xFSuppression3x3&lt;2, 0, 8, 1080, 1920, 3, 0, 12, 1, 5, 1, 0, 1920, 5760, 2&gt;, return value</column>
+<column name="start_out">out, 1, ap_ctrl_hs, xFSuppression3x3&lt;2, 0, 8, 1080, 1920, 3, 0, 12, 1, 5, 1, 0, 1920, 5760, 2&gt;, return value</column>
+<column name="start_write">out, 1, ap_ctrl_hs, xFSuppression3x3&lt;2, 0, 8, 1080, 1920, 3, 0, 12, 1, 5, 1, 0, 1920, 5760, 2&gt;, return value</column>
+<column name="magnitude_mat_48_dout">in, 16, ap_fifo, magnitude_mat_48, pointer</column>
+<column name="magnitude_mat_48_empty_n">in, 1, ap_fifo, magnitude_mat_48, pointer</column>
+<column name="magnitude_mat_48_read">out, 1, ap_fifo, magnitude_mat_48, pointer</column>
+<column name="phase_mat_49_dout">in, 8, ap_fifo, phase_mat_49, pointer</column>
+<column name="phase_mat_49_empty_n">in, 1, ap_fifo, phase_mat_49, pointer</column>
+<column name="phase_mat_49_read">out, 1, ap_fifo, phase_mat_49, pointer</column>
+<column name="nms_mat_410_din">out, 2, ap_fifo, nms_mat_410, pointer</column>
+<column name="nms_mat_410_full_n">in, 1, ap_fifo, nms_mat_410, pointer</column>
+<column name="nms_mat_410_write">out, 1, ap_fifo, nms_mat_410, pointer</column>
+<column name="low_threshold_dout">in, 8, ap_fifo, low_threshold, pointer</column>
+<column name="low_threshold_empty_n">in, 1, ap_fifo, low_threshold, pointer</column>
+<column name="low_threshold_read">out, 1, ap_fifo, low_threshold, pointer</column>
+<column name="high_threshold_dout">in, 8, ap_fifo, high_threshold, pointer</column>
+<column name="high_threshold_empty_n">in, 1, ap_fifo, high_threshold, pointer</column>
+<column name="high_threshold_read">out, 1, ap_fifo, high_threshold, pointer</column>
+<column name="imgheight_dout">in, 11, ap_fifo, imgheight, pointer</column>
+<column name="imgheight_empty_n">in, 1, ap_fifo, imgheight, pointer</column>
+<column name="imgheight_read">out, 1, ap_fifo, imgheight, pointer</column>
+<column name="imgwidth_dout">in, 11, ap_fifo, imgwidth, pointer</column>
+<column name="imgwidth_empty_n">in, 1, ap_fifo, imgwidth, pointer</column>
+<column name="imgwidth_read">out, 1, ap_fifo, imgwidth, pointer</column>
+<column name="imgheight_out_din">out, 11, ap_fifo, imgheight_out, pointer</column>
+<column name="imgheight_out_full_n">in, 1, ap_fifo, imgheight_out, pointer</column>
+<column name="imgheight_out_write">out, 1, ap_fifo, imgheight_out, pointer</column>
+<column name="imgwidth_out_din">out, 11, ap_fifo, imgwidth_out, pointer</column>
+<column name="imgwidth_out_full_n">in, 1, ap_fifo, imgwidth_out, pointer</column>
+<column name="imgwidth_out_write">out, 1, ap_fifo, imgwidth_out, pointer</column>
+</table>
+</item>
+</section>
+</profile>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1708854397026">
+  <ports id="1" name="return_r" type="PortType" coreId="52" bitwidth="17" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="2" name="rows" type="PortType" coreName="FIFO_SRL" coreId="52" bitwidth="22" iftype="IfTypeRom">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="3" name="cols" type="PortType" coreName="FIFO_SRL" coreId="49" bitwidth="11" iftype="IfTypeRom">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <edges id="18" source_obj="//@ports.1" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="21" source_obj="//@ports.2" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="22" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="23" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="24" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="27" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="30" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.5"/>
+  <edges id="35" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="42" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@ports.0"/>
+  <edges id="43" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.0/@node_objs.7"/>
+  <blocks id="15" name="addrbound" type="BlockType">
+    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="rows_read" originalName="rows" coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" bitwidth="22" opcode="read" m_display="0" m_delay="3.63" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataInputObjs>rows</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="cols_read" lineNumber="996" originalName="cols" fileName="../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" contextFuncName="addrbound" bitwidth="11" opcode="read" m_display="0" m_delay="3.63" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" linenumber="996" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="addrbound"/>
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int.h" linenumber="301" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="ap_uint"/>
+      <dataInputObjs>cols</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="zext_ln997" lineNumber="997" fileName="../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" fileDirectory=".." rtlName="grp_fu_85_p10" coreId="145" contextFuncName="addrbound" bitwidth="22" opcode="zext" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" linenumber="997" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="addrbound"/>
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int.h" linenumber="301" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="ap_uint"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="mul_ln997" lineNumber="997" fileName="../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" fileDirectory=".." rtlName="mul_mul_22s_11ns_22_4_1_U233" coreName="DSP48" implIndex="dsp" control="auto" opType="mul" coreId="119" contextFuncName="addrbound" bitwidth="22" opcode="mul" nodeLatency="3" m_display="0" m_delay="2.15" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" linenumber="997" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="addrbound"/>
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int.h" linenumber="301" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="ap_uint"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>bitconcatenate</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="shl_ln" lineNumber="997" fileName="../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" fileDirectory=".." rtlName="shl_ln_fu_61_p3" coreId="161" contextFuncName="addrbound" bitwidth="23" opcode="bitconcatenate" nodeLabel="3.0" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" linenumber="997" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="addrbound"/>
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int.h" linenumber="301" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="ap_uint"/>
+      <dataInputObjs>mul</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="add_ln997" lineNumber="997" fileName="../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" fileDirectory=".." rtlName="add_ln997_fu_68_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="addrbound" bitwidth="23" opcode="add" nodeLabel="3.0" m_display="0" m_delay="2.28" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" linenumber="997" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="addrbound"/>
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int.h" linenumber="301" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="ap_uint"/>
+      <dataInputObjs>bitconcatenate</dataInputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="trunc_ln" lineNumber="997" fileName="../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" fileDirectory=".." rtlName="return_r_preg" coreId="0" contextFuncName="addrbound" bitwidth="17" opcode="partselect" nodeLabel="3.0" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" linenumber="997" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="addrbound"/>
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int.h" linenumber="301" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="ap_uint"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="return_r_write_ln997" lineNumber="997" fileName="../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" fileDirectory=".." coreId="13" contextFuncName="addrbound" opcode="write" nodeLabel="3.0" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" linenumber="997" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="addrbound"/>
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int.h" linenumber="301" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="ap_uint"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>return_r</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="_ln301" lineNumber="301" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int.h" fileDirectory=".." coreId="0" contextFuncName="ap_uint" opcode="ret" nodeLabel="3.0" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int.h" linenumber="301" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="ap_uint"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int.h">
+      <validLinenumbers>301</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp">
+      <validLinenumbers>996</validLinenumbers>
+      <validLinenumbers>997</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <regnodes realName="rows_read_reg_92">
+    <nodeIds>6</nodeIds>
+  </regnodes>
+  <regnodes realName="zext_ln997_reg_97">
+    <nodeIds>8</nodeIds>
+  </regnodes>
+  <expressionNodes realName="shl_ln_fu_61">
+    <nodeIds>10</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln_fu_74">
+    <nodeIds>12</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln997_fu_57">
+    <nodeIds>8</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln997_fu_68">
+    <nodeIds>11</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_fu_85">
+    <nodeIds>9</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="cols_read_read_fu_44">
+    <nodeIds>7</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln997_write_fu_50">
+    <nodeIds>13</nodeIds>
+  </ioNodes>
+  <ioNodes realName="rows_read_read_fu_38">
+    <nodeIds>6</nodeIds>
+  </ioNodes>
+  <ioPorts name="cols">
+    <contents name="read">
+      <nodeIds>7</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="return_r">
+    <contents name="write">
+      <nodeIds>13</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="rows">
+    <contents name="read">
+      <nodeIds>6</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="4" latency="4"/>
+    </states>
+    <states id="2">
+      <operations id="9" stage="3" latency="4"/>
+    </states>
+    <states id="3">
+      <operations id="9" stage="2" latency="4"/>
+    </states>
+    <states id="4">
+      <operations id="4" stage="1" latency="1"/>
+      <operations id="5" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="4"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="addrbound" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="3" mMaxLatency="3">
+      <basicBlocks>15</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>
