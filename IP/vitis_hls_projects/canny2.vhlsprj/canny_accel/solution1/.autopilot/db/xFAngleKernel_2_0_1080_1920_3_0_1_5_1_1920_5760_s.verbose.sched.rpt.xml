@@ -1,0 +1,47 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'xFAngleKernel_2_0_1080_1920_3_0_1_5_1_1920_5760_s'" level="0">
+<item name = "Date">Sun Feb 25 01:46:24 2024
+</item>
+<item name = "Version">2020.2.2 (Build 3118627 on Tue Feb  9 05:13:49 MST 2021)</item>
+<item name = "Project">canny_accel</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.251 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">2081161, 2081161, 20.812 ms, 20.812 ms, 2081161, 2081161, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- rowLoop">2081160, 2081160, 1927, -, -, 1080, no</column>
+<column name=" + colLoop">1924, 1924, 6, 1, 1, 1920, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

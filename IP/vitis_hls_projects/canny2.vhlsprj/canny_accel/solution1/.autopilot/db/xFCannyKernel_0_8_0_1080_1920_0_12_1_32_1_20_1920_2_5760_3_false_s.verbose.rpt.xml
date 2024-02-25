@@ -1,0 +1,169 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'xFCannyKernel_0_8_0_1080_1920_0_12_1_32_1_20_1920_2_5760_3_false_s'" level="0">
+<item name = "Date">Sun Feb 25 01:46:35 2024
+</item>
+<item name = "Version">2020.2.2 (Build 3118627 on Tue Feb  9 05:13:49 MST 2021)</item>
+<item name = "Project">canny_accel</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.300 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">4161741, 4163661, 41.617 ms, 41.637 ms, 2091025, 2091025, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="xFPackNMS_8_8_1080_1920_12_12_1_32_0_20_U0">xFPackNMS_8_8_1080_1920_12_12_1_32_0_20_s, 2077921, 2077921, 20.779 ms, 20.779 ms, 2077921, 2077921, none</column>
+<column name="xFSobel_0_2_1080_1920_0_3_1_1_5_3_false_U0">xFSobel_0_2_1080_1920_0_3_1_1_5_3_false_s, 2091024, 2091024, 20.910 ms, 20.910 ms, 2091024, 2091024, none</column>
+<column name="xFSuppression3x3_2_0_8_1080_1920_3_0_12_1_5_1_0_1920_5760_2_U0">xFSuppression3x3_2_0_8_1080_1920_3_0_12_1_5_1_0_1920_5760_2_s, 1923, 2086323, 19.230 us, 20.863 ms, 1923, 2086323, none</column>
+<column name="xFAverageGaussianMask3x3_0_0_1080_1920_0_1_1_1920_U0">xFAverageGaussianMask3x3_0_0_1080_1920_0_1_1_1920_s, 1923, 2084163, 19.230 us, 20.842 ms, 1923, 2084163, none</column>
+<column name="xFAngleKernel_2_0_1080_1920_3_0_1_5_1_1920_5760_U0">xFAngleKernel_2_0_1080_1920_3_0_1_5_1_1920_5760_s, 2081161, 2081161, 20.812 ms, 20.812 ms, 2081161, 2081161, none</column>
+<column name="xFMagnitudeKernel_2_2_1080_1920_3_3_1_5_5_1920_2_U0">xFMagnitudeKernel_2_2_1080_1920_3_3_1_5_5_1920_2_s, 2077921, 2077921, 20.779 ms, 20.779 ms, 2077921, 2077921, none</column>
+<column name="xFDuplicate_rows_2_1080_1920_3_1_5_1920_U0">xFDuplicate_rows_2_1080_1920_3_1_5_1920_s, 2076841, 2076841, 20.768 ms, 20.768 ms, 2076841, 2076841, none</column>
+<column name="xFCannyKernel_0_8_0_1080_1920_0_12_1_32_1_20_1920_2_5760_3_false_entry21_U0">xFCannyKernel_0_8_0_1080_1920_0_12_1_32_1_20_1920_2_5760_3_false_entry21, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+<column name="xFCannyKernel_0_8_0_1080_1920_0_12_1_32_1_20_1920_2_5760_3_false_Block_ZN2xf2cv3MatILi0ELi1080ELi1920ELi1ELi2EEC2Eii_exit15_proc_U0">xFCannyKernel_0_8_0_1080_1920_0_12_1_32_1_20_1920_2_5760_3_false_Block_ZN2xf2cv3MatILi0ELi1080ELi1920ELi1ELi2EEC2Eii_exit15_proc, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 4, -</column>
+<column name="FIFO">4, -, 2836, 1916, -</column>
+<column name="Instance">14, 1, 4787, 7213, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, -, -</column>
+<column name="Register">-, -, -, -, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
+<specialColumn name="Utilization (%)">6, ~0, 7, 17, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="xFAngleKernel_2_0_1080_1920_3_0_1_5_1_1920_5760_U0">xFAngleKernel_2_0_1080_1920_3_0_1_5_1_1920_5760_s, 0, 1, 454, 473, 0</column>
+<column name="xFAverageGaussianMask3x3_0_0_1080_1920_0_1_1_1920_U0">xFAverageGaussianMask3x3_0_0_1080_1920_0_1_1_1920_s, 3, 0, 438, 916, 0</column>
+<column name="xFCannyKernel_0_8_0_1080_1920_0_12_1_32_1_20_1920_2_5760_3_false_Block_ZN2xf2cv3MatILi0ELi1080ELi1920ELi1ELi2EEC2Eii_exit15_proc_U0">xFCannyKernel_0_8_0_1080_1920_0_12_1_32_1_20_1920_2_5760_3_false_Block_ZN2xf2cv3MatILi0ELi1080ELi1920ELi1ELi2EEC2Eii_exit15_proc, 0, 0, 3, 56, 0</column>
+<column name="xFCannyKernel_0_8_0_1080_1920_0_12_1_32_1_20_1920_2_5760_3_false_entry21_U0">xFCannyKernel_0_8_0_1080_1920_0_12_1_32_1_20_1920_2_5760_3_false_entry21, 0, 0, 3, 74, 0</column>
+<column name="xFDuplicate_rows_2_1080_1920_3_1_5_1920_U0">xFDuplicate_rows_2_1080_1920_3_1_5_1920_s, 0, 0, 64, 239, 0</column>
+<column name="xFMagnitudeKernel_2_2_1080_1920_3_3_1_5_5_1920_2_U0">xFMagnitudeKernel_2_2_1080_1920_3_3_1_5_5_1920_2_s, 0, 0, 129, 274, 0</column>
+<column name="xFPackNMS_8_8_1080_1920_12_12_1_32_0_20_U0">xFPackNMS_8_8_1080_1920_12_12_1_32_0_20_s, 0, 0, 2252, 2518, 0</column>
+<column name="xFSobel_0_2_1080_1920_0_3_1_1_5_3_false_U0">xFSobel_0_2_1080_1920_0_3_1_1_5_3_false_s, 3, 0, 826, 1367, 0</column>
+<column name="xFSuppression3x3_2_0_8_1080_1920_3_0_12_1_5_1_0_1920_5760_2_U0">xFSuppression3x3_2_0_8_1080_1920_3_0_12_1_5_1_0_1920_5760_2_s, 8, 0, 618, 1296, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+<column name="gaussian_mat_data_U">0, 99, 0, -, 2, 8, 16</column>
+<column name="gradx1_mat_data_U">0, 99, 0, -, 2, 16, 32</column>
+<column name="gradx2_mat_data_U">0, 99, 0, -, 2, 16, 32</column>
+<column name="gradx_mat_data_U">0, 99, 0, -, 2, 16, 32</column>
+<column name="grady1_mat_data_U">0, 99, 0, -, 2, 16, 32</column>
+<column name="grady2_mat_data_U">0, 99, 0, -, 2, 16, 32</column>
+<column name="grady_mat_data_U">0, 99, 0, -, 2, 16, 32</column>
+<column name="height_c_U">0, 99, 0, -, 4, 11, 44</column>
+<column name="img_height_c19_U">0, 99, 0, -, 2, 11, 22</column>
+<column name="img_height_c21_U">0, 99, 0, -, 2, 11, 22</column>
+<column name="img_height_c23_U">0, 99, 0, -, 2, 11, 22</column>
+<column name="img_height_c25_U">0, 99, 0, -, 2, 11, 22</column>
+<column name="img_height_c26_U">0, 99, 0, -, 3, 11, 33</column>
+<column name="img_height_c29_U">0, 99, 0, -, 2, 11, 22</column>
+<column name="img_height_c_U">0, 99, 0, -, 2, 11, 22</column>
+<column name="img_width_c20_U">0, 99, 0, -, 2, 11, 22</column>
+<column name="img_width_c22_U">0, 99, 0, -, 2, 11, 22</column>
+<column name="img_width_c24_U">0, 99, 0, -, 2, 11, 22</column>
+<column name="img_width_c27_U">0, 99, 0, -, 2, 11, 22</column>
+<column name="img_width_c28_U">0, 99, 0, -, 3, 11, 33</column>
+<column name="img_width_c30_U">0, 99, 0, -, 2, 11, 22</column>
+<column name="img_width_c_U">0, 99, 0, -, 2, 11, 22</column>
+<column name="imgwidth_c_U">0, 99, 0, -, 4, 11, 44</column>
+<column name="magnitude_mat_data_U">0, 99, 0, -, 2, 16, 32</column>
+<column name="nms_mat_data_U">0, 99, 0, -, 2, 2, 4</column>
+<column name="p_highthreshold_c_U">0, 99, 0, -, 6, 8, 48</column>
+<column name="p_lowthreshold_c_U">0, 99, 0, -, 6, 8, 48</column>
+<column name="phase_mat_data_U">4, 163, 0, -, 5760, 8, 46080</column>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="ap_idle">and, 0, 0, 2, 1, 1</column>
+<column name="xFCannyKernel_0_8_0_1080_1920_0_12_1_32_1_20_1920_2_5760_3_false_entry21_U0_start_full_n">and, 0, 0, 2, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="in_mat_418_dout">in, 8, ap_fifo, in_mat_418, pointer</column>
+<column name="in_mat_418_empty_n">in, 1, ap_fifo, in_mat_418, pointer</column>
+<column name="in_mat_418_read">out, 1, ap_fifo, in_mat_418, pointer</column>
+<column name="dst_mat_419_din">out, 64, ap_fifo, dst_mat_419, pointer</column>
+<column name="dst_mat_419_full_n">in, 1, ap_fifo, dst_mat_419, pointer</column>
+<column name="dst_mat_419_write">out, 1, ap_fifo, dst_mat_419, pointer</column>
+<column name="p_lowthreshold">in, 8, ap_none, p_lowthreshold, scalar</column>
+<column name="p_lowthreshold_ap_vld">in, 1, ap_none, p_lowthreshold, scalar</column>
+<column name="p_highthreshold">in, 8, ap_none, p_highthreshold, scalar</column>
+<column name="p_highthreshold_ap_vld">in, 1, ap_none, p_highthreshold, scalar</column>
+<column name="img_height">in, 11, ap_none, img_height, scalar</column>
+<column name="img_height_ap_vld">in, 1, ap_none, img_height, scalar</column>
+<column name="img_width">in, 11, ap_none, img_width, scalar</column>
+<column name="img_width_ap_vld">in, 1, ap_none, img_width, scalar</column>
+<column name="ap_clk">in, 1, ap_ctrl_hs, xFCannyKernel&lt;0, 8, 0, 1080, 1920, 0, 12, 1, 32, 1, 20, 1920, 2, 5760, 3, false&gt;, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, xFCannyKernel&lt;0, 8, 0, 1080, 1920, 0, 12, 1, 32, 1, 20, 1920, 2, 5760, 3, false&gt;, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, xFCannyKernel&lt;0, 8, 0, 1080, 1920, 0, 12, 1, 32, 1, 20, 1920, 2, 5760, 3, false&gt;, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, xFCannyKernel&lt;0, 8, 0, 1080, 1920, 0, 12, 1, 32, 1, 20, 1920, 2, 5760, 3, false&gt;, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, xFCannyKernel&lt;0, 8, 0, 1080, 1920, 0, 12, 1, 32, 1, 20, 1920, 2, 5760, 3, false&gt;, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, xFCannyKernel&lt;0, 8, 0, 1080, 1920, 0, 12, 1, 32, 1, 20, 1920, 2, 5760, 3, false&gt;, return value</column>
+<column name="ap_continue">in, 1, ap_ctrl_hs, xFCannyKernel&lt;0, 8, 0, 1080, 1920, 0, 12, 1, 32, 1, 20, 1920, 2, 5760, 3, false&gt;, return value</column>
+</table>
+</item>
+</section>
+</profile>

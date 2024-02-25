@@ -1,0 +1,1204 @@
+INFO: Applying HLS Y2K22 patch v1.2 for IP revision
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2020.2/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'soc' on host 'ubuntu' (Linux_x86_64 version 5.15.0-97-generic) on Sun Feb 25 01:45:54 PST 2024
+INFO: [HLS 200-10] On os Ubuntu 20.04.6 LTS
+INFO: [HLS 200-10] In directory '/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj'
+Sourcing Tcl script '/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj/canny_accel/solution1/csynth.tcl'
+INFO: [HLS 200-1510] Running: open_project canny_accel 
+INFO: [HLS 200-10] Opening project '/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj/canny_accel'.
+INFO: [HLS 200-1510] Running: set_top canny_accel 
+INFO: [HLS 200-1510] Running: add_files ../../src/canny_2/canny.cpp -cflags -I../../Vitis_Libraries/vision/L1/include -csimflags -I../../Vitis_Libraries/vision/L1/include 
+INFO: [HLS 200-10] Adding design file '../../src/canny_2/canny.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution '/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj/canny_accel/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog 
+INFO: [HLS 200-1510] Running: set_directive_top -name canny_accel canny_accel 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.01 seconds; current allocated memory: 103.706 MB.
+INFO: [HLS 200-10] Analyzing design file '../../src/canny_2/canny.cpp' ... 
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: ../../src/canny_2/canny.cpp:42:5
+Resolution: For help on HLS 214-114 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=214-114.html
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: ../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1165:9
+Resolution: For help on HLS 214-114 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=214-114.html
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:166:2
+Resolution: For help on HLS 214-114 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=214-114.html
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:194:5
+Resolution: For help on HLS 214-114 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=214-114.html
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: ../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1438:9
+Resolution: For help on HLS 214-114 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=214-114.html
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: ../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1448:9
+Resolution: For help on HLS 214-114 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=214-114.html
+WARNING: [HLS 200-471] Dataflow form checks found 6 issue(s) in file ../../src/canny_2/canny.cpp
+Resolution: For help on HLS 200-471 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-471.html
+WARNING: [HLS 207-5301] unused parameter 'index': ../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:667:87
+WARNING: [HLS 207-5301] unused parameter 'index': ../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:687:60
+WARNING: [HLS 207-5301] unused parameter 'index': ../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1255:102
+WARNING: [HLS 207-5301] unused parameter 'index': ../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1565:34
+WARNING: [HLS 207-5301] unused parameter 'win_size': ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:23:33
+WARNING: [HLS 207-5301] unused parameter 'win_size': ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:56:33
+WARNING: [HLS 207-5301] unused parameter 'win_size': ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:90:30
+WARNING: [HLS 207-5301] unused parameter 'win_size': ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:116:30
+WARNING: [HLS 207-1017] unknown pragma ignored: ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:437:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:438:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:442:9
+WARNING: [HLS 207-5301] unused parameter '_border_type': ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:524:18
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: ../../Vitis_Libraries/vision/L1/include/imgproc/xf_averagegaussianmask.hpp:191:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:487:9
+WARNING: [HLS 207-5301] unused parameter 'width': ../../Vitis_Libraries/vision/L1/include/imgproc/xf_edge_tracing.hpp:154:23
+WARNING: [HLS 207-5301] unused parameter 'height': ../../Vitis_Libraries/vision/L1/include/imgproc/xf_edge_tracing.hpp:155:23
+WARNING: [HLS 207-5301] unused parameter 'bramsetsval': ../../Vitis_Libraries/vision/L1/include/imgproc/xf_edge_tracing.hpp:156:18
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: ../../Vitis_Libraries/vision/L1/include/imgproc/xf_edge_tracing.hpp:288:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: ../../Vitis_Libraries/vision/L1/include/imgproc/xf_edge_tracing.hpp:293:9
+WARNING: [HLS 207-4606] array index 4 is past the end of the array (which contains 3 elements): ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:30:85
+INFO: [HLS 207-4230] in instantiation of function template specialization 'xFSobelProcx5x5<1, 0, 3, 3, 9>' requested here: ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:289:21
+INFO: [HLS 207-4230] in instantiation of function template specialization 'ProcessSobelfunc<0, 2, 1080, 1920, 0, 3, 1, 1, 26, 1921, 3, 9>' requested here: ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:492:9
+INFO: [HLS 207-4230] in instantiation of function template specialization 'xFSobel3x3<0, 2, 1080, 1920, 0, 3, 1, 1, 26, 1921, 3, 9, false>' requested here: ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:530:5
+INFO: [HLS 207-4230] in instantiation of function template specialization 'xFSobel<0, 2, 1080, 1920, 0, 3, 1, 1, 26, 3, false>' requested here: ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:180:9
+INFO: [HLS 207-4230] in instantiation of function template specialization 'xf::cv::xFCannyKernel<0, 8, 0, 1080, 1920, 0, 12, 1, 32, 1, 20, 1920, 2, 5760, 3, false>' requested here: ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:273:9
+INFO: [HLS 207-4230] in instantiation of function template specialization 'xf::cv::Canny<3, 0, 0, 8, 1080, 1920, 1, 32, false>' requested here: ../../src/canny_2/canny.cpp:53:13
+INFO: [HLS 207-4105] array 'src_buf' declared here: ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:22:22
+WARNING: [HLS 207-4606] array index 4 is past the end of the array (which contains 3 elements): ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:30:101
+INFO: [HLS 207-4105] array 'src_buf' declared here: ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:22:22
+WARNING: [HLS 207-4606] array index 3 is past the end of the array (which contains 3 elements): ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:31:85
+INFO: [HLS 207-4105] array 'src_buf' declared here: ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:22:22
+WARNING: [HLS 207-4606] array index 3 is past the end of the array (which contains 3 elements): ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:31:101
+INFO: [HLS 207-4105] array 'src_buf' declared here: ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:22:22
+WARNING: [HLS 207-4606] array index 3 is past the end of the array (which contains 3 elements): ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:34:85
+INFO: [HLS 207-4105] array 'src_buf' declared here: ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:22:22
+WARNING: [HLS 207-4606] array index 3 is past the end of the array (which contains 3 elements): ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:34:101
+INFO: [HLS 207-4105] array 'src_buf' declared here: ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:22:22
+WARNING: [HLS 207-4606] array index 4 is past the end of the array (which contains 3 elements): ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:35:85
+INFO: [HLS 207-4105] array 'src_buf' declared here: ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:22:22
+WARNING: [HLS 207-4606] array index 4 is past the end of the array (which contains 3 elements): ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:35:101
+INFO: [HLS 207-4105] array 'src_buf' declared here: ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:22:22
+WARNING: [HLS 207-4606] array index 3 is past the end of the array (which contains 3 elements): ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:38:47
+INFO: [HLS 207-4105] array 'src_buf' declared here: ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:22:22
+WARNING: [HLS 207-4606] array index 4 is past the end of the array (which contains 3 elements): ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:39:47
+INFO: [HLS 207-4105] array 'src_buf' declared here: ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:22:22
+WARNING: [HLS 207-4606] array index 4 is past the end of the array (which contains 3 elements): ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:62:64
+INFO: [HLS 207-4230] in instantiation of function template specialization 'xFSobelProcy5x5<1, 0, 3, 3, 9>' requested here: ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:291:21
+INFO: [HLS 207-4230] in instantiation of function template specialization 'ProcessSobelfunc<0, 2, 1080, 1920, 0, 3, 1, 1, 26, 1921, 3, 9>' requested here: ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:492:9
+INFO: [HLS 207-4230] in instantiation of function template specialization 'xFSobel3x3<0, 2, 1080, 1920, 0, 3, 1, 1, 26, 1921, 3, 9, false>' requested here: ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:530:5
+INFO: [HLS 207-4230] in instantiation of function template specialization 'xFSobel<0, 2, 1080, 1920, 0, 3, 1, 1, 26, 3, false>' requested here: ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:180:9
+INFO: [HLS 207-4230] in instantiation of function template specialization 'xf::cv::xFCannyKernel<0, 8, 0, 1080, 1920, 0, 12, 1, 32, 1, 20, 1920, 2, 5760, 3, false>' requested here: ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:273:9
+INFO: [HLS 207-4230] in instantiation of function template specialization 'xf::cv::Canny<3, 0, 0, 8, 1080, 1920, 1, 32, false>' requested here: ../../src/canny_2/canny.cpp:53:13
+INFO: [HLS 207-4105] array 'src_buf' declared here: ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:55:22
+WARNING: [HLS 207-4606] array index 4 is past the end of the array (which contains 3 elements): ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:62:98
+INFO: [HLS 207-4105] array 'src_buf' declared here: ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:55:22
+WARNING: [HLS 207-4606] array index 3 is past the end of the array (which contains 3 elements): ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:63:101
+INFO: [HLS 207-4105] array 'src_buf' declared here: ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:55:22
+WARNING: [HLS 207-4606] array index 3 is past the end of the array (which contains 3 elements): ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:64:101
+INFO: [HLS 207-4105] array 'src_buf' declared here: ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:55:22
+WARNING: [HLS 207-4606] array index 4 is past the end of the array (which contains 3 elements): ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:65:101
+INFO: [HLS 207-4105] array 'src_buf' declared here: ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:55:22
+WARNING: [HLS 207-4606] array index 4 is past the end of the array (which contains 3 elements): ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:66:101
+INFO: [HLS 207-4105] array 'src_buf' declared here: ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:55:22
+WARNING: [HLS 207-4606] array index 3 is past the end of the array (which contains 3 elements): ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:67:101
+INFO: [HLS 207-4105] array 'src_buf' declared here: ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:55:22
+WARNING: [HLS 207-4606] array index 3 is past the end of the array (which contains 3 elements): ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:68:101
+INFO: [HLS 207-4105] array 'src_buf' declared here: ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:55:22
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 8.76 seconds. CPU system time: 1.57 seconds. Elapsed time: 8.95 seconds; current allocated memory: 106.097 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<8>, 0>::stream()' into 'hls::stream<ap_uint<8>, 2>::stream()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:195:43)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<8>, 2>::stream()' into 'xf::cv::Mat<0, 1080, 1920, 1, 2>::Mat(int, int)' (../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:447:5)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Mat<0, 1080, 1920, 1, 2>::init(int, int, bool)' into 'xf::cv::Mat<0, 1080, 1920, 1, 2>::Mat(int, int)' (../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:654:2)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<64>, 0>::stream()' into 'hls::stream<ap_uint<64>, 2>::stream()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:195:43)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<64>, 2>::stream()' into 'xf::cv::Mat<8, 1080, 1920, 32, 2>::Mat(int, int)' (../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:447:5)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Mat<8, 1080, 1920, 32, 2>::init(int, int, bool)' into 'xf::cv::Mat<8, 1080, 1920, 32, 2>::Mat(int, int)' (../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:654:2)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<64>, 0>::write(ap_uint<64> const&)' into 'xf::cv::MMIterIn<64, 0, 1080, 1920, 1, 2>::Axi2AxiStream(ap_uint<64>*, hls::stream<ap_uint<64>, 0>&, ap_uint<19>&)' (../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1029:7)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<64>, 0>::read(ap_uint<64>&)' into 'hls::stream<ap_uint<64>, 0>::read()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:156:9)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<8>, 0>::write(ap_uint<8> const&)' into 'xf::cv::MMIterIn<64, 0, 1080, 1920, 1, 2>::AxiStream2MatStream(hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<8>, 2>&, int, int, int, int)' (../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1104:46)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<64>, 0>::read()' into 'xf::cv::MMIterIn<64, 0, 1080, 1920, 1, 2>::AxiStream2MatStream(hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<8>, 2>&, int, int, int, int)' (../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1088:27)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<64>, 0>::stream()' into 'xf::cv::MMIterIn<64, 0, 1080, 1920, 1, 2>::Axi2Mat(ap_uint<64>*, hls::stream<ap_uint<8>, 2>&, int, int, int)' (../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1160:35)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<16>, 0>::stream()' into 'hls::stream<ap_uint<16>, 2>::stream()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:195:43)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<16>, 2>::stream()' into 'xf::cv::Mat<2, 1080, 1920, 1, 2>::Mat(int, int)' (../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:447:5)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Mat<2, 1080, 1920, 1, 2>::init(int, int, bool)' into 'xf::cv::Mat<2, 1080, 1920, 1, 2>::Mat(int, int)' (../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:654:2)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<8>, 0>::stream()' into 'hls::stream<ap_uint<8>, 5760>::stream()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:195:43)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<8>, 5760>::stream()' into 'xf::cv::Mat<0, 1080, 1920, 1, 5760>::Mat(int, int)' (../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:447:5)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Mat<0, 1080, 1920, 1, 5760>::init(int, int, bool)' into 'xf::cv::Mat<0, 1080, 1920, 1, 5760>::Mat(int, int)' (../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:654:2)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<2>, 0>::stream()' into 'hls::stream<ap_uint<2>, 2>::stream()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:195:43)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<2>, 2>::stream()' into 'xf::cv::Mat<8, 1080, 1920, 1, 2>::Mat(int, int)' (../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:447:5)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Mat<8, 1080, 1920, 1, 2>::init(int, int, bool)' into 'xf::cv::Mat<8, 1080, 1920, 1, 2>::Mat(int, int)' (../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:654:2)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<8>, 0>::read(ap_uint<8>&)' into 'hls::stream<ap_uint<8>, 0>::read()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:156:9)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<8>, 0>::read()' into 'xf::cv::Mat<0, 1080, 1920, 1, 2>::read(int)' (../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:669:17)
+INFO: [HLS 214-131] Inlining function 'PixelType<0>::name xFGaussianFixed3x3<0>(PixelType<0>::name, PixelType<0>::name, PixelType<0>::name, PixelType<0>::name, PixelType<0>::name, PixelType<0>::name, PixelType<0>::name, PixelType<0>::name, PixelType<0>::name)' into 'void xFAverageGaussian3x3<1, 0>(PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*)' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_averagegaussianmask.hpp:75:13)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<8>, 0>::write(ap_uint<8> const&)' into 'xf::cv::Mat<0, 1080, 1920, 1, 2>::write(int, ap_uint<8>)' (../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:689:10)
+INFO: [HLS 214-131] Inlining function 'void xf::cv::xfPackPixels<1, 1, 0>(PixelType<0>::name*, StreamType<1>::name&, unsigned short, short, unsigned short&)' into 'void ProcessAverageGaussian3x3<0, 0, 1080, 1920, 0, 1, 1, 1920>(xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, StreamType<1>::name (*) [(1920) >> (xfNPixelsPerCycle<1>::datashift)], PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, StreamType<1>::name&, unsigned short, unsigned short, unsigned short&, ap_uint<2>, ap_uint<2>, ap_uint<2>, ap_uint<13>, int&, int&)' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_averagegaussianmask.hpp:141:13)
+INFO: [HLS 214-131] Inlining function 'void xf::cv::xfPackPixels<1, 1, 0>(PixelType<0>::name*, StreamType<1>::name&, unsigned short, short, unsigned short&)' into 'void ProcessAverageGaussian3x3<0, 0, 1080, 1920, 0, 1, 1, 1920>(xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, StreamType<1>::name (*) [(1920) >> (xfNPixelsPerCycle<1>::datashift)], PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, StreamType<1>::name&, unsigned short, unsigned short, unsigned short&, ap_uint<2>, ap_uint<2>, ap_uint<2>, ap_uint<13>, int&, int&)' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_averagegaussianmask.hpp:134:13)
+INFO: [HLS 214-131] Inlining function 'void xf::cv::xfPackPixels<1, 1, 0>(PixelType<0>::name*, StreamType<1>::name&, unsigned short, short, unsigned short&)' into 'void ProcessAverageGaussian3x3<0, 0, 1080, 1920, 0, 1, 1, 1920>(xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, StreamType<1>::name (*) [(1920) >> (xfNPixelsPerCycle<1>::datashift)], PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, StreamType<1>::name&, unsigned short, unsigned short, unsigned short&, ap_uint<2>, ap_uint<2>, ap_uint<2>, ap_uint<13>, int&, int&)' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_averagegaussianmask.hpp:131:13)
+INFO: [HLS 214-131] Inlining function 'void xFAverageGaussian3x3<1, 0>(PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*)' into 'void ProcessAverageGaussian3x3<0, 0, 1080, 1920, 0, 1, 1, 1920>(xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, StreamType<1>::name (*) [(1920) >> (xfNPixelsPerCycle<1>::datashift)], PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, StreamType<1>::name&, unsigned short, unsigned short, unsigned short&, ap_uint<2>, ap_uint<2>, ap_uint<2>, ap_uint<13>, int&, int&)' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_averagegaussianmask.hpp:125:9)
+INFO: [HLS 214-131] Inlining function 'void xf::cv::xfPackPixels<1, 1, 0>(PixelType<0>::name*, StreamType<1>::name&, unsigned short, short, unsigned short&)' into 'void xFAverageGaussianMask3x3<0, 0, 1080, 1920, 0, 1, 1, 1920>(xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, unsigned short, unsigned short)' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_averagegaussianmask.hpp:247:9)
+INFO: [HLS 214-131] Inlining function 'PixelType<0>::name xFGaussianFixed3x3<0>(PixelType<0>::name, PixelType<0>::name, PixelType<0>::name, PixelType<0>::name, PixelType<0>::name, PixelType<0>::name, PixelType<0>::name, PixelType<0>::name, PixelType<0>::name)' into 'void xFAverageGaussianMask3x3<0, 0, 1080, 1920, 0, 1, 1, 1920>(xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, unsigned short, unsigned short)' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_averagegaussianmask.hpp:242:31)
+INFO: [HLS 214-131] Inlining function 'void ProcessAverageGaussian3x3<0, 0, 1080, 1920, 0, 1, 1, 1920>(xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, StreamType<1>::name (*) [(1920) >> (xfNPixelsPerCycle<1>::datashift)], PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, StreamType<1>::name&, unsigned short, unsigned short, unsigned short&, ap_uint<2>, ap_uint<2>, ap_uint<2>, ap_uint<13>, int&, int&)' into 'void xFAverageGaussianMask3x3<0, 0, 1080, 1920, 0, 1, 1, 1920>(xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, unsigned short, unsigned short)' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_averagegaussianmask.hpp:232:9)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<16>, 0>::write(ap_uint<16> const&)' into 'xf::cv::Mat<2, 1080, 1920, 1, 2>::write(int, ap_uint<16>)' (../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:689:10)
+INFO: [HLS 214-131] Inlining function 'void xFSobelProcy<1, 0, 3, 3, 9>(PixelType<3>::name*, PixelType<0>::name (*) [(xfNPixelsPerCycle<1>::nppc) + ((3) - (1))], ap_uint<8>)' into 'void ProcessSobelfunc<0, 2, 1080, 1920, 0, 3, 1, 1, 5, 1921, 3, 9>(xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<2, 1080, 1920, 1, 2>&, xf::cv::Mat<2, 1080, 1920, 1, 2>&, StreamType<1>::name (*) [(1920) >> (xfNPixelsPerCycle<1>::datashift)], PixelType<0>::name (*) [(xfNPixelsPerCycle<1>::nppc) + ((3) - (1))], PixelType<3>::name*, PixelType<3>::name*, StreamType<5>::name&, StreamType<5>::name&, unsigned short, unsigned short, unsigned short&, ap_uint<13>*, ap_uint<13>, ap_uint<8>, int&, int&, int&)' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:359:17)
+INFO: [HLS 214-131] Inlining function 'void xFSobelProcx<1, 0, 3, 3, 9>(PixelType<3>::name*, PixelType<0>::name (*) [(xfNPixelsPerCycle<1>::nppc) + ((3) - (1))], ap_uint<8>)' into 'void ProcessSobelfunc<0, 2, 1080, 1920, 0, 3, 1, 1, 5, 1921, 3, 9>(xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<2, 1080, 1920, 1, 2>&, xf::cv::Mat<2, 1080, 1920, 1, 2>&, StreamType<1>::name (*) [(1920) >> (xfNPixelsPerCycle<1>::datashift)], PixelType<0>::name (*) [(xfNPixelsPerCycle<1>::nppc) + ((3) - (1))], PixelType<3>::name*, PixelType<3>::name*, StreamType<5>::name&, StreamType<5>::name&, unsigned short, unsigned short, unsigned short&, ap_uint<13>*, ap_uint<13>, ap_uint<8>, int&, int&, int&)' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:358:17)
+INFO: [HLS 214-131] Inlining function 'void ProcessSobelfunc<0, 2, 1080, 1920, 0, 3, 1, 1, 5, 1921, 3, 9>(xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<2, 1080, 1920, 1, 2>&, xf::cv::Mat<2, 1080, 1920, 1, 2>&, StreamType<1>::name (*) [(1920) >> (xfNPixelsPerCycle<1>::datashift)], PixelType<0>::name (*) [(xfNPixelsPerCycle<1>::nppc) + ((3) - (1))], PixelType<3>::name*, PixelType<3>::name*, StreamType<5>::name&, StreamType<5>::name&, unsigned short, unsigned short, unsigned short&, ap_uint<13>*, ap_uint<13>, ap_uint<8>, int&, int&, int&)' into 'void xFSobel3x3<0, 2, 1080, 1920, 0, 3, 1, 1, 5, 1921, 3, 9, false>(xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<2, 1080, 1920, 1, 2>&, xf::cv::Mat<2, 1080, 1920, 1, 2>&, ap_uint<8>, unsigned short, unsigned short)' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:492:9)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<16>, 0>::read(ap_uint<16>&)' into 'hls::stream<ap_uint<16>, 0>::read()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:156:9)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<16>, 0>::read()' into 'xf::cv::Mat<2, 1080, 1920, 1, 2>::read(int)' (../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:669:17)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<8>, 0>::write(ap_uint<8> const&)' into 'xf::cv::Mat<0, 1080, 1920, 1, 5760>::write(int, ap_uint<8>)' (../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:689:10)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<8>, 0>::read()' into 'xf::cv::Mat<0, 1080, 1920, 1, 5760>::read(int)' (../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:669:17)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<2>, 0>::write(ap_uint<2> const&)' into 'xf::cv::Mat<8, 1080, 1920, 1, 2>::write(int, ap_uint<2>)' (../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:689:10)
+INFO: [HLS 214-131] Inlining function 'void xFNMS3x3<1, 3, 0, 12>(PixelType<12>::name*, PixelType<3>::name*, PixelType<3>::name*, PixelType<3>::name*, PixelType<0>::name*, unsigned char, unsigned char)' into 'void ProcessNms3x3canny<2, 0, 8, 1080, 1920, 3, 0, 12, 1, 5, 1, 0, 1920, 5760, 2>(xf::cv::Mat<2, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 5760>&, xf::cv::Mat<8, 1080, 1920, 1, 2>&, StreamType<5>::name (*) [(1920) >> (xfNPixelsPerCycle<1>::datashift)], StreamType<1>::name (*) [(1920) >> (xfNPixelsPerCycle<1>::datashift)], PixelType<3>::name*, PixelType<3>::name*, PixelType<3>::name*, PixelType<0>::name*, PixelType<12>::name*, StreamType<0>::name&, unsigned short, unsigned short, ap_uint<2>, ap_uint<2>, ap_uint<2>, ap_uint<13>, ap_uint<13>, ap_uint<13>, ap_uint<13>, unsigned char, unsigned char, int&, int&, int&)' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:232:9)
+INFO: [HLS 214-131] Inlining function 'void ProcessNms3x3canny<2, 0, 8, 1080, 1920, 3, 0, 12, 1, 5, 1, 0, 1920, 5760, 2>(xf::cv::Mat<2, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 5760>&, xf::cv::Mat<8, 1080, 1920, 1, 2>&, StreamType<5>::name (*) [(1920) >> (xfNPixelsPerCycle<1>::datashift)], StreamType<1>::name (*) [(1920) >> (xfNPixelsPerCycle<1>::datashift)], PixelType<3>::name*, PixelType<3>::name*, PixelType<3>::name*, PixelType<0>::name*, PixelType<12>::name*, StreamType<0>::name&, unsigned short, unsigned short, ap_uint<2>, ap_uint<2>, ap_uint<2>, ap_uint<13>, ap_uint<13>, ap_uint<13>, ap_uint<13>, unsigned char, unsigned char, int&, int&, int&)' into 'void xFSuppression3x3<2, 0, 8, 1080, 1920, 3, 0, 12, 1, 5, 1, 0, 1920, 5760, 2>(xf::cv::Mat<2, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 5760>&, xf::cv::Mat<8, 1080, 1920, 1, 2>&, unsigned char, unsigned char, unsigned short, unsigned short)' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:386:9)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<2>, 0>::read(ap_uint<2>&)' into 'hls::stream<ap_uint<2>, 0>::read()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:156:9)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<2>, 0>::read()' into 'xf::cv::Mat<8, 1080, 1920, 1, 2>::read(int)' (../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:669:17)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<64>, 0>::write(ap_uint<64> const&)' into 'xf::cv::Mat<8, 1080, 1920, 32, 2>::write(int, ap_uint<64>)' (../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:689:10)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Mat<0, 1080, 1920, 1, 2>::Mat(int, int)' into 'void xf::cv::xFCannyKernel<0, 8, 0, 1080, 1920, 0, 12, 1, 32, 1, 20, 1920, 2, 5760, 3, false>(xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<8, 1080, 1920, 32, 2>&, unsigned char, unsigned char, unsigned short, unsigned short)' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:195:47)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Mat<2, 1080, 1920, 1, 2>::Mat(int, int)' into 'void xf::cv::xFCannyKernel<0, 8, 0, 1080, 1920, 0, 12, 1, 32, 1, 20, 1920, 2, 5760, 3, false>(xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<8, 1080, 1920, 32, 2>&, unsigned char, unsigned char, unsigned short, unsigned short)' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:196:48)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Mat<2, 1080, 1920, 1, 2>::Mat(int, int)' into 'void xf::cv::xFCannyKernel<0, 8, 0, 1080, 1920, 0, 12, 1, 32, 1, 20, 1920, 2, 5760, 3, false>(xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<8, 1080, 1920, 32, 2>&, unsigned char, unsigned char, unsigned short, unsigned short)' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:197:48)
+INFO: [HLS 214-131] Inlining function 'void xFAngle<2, 0, 1080, 1920, 3, 0, 1, 5, 1, 5760>(xf::cv::Mat<2, 1080, 1920, 1, 2>&, xf::cv::Mat<2, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 5760>&, unsigned short, unsigned short)' into 'void xf::cv::xFCannyKernel<0, 8, 0, 1080, 1920, 0, 12, 1, 32, 1, 20, 1920, 2, 5760, 3, false>(xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<8, 1080, 1920, 32, 2>&, unsigned char, unsigned char, unsigned short, unsigned short)' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:213:9)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Mat<2, 1080, 1920, 1, 2>::Mat(int, int)' into 'void xf::cv::xFCannyKernel<0, 8, 0, 1080, 1920, 0, 12, 1, 32, 1, 20, 1920, 2, 5760, 3, false>(xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<8, 1080, 1920, 32, 2>&, unsigned char, unsigned char, unsigned short, unsigned short)' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:198:48)
+INFO: [HLS 214-131] Inlining function 'void xf::cv::magnitude<0, 2, 2, 1080, 1920, 1, 2>(xf::cv::Mat<2, 1080, 1920, 1, 2>&, xf::cv::Mat<2, 1080, 1920, 1, 2>&, xf::cv::Mat<2, 1080, 1920, 1, 2>&)' into 'void xf::cv::xFCannyKernel<0, 8, 0, 1080, 1920, 0, 12, 1, 32, 1, 20, 1920, 2, 5760, 3, false>(xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<8, 1080, 1920, 32, 2>&, unsigned char, unsigned char, unsigned short, unsigned short)' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:212:9)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Mat<2, 1080, 1920, 1, 2>::Mat(int, int)' into 'void xf::cv::xFCannyKernel<0, 8, 0, 1080, 1920, 0, 12, 1, 32, 1, 20, 1920, 2, 5760, 3, false>(xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<8, 1080, 1920, 32, 2>&, unsigned char, unsigned char, unsigned short, unsigned short)' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:199:48)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Mat<2, 1080, 1920, 1, 2>::Mat(int, int)' into 'void xf::cv::xFCannyKernel<0, 8, 0, 1080, 1920, 0, 12, 1, 32, 1, 20, 1920, 2, 5760, 3, false>(xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<8, 1080, 1920, 32, 2>&, unsigned char, unsigned char, unsigned short, unsigned short)' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:200:48)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Mat<2, 1080, 1920, 1, 2>::Mat(int, int)' into 'void xf::cv::xFCannyKernel<0, 8, 0, 1080, 1920, 0, 12, 1, 32, 1, 20, 1920, 2, 5760, 3, false>(xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<8, 1080, 1920, 32, 2>&, unsigned char, unsigned char, unsigned short, unsigned short)' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:201:48)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Mat<2, 1080, 1920, 1, 2>::Mat(int, int)' into 'void xf::cv::xFCannyKernel<0, 8, 0, 1080, 1920, 0, 12, 1, 32, 1, 20, 1920, 2, 5760, 3, false>(xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<8, 1080, 1920, 32, 2>&, unsigned char, unsigned char, unsigned short, unsigned short)' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:202:53)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Mat<8, 1080, 1920, 1, 2>::Mat(int, int)' into 'void xf::cv::xFCannyKernel<0, 8, 0, 1080, 1920, 0, 12, 1, 32, 1, 20, 1920, 2, 5760, 3, false>(xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<8, 1080, 1920, 32, 2>&, unsigned char, unsigned char, unsigned short, unsigned short)' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:204:47)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Mat<0, 1080, 1920, 1, 5760>::Mat(int, int)' into 'void xf::cv::xFCannyKernel<0, 8, 0, 1080, 1920, 0, 12, 1, 32, 1, 20, 1920, 2, 5760, 3, false>(xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<8, 1080, 1920, 32, 2>&, unsigned char, unsigned char, unsigned short, unsigned short)' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:203:52)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<64>, 0>::write(ap_uint<64> const&)' into 'xf::cv::MMIterOut<64, 8, 1080, 1920, 32, 1, 2>::MatStream2AxiStream(hls::stream<ap_uint<64>, 2>&, hls::stream<ap_uint<64>, 0>&, int, int, int, int)' (../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1364:18)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<64>, 0>::write(ap_uint<64> const&)' into 'xf::cv::MMIterOut<64, 8, 1080, 1920, 32, 1, 2>::MatStream2AxiStream(hls::stream<ap_uint<64>, 2>&, hls::stream<ap_uint<64>, 0>&, int, int, int, int)' (../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1354:26)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<64>, 0>::read()' into 'xf::cv::MMIterOut<64, 8, 1080, 1920, 32, 1, 2>::MatStream2AxiStream(hls::stream<ap_uint<64>, 2>&, hls::stream<ap_uint<64>, 0>&, int, int, int, int)' (../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1339:31)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<64>, 0>::read()' into 'xf::cv::MMIterOut<64, 8, 1080, 1920, 32, 1, 2>::AxiStream2Axi(hls::stream<ap_uint<64>, 0>&, ap_uint<64>*, ap_uint<17>&)' (../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1407:16)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<64>, 0>::stream()' into 'xf::cv::MMIterOut<64, 8, 1080, 1920, 32, 1, 2>::Mat2Axi(hls::stream<ap_uint<64>, 2>&, ap_uint<64>*, int, int, int)' (../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1443:42)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Mat<0, 1080, 1920, 1, 2>::Mat(int, int)' into 'canny_accel' (../../src/canny_2/canny.cpp:47:48)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Mat<8, 1080, 1920, 32, 2>::Mat(int, int)' into 'canny_accel' (../../src/canny_2/canny.cpp:48:49)
+INFO: [HLS 214-186] Unrolling loop 'Compute_Grad_Loop' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_averagegaussianmask.hpp:70:5) in function 'xFAverageGaussianMask3x3<0, 0, 1080, 1920, 0, 1, 1, 1920>' completely with a factor of 1 (../../Vitis_Libraries/vision/L1/include/imgproc/xf_averagegaussianmask.hpp:70:5)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_41_1' (../../Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:41:22) in function 'xFAverageGaussianMask3x3<0, 0, 1080, 1920, 0, 1, 1, 1920>' completely with a factor of 1 (../../Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:41:22)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_41_1' (../../Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:41:22) in function 'xFAverageGaussianMask3x3<0, 0, 1080, 1920, 0, 1, 1, 1920>' completely with a factor of 1 (../../Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:41:22)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_41_1' (../../Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:41:22) in function 'xFAverageGaussianMask3x3<0, 0, 1080, 1920, 0, 1, 1, 1920>' completely with a factor of 1 (../../Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:41:22)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_41_1' (../../Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:41:22) in function 'xFAverageGaussianMask3x3<0, 0, 1080, 1920, 0, 1, 1, 1920>' completely with a factor of 1 (../../Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:41:22)
+INFO: [HLS 214-186] Unrolling loop 'ComputeMaxLoop' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:147:5) in function 'xFSuppression3x3<2, 0, 8, 1080, 1920, 3, 0, 12, 1, 5, 1, 0, 1920, 5760, 2>' completely with a factor of 1 (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:147:5)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_119_1' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:119:20) in function 'xf::cv::xFPackNMS<8, 8, 1080, 1920, 12, 12, 1, 32, 0, 20>' completely with a factor of 32 (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:119:20)
+INFO: [HLS 214-186] Unrolling loop 'procLoop' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:469:13) in function 'xFAngleKernel<2, 0, 1080, 1920, 3, 0, 1, 5, 1, 1920, 5760>' completely with a factor of 1 (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:469:13)
+INFO: [HLS 214-186] Unrolling loop 'procLoop' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:91:13) in function 'xf::cv::xFMagnitudeKernel<2, 2, 1080, 1920, 3, 3, 1, 5, 5, 1920, 2>' completely with a factor of 1 (../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:91:13)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_183_1' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:183:23) in function 'xFSobel3x3<0, 2, 1080, 1920, 0, 3, 1, 1, 5, 1921, 3, 9, false>' completely with a factor of 3 (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:183:23)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_188_2' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:188:20) in function 'xFSobel3x3<0, 2, 1080, 1920, 0, 3, 1, 1, 5, 1921, 3, 9, false>' completely with a factor of 3 (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:188:20)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_188_2' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:188:20) in function 'xFSobel3x3<0, 2, 1080, 1920, 0, 3, 1, 1, 5, 1921, 3, 9, false>' completely with a factor of 3 (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:188:20)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_188_2' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:188:20) in function 'xFSobel3x3<0, 2, 1080, 1920, 0, 3, 1, 1, 5, 1921, 3, 9, false>' completely with a factor of 3 (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:188:20)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_335_17' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:335:32) in function 'xFSobel3x3<0, 2, 1080, 1920, 0, 3, 1, 1, 5, 1921, 3, 9, false>' completely with a factor of 3 (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:335:32)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_346_18' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:346:32) in function 'xFSobel3x3<0, 2, 1080, 1920, 0, 3, 1, 1, 5, 1921, 3, 9, false>' completely with a factor of 3 (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:346:32)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_369_19' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:369:32) in function 'xFSobel3x3<0, 2, 1080, 1920, 0, 3, 1, 1, 5, 1921, 3, 9, false>' completely with a factor of 3 (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:369:32)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_374_20' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:374:21) in function 'xFSobel3x3<0, 2, 1080, 1920, 0, 3, 1, 1, 5, 1921, 3, 9, false>' completely with a factor of 2 (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:374:21)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_374_20' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:374:21) in function 'xFSobel3x3<0, 2, 1080, 1920, 0, 3, 1, 1, 5, 1921, 3, 9, false>' completely with a factor of 2 (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:374:21)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_374_20' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:374:21) in function 'xFSobel3x3<0, 2, 1080, 1920, 0, 3, 1, 1, 5, 1921, 3, 9, false>' completely with a factor of 2 (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:374:21)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_499_5' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:499:27) in function 'xFSobel3x3<0, 2, 1080, 1920, 0, 3, 1, 1, 5, 1921, 3, 9, false>' completely with a factor of 2 (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:499:27)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_475_4' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:475:20) in function 'xFSobel3x3<0, 2, 1080, 1920, 0, 3, 1, 1, 5, 1921, 3, 9, false>' completely with a factor of 1 (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:475:20)
+INFO: [HLS 214-186] Unrolling loop 'Extract_pixels_loop' (../../Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:62:5) in function 'xf::cv::xfExtractPixels<1, 1, 0>' completely with a factor of 1 (../../Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:62:5)
+INFO: [HLS 214-186] Unrolling loop 'Extract_pixels_loop' (../../Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:62:5) in function 'xf::cv::xfExtractPixels<1, 5, 3>' completely with a factor of 1 (../../Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:62:5)
+INFO: [HLS 214-178] Inlining function 'xf::cv::MMIterIn<64, 0, 1080, 1920, 1, 2>::Array2xfMat(ap_uint<64>*, xf::cv::Mat<0, 1080, 1920, 1, 2>&, int)' into 'void xf::cv::Array2xfMat<64, 0, 1080, 1920, 1>(ap_uint<64>*, xf::cv::Mat<0, 1080, 1920, 1, 2>&, int)' (../../Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:524:0)
+INFO: [HLS 214-178] Inlining function 'xf::cv::Mat<0, 1080, 1920, 1, 2>::read(int)' into 'void xFAverageGaussianMask3x3<0, 0, 1080, 1920, 0, 1, 1, 1920>(xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, unsigned short, unsigned short)' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_averagegaussianmask.hpp:162:0)
+INFO: [HLS 214-178] Inlining function 'xf::cv::Mat<0, 1080, 1920, 1, 2>::write(int, ap_uint<8>)' into 'void xFAverageGaussianMask3x3<0, 0, 1080, 1920, 0, 1, 1, 1920>(xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, unsigned short, unsigned short)' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_averagegaussianmask.hpp:162:0)
+INFO: [HLS 214-178] Inlining function 'xf::cv::Mat<0, 1080, 1920, 1, 2>::read(int)' into 'void xFSobel3x3<0, 2, 1080, 1920, 0, 3, 1, 1, 5, 1921, 3, 9, false>(xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<2, 1080, 1920, 1, 2>&, xf::cv::Mat<2, 1080, 1920, 1, 2>&, ap_uint<8>, unsigned short, unsigned short)' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:408:0)
+INFO: [HLS 214-178] Inlining function 'xf::cv::Mat<2, 1080, 1920, 1, 2>::write(int, ap_uint<16>)' into 'void xFSobel3x3<0, 2, 1080, 1920, 0, 3, 1, 1, 5, 1921, 3, 9, false>(xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<2, 1080, 1920, 1, 2>&, xf::cv::Mat<2, 1080, 1920, 1, 2>&, ap_uint<8>, unsigned short, unsigned short)' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:408:0)
+INFO: [HLS 214-178] Inlining function 'xf::cv::Mat<2, 1080, 1920, 1, 2>::read(int)' into 'void xf::cv::xFDuplicate_rows<2, 1080, 1920, 3, 1, 5, 1920>(xf::cv::Mat<2, 1080, 1920, 1, 2>&, xf::cv::Mat<2, 1080, 1920, 1, 2>&, xf::cv::Mat<2, 1080, 1920, 1, 2>&, xf::cv::Mat<2, 1080, 1920, 1, 2>&, xf::cv::Mat<2, 1080, 1920, 1, 2>&, xf::cv::Mat<2, 1080, 1920, 1, 2>&, unsigned short, unsigned short)' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:51:0)
+INFO: [HLS 214-178] Inlining function 'xf::cv::Mat<2, 1080, 1920, 1, 2>::write(int, ap_uint<16>)' into 'void xf::cv::xFDuplicate_rows<2, 1080, 1920, 3, 1, 5, 1920>(xf::cv::Mat<2, 1080, 1920, 1, 2>&, xf::cv::Mat<2, 1080, 1920, 1, 2>&, xf::cv::Mat<2, 1080, 1920, 1, 2>&, xf::cv::Mat<2, 1080, 1920, 1, 2>&, xf::cv::Mat<2, 1080, 1920, 1, 2>&, xf::cv::Mat<2, 1080, 1920, 1, 2>&, unsigned short, unsigned short)' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:51:0)
+INFO: [HLS 214-178] Inlining function 'xf::cv::Mat<2, 1080, 1920, 1, 2>::read(int)' into 'void xf::cv::xFMagnitudeKernel<2, 2, 1080, 1920, 3, 3, 1, 5, 5, 1920, 2>(xf::cv::Mat<2, 1080, 1920, 1, 2>&, xf::cv::Mat<2, 1080, 1920, 1, 2>&, xf::cv::Mat<2, 1080, 1920, 1, 2>&, int, unsigned short&, unsigned short&)' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:63:0)
+INFO: [HLS 214-178] Inlining function 'xf::cv::Mat<2, 1080, 1920, 1, 2>::write(int, ap_uint<16>)' into 'void xf::cv::xFMagnitudeKernel<2, 2, 1080, 1920, 3, 3, 1, 5, 5, 1920, 2>(xf::cv::Mat<2, 1080, 1920, 1, 2>&, xf::cv::Mat<2, 1080, 1920, 1, 2>&, xf::cv::Mat<2, 1080, 1920, 1, 2>&, int, unsigned short&, unsigned short&)' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:63:0)
+INFO: [HLS 214-178] Inlining function 'xf::cv::Mat<2, 1080, 1920, 1, 2>::read(int)' into 'void xFAngleKernel<2, 0, 1080, 1920, 3, 0, 1, 5, 1, 1920, 5760>(xf::cv::Mat<2, 1080, 1920, 1, 2>&, xf::cv::Mat<2, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 5760>&, unsigned short, unsigned short)' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:443:0)
+INFO: [HLS 214-178] Inlining function 'xf::cv::Mat<0, 1080, 1920, 1, 5760>::write(int, ap_uint<8>)' into 'void xFAngleKernel<2, 0, 1080, 1920, 3, 0, 1, 5, 1, 1920, 5760>(xf::cv::Mat<2, 1080, 1920, 1, 2>&, xf::cv::Mat<2, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 5760>&, unsigned short, unsigned short)' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:443:0)
+INFO: [HLS 214-178] Inlining function 'xf::cv::Mat<2, 1080, 1920, 1, 2>::read(int)' into 'void xFSuppression3x3<2, 0, 8, 1080, 1920, 3, 0, 12, 1, 5, 1, 0, 1920, 5760, 2>(xf::cv::Mat<2, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 5760>&, xf::cv::Mat<8, 1080, 1920, 1, 2>&, unsigned char, unsigned char, unsigned short, unsigned short)' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:302:0)
+INFO: [HLS 214-178] Inlining function 'xf::cv::Mat<0, 1080, 1920, 1, 5760>::read(int)' into 'void xFSuppression3x3<2, 0, 8, 1080, 1920, 3, 0, 12, 1, 5, 1, 0, 1920, 5760, 2>(xf::cv::Mat<2, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 5760>&, xf::cv::Mat<8, 1080, 1920, 1, 2>&, unsigned char, unsigned char, unsigned short, unsigned short)' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:302:0)
+INFO: [HLS 214-178] Inlining function 'xf::cv::Mat<8, 1080, 1920, 1, 2>::write(int, ap_uint<2>)' into 'void xFSuppression3x3<2, 0, 8, 1080, 1920, 3, 0, 12, 1, 5, 1, 0, 1920, 5760, 2>(xf::cv::Mat<2, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 5760>&, xf::cv::Mat<8, 1080, 1920, 1, 2>&, unsigned char, unsigned char, unsigned short, unsigned short)' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:302:0)
+INFO: [HLS 214-178] Inlining function 'xf::cv::Mat<8, 1080, 1920, 32, 2>::write(int, ap_uint<64>)' into 'void xf::cv::xFPackNMS<8, 8, 1080, 1920, 12, 12, 1, 32, 0, 20>(xf::cv::Mat<8, 1080, 1920, 1, 2>&, xf::cv::Mat<8, 1080, 1920, 32, 2>&, unsigned short, unsigned short)' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:91:0)
+INFO: [HLS 214-178] Inlining function 'xf::cv::MMIterOut<64, 8, 1080, 1920, 32, 1, 2>::xfMat2Array(xf::cv::Mat<8, 1080, 1920, 32, 2>&, ap_uint<64>*, int)' into 'void xf::cv::xfMat2Array<64, 8, 1080, 1920, 32, 1>(xf::cv::Mat<8, 1080, 1920, 32, 2>&, ap_uint<64>*, int)' (../../Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:514:0)
+WARNING: [HLS 214-205] The INTERFACE pragma must have a max_widen_bitwidth setting that is both a power of 2 and in the range [0, 1024]. The current value of '0' will be ignored, in 'canny_accel' (../../src/canny_2/canny.cpp:24:0)
+WARNING: [HLS 214-205] The INTERFACE pragma must have a max_widen_bitwidth setting that is both a power of 2 and in the range [0, 1024]. The current value of '0' will be ignored, in 'canny_accel' (../../src/canny_2/canny.cpp:24:0)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 64 in loop 'MMIterInLoop1'(../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1024:9) has been inferred on port 'gmem1' (../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1024:9)
+INFO: [HLS 214-115] Multiple burst writes of variable length and bit width 64 in loop 'MMIterOutLoop2'(../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1402:9) has been inferred on port 'gmem2' (../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1402:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i8.s_struct.ap_uint.1s' into 'xf::cv::MMIterIn<64, 0, 1080, 1920, 1, 2>::AxiStream2MatStream(hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<8>, 2>&, int, int, int, int) (.1)' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i8.s_struct.ap_uint.1s' into 'void xFAverageGaussianMask3x3<0, 0, 1080, 1920, 0, 1, 1, 1920>(xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, unsigned short, unsigned short) (.1)' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i8.s_struct.ap_uint.1s' into 'void xFAverageGaussianMask3x3<0, 0, 1080, 1920, 0, 1, 1, 1920>(xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, unsigned short, unsigned short) (.1)' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i16.s_struct.ap_uint.16s' into 'void xFSobel3x3<0, 2, 1080, 1920, 0, 3, 1, 1, 5, 1921, 3, 9, false>(xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<2, 1080, 1920, 1, 2>&, xf::cv::Mat<2, 1080, 1920, 1, 2>&, ap_uint<8>, unsigned short, unsigned short) (.1)' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i16.s_struct.ap_uint.16s' into 'void xFSobel3x3<0, 2, 1080, 1920, 0, 3, 1, 1, 5, 1921, 3, 9, false>(xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<2, 1080, 1920, 1, 2>&, xf::cv::Mat<2, 1080, 1920, 1, 2>&, ap_uint<8>, unsigned short, unsigned short) (.1)' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i16.s_struct.ap_uint.16s' into 'void xf::cv::xFMagnitudeKernel<2, 2, 1080, 1920, 3, 3, 1, 5, 5, 1920, 2>(xf::cv::Mat<2, 1080, 1920, 1, 2>&, xf::cv::Mat<2, 1080, 1920, 1, 2>&, xf::cv::Mat<2, 1080, 1920, 1, 2>&, int, unsigned short&, unsigned short&) (.1)' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i8.s_struct.ap_uint.1s' into 'void xFAngleKernel<2, 0, 1080, 1920, 3, 0, 1, 5, 1, 1920, 5760>(xf::cv::Mat<2, 1080, 1920, 1, 2>&, xf::cv::Mat<2, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 5760>&, unsigned short, unsigned short) (.1)' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i2.s_struct.ap_uint.24s' into 'void xFSuppression3x3<2, 0, 8, 1080, 1920, 3, 0, 12, 1, 5, 1, 0, 1920, 5760, 2>(xf::cv::Mat<2, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 5760>&, xf::cv::Mat<8, 1080, 1920, 1, 2>&, unsigned char, unsigned char, unsigned short, unsigned short) (.1)' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i2.s_struct.ap_uint.24s' into 'void xFSuppression3x3<2, 0, 8, 1080, 1920, 3, 0, 12, 1, 5, 1, 0, 1920, 5760, 2>(xf::cv::Mat<2, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 5760>&, xf::cv::Mat<8, 1080, 1920, 1, 2>&, unsigned char, unsigned char, unsigned short, unsigned short) (.1)' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i64.s_struct.ap_uints' into 'void xf::cv::xFPackNMS<8, 8, 1080, 1920, 12, 12, 1, 32, 0, 20>(xf::cv::Mat<8, 1080, 1920, 1, 2>&, xf::cv::Mat<8, 1080, 1920, 32, 2>&, unsigned short, unsigned short) (.1)' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i7.s_struct.ap_uint.69s' into 'xf::cv::MMIterOut<64, 8, 1080, 1920, 32, 1, 2>::MatStream2AxiStream(hls::stream<ap_uint<64>, 2>&, hls::stream<ap_uint<64>, 0>&, int, int, int, int) (.1)'
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i64.s_struct.ap_uints' into 'xf::cv::MMIterOut<64, 8, 1080, 1920, 32, 1, 2>::MatStream2AxiStream(hls::stream<ap_uint<64>, 2>&, hls::stream<ap_uint<64>, 0>&, int, int, int, int) (.1)' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i7.s_struct.ap_uint.69s' into 'xf::cv::MMIterOut<64, 8, 1080, 1920, 32, 1, 2>::MatStream2AxiStream(hls::stream<ap_uint<64>, 2>&, hls::stream<ap_uint<64>, 0>&, int, int, int, int) (.1)'
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i64.s_struct.ap_uints' into 'xf::cv::MMIterOut<64, 8, 1080, 1920, 32, 1, 2>::MatStream2AxiStream(hls::stream<ap_uint<64>, 2>&, hls::stream<ap_uint<64>, 0>&, int, int, int, int) (.1)' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 7.29 seconds. CPU system time: 0.33 seconds. Elapsed time: 7.88 seconds; current allocated memory: 112.266 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 112.271 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.43 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.54 seconds; current allocated memory: 143.461 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-23] /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_ref.h:674: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.61 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.62 seconds; current allocated memory: 163.696 MB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_448_1' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:448) in function 'xFSobel3x3<0, 2, 1080, 1920, 0, 3, 1, 1, 5, 1921, 3, 9, false>' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_471_3' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:417) in function 'xFSobel3x3<0, 2, 1080, 1920, 0, 3, 1, 1, 5, 1921, 3, 9, false>' automatically.
+INFO: [XFORM 203-101] Partitioning array 'l00_buf.V' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:318) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'l10_buf.V' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:318) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'l20_buf.V' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:319) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'angle.V' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:327) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'buf.V' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:333) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'angle_buf.V' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:337) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'row_ind.V' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:409) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'src_buf.V' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:425) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'buf.V' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:434) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'src_buf1.V' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_averagegaussianmask.hpp:180) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'src_buf2.V' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_averagegaussianmask.hpp:180) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'src_buf3.V' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_averagegaussianmask.hpp:180) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'buf.V' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_averagegaussianmask.hpp:189) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'src_buf.V' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:425) in dimension 2 completely.
+WARNING: [HLS 200-805] An internal stream 'ldata' (../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1160) with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'ldata' (../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1443) with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-786] Detected dataflow-on-top in function  'canny_accel' (../../src/canny_2/canny.cpp:19)  with default interface mode 'ap_ctrl_hs'. Overlapped execution of successive kernel calls will not happen unless interface mode 'ap_ctrl_chain' is used (or 'ap_ctrl_none' for a purely data-driven design).
+Resolution: For help on HLS 200-786 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-786.html
+INFO: [XFORM 203-712] Applying dataflow to function 'xf::cv::MMIterIn<64, 0, 1080, 1920, 1, 2>::Axi2Mat' (../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1160:5), detected/extracted 6 process function(s): 
+	 'xf::cv::MMIterIn<64, 0, 1080, 1920, 1, 2>::Axi2Mat.entry15'
+	 'xf::cv::MMIter<64, 0, 1080, 1920, 1, 2>::last_blk_pxl_width'
+	 'xf::cv::MMIter<64, 0, 1080, 1920, 1, 2>::addrbound'
+	 'xf::cv::MMIterIn<64, 0, 1080, 1920, 1, 2>::Axi2Mat_Block_.split37_proc'
+	 'xf::cv::MMIterIn<64, 0, 1080, 1920, 1, 2>::Axi2AxiStream'
+	 'xf::cv::MMIterIn<64, 0, 1080, 1920, 1, 2>::AxiStream2MatStream'.
+INFO: [XFORM 203-712] Applying dataflow to function 'xf::cv::xFCannyKernel<0, 8, 0, 1080, 1920, 0, 12, 1, 32, 1, 20, 1920, 2, 5760, 3, false>' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:152:1), detected/extracted 9 process function(s): 
+	 'xf::cv::xFCannyKernel<0, 8, 0, 1080, 1920, 0, 12, 1, 32, 1, 20, 1920, 2, 5760, 3, false>.entry21'
+	 'xFAverageGaussianMask3x3<0, 0, 1080, 1920, 0, 1, 1, 1920>'
+	 'xFSobel<0, 2, 1080, 1920, 0, 3, 1, 1, 5, 3, false>'
+	 'xf::cv::xFDuplicate_rows<2, 1080, 1920, 3, 1, 5, 1920>'
+	 'xf::cv::xFCannyKernel<0, 8, 0, 1080, 1920, 0, 12, 1, 32, 1, 20, 1920, 2, 5760, 3, false>_Block__ZN2xf2cv3MatILi0ELi1080ELi1920ELi1ELi2EEC2Eii.exit15_proc'
+	 'xf::cv::xFMagnitudeKernel<2, 2, 1080, 1920, 3, 3, 1, 5, 5, 1920, 2>'
+	 'xFAngleKernel<2, 0, 1080, 1920, 3, 0, 1, 5, 1, 1920, 5760>'
+	 'xFSuppression3x3<2, 0, 8, 1080, 1920, 3, 0, 12, 1, 5, 1, 0, 1920, 5760, 2>'
+	 'xf::cv::xFPackNMS<8, 8, 1080, 1920, 12, 12, 1, 32, 0, 20>'.
+INFO: [XFORM 203-712] Applying dataflow to function 'xf::cv::MMIterOut<64, 8, 1080, 1920, 32, 1, 2>::Mat2AxiStream' (../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1372:9), detected/extracted 3 process function(s): 
+	 'xf::cv::MMIter<64, 8, 1080, 1920, 32, 2>::cols_npc_aligned31'
+	 'xf::cv::MMIter<64, 8, 1080, 1920, 32, 2>::last_blk_pxl_width'
+	 'xf::cv::MMIterOut<64, 8, 1080, 1920, 32, 1, 2>::MatStream2AxiStream'.
+INFO: [XFORM 203-712] Applying dataflow to function 'xf::cv::MMIterOut<64, 8, 1080, 1920, 32, 1, 2>::Mat2Axi' (../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1443:5), detected/extracted 5 process function(s): 
+	 'xf::cv::MMIterOut<64, 8, 1080, 1920, 32, 1, 2>::Mat2Axi.entry35'
+	 'xf::cv::MMIter<64, 8, 1080, 1920, 32, 2>::addrbound'
+	 'xf::cv::MMIterOut<64, 8, 1080, 1920, 32, 1, 2>::Mat2Axi_Block_.split24_proc'
+	 'xf::cv::MMIterOut<64, 8, 1080, 1920, 32, 1, 2>::Mat2AxiStream'
+	 'xf::cv::MMIterOut<64, 8, 1080, 1920, 32, 1, 2>::AxiStream2Axi'.
+INFO: [XFORM 203-712] Applying dataflow to function 'canny_accel' (../../src/canny_2/canny.cpp:19), detected/extracted 4 process function(s): 
+	 'Block__ZN2xf2cv3MatILi0ELi1080ELi1920ELi1ELi2EEC2Eii.exit11_proc40'
+	 'xf::cv::Array2xfMat<64, 0, 1080, 1920, 1>'
+	 'xf::cv::Canny<3, 0, 0, 8, 1080, 1920, 1, 32, false>'
+	 'xf::cv::xfMat2Array<64, 8, 1080, 1920, 32, 1>'.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:174:9) in function 'xf::cv::MMIterOut<64, 8, 1080, 1920, 32, 1, 2>::MatStream2AxiStream'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1085:25) to (../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1092:13) in function 'xf::cv::MMIterIn<64, 0, 1080, 1920, 1, 2>::AxiStream2MatStream'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1083:40) to (../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1104:17) in function 'xf::cv::MMIterIn<64, 0, 1080, 1920, 1, 2>::AxiStream2MatStream'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:221:14) to (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:235:13) in function 'xFSuppression3x3<2, 0, 8, 1080, 1920, 3, 0, 12, 1, 5, 1, 0, 1920, 5760, 2>'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:365:17) in function 'xFSobel3x3<0, 2, 1080, 1920, 0, 3, 1, 1, 5, 1921, 3, 9, false>'... converting 13 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:38:22) to (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:125:5) in function 'xFFindmax3x3<3, 0, 12>'... converting 14 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:445:46) in function 'xFAngleKernel<2, 0, 1080, 1920, 3, 0, 1, 5, 1, 1920, 5760>'... converting 4 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'xFFindmax3x3<3, 0, 12>' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:46:5)...3 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 3.05 seconds. CPU system time: 0.03 seconds. Elapsed time: 3.08 seconds; current allocated memory: 205.868 MB.
+INFO: [XFORM 203-541] Flattening a loop nest 'MMIterOutRow' (../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1319:28) in function 'xf::cv::MMIterOut<64, 8, 1080, 1920, 32, 1, 2>::MatStream2AxiStream'.
+WARNING: [HLS 200-960] Cannot flatten loop 'rowLoop' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:304:17) in function 'xFSuppression3x3<2, 0, 8, 1080, 1920, 3, 0, 12, 1, 5, 1, 0, 1920, 5760, 2>' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-960.html
+WARNING: [HLS 200-960] Cannot flatten loop 'Row_Loop' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_averagegaussianmask.hpp:165:17) in function 'xFAverageGaussianMask3x3<0, 0, 1080, 1920, 0, 1, 1, 1920>' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-960.html
+INFO: [HLS 200-472] Inferring partial write operation for 'buf.V[0]' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:348:14)
+INFO: [HLS 200-472] Inferring partial write operation for 'buf.V[1]' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:349:27)
+INFO: [HLS 200-472] Inferring partial write operation for 'angle.V[0]' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:350:23)
+INFO: [HLS 200-472] Inferring partial write operation for 'angle.V[0]' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:217:34)
+INFO: [HLS 200-472] Inferring partial write operation for 'angle.V[0]' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:214:34)
+INFO: [HLS 200-472] Inferring partial write operation for 'buf.V[0]' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:216:31)
+INFO: [HLS 200-472] Inferring partial write operation for 'buf.V[0]' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:213:31)
+INFO: [HLS 200-472] Inferring partial write operation for 'buf.V[0]' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:480:21)
+INFO: [HLS 200-472] Inferring partial write operation for 'buf.V[0]' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:204:45)
+INFO: [HLS 200-472] Inferring partial write operation for 'buf.V[0]' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:466:21)
+INFO: [HLS 200-472] Inferring partial write operation for 'buf.V[0]' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_averagegaussianmask.hpp:203:14)
+INFO: [HLS 200-472] Inferring partial write operation for 'buf.V[1]' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_averagegaussianmask.hpp:204:27)
+INFO: [HLS 200-472] Inferring partial write operation for 'buf.V[0]' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_averagegaussianmask.hpp:115:30)
+INFO: [HLS 200-472] Inferring partial write operation for 'buf.V[0]' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_averagegaussianmask.hpp:113:30)
+WARNING: [HLS 200-1449] Process Axi2AxiStream has both a predecessor and reads an input from its caller (see the GUI dataflow viewer). This may lead to lower throughput. Consider copying this input via a predecessor process.
+WARNING: [HLS 200-1614] Cosimulation may deadlock if process xFAverageGaussianMask3x3<0, 0, 1080, 1920, 0, 1, 1, 1920> has a streamed top-level array input and has predecessor processes. If a deadlock occurs, please consider converting the streamed array into an hls::stream or using '::common::get_param hls.config_cosim.top_streamed_array true' in the TCL script.
+WARNING: [HLS 200-1614] Cosimulation may deadlock if process MatStream2AxiStream has a streamed top-level array input and has predecessor processes. If a deadlock occurs, please consider converting the streamed array into an hls::stream or using '::common::get_param hls.config_cosim.top_streamed_array true' in the TCL script.
+WARNING: [HLS 200-1614] Cosimulation may deadlock if process Mat2AxiStream has a streamed top-level array input and has predecessor processes. If a deadlock occurs, please consider converting the streamed array into an hls::stream or using '::common::get_param hls.config_cosim.top_streamed_array true' in the TCL script.
+WARNING: [HLS 200-1449] Process Array2xfMat<64, 0, 1080, 1920, 1> has both a predecessor and reads an input from its caller (see the GUI dataflow viewer). This may lead to lower throughput. Consider copying this input via a predecessor process.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 2.76 seconds. CPU system time: 0.05 seconds. Elapsed time: 2.82 seconds; current allocated memory: 562.627 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'canny_accel' ...
+WARNING: [SYN 201-103] Legalizing function name 'Block__ZN2xf2cv3MatILi0ELi1080ELi1920ELi1ELi2EEC2Eii.exit11_proc40' to 'Block_ZN2xf2cv3MatILi0ELi1080ELi1920ELi1ELi2EEC2Eii_exit11_proc40'.
+WARNING: [SYN 201-103] Legalizing function name 'Axi2Mat.entry3' to 'Axi2Mat_entry3'.
+WARNING: [SYN 201-103] Legalizing function name 'Axi2Mat.entry15' to 'Axi2Mat_entry15'.
+WARNING: [SYN 201-103] Legalizing function name 'last_blk_pxl_width.1' to 'last_blk_pxl_width_1'.
+WARNING: [SYN 201-103] Legalizing function name 'addrbound.1' to 'addrbound_1'.
+WARNING: [SYN 201-103] Legalizing function name 'Axi2Mat_Block_.split37_proc' to 'Axi2Mat_Block_split37_proc'.
+WARNING: [SYN 201-103] Legalizing function name 'Array2xfMat<64, 0, 1080, 1920, 1>' to 'Array2xfMat_64_0_1080_1920_1_s'.
+WARNING: [SYN 201-103] Legalizing function name 'xFCannyKernel<0, 8, 0, 1080, 1920, 0, 12, 1, 32, 1, 20, 1920, 2, 5760, 3, false>.entry21' to 'xFCannyKernel_0_8_0_1080_1920_0_12_1_32_1_20_1920_2_5760_3_false_entry21'.
+WARNING: [SYN 201-103] Legalizing function name 'xfExtractPixels<1, 1, 0>' to 'xfExtractPixels_1_1_0_s'.
+WARNING: [SYN 201-103] Legalizing function name 'xFAverageGaussianMask3x3<0, 0, 1080, 1920, 0, 1, 1, 1920>' to 'xFAverageGaussianMask3x3_0_0_1080_1920_0_1_1_1920_s'.
+WARNING: [SYN 201-103] Legalizing function name 'xFSobel3x3<0, 2, 1080, 1920, 0, 3, 1, 1, 5, 1921, 3, 9, false>' to 'xFSobel3x3_0_2_1080_1920_0_3_1_1_5_1921_3_9_false_s'.
+WARNING: [SYN 201-103] Legalizing function name 'xFSobel<0, 2, 1080, 1920, 0, 3, 1, 1, 5, 3, false>' to 'xFSobel_0_2_1080_1920_0_3_1_1_5_3_false_s'.
+WARNING: [SYN 201-103] Legalizing function name 'xFDuplicate_rows<2, 1080, 1920, 3, 1, 5, 1920>' to 'xFDuplicate_rows_2_1080_1920_3_1_5_1920_s'.
+WARNING: [SYN 201-103] Legalizing function name 'xFCannyKernel<0, 8, 0, 1080, 1920, 0, 12, 1, 32, 1, 20, 1920, 2, 5760, 3, false>_Block__ZN2xf2cv3MatILi0ELi1080ELi1920ELi1ELi2EEC2Eii.exit15_proc' to 'xFCannyKernel_0_8_0_1080_1920_0_12_1_32_1_20_1920_2_5760_3_false_Block_ZN2xf2cv3MatILi0ELi1080ELi1920ELi1ELi2EEC2Eii_exit15_proc'.
+WARNING: [SYN 201-103] Legalizing function name 'xFMagnitudeKernel<2, 2, 1080, 1920, 3, 3, 1, 5, 5, 1920, 2>' to 'xFMagnitudeKernel_2_2_1080_1920_3_3_1_5_5_1920_2_s'.
+WARNING: [SYN 201-103] Legalizing function name 'xFAngleKernel<2, 0, 1080, 1920, 3, 0, 1, 5, 1, 1920, 5760>' to 'xFAngleKernel_2_0_1080_1920_3_0_1_5_1_1920_5760_s'.
+WARNING: [SYN 201-103] Legalizing function name 'xfExtractPixels<1, 5, 3>' to 'xfExtractPixels_1_5_3_s'.
+WARNING: [SYN 201-103] Legalizing function name 'xFFindmax3x3<3, 0, 12>' to 'xFFindmax3x3_3_0_12_s'.
+WARNING: [SYN 201-103] Legalizing function name 'xFSuppression3x3<2, 0, 8, 1080, 1920, 3, 0, 12, 1, 5, 1, 0, 1920, 5760, 2>' to 'xFSuppression3x3_2_0_8_1080_1920_3_0_12_1_5_1_0_1920_5760_2_s'.
+WARNING: [SYN 201-103] Legalizing function name 'xFPackNMS<8, 8, 1080, 1920, 12, 12, 1, 32, 0, 20>' to 'xFPackNMS_8_8_1080_1920_12_12_1_32_0_20_s'.
+WARNING: [SYN 201-103] Legalizing function name 'xFCannyKernel<0, 8, 0, 1080, 1920, 0, 12, 1, 32, 1, 20, 1920, 2, 5760, 3, false>' to 'xFCannyKernel_0_8_0_1080_1920_0_12_1_32_1_20_1920_2_5760_3_false_s'.
+WARNING: [SYN 201-103] Legalizing function name 'Canny<3, 0, 0, 8, 1080, 1920, 1, 32, false>' to 'Canny_3_0_0_8_1080_1920_1_32_false_s'.
+WARNING: [SYN 201-103] Legalizing function name 'Mat2Axi.entry35' to 'Mat2Axi_entry35'.
+WARNING: [SYN 201-103] Legalizing function name 'Mat2Axi_Block_.split24_proc' to 'Mat2Axi_Block_split24_proc'.
+WARNING: [SYN 201-103] Legalizing function name 'xfMat2Array<64, 8, 1080, 1920, 32, 1>' to 'xfMat2Array_64_8_1080_1920_32_1_s'.
+WARNING: [SYN 201-103] Legalizing function name 'read' to 'read_r'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_ZN2xf2cv3MatILi0ELi1080ELi1920ELi1ELi2EEC2Eii_exit11_proc40' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.17 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.2 seconds; current allocated memory: 564.237 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 564.460 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Axi2Mat_entry3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 564.514 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 564.599 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Axi2Mat_entry15' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 564.685 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 564.807 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'last_blk_pxl_width_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.03 seconds; current allocated memory: 564.843 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 564.888 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'addrbound_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 565.020 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 565.141 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Axi2Mat_Block_split37_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 565.173 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 565.204 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Axi2AxiStream' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'MMIterInLoop1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'MMIterInLoop1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 565.321 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 565.545 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'AxiStream2MatStream' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'MMIterInLoopRow'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'MMIterInLoopRow'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.12 seconds; current allocated memory: 566.021 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.12 seconds; current allocated memory: 566.658 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Axi2Mat' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+WARNING: [HLS 200-1020] Increasing the depth of FIFO last_blk_width_c (from last_blk_pxl_width_1_U0 to AxiStream2MatStream_U0) to 6 to improve performance and/or avoid deadlocks.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.19 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.2 seconds; current allocated memory: 566.792 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.12 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.13 seconds; current allocated memory: 567.120 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Array2xfMat_64_0_1080_1920_1_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.15 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 567.180 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 567.324 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'xFCannyKernel_0_8_0_1080_1920_0_12_1_32_1_20_1920_2_5760_3_false_entry21' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.14 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.15 seconds; current allocated memory: 567.384 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 567.510 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'xfExtractPixels_1_1_0_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'xfExtractPixels<1, 1, 0>'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, function 'xfExtractPixels<1, 1, 0>'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 567.608 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 567.639 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'xFAverageGaussianMask3x3_0_0_1080_1920_0_1_1_1920_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Clear_Row_Loop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'Clear_Row_Loop'
+INFO: [SCHED 204-61] Pipelining loop 'Col_Loop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 6, loop 'Col_Loop'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.12 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.13 seconds; current allocated memory: 568.216 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf_V_0' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf_V_1' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf_V_2' will be ignored if a simpler one can be used.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.12 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.12 seconds; current allocated memory: 568.943 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'xFSobel3x3_0_2_1080_1920_0_3_1_1_5_1921_3_9_false_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_448_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'VITIS_LOOP_448_1'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_460_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_460_2'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_471_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_471_3'
+INFO: [SCHED 204-61] Pipelining loop 'Col_Loop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 7, loop 'Col_Loop'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.22 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.24 seconds; current allocated memory: 569.685 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf_V_0' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf_V_1' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf_V_2' will be ignored if a simpler one can be used.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.15 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 570.600 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'xFSobel_0_2_1080_1920_0_3_1_1_5_3_false_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.15 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.15 seconds; current allocated memory: 570.663 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 570.835 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'xFDuplicate_rows_2_1080_1920_3_1_5_1920_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Col_Loop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'Col_Loop'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.13 seconds; current allocated memory: 570.975 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 571.288 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'xFCannyKernel_0_8_0_1080_1920_0_12_1_32_1_20_1920_2_5760_3_false_Block_ZN2xf2cv3MatILi0ELi1080ELi1920ELi1ELi2EEC2Eii_exit15_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 571.338 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 571.420 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'xFMagnitudeKernel_2_2_1080_1920_3_3_1_5_5_1920_2_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'colLoop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'colLoop'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.06 seconds; current allocated memory: 571.551 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 571.809 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'xFAngleKernel_2_0_1080_1920_3_0_1_5_1_1920_5760_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'colLoop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 6, loop 'colLoop'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 572.039 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 572.355 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'xfExtractPixels_1_5_3_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'xfExtractPixels<1, 5, 3>'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, function 'xfExtractPixels<1, 5, 3>'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.09 seconds; current allocated memory: 572.394 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 572.428 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'xFFindmax3x3_3_0_12_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'xFFindmax3x3<3, 0, 12>'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, function 'xFFindmax3x3<3, 0, 12>'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 572.739 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 573.038 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'xFSuppression3x3_2_0_8_1080_1920_3_0_12_1_5_1_0_1920_5760_2_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'bufColLoop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'bufColLoop'
+INFO: [SCHED 204-61] Pipelining loop 'colLoop1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 7, loop 'colLoop1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.23 seconds. CPU system time: 0 seconds. Elapsed time: 0.23 seconds; current allocated memory: 573.640 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.2 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.21 seconds; current allocated memory: 574.476 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'read_r' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'read'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, function 'read'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.21 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.23 seconds; current allocated memory: 574.519 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 574.593 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'xFPackNMS_8_8_1080_1920_12_12_1_32_0_20_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'colLoop'.
+WARNING: [HLS 200-880] The II Violation in module 'xFPackNMS_8_8_1080_1920_12_12_1_32_0_20_s' (loop 'colLoop'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('val_V_write_ln414') of variable '__Result__' on local variable 'val.V' and 'load' operation ('val_V_load') on local variable 'val.V'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'xFPackNMS_8_8_1080_1920_12_12_1_32_0_20_s' (loop 'colLoop'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('val_V_write_ln414') of variable '__Result__' on local variable 'val.V' and 'load' operation ('val_V_load') on local variable 'val.V'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'xFPackNMS_8_8_1080_1920_12_12_1_32_0_20_s' (loop 'colLoop'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation ('val_V_write_ln414') of variable '__Result__' on local variable 'val.V' and 'load' operation ('val_V_load') on local variable 'val.V'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'xFPackNMS_8_8_1080_1920_12_12_1_32_0_20_s' (loop 'colLoop'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 0) between 'store' operation ('val_V_write_ln414') of variable '__Result__' on local variable 'val.V' and 'load' operation ('val_V_load') on local variable 'val.V'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'xFPackNMS_8_8_1080_1920_12_12_1_32_0_20_s' (loop 'colLoop'): Unable to enforce a carried dependence constraint (II = 19, distance = 1, offset = 1) between 'call' operation ('call_ret12_i', ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:126->../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:152) to 'read' and 'call' operation ('call_ret31_i', ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:126->../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:152) to 'read'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'xFPackNMS_8_8_1080_1920_12_12_1_32_0_20_s' (loop 'colLoop'): Unable to enforce a carried dependence constraint (II = 27, distance = 1, offset = 1) between 'call' operation ('call_ret4_i', ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:126->../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:152) to 'read' and 'call' operation ('call_ret31_i', ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:126->../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:152) to 'read'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'xFPackNMS_8_8_1080_1920_12_12_1_32_0_20_s' (loop 'colLoop'): Unable to enforce a carried dependence constraint (II = 31, distance = 1, offset = 1) between 'call' operation ('call_ret_i', ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:126->../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:152) to 'read' and 'call' operation ('call_ret31_i', ../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:126->../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:152) to 'read'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 32, Depth = 34, loop 'colLoop'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.43 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.45 seconds; current allocated memory: 576.104 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.2 seconds. CPU system time: 0 seconds. Elapsed time: 0.2 seconds; current allocated memory: 577.873 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'xFCannyKernel_0_8_0_1080_1920_0_12_1_32_1_20_1920_2_5760_3_false_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.16 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.18 seconds; current allocated memory: 578.127 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.7 seconds. CPU system time: 0 seconds. Elapsed time: 0.7 seconds; current allocated memory: 578.796 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Canny_3_0_0_8_1080_1920_1_32_false_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.43 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.44 seconds; current allocated memory: 578.893 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 579.030 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Mat2Axi_entry35' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.41 seconds. CPU system time: 0 seconds. Elapsed time: 0.41 seconds; current allocated memory: 579.084 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 579.200 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'addrbound' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln997) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 579.291 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 579.383 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Mat2Axi_Block_split24_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.05 seconds; current allocated memory: 579.415 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 579.493 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cols_npc_aligned31' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 579.589 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 579.723 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'last_blk_pxl_width' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 579.792 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 579.899 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'MatStream2AxiStream' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'MMIterOutRow_MMIterOutCol'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'MMIterOutRow_MMIterOutCol'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 580.143 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 580.495 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Mat2AxiStream' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 580.609 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 580.790 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'AxiStream2Axi' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'MMIterOutLoop2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'MMIterOutLoop2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 580.909 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 581.126 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Mat2Axi' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+WARNING: [HLS 200-1018] Consider increasing the depth of FIFO ldata (from Mat2AxiStream_U0 to AxiStream2Axi_U0) to 3 to improve performance and/or avoid deadlocks.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 581.222 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 581.441 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'xfMat2Array_64_8_1080_1920_32_1_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 581.493 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 581.643 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'canny_accel' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 581.824 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.79 seconds. CPU system time: 0 seconds. Elapsed time: 0.8 seconds; current allocated memory: 582.255 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Block_ZN2xf2cv3MatILi0ELi1080ELi1920ELi1ELi2EEC2Eii_exit11_proc40' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Block_ZN2xf2cv3MatILi0ELi1080ELi1920ELi1ELi2EEC2Eii_exit11_proc40'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.59 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.61 seconds; current allocated memory: 582.636 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Axi2Mat_entry3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Axi2Mat_entry3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 583.393 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Axi2Mat_entry15' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Axi2Mat_entry15'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 583.880 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'last_blk_pxl_width_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'last_blk_pxl_width_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 584.376 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'addrbound_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mul_22s_22s_22_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'addrbound_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 584.808 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Axi2Mat_Block_split37_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Axi2Mat_Block_split37_proc'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 585.330 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Axi2AxiStream' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Axi2AxiStream'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 586.009 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'AxiStream2MatStream' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'AxiStream2MatStream'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.13 seconds; current allocated memory: 587.644 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Axi2Mat' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Setting dangling out port 'Axi2Mat/m_axi_gmem1_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Axi2Mat/m_axi_gmem1_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Axi2Mat/m_axi_gmem1_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Axi2Mat/m_axi_gmem1_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Axi2Mat/m_axi_gmem1_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Axi2Mat/m_axi_gmem1_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Axi2Mat/m_axi_gmem1_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Axi2Mat/m_axi_gmem1_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Axi2Mat/m_axi_gmem1_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Axi2Mat/m_axi_gmem1_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Axi2Mat/m_axi_gmem1_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Axi2Mat/m_axi_gmem1_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Axi2Mat/m_axi_gmem1_WVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Axi2Mat/m_axi_gmem1_WDATA' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Axi2Mat/m_axi_gmem1_WSTRB' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Axi2Mat/m_axi_gmem1_WLAST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Axi2Mat/m_axi_gmem1_WID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Axi2Mat/m_axi_gmem1_WUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Axi2Mat/m_axi_gmem1_BREADY' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Axi2Mat'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.57 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.58 seconds; current allocated memory: 591.090 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Array2xfMat_64_0_1080_1920_1_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Array2xfMat_64_0_1080_1920_1_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.2 seconds. CPU system time: 0 seconds. Elapsed time: 0.21 seconds; current allocated memory: 592.405 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'xFCannyKernel_0_8_0_1080_1920_0_12_1_32_1_20_1920_2_5760_3_false_entry21' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'xFCannyKernel_0_8_0_1080_1920_0_12_1_32_1_20_1920_2_5760_3_false_entry21'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.16 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.17 seconds; current allocated memory: 593.026 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'xfExtractPixels_1_1_0_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'xfExtractPixels_1_1_0_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 593.575 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'xFAverageGaussianMask3x3_0_0_1080_1920_0_1_1_1920_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mux_32_8_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'xFAverageGaussianMask3x3_0_0_1080_1920_0_1_1_1920_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 594.950 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'xFSobel3x3_0_2_1080_1920_0_3_1_1_5_1921_3_9_false_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mux_32_13_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_32_8_1_1': 7 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'xFSobel3x3_0_2_1080_1920_0_3_1_1_5_1921_3_9_false_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.39 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.4 seconds; current allocated memory: 599.282 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'xFSobel_0_2_1080_1920_0_3_1_1_5_3_false_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'xFSobel_0_2_1080_1920_0_3_1_1_5_3_false_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.43 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.44 seconds; current allocated memory: 603.005 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'xFDuplicate_rows_2_1080_1920_3_1_5_1920_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'xFDuplicate_rows_2_1080_1920_3_1_5_1920_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.14 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 603.768 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'xFCannyKernel_0_8_0_1080_1920_0_12_1_32_1_20_1920_2_5760_3_false_Block_ZN2xf2cv3MatILi0ELi1080ELi1920ELi1ELi2EEC2Eii_exit15_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'xFCannyKernel_0_8_0_1080_1920_0_12_1_32_1_20_1920_2_5760_3_false_Block_ZN2xf2cv3MatILi0ELi1080ELi1920ELi1ELi2EEC2Eii_exit15_proc'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.1 seconds; current allocated memory: 604.768 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'xFMagnitudeKernel_2_2_1080_1920_3_3_1_5_5_1920_2_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'xFMagnitudeKernel_2_2_1080_1920_3_3_1_5_5_1920_2_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 605.460 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'xFAngleKernel_2_0_1080_1920_3_0_1_5_1_1920_5760_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mul_17s_15ns_32_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'xFAngleKernel_2_0_1080_1920_3_0_1_5_1_1920_5760_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.13 seconds; current allocated memory: 606.763 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'xfExtractPixels_1_5_3_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'xfExtractPixels_1_5_3_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.18 seconds. CPU system time: 0 seconds. Elapsed time: 0.18 seconds; current allocated memory: 607.926 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'xFFindmax3x3_3_0_12_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'xFFindmax3x3_3_0_12_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 608.723 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'xFSuppression3x3_2_0_8_1080_1920_3_0_12_1_5_1_0_1920_5760_2_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mux_32_16_1_1': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'xFSuppression3x3_2_0_8_1080_1920_3_0_12_1_5_1_0_1920_5760_2_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.38 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.39 seconds; current allocated memory: 611.469 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'read_r' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'read_r'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.41 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.43 seconds; current allocated memory: 614.645 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'xFPackNMS_8_8_1080_1920_12_12_1_32_0_20_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'xFPackNMS_8_8_1080_1920_12_12_1_32_0_20_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.12 seconds; current allocated memory: 618.766 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'xFCannyKernel_0_8_0_1080_1920_0_12_1_32_1_20_1920_2_5760_3_false_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'start_for_xFCannyKernel_0_8_0_1080_1920_0_12_1_32_1_20_1920_2_5760_3_false_Block_ZN2xf2cv3MatILi0ELi1080ELi1920ELi1ELi2EEC2Eii_exit15_proc_U0' to 'start_for_xFCannyKernel_0_8_0_1080_1920_0_12_1_32_1_20_1920_2_5760_3_false_Blbkb' due to the length limit 80
+INFO: [RTGEN 206-100] Finished creating RTL model for 'xFCannyKernel_0_8_0_1080_1920_0_12_1_32_1_20_1920_2_5760_3_false_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.89 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.91 seconds; current allocated memory: 627.543 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Canny_3_0_0_8_1080_1920_1_32_false_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Canny_3_0_0_8_1080_1920_1_32_false_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.49 seconds. CPU system time: 0 seconds. Elapsed time: 0.5 seconds; current allocated memory: 629.166 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Mat2Axi_entry35' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Mat2Axi_entry35'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.46 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.47 seconds; current allocated memory: 629.829 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'addrbound' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_22s_11ns_22_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'addrbound'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 630.504 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Mat2Axi_Block_split24_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Mat2Axi_Block_split24_proc'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 631.068 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cols_npc_aligned31' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cols_npc_aligned31'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 631.567 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'last_blk_pxl_width' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'last_blk_pxl_width'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 632.237 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'MatStream2AxiStream' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mul_32ns_7ns_39_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'MatStream2AxiStream'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 633.257 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Mat2AxiStream' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] RTL name 'fifo_w11_d2_S' is changed to 'fifo_w11_d2_S_x' due to conflict.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Mat2AxiStream'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.22 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.23 seconds; current allocated memory: 634.970 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'AxiStream2Axi' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'AxiStream2Axi'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.1 seconds; current allocated memory: 635.949 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Mat2Axi' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] RTL name 'fifo_w64_d4_S' is changed to 'fifo_w64_d4_S_x' due to conflict.
+WARNING: [RTGEN 206-101] RTL name 'fifo_w32_d2_S' is changed to 'fifo_w32_d2_S_x' due to conflict.
+WARNING: [RTGEN 206-101] RTL name 'fifo_w11_d2_S' is changed to 'fifo_w11_d2_S_x0' due to conflict.
+WARNING: [RTGEN 206-101] RTL name 'fifo_w64_d2_S' is changed to 'fifo_w64_d2_S_x' due to conflict.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Mat2Axi/m_axi_gmem2_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Mat2Axi/m_axi_gmem2_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Mat2Axi/m_axi_gmem2_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Mat2Axi/m_axi_gmem2_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Mat2Axi/m_axi_gmem2_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Mat2Axi/m_axi_gmem2_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Mat2Axi/m_axi_gmem2_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Mat2Axi/m_axi_gmem2_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Mat2Axi/m_axi_gmem2_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Mat2Axi/m_axi_gmem2_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Mat2Axi/m_axi_gmem2_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Mat2Axi/m_axi_gmem2_ARUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Mat2Axi/m_axi_gmem2_RREADY' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Mat2Axi'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.23 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.24 seconds; current allocated memory: 637.479 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'xfMat2Array_64_8_1080_1920_32_1_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'xfMat2Array_64_8_1080_1920_32_1_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.13 seconds; current allocated memory: 638.720 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'canny_accel' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'canny_accel/gmem1' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'canny_accel/gmem2' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'canny_accel/img_inp' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'canny_accel/img_out' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'canny_accel/rows' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'canny_accel/cols' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'canny_accel/low_threshold' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'canny_accel/high_threshold' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'canny_accel' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'img_inp', 'img_out', 'rows', 'cols', 'low_threshold', 'high_threshold' and 'return' to AXI-Lite port control.
+WARNING: [RTGEN 206-101] RTL name 'fifo_w32_d2_S' is changed to 'fifo_w32_d2_S_x0' due to conflict.
+WARNING: [RTGEN 206-101] RTL name 'fifo_w32_d4_S' is changed to 'fifo_w32_d4_S_x' due to conflict.
+WARNING: [RTGEN 206-101] RTL name 'fifo_w11_d4_S' is changed to 'fifo_w11_d4_S_x' due to conflict.
+WARNING: [RTGEN 206-101] RTL name 'fifo_w64_d2_S' is changed to 'fifo_w64_d2_S_x0' due to conflict.
+WARNING: [RTGEN 206-101] RTL name 'fifo_w64_d4_S' is changed to 'fifo_w64_d4_S_x0' due to conflict.
+WARNING: [RTGEN 206-101] RTL name 'fifo_w32_d3_S' is changed to 'fifo_w32_d3_S_x' due to conflict.
+WARNING: [RTGEN 206-101] RTL name 'fifo_w8_d2_S' is changed to 'fifo_w8_d2_S_x' due to conflict.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'canny_accel'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.22 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.26 seconds; current allocated memory: 640.827 MB.
+INFO: [RTMG 210-282] Generating pipelined core: 'canny_accel_mul_22s_22s_22_1_1_Multiplier_0'
+INFO: [RTMG 210-282] Generating pipelined core: 'canny_accel_mul_32s_32s_32_2_1_Multiplier_1'
+INFO: [RTMG 210-285] Implementing FIFO 'din_c1_U(canny_accel_fifo_w64_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'rows_c2_U(canny_accel_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'cols_c3_U(canny_accel_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'din_c_U(canny_accel_fifo_w64_d4_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'rows_c_U(canny_accel_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'cols_c_U(canny_accel_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'last_blk_width_c_U(canny_accel_fifo_w4_d6_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_channel_U(canny_accel_fifo_w19_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'rows_c15_U(canny_accel_fifo_w32_d4_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'cols_c16_U(canny_accel_fifo_w32_d4_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'axibound_V_U(canny_accel_fifo_w19_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'ldata_U(canny_accel_fifo_w64_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_Axi2Mat_entry15_U0_U(canny_accel_start_for_Axi2Mat_entry15_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_addrbound_1_U0_U(canny_accel_start_for_addrbound_1_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_AxiStream2MatStream_U0_U(canny_accel_start_for_AxiStream2MatStream_U0)' using Shift Registers.
+INFO: [RTMG 210-278] Implementing memory 'canny_accel_xFAverageGaussianMask3x3_0_0_1080_1920_0_1_1_1920_s_buf_V_0_ram (RAM_S2P_BRAM)' using block RAMs.
+INFO: [RTMG 210-282] Generating pipelined core: 'canny_accel_mul_17s_15ns_32_2_1_Multiplier_2'
+INFO: [RTMG 210-278] Implementing memory 'canny_accel_xFSuppression3x3_2_0_8_1080_1920_3_0_12_1_5_1_0_1920_5760_2_s_angle_V_0_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'canny_accel_xFSuppression3x3_2_0_8_1080_1920_3_0_12_1_5_1_0_1920_5760_2_s_buf_V_0_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'p_lowthreshold_c_U(canny_accel_fifo_w8_d6_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_highthreshold_c_U(canny_accel_fifo_w8_d6_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'img_height_c_U(canny_accel_fifo_w11_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'img_height_c19_U(canny_accel_fifo_w11_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'img_width_c_U(canny_accel_fifo_w11_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'img_width_c20_U(canny_accel_fifo_w11_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'gaussian_mat_data_U(canny_accel_fifo_w8_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'img_height_c21_U(canny_accel_fifo_w11_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'img_width_c22_U(canny_accel_fifo_w11_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'gradx_mat_data_U(canny_accel_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'grady_mat_data_U(canny_accel_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'img_height_c23_U(canny_accel_fifo_w11_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'img_width_c24_U(canny_accel_fifo_w11_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'gradx1_mat_data_U(canny_accel_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'gradx2_mat_data_U(canny_accel_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'grady1_mat_data_U(canny_accel_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'grady2_mat_data_U(canny_accel_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'img_height_c25_U(canny_accel_fifo_w11_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'img_height_c26_U(canny_accel_fifo_w11_d3_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'img_width_c27_U(canny_accel_fifo_w11_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'img_width_c28_U(canny_accel_fifo_w11_d3_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'imgwidth_c_U(canny_accel_fifo_w11_d4_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'height_c_U(canny_accel_fifo_w11_d4_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'magnitude_mat_data_U(canny_accel_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'phase_mat_data_U(canny_accel_fifo_w8_d5760_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'nms_mat_data_U(canny_accel_fifo_w2_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'img_height_c29_U(canny_accel_fifo_w11_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'img_width_c30_U(canny_accel_fifo_w11_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_xFAverageGaussianMask3x3_0_0_1080_1920_0_1_1_1920_U0_U(canny_accel_start_for_xFAverageGaussianMask3x3_0_0_1080_1920_0_1_1_1920_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_xFCannyKernel_0_8_0_1080_1920_0_12_1_32_1_20_1920_2_5760_3_false_Blbkb_U(canny_accel_start_for_xFCannyKernel_0_8_0_1080_1920_0_12_1_32_1_20_1920_2_5760_3_false_Blbkb)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_xFSuppression3x3_2_0_8_1080_1920_3_0_12_1_5_1_0_1920_5760_2_U0_U(canny_accel_start_for_xFSuppression3x3_2_0_8_1080_1920_3_0_12_1_5_1_0_1920_5760_2_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_xFSobel_0_2_1080_1920_0_3_1_1_5_3_false_U0_U(canny_accel_start_for_xFSobel_0_2_1080_1920_0_3_1_1_5_3_false_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_xFDuplicate_rows_2_1080_1920_3_1_5_1920_U0_U(canny_accel_start_for_xFDuplicate_rows_2_1080_1920_3_1_5_1920_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_xFAngleKernel_2_0_1080_1920_3_0_1_5_1_1920_5760_U0_U(canny_accel_start_for_xFAngleKernel_2_0_1080_1920_3_0_1_5_1_1920_5760_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_xFMagnitudeKernel_2_2_1080_1920_3_3_1_5_5_1920_2_U0_U(canny_accel_start_for_xFMagnitudeKernel_2_2_1080_1920_3_3_1_5_5_1920_2_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_xFPackNMS_8_8_1080_1920_12_12_1_32_0_20_U0_U(canny_accel_start_for_xFPackNMS_8_8_1080_1920_12_12_1_32_0_20_U0)' using Shift Registers.
+INFO: [RTMG 210-282] Generating pipelined core: 'canny_accel_mul_32ns_7ns_39_2_1_Multiplier_3'
+INFO: [RTMG 210-285] Implementing FIFO 'cols_c_i_U(canny_accel_fifo_w11_d2_S_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'rows_c_i_U(canny_accel_fifo_w32_d3_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_c_i_U(canny_accel_fifo_w7_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_channel_U(canny_accel_fifo_w7_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_c11_i_U(canny_accel_fifo_w7_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_last_blk_pxl_width_U0_U(canny_accel_start_for_last_blk_pxl_width_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'dout_c_U(canny_accel_fifo_w64_d4_S_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'rows_c_U(canny_accel_fifo_w22_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'rows_c11_U(canny_accel_fifo_w32_d2_S_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'cols_c_U(canny_accel_fifo_w11_d2_S_x0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'cols_c12_U(canny_accel_fifo_w11_d2_S_x0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_channel_U(canny_accel_fifo_w17_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'axibound_V_U(canny_accel_fifo_w17_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'ldata_U(canny_accel_fifo_w64_d2_S_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_addrbound_U0_U(canny_accel_start_for_addrbound_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_Mat2AxiStream_U0_U(canny_accel_start_for_Mat2AxiStream_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'in_mat_rows_c_U(canny_accel_fifo_w32_d2_S_x0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'in_mat_cols_c_U(canny_accel_fifo_w32_d2_S_x0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'dst_mat_rows_c_U(canny_accel_fifo_w32_d4_S_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'dst_mat_cols_c_U(canny_accel_fifo_w11_d4_S_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'img_inp_c_U(canny_accel_fifo_w64_d2_S_x0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'img_out_c_U(canny_accel_fifo_w64_d4_S_x0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'low_threshold_c_U(canny_accel_fifo_w32_d3_S_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'high_threshold_c_U(canny_accel_fifo_w32_d3_S_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'in_mat_data_U(canny_accel_fifo_w8_d2_S_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'in_mat_rows_c20_U(canny_accel_fifo_w32_d2_S_x0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'in_mat_cols_c21_U(canny_accel_fifo_w32_d2_S_x0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'dst_mat_data_U(canny_accel_fifo_w64_d2_S_x0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_Canny_3_0_0_8_1080_1920_1_32_false_U0_U(canny_accel_start_for_Canny_3_0_0_8_1080_1920_1_32_false_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_xfMat2Array_64_8_1080_1920_32_1_U0_U(canny_accel_start_for_xfMat2Array_64_8_1080_1920_32_1_U0)' using Shift Registers.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 6.36 seconds. CPU system time: 0.32 seconds. Elapsed time: 6.71 seconds; current allocated memory: 652.242 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for canny_accel.
+INFO: [VLOG 209-307] Generating Verilog RTL for canny_accel.
+INFO: [HLS 200-1603] Design has MAXI bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-789] **** Estimated Fmax: 136.99 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 45.95 seconds. CPU system time: 3.17 seconds. Elapsed time: 48.19 seconds; current allocated memory: 656.599 MB.
+INFO: [HLS 200-112] Total CPU user time: 48.16 seconds. Total CPU system time: 4.82 seconds. Total elapsed time: 50.68 seconds; peak allocated memory: 652.242 MB.

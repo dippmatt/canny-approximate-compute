@@ -1,0 +1,650 @@
+
+
+================================================================
+== Vitis HLS Report for 'xFSobel_0_2_1080_1920_0_3_1_1_5_3_false_s'
+================================================================
+* Date:           Sun Feb 25 01:46:33 2024
+
+* Version:        2020.2.2 (Build 3118627 on Tue Feb  9 05:13:49 MST 2021)
+* Project:        canny_accel
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.268 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+---------+---------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |      Interval     | Pipeline|
+    |   min   |   max   |    min    |    max    |   min   |   max   |   Type  |
+    +---------+---------+-----------+-----------+---------+---------+---------+
+    |  2091024|  2091024|  20.910 ms|  20.910 ms|  2091024|  2091024|     none|
+    +---------+---------+-----------+-----------+---------+---------+---------+
+
+    + Detail: 
+        * Instance: 
+        +---------------------------------------------------------------+-----------------------------------------------------+---------+---------+-----------+-----------+---------+---------+---------+
+        |                                                               |                                                     |  Latency (cycles) |   Latency (absolute)  |      Interval     | Pipeline|
+        |                            Instance                           |                        Module                       |   min   |   max   |    min    |    max    |   min   |   max   |   Type  |
+        +---------------------------------------------------------------+-----------------------------------------------------+---------+---------+-----------+-----------+---------+---------+---------+
+        |grp_xFSobel3x3_0_2_1080_1920_0_3_1_1_5_1921_3_9_false_s_fu_66  |xFSobel3x3_0_2_1080_1920_0_3_1_1_5_1921_3_9_false_s  |  2091023|  2091023|  20.910 ms|  20.910 ms|  2091023|  2091023|     none|
+        +---------------------------------------------------------------+-----------------------------------------------------+---------+---------+-----------+-----------+---------+---------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|      2|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        3|    -|     799|   1270|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|     95|    -|
+|Register         |        -|    -|      27|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        3|    0|     826|   1367|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        1|    0|      ~0|      2|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------------------------------------------------------+-----------------------------------------------------+---------+----+-----+------+-----+
+    |                            Instance                           |                        Module                       | BRAM_18K| DSP|  FF |  LUT | URAM|
+    +---------------------------------------------------------------+-----------------------------------------------------+---------+----+-----+------+-----+
+    |grp_xFSobel3x3_0_2_1080_1920_0_3_1_1_5_1921_3_9_false_s_fu_66  |xFSobel3x3_0_2_1080_1920_0_3_1_1_5_1921_3_9_false_s  |        3|   0|  799|  1270|    0|
+    +---------------------------------------------------------------+-----------------------------------------------------+---------+----+-----+------+-----+
+    |Total                                                          |                                                     |        3|   0|  799|  1270|    0|
+    +---------------------------------------------------------------+-----------------------------------------------------+---------+----+-----+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------+----------+----+---+----+------------+------------+
+    |  Variable Name  | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |ap_block_state1  |        or|   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |Total            |          |   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------+----+-----------+-----+-----------+
+    |         Name         | LUT| Input Size| Bits| Total Bits|
+    +----------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm             |  14|          3|    1|          3|
+    |ap_done               |   9|          2|    1|          2|
+    |gaussian_mat_41_read  |   9|          2|    1|          2|
+    |gradx_mat_42_write    |   9|          2|    1|          2|
+    |grady_mat_45_write    |   9|          2|    1|          2|
+    |imgheight_blk_n       |   9|          2|    1|          2|
+    |imgheight_out_blk_n   |   9|          2|    1|          2|
+    |imgwidth_blk_n        |   9|          2|    1|          2|
+    |imgwidth_out_blk_n    |   9|          2|    1|          2|
+    |real_start            |   9|          2|    1|          2|
+    +----------------------+----+-----------+-----+-----------+
+    |Total                 |  95|         21|   10|         21|
+    +----------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------------------------------------------+----+----+-----+-----------+
+    |                                    Name                                    | FF | LUT| Bits| Const Bits|
+    +----------------------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                                   |   2|   0|    2|          0|
+    |ap_done_reg                                                                 |   1|   0|    1|          0|
+    |grp_xFSobel3x3_0_2_1080_1920_0_3_1_1_5_1921_3_9_false_s_fu_66_ap_start_reg  |   1|   0|    1|          0|
+    |imgheight_read_reg_80                                                       |  11|   0|   11|          0|
+    |imgwidth_read_reg_85                                                        |  11|   0|   11|          0|
+    |start_once_reg                                                              |   1|   0|    1|          0|
+    +----------------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                                       |  27|   0|   27|          0|
+    +----------------------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------+-----+-----+------------+----------------------------------------------------+--------------+
+|        RTL Ports        | Dir | Bits|  Protocol  |                    Source Object                   |    C Type    |
++-------------------------+-----+-----+------------+----------------------------------------------------+--------------+
+|ap_clk                   |   in|    1|  ap_ctrl_hs|  xFSobel<0, 2, 1080, 1920, 0, 3, 1, 1, 5, 3, false>|  return value|
+|ap_rst                   |   in|    1|  ap_ctrl_hs|  xFSobel<0, 2, 1080, 1920, 0, 3, 1, 1, 5, 3, false>|  return value|
+|ap_start                 |   in|    1|  ap_ctrl_hs|  xFSobel<0, 2, 1080, 1920, 0, 3, 1, 1, 5, 3, false>|  return value|
+|start_full_n             |   in|    1|  ap_ctrl_hs|  xFSobel<0, 2, 1080, 1920, 0, 3, 1, 1, 5, 3, false>|  return value|
+|ap_done                  |  out|    1|  ap_ctrl_hs|  xFSobel<0, 2, 1080, 1920, 0, 3, 1, 1, 5, 3, false>|  return value|
+|ap_continue              |   in|    1|  ap_ctrl_hs|  xFSobel<0, 2, 1080, 1920, 0, 3, 1, 1, 5, 3, false>|  return value|
+|ap_idle                  |  out|    1|  ap_ctrl_hs|  xFSobel<0, 2, 1080, 1920, 0, 3, 1, 1, 5, 3, false>|  return value|
+|ap_ready                 |  out|    1|  ap_ctrl_hs|  xFSobel<0, 2, 1080, 1920, 0, 3, 1, 1, 5, 3, false>|  return value|
+|start_out                |  out|    1|  ap_ctrl_hs|  xFSobel<0, 2, 1080, 1920, 0, 3, 1, 1, 5, 3, false>|  return value|
+|start_write              |  out|    1|  ap_ctrl_hs|  xFSobel<0, 2, 1080, 1920, 0, 3, 1, 1, 5, 3, false>|  return value|
+|gaussian_mat_41_dout     |   in|    8|     ap_fifo|                                     gaussian_mat_41|       pointer|
+|gaussian_mat_41_empty_n  |   in|    1|     ap_fifo|                                     gaussian_mat_41|       pointer|
+|gaussian_mat_41_read     |  out|    1|     ap_fifo|                                     gaussian_mat_41|       pointer|
+|gradx_mat_42_din         |  out|   16|     ap_fifo|                                        gradx_mat_42|       pointer|
+|gradx_mat_42_full_n      |   in|    1|     ap_fifo|                                        gradx_mat_42|       pointer|
+|gradx_mat_42_write       |  out|    1|     ap_fifo|                                        gradx_mat_42|       pointer|
+|grady_mat_45_din         |  out|   16|     ap_fifo|                                        grady_mat_45|       pointer|
+|grady_mat_45_full_n      |   in|    1|     ap_fifo|                                        grady_mat_45|       pointer|
+|grady_mat_45_write       |  out|    1|     ap_fifo|                                        grady_mat_45|       pointer|
+|imgheight_dout           |   in|   11|     ap_fifo|                                           imgheight|       pointer|
+|imgheight_empty_n        |   in|    1|     ap_fifo|                                           imgheight|       pointer|
+|imgheight_read           |  out|    1|     ap_fifo|                                           imgheight|       pointer|
+|imgwidth_dout            |   in|   11|     ap_fifo|                                            imgwidth|       pointer|
+|imgwidth_empty_n         |   in|    1|     ap_fifo|                                            imgwidth|       pointer|
+|imgwidth_read            |  out|    1|     ap_fifo|                                            imgwidth|       pointer|
+|imgheight_out_din        |  out|   11|     ap_fifo|                                       imgheight_out|       pointer|
+|imgheight_out_full_n     |   in|    1|     ap_fifo|                                       imgheight_out|       pointer|
+|imgheight_out_write      |  out|    1|     ap_fifo|                                       imgheight_out|       pointer|
+|imgwidth_out_din         |  out|   11|     ap_fifo|                                        imgwidth_out|       pointer|
+|imgwidth_out_full_n      |   in|    1|     ap_fifo|                                        imgwidth_out|       pointer|
+|imgwidth_out_write       |  out|    1|     ap_fifo|                                        imgwidth_out|       pointer|
++-------------------------+-----+-----+------------+----------------------------------------------------+--------------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 7.26>
+ST_1 : Operation 3 [1/1] (3.63ns)   --->   "%imgheight_read = read i11 @_ssdm_op_Read.ap_fifo.i11P0A, i11 %imgheight" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:530]   --->   Operation 3 'read' 'imgheight_read' <Predicate = true> <Delay = 3.63> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 11> <Depth = 2> <FIFO>
+ST_1 : Operation 4 [1/1] (3.63ns)   --->   "%imgwidth_read = read i11 @_ssdm_op_Read.ap_fifo.i11P0A, i11 %imgwidth" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:530]   --->   Operation 4 'read' 'imgwidth_read' <Predicate = true> <Delay = 3.63> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 11> <Depth = 2> <FIFO>
+ST_1 : Operation 5 [1/1] (3.63ns)   --->   "%write_ln152 = write void @_ssdm_op_Write.ap_fifo.i11P0A, i11 %imgheight_out, i11 %imgheight_read" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:152]   --->   Operation 5 'write' 'write_ln152' <Predicate = true> <Delay = 3.63> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 11> <Depth = 2> <FIFO>
+ST_1 : Operation 6 [1/1] (3.63ns)   --->   "%write_ln152 = write void @_ssdm_op_Write.ap_fifo.i11P0A, i11 %imgwidth_out, i11 %imgwidth_read" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:152]   --->   Operation 6 'write' 'write_ln152' <Predicate = true> <Delay = 3.63> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 11> <Depth = 2> <FIFO>
+ST_1 : Operation 7 [2/2] (0.00ns)   --->   "%call_ln530 = call void @xFSobel3x3<0, 2, 1080, 1920, 0, 3, 1, 1, 5, 1921, 3, 9, false>, i8 %gaussian_mat_41, i16 %gradx_mat_42, i16 %grady_mat_45, i11 %imgheight_read, i11 %imgwidth_read" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:530->../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:152]   --->   Operation 7 'call' 'call_ln530' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 8 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %gaussian_mat_41, void @empty_13, i32 0, i32 0, void @empty_17, i32 0, i32 0, void @empty_17, void @empty_17, void @empty_17, i32 0, i32 0, i32 0, i32 0, void @empty_17, void @empty_17"   --->   Operation 8 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %gradx_mat_42, void @empty_13, i32 0, i32 0, void @empty_17, i32 0, i32 0, void @empty_17, void @empty_17, void @empty_17, i32 0, i32 0, i32 0, i32 0, void @empty_17, void @empty_17"   --->   Operation 9 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %grady_mat_45, void @empty_13, i32 0, i32 0, void @empty_17, i32 0, i32 0, void @empty_17, void @empty_17, void @empty_17, i32 0, i32 0, i32 0, i32 0, void @empty_17, void @empty_17"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i11 %imgwidth, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i11 %imgheight, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str"   --->   Operation 12 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i11 %imgheight_out, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i11 %imgwidth_out, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str"   --->   Operation 14 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %grady_mat_45, void @empty_13, i32 0, i32 0, void @empty_17, i32 0, i32 0, void @empty_17, void @empty_17, void @empty_17, i32 0, i32 0, i32 0, i32 0, void @empty_17, void @empty_17"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %gradx_mat_42, void @empty_13, i32 0, i32 0, void @empty_17, i32 0, i32 0, void @empty_17, void @empty_17, void @empty_17, i32 0, i32 0, i32 0, i32 0, void @empty_17, void @empty_17"   --->   Operation 16 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %gaussian_mat_41, void @empty_13, i32 0, i32 0, void @empty_17, i32 0, i32 0, void @empty_17, void @empty_17, void @empty_17, i32 0, i32 0, i32 0, i32 0, void @empty_17, void @empty_17"   --->   Operation 17 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 18 [1/2] (0.00ns)   --->   "%call_ln530 = call void @xFSobel3x3<0, 2, 1080, 1920, 0, 3, 1, 1, 5, 1921, 3, 9, false>, i8 %gaussian_mat_41, i16 %gradx_mat_42, i16 %grady_mat_45, i11 %imgheight_read, i11 %imgwidth_read" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_sobel.hpp:530->../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:152]   --->   Operation 18 'call' 'call_ln530' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%ret_ln152 = ret" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:152]   --->   Operation 19 'ret' 'ret_ln152' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 0
+- Is top level: 0
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ gaussian_mat_41]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ gradx_mat_42]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ grady_mat_45]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ imgheight]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ imgwidth]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ imgheight_out]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ imgwidth_out]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+imgheight_read    (read         ) [ 001]
+imgwidth_read     (read         ) [ 001]
+write_ln152       (write        ) [ 000]
+write_ln152       (write        ) [ 000]
+specinterface_ln0 (specinterface) [ 000]
+specinterface_ln0 (specinterface) [ 000]
+specinterface_ln0 (specinterface) [ 000]
+specinterface_ln0 (specinterface) [ 000]
+specinterface_ln0 (specinterface) [ 000]
+specinterface_ln0 (specinterface) [ 000]
+specinterface_ln0 (specinterface) [ 000]
+specinterface_ln0 (specinterface) [ 000]
+specinterface_ln0 (specinterface) [ 000]
+specinterface_ln0 (specinterface) [ 000]
+call_ln530        (call         ) [ 000]
+ret_ln152         (ret          ) [ 000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="gaussian_mat_41">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="gaussian_mat_41"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="gradx_mat_42">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="gradx_mat_42"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="grady_mat_45">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="grady_mat_45"/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1000" name="imgheight">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="imgheight"/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1000" name="imgwidth">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="imgwidth"/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1000" name="imgheight_out">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="imgheight_out"/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1000" name="imgwidth_out">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="imgwidth_out"/></StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1001" name="const_14">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_fifo.i11P0A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1001" name="const_16">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Write.ap_fifo.i11P0A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1001" name="const_18">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="xFSobel3x3<0, 2, 1080, 1920, 0, 3, 1, 1, 5, 1921, 3, 9, false>"/></StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1001" name="const_20">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecInterface"/></StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1001" name="const_22">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_13"/></StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1001" name="const_24">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1001" name="const_26">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_17"/></StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1001" name="const_28">
+<pin_list>
+<pin id="29" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="ap_fifo_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="30" class="1001" name="const_30">
+<pin_list>
+<pin id="31" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="32" class="1001" name="const_32">
+<pin_list>
+<pin id="33" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="34" class="1001" name="const_34">
+<pin_list>
+<pin id="35" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="36" class="1001" name="const_36">
+<pin_list>
+<pin id="37" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="ScalarProp_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="38" class="1004" name="imgheight_read_read_fu_38">
+<pin_list>
+<pin id="39" dir="0" index="0" bw="11" slack="0"/>
+<pin id="40" dir="0" index="1" bw="11" slack="0"/>
+<pin id="41" dir="1" index="2" bw="11" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="imgheight_read/1 "/>
+</bind>
+</comp>
+
+<comp id="44" class="1004" name="imgwidth_read_read_fu_44">
+<pin_list>
+<pin id="45" dir="0" index="0" bw="11" slack="0"/>
+<pin id="46" dir="0" index="1" bw="11" slack="0"/>
+<pin id="47" dir="1" index="2" bw="11" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="imgwidth_read/1 "/>
+</bind>
+</comp>
+
+<comp id="50" class="1004" name="write_ln152_write_fu_50">
+<pin_list>
+<pin id="51" dir="0" index="0" bw="0" slack="0"/>
+<pin id="52" dir="0" index="1" bw="11" slack="0"/>
+<pin id="53" dir="0" index="2" bw="11" slack="0"/>
+<pin id="54" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="write_ln152/1 "/>
+</bind>
+</comp>
+
+<comp id="58" class="1004" name="write_ln152_write_fu_58">
+<pin_list>
+<pin id="59" dir="0" index="0" bw="0" slack="0"/>
+<pin id="60" dir="0" index="1" bw="11" slack="0"/>
+<pin id="61" dir="0" index="2" bw="11" slack="0"/>
+<pin id="62" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="write_ln152/1 "/>
+</bind>
+</comp>
+
+<comp id="66" class="1004" name="grp_xFSobel3x3_0_2_1080_1920_0_3_1_1_5_1921_3_9_false_s_fu_66">
+<pin_list>
+<pin id="67" dir="0" index="0" bw="0" slack="0"/>
+<pin id="68" dir="0" index="1" bw="8" slack="0"/>
+<pin id="69" dir="0" index="2" bw="16" slack="0"/>
+<pin id="70" dir="0" index="3" bw="16" slack="0"/>
+<pin id="71" dir="0" index="4" bw="11" slack="0"/>
+<pin id="72" dir="0" index="5" bw="11" slack="0"/>
+<pin id="73" dir="1" index="6" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln530/1 "/>
+</bind>
+</comp>
+
+<comp id="80" class="1005" name="imgheight_read_reg_80">
+<pin_list>
+<pin id="81" dir="0" index="0" bw="11" slack="1"/>
+<pin id="82" dir="1" index="1" bw="11" slack="1"/>
+</pin_list>
+<bind>
+<opset="imgheight_read "/>
+</bind>
+</comp>
+
+<comp id="85" class="1005" name="imgwidth_read_reg_85">
+<pin_list>
+<pin id="86" dir="0" index="0" bw="11" slack="1"/>
+<pin id="87" dir="1" index="1" bw="11" slack="1"/>
+</pin_list>
+<bind>
+<opset="imgwidth_read "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="42"><net_src comp="14" pin="0"/><net_sink comp="38" pin=0"/></net>
+
+<net id="43"><net_src comp="6" pin="0"/><net_sink comp="38" pin=1"/></net>
+
+<net id="48"><net_src comp="14" pin="0"/><net_sink comp="44" pin=0"/></net>
+
+<net id="49"><net_src comp="8" pin="0"/><net_sink comp="44" pin=1"/></net>
+
+<net id="55"><net_src comp="16" pin="0"/><net_sink comp="50" pin=0"/></net>
+
+<net id="56"><net_src comp="10" pin="0"/><net_sink comp="50" pin=1"/></net>
+
+<net id="57"><net_src comp="38" pin="2"/><net_sink comp="50" pin=2"/></net>
+
+<net id="63"><net_src comp="16" pin="0"/><net_sink comp="58" pin=0"/></net>
+
+<net id="64"><net_src comp="12" pin="0"/><net_sink comp="58" pin=1"/></net>
+
+<net id="65"><net_src comp="44" pin="2"/><net_sink comp="58" pin=2"/></net>
+
+<net id="74"><net_src comp="18" pin="0"/><net_sink comp="66" pin=0"/></net>
+
+<net id="75"><net_src comp="0" pin="0"/><net_sink comp="66" pin=1"/></net>
+
+<net id="76"><net_src comp="2" pin="0"/><net_sink comp="66" pin=2"/></net>
+
+<net id="77"><net_src comp="4" pin="0"/><net_sink comp="66" pin=3"/></net>
+
+<net id="78"><net_src comp="38" pin="2"/><net_sink comp="66" pin=4"/></net>
+
+<net id="79"><net_src comp="44" pin="2"/><net_sink comp="66" pin=5"/></net>
+
+<net id="83"><net_src comp="38" pin="2"/><net_sink comp="80" pin=0"/></net>
+
+<net id="84"><net_src comp="80" pin="1"/><net_sink comp="66" pin=4"/></net>
+
+<net id="88"><net_src comp="44" pin="2"/><net_sink comp="85" pin=0"/></net>
+
+<net id="89"><net_src comp="85" pin="1"/><net_sink comp="66" pin=5"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: gradx_mat_42 | {1 2 }
+	Port: grady_mat_45 | {1 2 }
+	Port: imgheight_out | {1 }
+	Port: imgwidth_out | {1 }
+ - Input state : 
+	Port: xFSobel<0, 2, 1080, 1920, 0, 3, 1, 1, 5, 3, false> : gaussian_mat_41 | {1 2 }
+	Port: xFSobel<0, 2, 1080, 1920, 0, 3, 1, 1, 5, 3, false> : imgheight | {1 }
+	Port: xFSobel<0, 2, 1080, 1920, 0, 3, 1, 1, 5, 3, false> : imgwidth | {1 }
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|---------------------------------------------------------------|---------|---------|---------|---------|
+| Operation|                        Functional Unit                        |   BRAM  |  Delay  |    FF   |   LUT   |
+|----------|---------------------------------------------------------------|---------|---------|---------|---------|
+|   call   | grp_xFSobel3x3_0_2_1080_1920_0_3_1_1_5_1921_3_9_false_s_fu_66 |    3    | 21.4791 |   794   |   799   |
+|----------|---------------------------------------------------------------|---------|---------|---------|---------|
+|   read   |                   imgheight_read_read_fu_38                   |    0    |    0    |    0    |    0    |
+|          |                    imgwidth_read_read_fu_44                   |    0    |    0    |    0    |    0    |
+|----------|---------------------------------------------------------------|---------|---------|---------|---------|
+|   write  |                    write_ln152_write_fu_50                    |    0    |    0    |    0    |    0    |
+|          |                    write_ln152_write_fu_58                    |    0    |    0    |    0    |    0    |
+|----------|---------------------------------------------------------------|---------|---------|---------|---------|
+|   Total  |                                                               |    3    | 21.4791 |   794   |   799   |
+|----------|---------------------------------------------------------------|---------|---------|---------|---------|
+
+Memories:
+N/A
+
+* Register list:
++---------------------+--------+
+|                     |   FF   |
++---------------------+--------+
+|imgheight_read_reg_80|   11   |
+| imgwidth_read_reg_85|   11   |
++---------------------+--------+
+|        Total        |   22   |
++---------------------+--------+
+
+* Multiplexer (MUX) list: 
+|---------------------------------------------------------------|------|------|------|--------||---------||---------|
+|                              Comp                             |  Pin | Size |  BW  | S x BW ||  Delay  ||   LUT   |
+|---------------------------------------------------------------|------|------|------|--------||---------||---------|
+| grp_xFSobel3x3_0_2_1080_1920_0_3_1_1_5_1921_3_9_false_s_fu_66 |  p4  |   2  |  11  |   22   ||    9    |
+| grp_xFSobel3x3_0_2_1080_1920_0_3_1_1_5_1921_3_9_false_s_fu_66 |  p5  |   2  |  11  |   22   ||    9    |
+|---------------------------------------------------------------|------|------|------|--------||---------||---------|
+|                             Total                             |      |      |      |   44   ||  3.176  ||    18   |
+|---------------------------------------------------------------|------|------|------|--------||---------||---------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+--------+
+|           |  BRAM  |  Delay |   FF   |   LUT  |
++-----------+--------+--------+--------+--------+
+|  Function |    3   |   21   |   794  |   799  |
+|   Memory  |    -   |    -   |    -   |    -   |
+|Multiplexer|    -   |    3   |    -   |   18   |
+|  Register |    -   |    -   |   22   |    -   |
++-----------+--------+--------+--------+--------+
+|   Total   |    3   |   24   |   816  |   817  |
++-----------+--------+--------+--------+--------+

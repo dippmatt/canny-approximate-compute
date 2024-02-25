@@ -1,0 +1,282 @@
+
+
+================================================================
+== Vitis HLS Report for 'Axi2Mat_Block_split26_proc'
+================================================================
+* Date:           Sun Feb 25 00:53:08 2024
+
+* Version:        2020.2.2 (Build 3118627 on Tue Feb  9 05:13:49 MST 2021)
+* Project:        grayscaler
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|      0 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        0|        0|      0 ns|      0 ns|    0|    0|     none|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|      2|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|     18|    -|
+|Register         |        -|    -|      23|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|      23|     20|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------+----------+----+---+----+------------+------------+
+    |  Variable Name  | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |ap_block_state1  |        or|   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |Total            |          |   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------+----+-----------+-----+-----------+
+    |    Name   | LUT| Input Size| Bits| Total Bits|
+    +-----------+----+-----------+-----+-----------+
+    |ap_done    |   9|          2|    1|          2|
+    |ap_return  |   9|          2|   21|         42|
+    +-----------+----+-----------+-----+-----------+
+    |Total      |  18|          4|   22|         44|
+    +-----------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------+----+----+-----+-----------+
+    |      Name      | FF | LUT| Bits| Const Bits|
+    +----------------+----+----+-----+-----------+
+    |ap_CS_fsm       |   1|   0|    1|          0|
+    |ap_done_reg     |   1|   0|    1|          0|
+    |ap_return_preg  |  21|   0|   21|          0|
+    +----------------+----+----+-----+-----------+
+    |Total           |  23|   0|   23|          0|
+    +----------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------+-----+-----+------------+-----------------------------+--------------+
+|   RTL Ports  | Dir | Bits|  Protocol  |        Source Object        |    C Type    |
++--------------+-----+-----+------------+-----------------------------+--------------+
+|ap_clk        |   in|    1|  ap_ctrl_hs|  Axi2Mat_Block_.split26_proc|  return value|
+|ap_rst        |   in|    1|  ap_ctrl_hs|  Axi2Mat_Block_.split26_proc|  return value|
+|ap_start      |   in|    1|  ap_ctrl_hs|  Axi2Mat_Block_.split26_proc|  return value|
+|ap_done       |  out|    1|  ap_ctrl_hs|  Axi2Mat_Block_.split26_proc|  return value|
+|ap_continue   |   in|    1|  ap_ctrl_hs|  Axi2Mat_Block_.split26_proc|  return value|
+|ap_idle       |  out|    1|  ap_ctrl_hs|  Axi2Mat_Block_.split26_proc|  return value|
+|ap_ready      |  out|    1|  ap_ctrl_hs|  Axi2Mat_Block_.split26_proc|  return value|
+|ap_return     |  out|   21|  ap_ctrl_hs|  Axi2Mat_Block_.split26_proc|  return value|
+|axibound_V_2  |   in|   21|     ap_none|                 axibound_V_2|       pointer|
++--------------+-----+-----+------------+-----------------------------+--------------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 0
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 2 [1/1] (0.00ns)   --->   "%axibound_V_2_read = read i21 @_ssdm_op_Read.ap_auto.volatile.i21P0A, i21 %axibound_V_2"   --->   Operation 2 'read' 'axibound_V_2_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%ret_ln301 = ret i21 %axibound_V_2_read"   --->   Operation 3 'ret' 'ret_ln301' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 1
+- Is datapath-only: 0
+- Is pipelined: 0
+- Is top level: 0
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ axibound_V_2]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+axibound_V_2_read (read) [ 00]
+ret_ln301         (ret ) [ 00]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="axibound_V_2">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="axibound_V_2"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1001" name="const_2">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_auto.volatile.i21P0A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1004" name="axibound_V_2_read_read_fu_4">
+<pin_list>
+<pin id="5" dir="0" index="0" bw="21" slack="0"/>
+<pin id="6" dir="0" index="1" bw="21" slack="0"/>
+<pin id="7" dir="1" index="2" bw="21" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="axibound_V_2_read/1 "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="8"><net_src comp="2" pin="0"/><net_sink comp="4" pin=0"/></net>
+
+<net id="9"><net_src comp="0" pin="0"/><net_sink comp="4" pin=1"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+	Port: Axi2Mat_Block_.split26_proc : axibound_V_2 | {1 }
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|-----------------------------|
+| Operation|       Functional Unit       |
+|----------|-----------------------------|
+|   read   | axibound_V_2_read_read_fu_4 |
+|----------|-----------------------------|
+|   Total  |                             |
+|----------|-----------------------------|
+
+Memories:
+N/A
+
+* Register list:
+N/A
+
+* Multiplexer (MUX) list: 
+|--------|------|------|------|--------|
+|  Comp  |  Pin | Size |  BW  | S x BW |
+|--------|------|------|------|--------|
+|  Total |      |      |      |    0   |
+|--------|------|------|------|--------|
+
+
+
+* Summary:
++-----------+
+|           |
++-----------+
+|  Function |
+|   Memory  |
+|Multiplexer|
+|  Register |
++-----------+
+|   Total   |
++-----------+

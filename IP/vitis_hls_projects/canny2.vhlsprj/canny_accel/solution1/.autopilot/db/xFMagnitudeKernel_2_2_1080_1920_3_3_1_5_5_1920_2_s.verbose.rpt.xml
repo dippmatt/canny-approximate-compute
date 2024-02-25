@@ -1,0 +1,166 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'xFMagnitudeKernel_2_2_1080_1920_3_3_1_5_5_1920_2_s'" level="0">
+<item name = "Date">Sun Feb 25 01:46:33 2024
+</item>
+<item name = "Version">2020.2.2 (Build 3118627 on Tue Feb  9 05:13:49 MST 2021)</item>
+<item name = "Project">canny_accel</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 5.711 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">2077921, 2077921, 20.779 ms, 20.779 ms, 2077921, 2077921, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- rowLoop">2077920, 2077920, 1924, -, -, 1080, no</column>
+<column name=" + colLoop">1921, 1921, 3, 1, 1, 1920, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 159, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, -, -, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 115, -</column>
+<column name="Register">-, -, 129, -, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="i_2_fu_113_p2">+, 0, 0, 12, 11, 1</column>
+<column name="j_2_fu_124_p2">+, 0, 0, 12, 11, 1</column>
+<column name="magnitude_mat_48_din">+, 0, 0, 23, 16, 16</column>
+<column name="sub_ln98_fu_135_p2">-, 0, 0, 23, 1, 16</column>
+<column name="sub_ln99_fu_141_p2">-, 0, 0, 23, 1, 16</column>
+<column name="ap_block_state5_pp0_stage0_iter2">and, 0, 0, 2, 1, 1</column>
+<column name="icmp_ln72_fu_119_p2">icmp, 0, 0, 11, 11, 11</column>
+<column name="icmp_ln79_fu_130_p2">icmp, 0, 0, 11, 11, 11</column>
+<column name="ap_block_pp0_stage0_01001">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state4_pp0_stage0_iter1">or, 0, 0, 2, 1, 1</column>
+<column name="p_1_fu_154_p3">select, 0, 0, 16, 1, 16</column>
+<column name="q_1_fu_167_p3">select, 0, 0, 16, 1, 16</column>
+<column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
+<column name="ap_enable_reg_pp0_iter1">xor, 0, 0, 2, 2, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">25, 5, 1, 5</column>
+<column name="ap_done">9, 2, 1, 2</column>
+<column name="ap_enable_reg_pp0_iter1">9, 2, 1, 2</column>
+<column name="ap_enable_reg_pp0_iter2">9, 2, 1, 2</column>
+<column name="gradx1_mat_43_blk_n">9, 2, 1, 2</column>
+<column name="grady1_mat_46_blk_n">9, 2, 1, 2</column>
+<column name="i_reg_91">9, 2, 11, 22</column>
+<column name="imgheight_blk_n">9, 2, 1, 2</column>
+<column name="imgwidth_blk_n">9, 2, 1, 2</column>
+<column name="j_reg_102">9, 2, 11, 22</column>
+<column name="magnitude_mat_48_blk_n">9, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">4, 0, 4, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter0">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter2">1, 0, 1, 0</column>
+<column name="i_2_reg_190">11, 0, 11, 0</column>
+<column name="i_reg_91">11, 0, 11, 0</column>
+<column name="icmp_ln79_reg_204">1, 0, 1, 0</column>
+<column name="icmp_ln79_reg_204_pp0_iter1_reg">1, 0, 1, 0</column>
+<column name="imgheight_read_reg_180">11, 0, 11, 0</column>
+<column name="imgwidth_read_reg_185">11, 0, 11, 0</column>
+<column name="j_reg_102">11, 0, 11, 0</column>
+<column name="sub_ln98_reg_220">16, 0, 16, 0</column>
+<column name="sub_ln99_reg_225">16, 0, 16, 0</column>
+<column name="tmp_V_9_reg_214">16, 0, 16, 0</column>
+<column name="tmp_V_reg_208">16, 0, 16, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, xFMagnitudeKernel&lt;2, 2, 1080, 1920, 3, 3, 1, 5, 5, 1920, 2&gt;, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, xFMagnitudeKernel&lt;2, 2, 1080, 1920, 3, 3, 1, 5, 5, 1920, 2&gt;, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, xFMagnitudeKernel&lt;2, 2, 1080, 1920, 3, 3, 1, 5, 5, 1920, 2&gt;, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, xFMagnitudeKernel&lt;2, 2, 1080, 1920, 3, 3, 1, 5, 5, 1920, 2&gt;, return value</column>
+<column name="ap_continue">in, 1, ap_ctrl_hs, xFMagnitudeKernel&lt;2, 2, 1080, 1920, 3, 3, 1, 5, 5, 1920, 2&gt;, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, xFMagnitudeKernel&lt;2, 2, 1080, 1920, 3, 3, 1, 5, 5, 1920, 2&gt;, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, xFMagnitudeKernel&lt;2, 2, 1080, 1920, 3, 3, 1, 5, 5, 1920, 2&gt;, return value</column>
+<column name="gradx1_mat_43_dout">in, 16, ap_fifo, gradx1_mat_43, pointer</column>
+<column name="gradx1_mat_43_empty_n">in, 1, ap_fifo, gradx1_mat_43, pointer</column>
+<column name="gradx1_mat_43_read">out, 1, ap_fifo, gradx1_mat_43, pointer</column>
+<column name="grady1_mat_46_dout">in, 16, ap_fifo, grady1_mat_46, pointer</column>
+<column name="grady1_mat_46_empty_n">in, 1, ap_fifo, grady1_mat_46, pointer</column>
+<column name="grady1_mat_46_read">out, 1, ap_fifo, grady1_mat_46, pointer</column>
+<column name="magnitude_mat_48_din">out, 16, ap_fifo, magnitude_mat_48, pointer</column>
+<column name="magnitude_mat_48_full_n">in, 1, ap_fifo, magnitude_mat_48, pointer</column>
+<column name="magnitude_mat_48_write">out, 1, ap_fifo, magnitude_mat_48, pointer</column>
+<column name="imgheight_dout">in, 11, ap_fifo, imgheight, pointer</column>
+<column name="imgheight_empty_n">in, 1, ap_fifo, imgheight, pointer</column>
+<column name="imgheight_read">out, 1, ap_fifo, imgheight, pointer</column>
+<column name="imgwidth_dout">in, 11, ap_fifo, imgwidth, pointer</column>
+<column name="imgwidth_empty_n">in, 1, ap_fifo, imgwidth, pointer</column>
+<column name="imgwidth_read">out, 1, ap_fifo, imgwidth, pointer</column>
+</table>
+</item>
+</section>
+</profile>

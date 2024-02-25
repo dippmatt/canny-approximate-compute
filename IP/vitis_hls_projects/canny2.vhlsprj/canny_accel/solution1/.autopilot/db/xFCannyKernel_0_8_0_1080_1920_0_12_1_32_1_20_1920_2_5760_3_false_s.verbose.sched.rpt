@@ -1,0 +1,298 @@
+
+
+================================================================
+== Vitis HLS Report for 'xFCannyKernel_0_8_0_1080_1920_0_12_1_32_1_20_1920_2_5760_3_false_s'
+================================================================
+* Date:           Sun Feb 25 01:46:26 2024
+
+* Version:        2020.2.2 (Build 3118627 on Tue Feb  9 05:13:49 MST 2021)
+* Project:        canny_accel
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.300 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+---------+---------+----------+
+    |  Latency (cycles) |   Latency (absolute)  |      Interval     | Pipeline |
+    |   min   |   max   |    min    |    max    |   min   |   max   |   Type   |
+    +---------+---------+-----------+-----------+---------+---------+----------+
+    |  4161741|  4163661|  41.617 ms|  41.637 ms|  2091025|  2091025|  dataflow|
+    +---------+---------+-----------+-----------+---------+---------+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 13
+* Pipeline : 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 13, States = { 1 2 3 4 5 6 7 8 9 10 11 12 13 }
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.63>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%img_width_read = read i11 @_ssdm_op_Read.ap_auto.i11, i11 %img_width" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:152]   --->   Operation 14 'read' 'img_width_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%img_height_read = read i11 @_ssdm_op_Read.ap_auto.i11, i11 %img_height" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:152]   --->   Operation 15 'read' 'img_height_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%p_highthreshold_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_highthreshold" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:152]   --->   Operation 16 'read' 'p_highthreshold_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%p_lowthreshold_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_lowthreshold" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:152]   --->   Operation 17 'read' 'p_lowthreshold_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%img_width_c30 = alloca i64 1" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:152]   --->   Operation 18 'alloca' 'img_width_c30' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 11> <Depth = 2> <FIFO>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%img_height_c29 = alloca i64 1" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:153]   --->   Operation 19 'alloca' 'img_height_c29' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 11> <Depth = 2> <FIFO>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%height_c = alloca i64 1"   --->   Operation 20 'alloca' 'height_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 11> <Depth = 4> <FIFO>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%imgwidth_c = alloca i64 1"   --->   Operation 21 'alloca' 'imgwidth_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 11> <Depth = 4> <FIFO>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%img_width_c28 = alloca i64 1" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:152]   --->   Operation 22 'alloca' 'img_width_c28' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 11> <Depth = 3> <FIFO>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%img_width_c27 = alloca i64 1" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:152]   --->   Operation 23 'alloca' 'img_width_c27' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 11> <Depth = 2> <FIFO>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%img_height_c26 = alloca i64 1" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:153]   --->   Operation 24 'alloca' 'img_height_c26' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 11> <Depth = 3> <FIFO>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%img_height_c25 = alloca i64 1" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:153]   --->   Operation 25 'alloca' 'img_height_c25' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 11> <Depth = 2> <FIFO>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%img_width_c24 = alloca i64 1" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:152]   --->   Operation 26 'alloca' 'img_width_c24' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 11> <Depth = 2> <FIFO>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%img_height_c23 = alloca i64 1" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:153]   --->   Operation 27 'alloca' 'img_height_c23' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 11> <Depth = 2> <FIFO>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%img_width_c22 = alloca i64 1" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:152]   --->   Operation 28 'alloca' 'img_width_c22' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 11> <Depth = 2> <FIFO>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%img_height_c21 = alloca i64 1" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:153]   --->   Operation 29 'alloca' 'img_height_c21' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 11> <Depth = 2> <FIFO>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%img_width_c20 = alloca i64 1" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:152]   --->   Operation 30 'alloca' 'img_width_c20' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 11> <Depth = 2> <FIFO>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%img_width_c = alloca i64 1" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:152]   --->   Operation 31 'alloca' 'img_width_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 11> <Depth = 2> <FIFO>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%img_height_c19 = alloca i64 1" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:153]   --->   Operation 32 'alloca' 'img_height_c19' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 11> <Depth = 2> <FIFO>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%img_height_c = alloca i64 1" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:153]   --->   Operation 33 'alloca' 'img_height_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 11> <Depth = 2> <FIFO>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%p_highthreshold_c = alloca i64 1" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:215]   --->   Operation 34 'alloca' 'p_highthreshold_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.59> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 6> <FIFO>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%p_lowthreshold_c = alloca i64 1" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:215]   --->   Operation 35 'alloca' 'p_lowthreshold_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.59> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 6> <FIFO>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%gaussian_mat_data = alloca i64 1" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:195]   --->   Operation 36 'alloca' 'gaussian_mat_data' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 2> <FIFO>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%gradx_mat_data = alloca i64 1" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:196]   --->   Operation 37 'alloca' 'gradx_mat_data' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%gradx1_mat_data = alloca i64 1" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:197]   --->   Operation 38 'alloca' 'gradx1_mat_data' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%gradx2_mat_data = alloca i64 1" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:198]   --->   Operation 39 'alloca' 'gradx2_mat_data' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%grady_mat_data = alloca i64 1" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:199]   --->   Operation 40 'alloca' 'grady_mat_data' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%grady1_mat_data = alloca i64 1" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:200]   --->   Operation 41 'alloca' 'grady1_mat_data' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%grady2_mat_data = alloca i64 1" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:201]   --->   Operation 42 'alloca' 'grady2_mat_data' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%magnitude_mat_data = alloca i64 1" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:202]   --->   Operation 43 'alloca' 'magnitude_mat_data' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%phase_mat_data = alloca i64 1" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:203]   --->   Operation 44 'alloca' 'phase_mat_data' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 3.50> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 5760> <FIFO>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%nms_mat_data = alloca i64 1" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:204]   --->   Operation 45 'alloca' 'nms_mat_data' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 2> <Depth = 2> <FIFO>
+ST_1 : Operation 46 [1/1] (3.63ns)   --->   "%call_ln152 = call void @xFCannyKernel<0, 8, 0, 1080, 1920, 0, 12, 1, 32, 1, 20, 1920, 2, 5760, 3, false>.entry21, i8 %p_lowthreshold_read, i8 %p_highthreshold_read, i11 %img_height_read, i11 %img_width_read, i8 %p_lowthreshold_c, i8 %p_highthreshold_c, i11 %img_height_c, i11 %img_height_c19, i11 %img_width_c, i11 %img_width_c20" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:152]   --->   Operation 46 'call' 'call_ln152' <Predicate = true> <Delay = 3.63> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 47 [2/2] (0.00ns)   --->   "%call_ln206 = call void @xFAverageGaussianMask3x3<0, 0, 1080, 1920, 0, 1, 1, 1920>, i8 %in_mat_418, i8 %gaussian_mat_data, i11 %img_height_c, i11 %img_width_c, i11 %img_height_c21, i11 %img_width_c22" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:206]   --->   Operation 47 'call' 'call_ln206' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 48 [1/2] (0.00ns)   --->   "%call_ln206 = call void @xFAverageGaussianMask3x3<0, 0, 1080, 1920, 0, 1, 1, 1920>, i8 %in_mat_418, i8 %gaussian_mat_data, i11 %img_height_c, i11 %img_width_c, i11 %img_height_c21, i11 %img_width_c22" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:206]   --->   Operation 48 'call' 'call_ln206' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 49 [2/2] (0.00ns)   --->   "%call_ln208 = call void @xFSobel<0, 2, 1080, 1920, 0, 3, 1, 1, 5, 3, false>, i8 %gaussian_mat_data, i16 %gradx_mat_data, i16 %grady_mat_data, i11 %img_height_c21, i11 %img_width_c22, i11 %img_height_c23, i11 %img_width_c24" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:208]   --->   Operation 49 'call' 'call_ln208' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 50 [1/2] (0.00ns)   --->   "%call_ln208 = call void @xFSobel<0, 2, 1080, 1920, 0, 3, 1, 1, 5, 3, false>, i8 %gaussian_mat_data, i16 %gradx_mat_data, i16 %grady_mat_data, i11 %img_height_c21, i11 %img_width_c22, i11 %img_height_c23, i11 %img_width_c24" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:208]   --->   Operation 50 'call' 'call_ln208' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 51 [2/2] (0.00ns)   --->   "%call_ln210 = call void @xFDuplicate_rows<2, 1080, 1920, 3, 1, 5, 1920>, i16 %gradx_mat_data, i16 %grady_mat_data, i16 %gradx1_mat_data, i16 %gradx2_mat_data, i16 %grady1_mat_data, i16 %grady2_mat_data, i11 %img_height_c23, i11 %img_width_c24, i11 %img_height_c25, i11 %img_height_c26, i11 %img_width_c27, i11 %img_width_c28" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:210]   --->   Operation 51 'call' 'call_ln210' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 0.00>
+ST_7 : Operation 52 [1/2] (0.00ns)   --->   "%call_ln210 = call void @xFDuplicate_rows<2, 1080, 1920, 3, 1, 5, 1920>, i16 %gradx_mat_data, i16 %grady_mat_data, i16 %gradx1_mat_data, i16 %gradx2_mat_data, i16 %grady1_mat_data, i16 %grady2_mat_data, i11 %img_height_c23, i11 %img_width_c24, i11 %img_height_c25, i11 %img_height_c26, i11 %img_width_c27, i11 %img_width_c28" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:210]   --->   Operation 52 'call' 'call_ln210' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_7 : Operation 53 [1/1] (0.00ns)   --->   "%call_ln152 = call void @xFCannyKernel<0, 8, 0, 1080, 1920, 0, 12, 1, 32, 1, 20, 1920, 2, 5760, 3, false>_Block__ZN2xf2cv3MatILi0ELi1080ELi1920ELi1ELi2EEC2Eii.exit15_proc, i11 %img_width_c20, i11 %img_height_c19, i11 %imgwidth_c, i11 %height_c" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:152]   --->   Operation 53 'call' 'call_ln152' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 7> <Delay = 0.00>
+ST_8 : Operation 54 [2/2] (0.00ns)   --->   "%call_ln155 = call void @xFMagnitudeKernel<2, 2, 1080, 1920, 3, 3, 1, 5, 5, 1920, 2>, i16 %gradx1_mat_data, i16 %grady1_mat_data, i16 %magnitude_mat_data, i11 %height_c, i11 %imgwidth_c" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:155]   --->   Operation 54 'call' 'call_ln155' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_8 : Operation 55 [2/2] (0.00ns)   --->   "%call_ln536 = call void @xFAngleKernel<2, 0, 1080, 1920, 3, 0, 1, 5, 1, 1920, 5760>, i16 %gradx2_mat_data, i16 %grady2_mat_data, i8 %phase_mat_data, i11 %img_height_c25, i11 %img_width_c27" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:536]   --->   Operation 55 'call' 'call_ln536' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 9 <SV = 8> <Delay = 0.00>
+ST_9 : Operation 56 [1/2] (0.00ns)   --->   "%call_ln155 = call void @xFMagnitudeKernel<2, 2, 1080, 1920, 3, 3, 1, 5, 5, 1920, 2>, i16 %gradx1_mat_data, i16 %grady1_mat_data, i16 %magnitude_mat_data, i11 %height_c, i11 %imgwidth_c" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:155]   --->   Operation 56 'call' 'call_ln155' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_9 : Operation 57 [1/2] (0.00ns)   --->   "%call_ln536 = call void @xFAngleKernel<2, 0, 1080, 1920, 3, 0, 1, 5, 1, 1920, 5760>, i16 %gradx2_mat_data, i16 %grady2_mat_data, i8 %phase_mat_data, i11 %img_height_c25, i11 %img_width_c27" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny_utils.hpp:536]   --->   Operation 57 'call' 'call_ln536' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 10 <SV = 9> <Delay = 0.00>
+ST_10 : Operation 58 [2/2] (0.00ns)   --->   "%call_ln215 = call void @xFSuppression3x3<2, 0, 8, 1080, 1920, 3, 0, 12, 1, 5, 1, 0, 1920, 5760, 2>, i16 %magnitude_mat_data, i8 %phase_mat_data, i2 %nms_mat_data, i8 %p_lowthreshold_c, i8 %p_highthreshold_c, i11 %img_height_c26, i11 %img_width_c28, i11 %img_height_c29, i11 %img_width_c30" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:215]   --->   Operation 58 'call' 'call_ln215' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 11 <SV = 10> <Delay = 0.00>
+ST_11 : Operation 59 [1/2] (0.00ns)   --->   "%call_ln215 = call void @xFSuppression3x3<2, 0, 8, 1080, 1920, 3, 0, 12, 1, 5, 1, 0, 1920, 5760, 2>, i16 %magnitude_mat_data, i8 %phase_mat_data, i2 %nms_mat_data, i8 %p_lowthreshold_c, i8 %p_highthreshold_c, i11 %img_height_c26, i11 %img_width_c28, i11 %img_height_c29, i11 %img_width_c30" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:215]   --->   Operation 59 'call' 'call_ln215' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 12 <SV = 11> <Delay = 0.00>
+ST_12 : Operation 60 [2/2] (0.00ns)   --->   "%call_ln218 = call void @xFPackNMS<8, 8, 1080, 1920, 12, 12, 1, 32, 0, 20>, i2 %nms_mat_data, i64 %dst_mat_419, i11 %img_height_c29, i11 %img_width_c30" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:218]   --->   Operation 60 'call' 'call_ln218' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 13 <SV = 12> <Delay = 0.00>
+ST_13 : Operation 61 [1/1] (0.00ns)   --->   "%specdataflowpipeline_ln0 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @empty_17"   --->   Operation 61 'specdataflowpipeline' 'specdataflowpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 62 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %in_mat_418, void @empty_13, i32 0, i32 0, void @empty_17, i32 0, i32 0, void @empty_17, void @empty_17, void @empty_17, i32 0, i32 0, i32 0, i32 0, void @empty_17, void @empty_17"   --->   Operation 62 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 63 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %dst_mat_419, void @empty_13, i32 0, i32 0, void @empty_17, i32 0, i32 0, void @empty_17, void @empty_17, void @empty_17, i32 0, i32 0, i32 0, i32 0, void @empty_17, void @empty_17"   --->   Operation 63 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 64 [1/1] (0.00ns)   --->   "%empty = specchannel i32 @_ssdm_op_SpecChannel, void @gaussian_mat_OC_data_str, i32 1, void @p_str, void @p_str, i32 2, i32 2, i8 %gaussian_mat_data, i8 %gaussian_mat_data"   --->   Operation 64 'specchannel' 'empty' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 65 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %gaussian_mat_data, void @empty_13, i32 0, i32 0, void @empty_17, i32 0, i32 0, void @empty_17, void @empty_17, void @empty_17, i32 0, i32 0, i32 0, i32 0, void @empty_17, void @empty_17"   --->   Operation 65 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 66 [1/1] (0.00ns)   --->   "%empty_64 = specchannel i32 @_ssdm_op_SpecChannel, void @gradx_mat_OC_data_str, i32 1, void @p_str, void @p_str, i32 2, i32 2, i16 %gradx_mat_data, i16 %gradx_mat_data"   --->   Operation 66 'specchannel' 'empty_64' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 67 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %gradx_mat_data, void @empty_13, i32 0, i32 0, void @empty_17, i32 0, i32 0, void @empty_17, void @empty_17, void @empty_17, i32 0, i32 0, i32 0, i32 0, void @empty_17, void @empty_17"   --->   Operation 67 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 68 [1/1] (0.00ns)   --->   "%empty_65 = specchannel i32 @_ssdm_op_SpecChannel, void @gradx1_mat_OC_data_str, i32 1, void @p_str, void @p_str, i32 2, i32 2, i16 %gradx1_mat_data, i16 %gradx1_mat_data"   --->   Operation 68 'specchannel' 'empty_65' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 69 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %gradx1_mat_data, void @empty_13, i32 0, i32 0, void @empty_17, i32 0, i32 0, void @empty_17, void @empty_17, void @empty_17, i32 0, i32 0, i32 0, i32 0, void @empty_17, void @empty_17"   --->   Operation 69 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 70 [1/1] (0.00ns)   --->   "%empty_66 = specchannel i32 @_ssdm_op_SpecChannel, void @gradx2_mat_OC_data_str, i32 1, void @p_str, void @p_str, i32 2, i32 2, i16 %gradx2_mat_data, i16 %gradx2_mat_data"   --->   Operation 70 'specchannel' 'empty_66' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 71 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %gradx2_mat_data, void @empty_13, i32 0, i32 0, void @empty_17, i32 0, i32 0, void @empty_17, void @empty_17, void @empty_17, i32 0, i32 0, i32 0, i32 0, void @empty_17, void @empty_17"   --->   Operation 71 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 72 [1/1] (0.00ns)   --->   "%empty_67 = specchannel i32 @_ssdm_op_SpecChannel, void @grady_mat_OC_data_str, i32 1, void @p_str, void @p_str, i32 2, i32 2, i16 %grady_mat_data, i16 %grady_mat_data"   --->   Operation 72 'specchannel' 'empty_67' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 73 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %grady_mat_data, void @empty_13, i32 0, i32 0, void @empty_17, i32 0, i32 0, void @empty_17, void @empty_17, void @empty_17, i32 0, i32 0, i32 0, i32 0, void @empty_17, void @empty_17"   --->   Operation 73 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 74 [1/1] (0.00ns)   --->   "%empty_68 = specchannel i32 @_ssdm_op_SpecChannel, void @grady1_mat_OC_data_str, i32 1, void @p_str, void @p_str, i32 2, i32 2, i16 %grady1_mat_data, i16 %grady1_mat_data"   --->   Operation 74 'specchannel' 'empty_68' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 75 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %grady1_mat_data, void @empty_13, i32 0, i32 0, void @empty_17, i32 0, i32 0, void @empty_17, void @empty_17, void @empty_17, i32 0, i32 0, i32 0, i32 0, void @empty_17, void @empty_17"   --->   Operation 75 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 76 [1/1] (0.00ns)   --->   "%empty_69 = specchannel i32 @_ssdm_op_SpecChannel, void @grady2_mat_OC_data_str, i32 1, void @p_str, void @p_str, i32 2, i32 2, i16 %grady2_mat_data, i16 %grady2_mat_data"   --->   Operation 76 'specchannel' 'empty_69' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 77 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %grady2_mat_data, void @empty_13, i32 0, i32 0, void @empty_17, i32 0, i32 0, void @empty_17, void @empty_17, void @empty_17, i32 0, i32 0, i32 0, i32 0, void @empty_17, void @empty_17"   --->   Operation 77 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 78 [1/1] (0.00ns)   --->   "%empty_70 = specchannel i32 @_ssdm_op_SpecChannel, void @magnitude_mat_OC_data_str, i32 1, void @p_str, void @p_str, i32 2, i32 2, i16 %magnitude_mat_data, i16 %magnitude_mat_data"   --->   Operation 78 'specchannel' 'empty_70' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 79 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %magnitude_mat_data, void @empty_13, i32 0, i32 0, void @empty_17, i32 0, i32 0, void @empty_17, void @empty_17, void @empty_17, i32 0, i32 0, i32 0, i32 0, void @empty_17, void @empty_17"   --->   Operation 79 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 80 [1/1] (0.00ns)   --->   "%empty_71 = specchannel i32 @_ssdm_op_SpecChannel, void @phase_mat_OC_data_str, i32 1, void @p_str, void @p_str, i32 5760, i32 5760, i8 %phase_mat_data, i8 %phase_mat_data"   --->   Operation 80 'specchannel' 'empty_71' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 81 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %phase_mat_data, void @empty_13, i32 0, i32 0, void @empty_17, i32 0, i32 0, void @empty_17, void @empty_17, void @empty_17, i32 0, i32 0, i32 0, i32 0, void @empty_17, void @empty_17"   --->   Operation 81 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 82 [1/1] (0.00ns)   --->   "%empty_72 = specchannel i32 @_ssdm_op_SpecChannel, void @nms_mat_OC_data_str, i32 1, void @p_str, void @p_str, i32 2, i32 2, i2 %nms_mat_data, i2 %nms_mat_data"   --->   Operation 82 'specchannel' 'empty_72' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 83 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i2 %nms_mat_data, void @empty_13, i32 0, i32 0, void @empty_17, i32 0, i32 0, void @empty_17, void @empty_17, void @empty_17, i32 0, i32 0, i32 0, i32 0, void @empty_17, void @empty_17"   --->   Operation 83 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 84 [1/1] (0.00ns)   --->   "%empty_73 = specchannel i32 @_ssdm_op_SpecChannel, void @p_lowthreshold_c_str, i32 1, void @p_str, void @p_str, i32 6, i32 0, i8 %p_lowthreshold_c, i8 %p_lowthreshold_c" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:215]   --->   Operation 84 'specchannel' 'empty_73' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 85 [1/1] (0.00ns)   --->   "%specinterface_ln215 = specinterface void @_ssdm_op_SpecInterface, i8 %p_lowthreshold_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:215]   --->   Operation 85 'specinterface' 'specinterface_ln215' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 86 [1/1] (0.00ns)   --->   "%empty_74 = specchannel i32 @_ssdm_op_SpecChannel, void @p_highthreshold_c_str, i32 1, void @p_str, void @p_str, i32 6, i32 0, i8 %p_highthreshold_c, i8 %p_highthreshold_c" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:215]   --->   Operation 86 'specchannel' 'empty_74' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 87 [1/1] (0.00ns)   --->   "%specinterface_ln215 = specinterface void @_ssdm_op_SpecInterface, i8 %p_highthreshold_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:215]   --->   Operation 87 'specinterface' 'specinterface_ln215' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 88 [1/1] (0.00ns)   --->   "%empty_75 = specchannel i32 @_ssdm_op_SpecChannel, void @img_height_c_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i11 %img_height_c, i11 %img_height_c" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:153]   --->   Operation 88 'specchannel' 'empty_75' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 89 [1/1] (0.00ns)   --->   "%specinterface_ln153 = specinterface void @_ssdm_op_SpecInterface, i11 %img_height_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:153]   --->   Operation 89 'specinterface' 'specinterface_ln153' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 90 [1/1] (0.00ns)   --->   "%empty_76 = specchannel i32 @_ssdm_op_SpecChannel, void @img_height_c19_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i11 %img_height_c19, i11 %img_height_c19" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:153]   --->   Operation 90 'specchannel' 'empty_76' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 91 [1/1] (0.00ns)   --->   "%specinterface_ln153 = specinterface void @_ssdm_op_SpecInterface, i11 %img_height_c19, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:153]   --->   Operation 91 'specinterface' 'specinterface_ln153' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 92 [1/1] (0.00ns)   --->   "%empty_77 = specchannel i32 @_ssdm_op_SpecChannel, void @img_width_c_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i11 %img_width_c, i11 %img_width_c" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:152]   --->   Operation 92 'specchannel' 'empty_77' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 93 [1/1] (0.00ns)   --->   "%specinterface_ln152 = specinterface void @_ssdm_op_SpecInterface, i11 %img_width_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:152]   --->   Operation 93 'specinterface' 'specinterface_ln152' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 94 [1/1] (0.00ns)   --->   "%empty_78 = specchannel i32 @_ssdm_op_SpecChannel, void @img_width_c20_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i11 %img_width_c20, i11 %img_width_c20" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:152]   --->   Operation 94 'specchannel' 'empty_78' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 95 [1/1] (0.00ns)   --->   "%specinterface_ln152 = specinterface void @_ssdm_op_SpecInterface, i11 %img_width_c20, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:152]   --->   Operation 95 'specinterface' 'specinterface_ln152' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 96 [1/1] (0.00ns)   --->   "%empty_79 = specchannel i32 @_ssdm_op_SpecChannel, void @img_height_c21_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i11 %img_height_c21, i11 %img_height_c21" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:153]   --->   Operation 96 'specchannel' 'empty_79' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 97 [1/1] (0.00ns)   --->   "%specinterface_ln153 = specinterface void @_ssdm_op_SpecInterface, i11 %img_height_c21, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:153]   --->   Operation 97 'specinterface' 'specinterface_ln153' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 98 [1/1] (0.00ns)   --->   "%empty_80 = specchannel i32 @_ssdm_op_SpecChannel, void @img_width_c22_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i11 %img_width_c22, i11 %img_width_c22" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:152]   --->   Operation 98 'specchannel' 'empty_80' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 99 [1/1] (0.00ns)   --->   "%specinterface_ln152 = specinterface void @_ssdm_op_SpecInterface, i11 %img_width_c22, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:152]   --->   Operation 99 'specinterface' 'specinterface_ln152' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 100 [1/1] (0.00ns)   --->   "%empty_81 = specchannel i32 @_ssdm_op_SpecChannel, void @img_height_c23_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i11 %img_height_c23, i11 %img_height_c23" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:153]   --->   Operation 100 'specchannel' 'empty_81' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 101 [1/1] (0.00ns)   --->   "%specinterface_ln153 = specinterface void @_ssdm_op_SpecInterface, i11 %img_height_c23, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:153]   --->   Operation 101 'specinterface' 'specinterface_ln153' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 102 [1/1] (0.00ns)   --->   "%empty_82 = specchannel i32 @_ssdm_op_SpecChannel, void @img_width_c24_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i11 %img_width_c24, i11 %img_width_c24" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:152]   --->   Operation 102 'specchannel' 'empty_82' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 103 [1/1] (0.00ns)   --->   "%specinterface_ln152 = specinterface void @_ssdm_op_SpecInterface, i11 %img_width_c24, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:152]   --->   Operation 103 'specinterface' 'specinterface_ln152' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 104 [1/1] (0.00ns)   --->   "%empty_83 = specchannel i32 @_ssdm_op_SpecChannel, void @img_height_c25_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i11 %img_height_c25, i11 %img_height_c25" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:153]   --->   Operation 104 'specchannel' 'empty_83' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 105 [1/1] (0.00ns)   --->   "%specinterface_ln153 = specinterface void @_ssdm_op_SpecInterface, i11 %img_height_c25, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:153]   --->   Operation 105 'specinterface' 'specinterface_ln153' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 106 [1/1] (0.00ns)   --->   "%empty_84 = specchannel i32 @_ssdm_op_SpecChannel, void @img_height_c26_str, i32 1, void @p_str, void @p_str, i32 3, i32 0, i11 %img_height_c26, i11 %img_height_c26" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:153]   --->   Operation 106 'specchannel' 'empty_84' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 107 [1/1] (0.00ns)   --->   "%specinterface_ln153 = specinterface void @_ssdm_op_SpecInterface, i11 %img_height_c26, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:153]   --->   Operation 107 'specinterface' 'specinterface_ln153' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 108 [1/1] (0.00ns)   --->   "%empty_85 = specchannel i32 @_ssdm_op_SpecChannel, void @img_width_c27_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i11 %img_width_c27, i11 %img_width_c27" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:152]   --->   Operation 108 'specchannel' 'empty_85' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 109 [1/1] (0.00ns)   --->   "%specinterface_ln152 = specinterface void @_ssdm_op_SpecInterface, i11 %img_width_c27, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:152]   --->   Operation 109 'specinterface' 'specinterface_ln152' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 110 [1/1] (0.00ns)   --->   "%empty_86 = specchannel i32 @_ssdm_op_SpecChannel, void @img_width_c28_str, i32 1, void @p_str, void @p_str, i32 3, i32 0, i11 %img_width_c28, i11 %img_width_c28" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:152]   --->   Operation 110 'specchannel' 'empty_86' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 111 [1/1] (0.00ns)   --->   "%specinterface_ln152 = specinterface void @_ssdm_op_SpecInterface, i11 %img_width_c28, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:152]   --->   Operation 111 'specinterface' 'specinterface_ln152' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 112 [1/1] (0.00ns)   --->   "%empty_87 = specchannel i32 @_ssdm_op_SpecChannel, void @imgwidth_c_str, i32 1, void @p_str, void @p_str, i32 4, i32 0, i11 %imgwidth_c, i11 %imgwidth_c"   --->   Operation 112 'specchannel' 'empty_87' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 113 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i11 %imgwidth_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str"   --->   Operation 113 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 114 [1/1] (0.00ns)   --->   "%empty_88 = specchannel i32 @_ssdm_op_SpecChannel, void @height_c_str, i32 1, void @p_str, void @p_str, i32 4, i32 0, i11 %height_c, i11 %height_c"   --->   Operation 114 'specchannel' 'empty_88' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 115 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i11 %height_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str"   --->   Operation 115 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 116 [1/1] (0.00ns)   --->   "%empty_89 = specchannel i32 @_ssdm_op_SpecChannel, void @img_height_c29_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i11 %img_height_c29, i11 %img_height_c29" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:153]   --->   Operation 116 'specchannel' 'empty_89' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 117 [1/1] (0.00ns)   --->   "%specinterface_ln153 = specinterface void @_ssdm_op_SpecInterface, i11 %img_height_c29, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:153]   --->   Operation 117 'specinterface' 'specinterface_ln153' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 118 [1/1] (0.00ns)   --->   "%empty_90 = specchannel i32 @_ssdm_op_SpecChannel, void @img_width_c30_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i11 %img_width_c30, i11 %img_width_c30" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:152]   --->   Operation 118 'specchannel' 'empty_90' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 119 [1/1] (0.00ns)   --->   "%specinterface_ln152 = specinterface void @_ssdm_op_SpecInterface, i11 %img_width_c30, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:152]   --->   Operation 119 'specinterface' 'specinterface_ln152' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 120 [1/2] (0.00ns)   --->   "%call_ln218 = call void @xFPackNMS<8, 8, 1080, 1920, 12, 12, 1, 32, 0, 20>, i2 %nms_mat_data, i64 %dst_mat_419, i11 %img_height_c29, i11 %img_width_c30" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:218]   --->   Operation 120 'call' 'call_ln218' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_13 : Operation 121 [1/1] (0.00ns)   --->   "%ret_ln221 = ret" [../../Vitis_Libraries/vision/L1/include/imgproc/xf_canny.hpp:221]   --->   Operation 121 'ret' 'ret_ln221' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 3.63ns
+The critical path consists of the following:
+	wire read on port 'img_width' (../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:152) [7]  (0 ns)
+	'call' operation ('call_ln152', ../../Vitis_Libraries/vision/L1/include/imgproc/xf_magnitude.hpp:152) to 'xFCannyKernel<0, 8, 0, 1080, 1920, 0, 12, 1, 32, 1, 20, 1920, 2, 5760, 3, false>.entry21' [74]  (3.63 ns)
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+ <State 5>: 0ns
+The critical path consists of the following:
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+ <State 7>: 0ns
+The critical path consists of the following:
+
+ <State 8>: 0ns
+The critical path consists of the following:
+
+ <State 9>: 0ns
+The critical path consists of the following:
+
+ <State 10>: 0ns
+The critical path consists of the following:
+
+ <State 11>: 0ns
+The critical path consists of the following:
+
+ <State 12>: 0ns
+The critical path consists of the following:
+
+ <State 13>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

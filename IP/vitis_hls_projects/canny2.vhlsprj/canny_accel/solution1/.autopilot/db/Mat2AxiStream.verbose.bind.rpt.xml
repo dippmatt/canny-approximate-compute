@@ -1,0 +1,48 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'Mat2AxiStream'" level="0">
+<item name = "Date">Sun Feb 25 01:46:28 2024
+</item>
+<item name = "Version">2020.2.2 (Build 3118627 on Tue Feb  9 05:13:49 MST 2021)</item>
+<item name = "Project">canny_accel</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.268 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">10, 64809, 0.100 us, 0.648 ms, 8, 64807, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_MatStream2AxiStream_fu_72">MatStream2AxiStream, 7, 64806, 70.000 ns, 0.648 ms, 7, 64806, none</column>
+<column name="grp_cols_npc_aligned31_fu_83">cols_npc_aligned31, 1, 1, 10.000 ns, 10.000 ns, 1, 1, none</column>
+<column name="call_ln1377_last_blk_pxl_width_fu_94">last_blk_pxl_width, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

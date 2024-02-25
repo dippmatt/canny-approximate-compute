@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1708854394910">
+  <ports id="1" name="nms_mat_410" type="PortType" coreName="FIFO_SRL" coreId="52" bitwidth="2" iftype="IfTypeRom">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="11" name="ap_return" direction="DirOut">
+    <dataInputObjs>ret</dataInputObjs>
+  </ports>
+  <edges id="8" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="9" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@ports.1"/>
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" id="14" pipe_depth="1" RegionName="read">
+    <basic_blocks id="5" name="read" type="BlockType">
+      <node_objs xsi:type="cdfg:CdfgNode" id="3" name="nms_mat_410_read" lineNumber="145" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" contextFuncName="read_r" bitwidth="2" opcode="read" m_display="0" m_delay="3.63" m_topoIndex="1" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="read"/>
+        <dataInputObjs>nms_mat_410</dataInputObjs>
+        <dataOutputObjs>ret</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="4" name="_ln669" lineNumber="669" fileName="../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" fileDirectory=".." coreId="116" contextFuncName="read_r" opcode="ret" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" linenumber="669" fileDirectory="/home/soc/Documents/canny-approximate-compute_git/IP/vitis_hls_projects/canny2.vhlsprj" functionName="read"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>ap_return</dataOutputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h">
+        <validLinenumbers>145</validLinenumbers>
+      </fileValidLineNumbers>
+      <fileValidLineNumbers fileName="../../Vitis_Libraries/vision/L1/include/common/xf_structs.hpp">
+        <validLinenumbers>669</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ioNodes realName="nms_mat_410_read_read_fu_12">
+    <nodeIds>3</nodeIds>
+  </ioNodes>
+  <ioPorts name="nms_mat_410">
+    <contents name="read">
+      <nodeIds>3</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ap_return">
+    <contents name="ret">
+      <nodeIds>4</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="2" stage="1" latency="1"/>
+      <operations id="3" stage="1" latency="1"/>
+      <operations id="4" stage="1" latency="1"/>
+    </states>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="read_r" mII="1" mDepth="1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>5</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>
