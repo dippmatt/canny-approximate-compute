@@ -20,12 +20,13 @@ stackoverflow
 https://stackoverflow.com/questions/54349895/how-can-i-do-pixel-wise-computation-with-a-xfmat
 
 ## Getting started
+- Vitis Libraries are developed for Linux and not Windows, therefore, some Linux Distro is required. We worked with Ubuntu 20.04 on the virtual Machine.
 
 - Install Vivado 2020.2 and Vitis HLS 2020.2
 
 - Install & Flash Pynq v2.7 (= a precompiled version of petalinux) on a micro sd card and boot the Pynq Z2 board: [Pynq Boards](http://www.pynq.io/board.html)
 
-### Rebuild HLS IPs & Vivado procect
+### Rebuild HLS IPs & Vivado project
 
 1. Rebuild the HLS IPs:
 
@@ -34,8 +35,8 @@ https://stackoverflow.com/questions/54349895/how-can-i-do-pixel-wise-computation
 - Open the HLS project in Vitis HLS 2020.2 and run the C synthesis.
 - Export the RTL as Vivado IP: `Solution -> Export RTL -> Vivado IP (.zip) -> Click 'Ok'`
 - If the HLS IPs don't synthesise, because files are missing check the following paths:
-    - In the `Explorer` view, right click on the source file of the respective IP and select `Properties`. For `Resource -> Location -> Edit` select `../../../src/<IP Name>/<Main IP file.cpp>`
-    - Select `Project -> Project Settings` and for each source file in `Synthesis` add the following Path to `CFLAGS` and `CSIMFLAGS`: `-I../../Vitis_Libraries/vision/L1/include`.
+    - In the `Explorer` view, right-click on the source file of the respective IP and select `Properties`. For `Resource -> Location -> Edit` select `../../../src/<IP Name>/<Main IP file.cpp>`
+    - Select `Project -> Project Settings` and for each source file in `Synthesis` add the following Path to `CFLAGS` and `CSIMFLAGS`: `-I../../Vitis_Libraries/vision/L1/include -std=c++0x`.
 
 2. Rebuild the Vivado Project
 
@@ -45,7 +46,7 @@ https://stackoverflow.com/questions/54349895/how-can-i-do-pixel-wise-computation
     `cd <project dir/vivado_projects/canny_pynq_overlay/>`
     `source canny_pynq_overlay.tcl`
 
-    If the project is already genereated, you can open `<Project Dir>/vivado_projects/canny_pynq_overlay/canny_2/canny_2.xpr`.
+    If the project is already generated, you can open `<Project Dir>/vivado_projects/canny_pynq_overlay/canny_2/canny_2.xpr`.
 
 - Select `Generate Bitstream` in the Vivado Tool-Flow to create the bitstream.
 
