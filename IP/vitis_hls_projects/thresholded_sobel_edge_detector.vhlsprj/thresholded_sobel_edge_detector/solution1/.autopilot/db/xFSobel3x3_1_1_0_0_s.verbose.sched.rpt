@@ -1,0 +1,132 @@
+
+
+================================================================
+== Vitis HLS Report for 'xFSobel3x3_1_1_0_0_s'
+================================================================
+* Date:           Mon Feb 26 05:31:42 2024
+
+* Version:        2020.2.2 (Build 3118627 on Tue Feb  9 05:13:49 MST 2021)
+* Project:        thresholded_sobel_edge_detector
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.135 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        1|        1|  10.000 ns|  10.000 ns|    1|    1|      yes|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 1 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.91>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%p_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_read11" [/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp:136]   --->   Operation 3 'read' 'p_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%p_read_1 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_read10" [/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp:136]   --->   Operation 4 'read' 'p_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%p_read_2 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_read9" [/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp:136]   --->   Operation 5 'read' 'p_read_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%p_read_3 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_read8" [/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp:136]   --->   Operation 6 'read' 'p_read_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%p_read_4 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_read7" [/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp:136]   --->   Operation 7 'read' 'p_read_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%p_read63 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_read6" [/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp:136]   --->   Operation 8 'read' 'p_read63' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%p_read52 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_read5" [/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp:136]   --->   Operation 9 'read' 'p_read52' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%p_read21 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_read2" [/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp:136]   --->   Operation 10 'read' 'p_read21' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [2/2] (1.91ns)   --->   "%tmp_V = call i8 @xFGradientX3x3<0, 0>, i8 %p_read21, i8 %p_read63, i8 %p_read_4, i8 %p_read_3, i8 %p_read_2, i8 %p_read" [/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp:159]   --->   Operation 11 'call' 'tmp_V' <Predicate = true> <Delay = 1.91> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 12 [2/2] (1.91ns)   --->   "%tmp_V_6 = call i8 @xFGradientY3x3<0, 0>, i8 %p_read21, i8 %p_read52, i8 %p_read63, i8 %p_read_2, i8 %p_read_1, i8 %p_read" [/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp:166]   --->   Operation 12 'call' 'tmp_V_6' <Predicate = true> <Delay = 1.91> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 6.13>
+ST_2 : Operation 13 [1/2] (6.13ns)   --->   "%tmp_V = call i8 @xFGradientX3x3<0, 0>, i8 %p_read21, i8 %p_read63, i8 %p_read_4, i8 %p_read_3, i8 %p_read_2, i8 %p_read" [/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp:159]   --->   Operation 13 'call' 'tmp_V' <Predicate = true> <Delay = 6.13> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 14 [1/2] (6.13ns)   --->   "%tmp_V_6 = call i8 @xFGradientY3x3<0, 0>, i8 %p_read21, i8 %p_read52, i8 %p_read63, i8 %p_read_2, i8 %p_read_1, i8 %p_read" [/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp:166]   --->   Operation 14 'call' 'tmp_V_6' <Predicate = true> <Delay = 6.13> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%mrv = insertvalue i16 <undef>, i8 %tmp_V" [/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp:175]   --->   Operation 15 'insertvalue' 'mrv' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%mrv_1 = insertvalue i16 %mrv, i8 %tmp_V_6" [/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp:175]   --->   Operation 16 'insertvalue' 'mrv_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%ret_ln175 = ret i16 %mrv_1" [/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp:175]   --->   Operation 17 'ret' 'ret_ln175' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 1.92ns
+The critical path consists of the following:
+	wire read on port 'p_read11' (/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp:136) [9]  (0 ns)
+	'call' operation ('tmp.V', /home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp:159) to 'xFGradientX3x3<0, 0>' [17]  (1.92 ns)
+
+ <State 2>: 6.14ns
+The critical path consists of the following:
+	'call' operation ('tmp.V', /home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp:159) to 'xFGradientX3x3<0, 0>' [17]  (6.14 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

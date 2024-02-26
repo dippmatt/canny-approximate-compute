@@ -1,0 +1,140 @@
+
+
+================================================================
+== Vitis HLS Report for 'addrbound'
+================================================================
+* Date:           Mon Feb 26 05:31:40 2024
+
+* Version:        2020.2.2 (Build 3118627 on Tue Feb  9 05:13:49 MST 2021)
+* Project:        thresholded_sobel_edge_detector
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.268 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        2|        2|  20.000 ns|  20.000 ns|    2|    2|     none|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 7.26>
+ST_1 : Operation 4 [1/1] (3.63ns)   --->   "%rows_read = read i32 @_ssdm_op_Read.ap_fifo.i32P0A, i32 %rows"   --->   Operation 4 'read' 'rows_read' <Predicate = true> <Delay = 3.63> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_1 : Operation 5 [1/1] (3.63ns)   --->   "%cols_read = read i32 @_ssdm_op_Read.ap_fifo.i32P0A, i32 %cols"   --->   Operation 5 'read' 'cols_read' <Predicate = true> <Delay = 3.63> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_1 : Operation 6 [1/1] (3.63ns)   --->   "%write_ln1162 = write void @_ssdm_op_Write.ap_fifo.i32P0A, i32 %rows_out, i32 %rows_read" [/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1162]   --->   Operation 6 'write' 'write_ln1162' <Predicate = true> <Delay = 3.63> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 4> <FIFO>
+ST_1 : Operation 7 [1/1] (3.63ns)   --->   "%write_ln1162 = write void @_ssdm_op_Write.ap_fifo.i32P0A, i32 %cols_out, i32 %cols_read" [/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1162]   --->   Operation 7 'write' 'write_ln1162' <Predicate = true> <Delay = 3.63> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 4> <FIFO>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%empty = trunc i32 %cols_read"   --->   Operation 8 'trunc' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%trunc_ln997 = trunc i32 %rows_read" [/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:997]   --->   Operation 9 'trunc' 'trunc_ln997' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%shl_ln = bitconcatenate i26 @_ssdm_op_BitConcatenate.i26.i21.i5, i21 %trunc_ln997, i5 0" [/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:997]   --->   Operation 10 'bitconcatenate' 'shl_ln' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%trunc_ln997_1 = trunc i32 %rows_read" [/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:997]   --->   Operation 11 'trunc' 'trunc_ln997_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%shl_ln997_1 = bitconcatenate i26 @_ssdm_op_BitConcatenate.i26.i23.i3, i23 %trunc_ln997_1, i3 0" [/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:997]   --->   Operation 12 'bitconcatenate' 'shl_ln997_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (2.37ns)   --->   "%sub_ln997 = sub i26 %shl_ln, i26 %shl_ln997_1" [/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:997]   --->   Operation 13 'sub' 'sub_ln997' <Predicate = true> <Delay = 2.37> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.37> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 6.91>
+ST_2 : Operation 14 [1/1] (6.91ns)   --->   "%mul_ln997 = mul i26 %sub_ln997, i26 %empty" [/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:997]   --->   Operation 14 'mul' 'mul_ln997' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 2.37>
+ST_3 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %cols, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 16 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %rows, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str"   --->   Operation 16 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 17 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %rows_out, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str"   --->   Operation 17 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 18 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %cols_out, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str"   --->   Operation 18 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 19 [1/1] (2.37ns)   --->   "%add_ln997 = add i26 %mul_ln997, i26 63" [/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:997]   --->   Operation 19 'add' 'add_ln997' <Predicate = true> <Delay = 2.37> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.37> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 20 [1/1] (0.00ns)   --->   "%trunc_ln = partselect i20 @_ssdm_op_PartSelect.i20.i26.i32.i32, i26 %add_ln997, i32 6, i32 25" [/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:997]   --->   Operation 20 'partselect' 'trunc_ln' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 21 [1/1] (0.00ns)   --->   "%write_ln997 = write void @_ssdm_op_Write.ap_auto.volatile.i20P0A, i20 %return_r, i20 %trunc_ln" [/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:997]   --->   Operation 21 'write' 'write_ln997' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 22 [1/1] (0.00ns)   --->   "%ret_ln1162 = ret" [/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1162]   --->   Operation 22 'ret' 'ret_ln1162' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 7.27ns
+The critical path consists of the following:
+	fifo read on port 'rows' [8]  (3.63 ns)
+	fifo write on port 'rows_out' (/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1162) [11]  (3.63 ns)
+
+ <State 2>: 6.92ns
+The critical path consists of the following:
+	'mul' operation ('mul_ln997', /home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:997) [20]  (6.92 ns)
+
+ <State 3>: 2.37ns
+The critical path consists of the following:
+	'add' operation ('add_ln997', /home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:997) [21]  (2.37 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

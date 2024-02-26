@@ -1,0 +1,2055 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1708954307181">
+  <ports id="1" name="img_gray_479" type="PortType" coreName="FIFO_SRL" coreId="791759919" bitwidth="8" iftype="IfTypeRom">
+    <dataOutputObjs>read</dataOutputObjs>
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="2" name="mat_grad_x_480" type="PortType" coreName="FIFO_SRL" coreId="827076462" bitwidth="8" direction="DirOut" iftype="IfTypeRom">
+    <dataInputObjs>write</dataInputObjs>
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="3" name="mat_grad_y_481" type="PortType" coreName="FIFO_SRL" coreId="1867511152" bitwidth="8" direction="DirOut" iftype="IfTypeRom">
+    <dataInputObjs>write</dataInputObjs>
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="4" name="img_height" type="PortType" coreId="791759919" bitwidth="16">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="5" name="img_width" type="PortType" coreId="791759919" bitwidth="16">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <edges id="170" source_obj="//@ports.4" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="172" source_obj="//@ports.3" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="177" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.0/@node_objs.5"/>
+  <edges id="180" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="181" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="182" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="183" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="186" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="187" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="188" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="189" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
+  <edges id="190" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
+  <edges id="191" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
+  <edges id="192" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="193" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="196" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="199" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="202" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="203" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="205" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="206" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="207" source_obj="//@regions.0/@basic_blocks.1/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="208" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="213" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="214" source_obj="//@blocks.1/@node_objs.3" sink_obj="//@blocks.1/@node_objs.4"/>
+  <edges id="217" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1/@node_objs.5"/>
+  <edges id="219" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="220" source_obj="//@blocks.8/@node_objs.0" sink_obj="//@blocks.2/@node_objs.0" is_back_edge="1"/>
+  <edges id="221" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.2/@node_objs.0" is_back_edge="1"/>
+  <edges id="224" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="225" source_obj="//@blocks.8/@node_objs.7" sink_obj="//@blocks.2/@node_objs.1" is_back_edge="1"/>
+  <edges id="226" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.2/@node_objs.1" is_back_edge="1"/>
+  <edges id="227" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.2/@node_objs.2"/>
+  <edges id="228" source_obj="//@blocks.2/@node_objs.2" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="229" source_obj="//@blocks.1/@node_objs.4" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="230" source_obj="//@blocks.2/@node_objs.3" sink_obj="//@blocks.2/@node_objs.4"/>
+  <edges id="231" edge_type="CtrlEdge" source_obj="//@blocks.9" sink_obj="//@blocks.2/@node_objs.4"/>
+  <edges id="232" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.2/@node_objs.4"/>
+  <edges id="233" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="234" source_obj="//@blocks.2/@node_objs.1" sink_obj="//@blocks.3/@node_objs.1"/>
+  <edges id="235" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.3/@node_objs.1"/>
+  <edges id="237" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.3/@node_objs.1"/>
+  <edges id="239" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.3/@node_objs.1"/>
+  <edges id="242" source_obj="//@blocks.1/@node_objs.2" sink_obj="//@blocks.5/@node_objs.0"/>
+  <edges id="245" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.5/@node_objs.1"/>
+  <edges id="248" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.5/@node_objs.2"/>
+  <edges id="249" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.5/@node_objs.3"/>
+  <edges id="250" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.6/@node_objs.0"/>
+  <edges id="251" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.6/@node_objs.1"/>
+  <edges id="252" source_obj="//@blocks.1/@node_objs.2" sink_obj="//@blocks.6/@node_objs.2"/>
+  <edges id="253" source_obj="//@blocks.2/@node_objs.1" sink_obj="//@blocks.6/@node_objs.3"/>
+  <edges id="255" source_obj="//@blocks.6/@node_objs.3" sink_obj="//@blocks.6/@node_objs.4"/>
+  <edges id="257" source_obj="//@blocks.6/@node_objs.0" sink_obj="//@blocks.6/@node_objs.4"/>
+  <edges id="258" source_obj="//@blocks.6/@node_objs.3" sink_obj="//@blocks.6/@node_objs.5"/>
+  <edges id="260" source_obj="//@blocks.6/@node_objs.1" sink_obj="//@blocks.6/@node_objs.5"/>
+  <edges id="261" source_obj="//@blocks.6/@node_objs.3" sink_obj="//@blocks.6/@node_objs.6"/>
+  <edges id="263" source_obj="//@blocks.6/@node_objs.2" sink_obj="//@blocks.6/@node_objs.6"/>
+  <edges id="264" source_obj="//@blocks.6/@node_objs.6" sink_obj="//@blocks.6/@node_objs.7"/>
+  <edges id="265" source_obj="//@blocks.1/@node_objs.2" sink_obj="//@blocks.6/@node_objs.7"/>
+  <edges id="266" source_obj="//@blocks.6/@node_objs.5" sink_obj="//@blocks.6/@node_objs.8"/>
+  <edges id="267" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.6/@node_objs.8"/>
+  <edges id="268" source_obj="//@blocks.6/@node_objs.4" sink_obj="//@blocks.6/@node_objs.9"/>
+  <edges id="269" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.6/@node_objs.9"/>
+  <edges id="270" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.6/@node_objs.10"/>
+  <edges id="272" source_obj="//@blocks.1/@node_objs.2" sink_obj="//@blocks.4/@node_objs.0"/>
+  <edges id="274" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.4/@node_objs.1"/>
+  <edges id="276" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.4/@node_objs.2"/>
+  <edges id="277" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.4/@node_objs.3"/>
+  <edges id="278" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.7/@node_objs.0"/>
+  <edges id="279" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.7/@node_objs.0"/>
+  <edges id="280" source_obj="//@blocks.2/@node_objs.1" sink_obj="//@blocks.7/@node_objs.1"/>
+  <edges id="281" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.0" sink_obj="//@blocks.7/@node_objs.2"/>
+  <edges id="283" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.0"/>
+  <edges id="284" source_obj="//@regions.1/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="285" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.14" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="287" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.1"/>
+  <edges id="288" source_obj="//@regions.1/@basic_blocks.0/@node_objs.5" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.1" is_back_edge="1"/>
+  <edges id="289" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.14" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.1" is_back_edge="1"/>
+  <edges id="291" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.2"/>
+  <edges id="292" source_obj="//@regions.1/@basic_blocks.12/@node_objs.12" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.2" is_back_edge="1"/>
+  <edges id="293" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.14" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.2" is_back_edge="1"/>
+  <edges id="295" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.3"/>
+  <edges id="296" source_obj="//@regions.1/@basic_blocks.12/@node_objs.10" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.3" is_back_edge="1"/>
+  <edges id="297" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.14" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.3" is_back_edge="1"/>
+  <edges id="299" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.4"/>
+  <edges id="300" source_obj="//@regions.1/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.4" is_back_edge="1"/>
+  <edges id="301" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.14" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.4" is_back_edge="1"/>
+  <edges id="303" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.5"/>
+  <edges id="304" source_obj="//@regions.1/@basic_blocks.12/@node_objs.11" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.5" is_back_edge="1"/>
+  <edges id="305" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.14" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.5" is_back_edge="1"/>
+  <edges id="307" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.6"/>
+  <edges id="308" source_obj="//@regions.1/@basic_blocks.0/@node_objs.7" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.6" is_back_edge="1"/>
+  <edges id="309" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.14" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.6" is_back_edge="1"/>
+  <edges id="310" source_obj="//@regions.1/@basic_blocks.0/@node_objs.6" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.7"/>
+  <edges id="312" source_obj="//@regions.1/@basic_blocks.0/@node_objs.6" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.8"/>
+  <edges id="313" source_obj="//@regions.1/@basic_blocks.0/@node_objs.8" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.9"/>
+  <edges id="314" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.9"/>
+  <edges id="315" source_obj="//@regions.1/@basic_blocks.0/@node_objs.9" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.10"/>
+  <edges id="316" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.10"/>
+  <edges id="317" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.1" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.10"/>
+  <edges id="318" source_obj="//@blocks.7/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.0"/>
+  <edges id="319" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.2" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.0"/>
+  <edges id="320" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.7" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.0"/>
+  <edges id="322" source_obj="//@ports.0" sink_obj="//@regions.1/@basic_blocks.7/@node_objs.0"/>
+  <edges id="323" source_obj="//@regions.1/@basic_blocks.0/@node_objs.6" sink_obj="//@regions.1/@basic_blocks.7/@node_objs.1"/>
+  <edges id="324" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@regions.1/@basic_blocks.7/@node_objs.2"/>
+  <edges id="326" source_obj="//@regions.1/@basic_blocks.7/@node_objs.1" sink_obj="//@regions.1/@basic_blocks.7/@node_objs.2"/>
+  <edges id="327" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@regions.1/@basic_blocks.7/@node_objs.3"/>
+  <edges id="329" source_obj="//@regions.1/@basic_blocks.7/@node_objs.1" sink_obj="//@regions.1/@basic_blocks.7/@node_objs.3"/>
+  <edges id="330" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@regions.1/@basic_blocks.7/@node_objs.4"/>
+  <edges id="332" source_obj="//@regions.1/@basic_blocks.7/@node_objs.1" sink_obj="//@regions.1/@basic_blocks.7/@node_objs.4"/>
+  <edges id="333" source_obj="//@blocks.7/@node_objs.1" sink_obj="//@regions.1/@basic_blocks.7/@node_objs.5"/>
+  <edges id="334" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.10" sink_obj="//@regions.1/@basic_blocks.7/@node_objs.5"/>
+  <edges id="336" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.9" sink_obj="//@regions.1/@basic_blocks.7/@node_objs.5"/>
+  <edges id="338" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.8" sink_obj="//@regions.1/@basic_blocks.7/@node_objs.5"/>
+  <edges id="339" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.12" sink_obj="//@regions.1/@basic_blocks.11/@node_objs.0"/>
+  <edges id="340" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.2/@node_objs.0"/>
+  <edges id="341" source_obj="//@regions.1/@basic_blocks.0/@node_objs.6" sink_obj="//@regions.1/@basic_blocks.2/@node_objs.1"/>
+  <edges id="342" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@regions.1/@basic_blocks.2/@node_objs.2"/>
+  <edges id="344" source_obj="//@regions.1/@basic_blocks.2/@node_objs.1" sink_obj="//@regions.1/@basic_blocks.2/@node_objs.2"/>
+  <edges id="345" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@regions.1/@basic_blocks.2/@node_objs.3"/>
+  <edges id="347" source_obj="//@regions.1/@basic_blocks.2/@node_objs.1" sink_obj="//@regions.1/@basic_blocks.2/@node_objs.3"/>
+  <edges id="348" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@regions.1/@basic_blocks.2/@node_objs.4"/>
+  <edges id="350" source_obj="//@regions.1/@basic_blocks.2/@node_objs.1" sink_obj="//@regions.1/@basic_blocks.2/@node_objs.4"/>
+  <edges id="351" source_obj="//@regions.1/@basic_blocks.2/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.2/@node_objs.5"/>
+  <edges id="352" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.5" sink_obj="//@regions.1/@basic_blocks.2/@node_objs.5"/>
+  <edges id="354" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.4" sink_obj="//@regions.1/@basic_blocks.2/@node_objs.5"/>
+  <edges id="356" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.3" sink_obj="//@regions.1/@basic_blocks.2/@node_objs.5"/>
+  <edges id="357" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.12" sink_obj="//@regions.1/@basic_blocks.6/@node_objs.0"/>
+  <edges id="358" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.12/@node_objs.0"/>
+  <edges id="359" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@regions.1/@basic_blocks.12/@node_objs.1"/>
+  <edges id="360" source_obj="//@blocks.1/@node_objs.2" sink_obj="//@regions.1/@basic_blocks.12/@node_objs.2"/>
+  <edges id="361" source_obj="//@regions.1/@basic_blocks.0/@node_objs.6" sink_obj="//@regions.1/@basic_blocks.12/@node_objs.3"/>
+  <edges id="362" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@regions.1/@basic_blocks.12/@node_objs.4"/>
+  <edges id="364" source_obj="//@regions.1/@basic_blocks.12/@node_objs.3" sink_obj="//@regions.1/@basic_blocks.12/@node_objs.4"/>
+  <edges id="365" source_obj="//@regions.1/@basic_blocks.12/@node_objs.4" sink_obj="//@regions.1/@basic_blocks.12/@node_objs.5"/>
+  <edges id="366" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@regions.1/@basic_blocks.12/@node_objs.6"/>
+  <edges id="368" source_obj="//@regions.1/@basic_blocks.12/@node_objs.3" sink_obj="//@regions.1/@basic_blocks.12/@node_objs.6"/>
+  <edges id="369" source_obj="//@regions.1/@basic_blocks.12/@node_objs.6" sink_obj="//@regions.1/@basic_blocks.12/@node_objs.7"/>
+  <edges id="370" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@regions.1/@basic_blocks.12/@node_objs.8"/>
+  <edges id="372" source_obj="//@regions.1/@basic_blocks.12/@node_objs.3" sink_obj="//@regions.1/@basic_blocks.12/@node_objs.8"/>
+  <edges id="373" source_obj="//@regions.1/@basic_blocks.12/@node_objs.8" sink_obj="//@regions.1/@basic_blocks.12/@node_objs.9"/>
+  <edges id="376" source_obj="//@regions.1/@basic_blocks.12/@node_objs.5" sink_obj="//@regions.1/@basic_blocks.12/@node_objs.10"/>
+  <edges id="377" source_obj="//@regions.1/@basic_blocks.12/@node_objs.7" sink_obj="//@regions.1/@basic_blocks.12/@node_objs.10"/>
+  <edges id="378" source_obj="//@regions.1/@basic_blocks.12/@node_objs.9" sink_obj="//@regions.1/@basic_blocks.12/@node_objs.10"/>
+  <edges id="379" source_obj="//@regions.1/@basic_blocks.12/@node_objs.2" sink_obj="//@regions.1/@basic_blocks.12/@node_objs.10"/>
+  <edges id="381" source_obj="//@regions.1/@basic_blocks.12/@node_objs.5" sink_obj="//@regions.1/@basic_blocks.12/@node_objs.11"/>
+  <edges id="382" source_obj="//@regions.1/@basic_blocks.12/@node_objs.7" sink_obj="//@regions.1/@basic_blocks.12/@node_objs.11"/>
+  <edges id="383" source_obj="//@regions.1/@basic_blocks.12/@node_objs.9" sink_obj="//@regions.1/@basic_blocks.12/@node_objs.11"/>
+  <edges id="384" source_obj="//@regions.1/@basic_blocks.12/@node_objs.1" sink_obj="//@regions.1/@basic_blocks.12/@node_objs.11"/>
+  <edges id="386" source_obj="//@regions.1/@basic_blocks.12/@node_objs.5" sink_obj="//@regions.1/@basic_blocks.12/@node_objs.12"/>
+  <edges id="387" source_obj="//@regions.1/@basic_blocks.12/@node_objs.7" sink_obj="//@regions.1/@basic_blocks.12/@node_objs.12"/>
+  <edges id="388" source_obj="//@regions.1/@basic_blocks.12/@node_objs.9" sink_obj="//@regions.1/@basic_blocks.12/@node_objs.12"/>
+  <edges id="389" source_obj="//@regions.1/@basic_blocks.12/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.12/@node_objs.12"/>
+  <edges id="392" source_obj="//@regions.1/@basic_blocks.0/@node_objs.4" sink_obj="//@regions.1/@basic_blocks.12/@node_objs.13"/>
+  <edges id="393" source_obj="//@regions.1/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.1/@basic_blocks.12/@node_objs.13"/>
+  <edges id="394" source_obj="//@regions.1/@basic_blocks.12/@node_objs.10" sink_obj="//@regions.1/@basic_blocks.12/@node_objs.13"/>
+  <edges id="395" source_obj="//@regions.1/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.1/@basic_blocks.12/@node_objs.13"/>
+  <edges id="396" source_obj="//@regions.1/@basic_blocks.12/@node_objs.11" sink_obj="//@regions.1/@basic_blocks.12/@node_objs.13"/>
+  <edges id="397" source_obj="//@regions.1/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.12/@node_objs.13"/>
+  <edges id="398" source_obj="//@regions.1/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.1/@basic_blocks.12/@node_objs.13"/>
+  <edges id="399" source_obj="//@regions.1/@basic_blocks.12/@node_objs.12" sink_obj="//@regions.1/@basic_blocks.12/@node_objs.13"/>
+  <edges id="400" source_obj="//@regions.1/@basic_blocks.12/@node_objs.13" sink_obj="//@regions.1/@basic_blocks.12/@node_objs.14"/>
+  <edges id="401" source_obj="//@regions.1/@basic_blocks.12/@node_objs.13" sink_obj="//@regions.1/@basic_blocks.12/@node_objs.15"/>
+  <edges id="402" source_obj="//@regions.1/@basic_blocks.0/@node_objs.6" sink_obj="//@regions.1/@basic_blocks.12/@node_objs.16"/>
+  <edges id="404" source_obj="//@regions.1/@basic_blocks.12/@node_objs.16" sink_obj="//@regions.1/@basic_blocks.12/@node_objs.17"/>
+  <edges id="405" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.13" sink_obj="//@regions.1/@basic_blocks.12/@node_objs.17"/>
+  <edges id="406" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.14" sink_obj="//@regions.1/@basic_blocks.12/@node_objs.17"/>
+  <edges id="409" source_obj="//@regions.1/@basic_blocks.13/@node_objs.0" sink_obj="//@ports.1"/>
+  <edges id="410" source_obj="//@regions.1/@basic_blocks.12/@node_objs.14" sink_obj="//@regions.1/@basic_blocks.13/@node_objs.0"/>
+  <edges id="412" source_obj="//@regions.1/@basic_blocks.13/@node_objs.1" sink_obj="//@ports.2"/>
+  <edges id="413" source_obj="//@regions.1/@basic_blocks.12/@node_objs.15" sink_obj="//@regions.1/@basic_blocks.13/@node_objs.1"/>
+  <edges id="414" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.14" sink_obj="//@regions.1/@basic_blocks.13/@node_objs.2"/>
+  <edges id="415" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.0" sink_obj="//@regions.1/@basic_blocks.14/@node_objs.0"/>
+  <edges id="416" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.8/@node_objs.0"/>
+  <edges id="420" source_obj="//@regions.1/@basic_blocks.0/@node_objs.4" sink_obj="//@blocks.8/@node_objs.1"/>
+  <edges id="422" source_obj="//@regions.1/@basic_blocks.0/@node_objs.1" sink_obj="//@blocks.8/@node_objs.1"/>
+  <edges id="424" source_obj="//@regions.1/@basic_blocks.0/@node_objs.0" sink_obj="//@blocks.8/@node_objs.1"/>
+  <edges id="428" source_obj="//@regions.1/@basic_blocks.0/@node_objs.4" sink_obj="//@blocks.8/@node_objs.2"/>
+  <edges id="429" source_obj="//@regions.1/@basic_blocks.0/@node_objs.3" sink_obj="//@blocks.8/@node_objs.2"/>
+  <edges id="431" source_obj="//@regions.1/@basic_blocks.0/@node_objs.0" sink_obj="//@blocks.8/@node_objs.2"/>
+  <edges id="432" source_obj="//@regions.1/@basic_blocks.0/@node_objs.2" sink_obj="//@blocks.8/@node_objs.2"/>
+  <edges id="435" source_obj="//@blocks.8/@node_objs.3" sink_obj="//@ports.1"/>
+  <edges id="436" source_obj="//@blocks.8/@node_objs.1" sink_obj="//@blocks.8/@node_objs.3"/>
+  <edges id="438" source_obj="//@blocks.8/@node_objs.4" sink_obj="//@ports.2"/>
+  <edges id="439" source_obj="//@blocks.8/@node_objs.2" sink_obj="//@blocks.8/@node_objs.4"/>
+  <edges id="440" source_obj="//@blocks.2/@node_objs.1" sink_obj="//@blocks.8/@node_objs.5"/>
+  <edges id="442" source_obj="//@blocks.8/@node_objs.5" sink_obj="//@blocks.8/@node_objs.6"/>
+  <edges id="445" source_obj="//@blocks.8/@node_objs.6" sink_obj="//@blocks.8/@node_objs.7"/>
+  <edges id="447" source_obj="//@blocks.8/@node_objs.5" sink_obj="//@blocks.8/@node_objs.7"/>
+  <edges id="448" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.8/@node_objs.8"/>
+  <edges id="450" source_obj="//@regions.1/@basic_blocks.2/@node_objs.2" sink_obj="//@regions.1/@basic_blocks.4/@node_objs.0"/>
+  <edges id="451" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.6" sink_obj="//@regions.1/@basic_blocks.4/@node_objs.1"/>
+  <edges id="453" source_obj="//@regions.1/@basic_blocks.2/@node_objs.3" sink_obj="//@regions.1/@basic_blocks.3/@node_objs.0"/>
+  <edges id="454" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.6" sink_obj="//@regions.1/@basic_blocks.3/@node_objs.1"/>
+  <edges id="456" source_obj="//@regions.1/@basic_blocks.2/@node_objs.4" sink_obj="//@regions.1/@basic_blocks.5/@node_objs.0"/>
+  <edges id="457" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.6" sink_obj="//@regions.1/@basic_blocks.5/@node_objs.1"/>
+  <edges id="458" source_obj="//@regions.1/@basic_blocks.7/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.9/@node_objs.0"/>
+  <edges id="459" source_obj="//@regions.1/@basic_blocks.7/@node_objs.2" sink_obj="//@regions.1/@basic_blocks.9/@node_objs.0"/>
+  <edges id="460" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.11" sink_obj="//@regions.1/@basic_blocks.9/@node_objs.1"/>
+  <edges id="461" source_obj="//@regions.1/@basic_blocks.7/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.8/@node_objs.0"/>
+  <edges id="462" source_obj="//@regions.1/@basic_blocks.7/@node_objs.3" sink_obj="//@regions.1/@basic_blocks.8/@node_objs.0"/>
+  <edges id="463" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.11" sink_obj="//@regions.1/@basic_blocks.8/@node_objs.1"/>
+  <edges id="464" source_obj="//@regions.1/@basic_blocks.7/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.10/@node_objs.0"/>
+  <edges id="465" source_obj="//@regions.1/@basic_blocks.7/@node_objs.4" sink_obj="//@regions.1/@basic_blocks.10/@node_objs.0"/>
+  <edges id="466" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.11" sink_obj="//@regions.1/@basic_blocks.10/@node_objs.1"/>
+  <edges id="577" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0"/>
+  <edges id="578" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
+  <edges id="579" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="580" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="581" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2"/>
+  <edges id="582" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.3"/>
+  <edges id="583" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.9"/>
+  <edges id="584" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.6"/>
+  <edges id="585" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.5"/>
+  <edges id="586" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.4"/>
+  <edges id="587" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.7"/>
+  <edges id="588" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.7"/>
+  <edges id="589" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.7"/>
+  <edges id="590" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@regions.1/@basic_blocks.0"/>
+  <edges id="591" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.0" sink_obj="//@regions.1/@basic_blocks.1"/>
+  <edges id="592" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.0" sink_obj="//@blocks.8"/>
+  <edges id="593" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.1" sink_obj="//@regions.1/@basic_blocks.7"/>
+  <edges id="594" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.1" sink_obj="//@regions.1/@basic_blocks.2"/>
+  <edges id="595" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.2" sink_obj="//@regions.1/@basic_blocks.5"/>
+  <edges id="596" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.2" sink_obj="//@regions.1/@basic_blocks.4"/>
+  <edges id="597" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.2" sink_obj="//@regions.1/@basic_blocks.3"/>
+  <edges id="598" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.3" sink_obj="//@regions.1/@basic_blocks.6"/>
+  <edges id="599" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.4" sink_obj="//@regions.1/@basic_blocks.6"/>
+  <edges id="600" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.5" sink_obj="//@regions.1/@basic_blocks.6"/>
+  <edges id="601" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.6" sink_obj="//@regions.1/@basic_blocks.12"/>
+  <edges id="602" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.7" sink_obj="//@regions.1/@basic_blocks.10"/>
+  <edges id="603" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.7" sink_obj="//@regions.1/@basic_blocks.9"/>
+  <edges id="604" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.7" sink_obj="//@regions.1/@basic_blocks.8"/>
+  <edges id="605" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.8" sink_obj="//@regions.1/@basic_blocks.11"/>
+  <edges id="606" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.9" sink_obj="//@regions.1/@basic_blocks.11"/>
+  <edges id="607" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.10" sink_obj="//@regions.1/@basic_blocks.11"/>
+  <edges id="608" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.11" sink_obj="//@regions.1/@basic_blocks.12"/>
+  <edges id="609" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.12" sink_obj="//@regions.1/@basic_blocks.14"/>
+  <edges id="610" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.12" sink_obj="//@regions.1/@basic_blocks.13"/>
+  <edges id="611" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.13" sink_obj="//@regions.1/@basic_blocks.14"/>
+  <edges id="612" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.14" sink_obj="//@regions.1/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="613" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.2" is_back_edge="1"/>
+  <edges id="614" edge_type="VirtEdge" source_obj="//@regions.1/@basic_blocks.3/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.12/@node_objs.7"/>
+  <edges id="615" edge_type="VirtEdge" source_obj="//@regions.1/@basic_blocks.4/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.12/@node_objs.5"/>
+  <edges id="616" edge_type="VirtEdge" source_obj="//@regions.1/@basic_blocks.5/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.12/@node_objs.9"/>
+  <edges id="617" edge_type="VirtEdge" source_obj="//@regions.1/@basic_blocks.8/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.12/@node_objs.7"/>
+  <edges id="618" edge_type="VirtEdge" source_obj="//@regions.1/@basic_blocks.9/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.12/@node_objs.5"/>
+  <edges id="619" edge_type="VirtEdge" source_obj="//@regions.1/@basic_blocks.10/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.12/@node_objs.9"/>
+  <edges id="620" edge_type="VirtEdge" source_obj="//@blocks.6/@node_objs.2" sink_obj="//@blocks.6/@node_objs.7"/>
+  <edges id="621" edge_type="VirtEdge" source_obj="//@blocks.6/@node_objs.1" sink_obj="//@blocks.6/@node_objs.8"/>
+  <edges id="622" edge_type="VirtEdge" source_obj="//@blocks.6/@node_objs.0" sink_obj="//@blocks.6/@node_objs.9"/>
+  <edges id="623" edge_type="VirtEdge" source_obj="//@blocks.4/@node_objs.2" sink_obj="//@regions.1/@basic_blocks.2/@node_objs.0"/>
+  <edges id="624" edge_type="VirtEdge" source_obj="//@blocks.4/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.12/@node_objs.2"/>
+  <edges id="625" edge_type="VirtEdge" source_obj="//@blocks.4/@node_objs.1" sink_obj="//@regions.1/@basic_blocks.12/@node_objs.1"/>
+  <edges id="626" edge_type="VirtEdge" source_obj="//@blocks.4/@node_objs.2" sink_obj="//@regions.1/@basic_blocks.12/@node_objs.0"/>
+  <edges id="627" edge_type="VirtEdge" source_obj="//@blocks.5/@node_objs.2" sink_obj="//@regions.1/@basic_blocks.2/@node_objs.0"/>
+  <edges id="628" edge_type="VirtEdge" source_obj="//@blocks.5/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.12/@node_objs.2"/>
+  <edges id="629" edge_type="VirtEdge" source_obj="//@blocks.5/@node_objs.1" sink_obj="//@regions.1/@basic_blocks.12/@node_objs.1"/>
+  <edges id="630" edge_type="VirtEdge" source_obj="//@blocks.5/@node_objs.2" sink_obj="//@regions.1/@basic_blocks.12/@node_objs.0"/>
+  <edges id="631" edge_type="VirtEdge" source_obj="//@blocks.6/@node_objs.9" sink_obj="//@regions.1/@basic_blocks.2/@node_objs.0"/>
+  <edges id="632" edge_type="VirtEdge" source_obj="//@blocks.6/@node_objs.7" sink_obj="//@regions.1/@basic_blocks.12/@node_objs.2"/>
+  <edges id="633" edge_type="VirtEdge" source_obj="//@blocks.6/@node_objs.8" sink_obj="//@regions.1/@basic_blocks.12/@node_objs.1"/>
+  <edges id="634" edge_type="VirtEdge" source_obj="//@blocks.6/@node_objs.9" sink_obj="//@regions.1/@basic_blocks.12/@node_objs.0"/>
+  <blocks id="16" name="arrayctor.loop" type="BlockType">
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>block_22</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="img_width_read" coreId="741357618" bitwidth="16" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataInputObjs>img_width</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="img_height_read" coreId="741357618" bitwidth="16" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataInputObjs>img_height</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="buf_V_0" lineNumber="333" originalName="buf.V[0]" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." rtlName="buf_V_0_U" coreName="RAM_S2P_BRAM" implIndex="bram" control="pragma" opType="ram_s2p" coreId="93" contextFuncName="xFSobelFilter3x3_0_0_720_1280_1_0_0_1_1_1_1280_false_s" bitwidth="8" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="333" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="xFSobelFilter3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280, false&amp;gt;"/>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="buf_V_1" lineNumber="333" originalName="buf.V[1]" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." rtlName="buf_V_1_U" coreName="RAM_S2P_BRAM" implIndex="bram" control="pragma" opType="ram_s2p" coreId="93" contextFuncName="xFSobelFilter3x3_0_0_720_1280_1_0_0_1_1_1_1280_false_s" bitwidth="8" opcode="alloca" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="333" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="xFSobelFilter3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280, false&amp;gt;"/>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="buf_V_2" lineNumber="333" originalName="buf.V[2]" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." rtlName="buf_V_2_U" coreName="RAM_S2P_BRAM" implIndex="bram" control="pragma" opType="ram_s2p" coreId="93" contextFuncName="xFSobelFilter3x3_0_0_720_1280_1_0_0_1_1_1_1280_false_s" bitwidth="8" opcode="alloca" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="333" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="xFSobelFilter3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280, false&amp;gt;"/>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="br_ln347" lineNumber="347" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreId="68" contextFuncName="xFSobelFilter3x3_0_0_720_1280_1_0_0_1_1_1_1280_false_s" opcode="br" m_display="0" m_delay="1.58" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="347" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="xFSobelFilter3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280, false&amp;gt;"/>
+      <controlInputObjs>block_22</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp">
+      <validLinenumbers>333</validLinenumbers>
+      <validLinenumbers>347</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="40" name="._crit_edge88.loopexit" type="BlockType">
+    <controlInputObjs>block_22</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>block_46</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="bottom" originalName="bottom" coreId="0" bitwidth="2" opcode="alloca" nodeLabel="3.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="mid" originalName="mid" coreId="1867279945" bitwidth="2" opcode="alloca" nodeLabel="3.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="tp" originalName="tp" coreId="1835476768" bitwidth="2" opcode="alloca" nodeLabel="3.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="img_height_cast" rtlName="img_height_cast_fu_448_p1" coreId="1701869908" bitwidth="17" opcode="zext" nodeLabel="3.0" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="38" name="op2_assign" originalName="op2" rtlName="op2_assign_fu_451_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" bitwidth="17" opcode="add" nodeLabel="3.0" m_display="0" m_delay="2.07" m_topoIndex="23" m_clusterGroupNumber="-1">
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="br_ln359" lineNumber="359" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreId="0" contextFuncName="xFSobelFilter3x3_0_0_720_1280_1_0_0_1_1_1_1280_false_s" opcode="br" nodeLabel="3.0" m_display="0" m_delay="1.58" m_topoIndex="24" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="359" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="xFSobelFilter3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280, false&amp;gt;"/>
+      <controlInputObjs>block_46</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp">
+      <validLinenumbers>359</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="46" name="block_46" type="BlockType">
+    <controlInputObjs>._crit_edge88.loopexit</controlInputObjs>
+    <controlInputObjs>._ZN2xf2cv15ProcessSobel3x3ILi0ELi0ELi720ELi1280ELi1ELi0ELi0ELi1ELi1ELi1ELi1280EEEvRNS0_3MatIXT_EXT1_EXT2_EXT6_ELi2EEERNS2_IXT0_EXT1_EXT2_EXT6_ELi2EEES6_PArsT2_sr17xfNPixelsPerCycleIXT6_EEE9datashift_N10StreamTypeIXT7_EE4nameEPN9PixelTypeIXT4_EE4nameESF_SF_PNSC_IXT5_EE4nameESI_RNS7_IXT8_EE4nameESL_tt7ap_uintILi13EERtSO_SM_ILi2EESP_SP_SN_RiSQ_.exit_crit_edge.loopexit</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>.split8</controlOutputObjs>
+    <controlOutputObjs>._crit_edge.loopexit</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="41" name="row_V" originalName="row.V" coreId="0" bitwidth="13" opcode="phi" nodeLabel="4.0" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <controlInputObjs>._crit_edge88.loopexit</controlInputObjs>
+      <controlInputObjs>._ZN2xf2cv15ProcessSobel3x3ILi0ELi0ELi720ELi1280ELi1ELi0ELi0ELi1ELi1ELi1ELi1280EEEvRNS0_3MatIXT_EXT1_EXT2_EXT6_ELi2EEERNS2_IXT0_EXT1_EXT2_EXT6_ELi2EEES6_PArsT2_sr17xfNPixelsPerCycleIXT6_EEE9datashift_N10StreamTypeIXT7_EE4nameEPN9PixelTypeIXT4_EE4nameESF_SF_PNSC_IXT5_EE4nameESI_RNS7_IXT8_EE4nameESL_tt7ap_uintILi13EERtSO_SM_ILi2EESP_SP_SN_RiSQ_.exit_crit_edge.loopexit</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="42" name="row_ind_V" originalName="row_ind.V" coreId="1868266393" bitwidth="13" opcode="phi" nodeLabel="4.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>switch</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <controlInputObjs>._crit_edge88.loopexit</controlInputObjs>
+      <controlInputObjs>._ZN2xf2cv15ProcessSobel3x3ILi0ELi0ELi720ELi1280ELi1ELi0ELi0ELi1ELi1ELi1ELi1280EEEvRNS0_3MatIXT_EXT1_EXT2_EXT6_ELi2EEERNS2_IXT0_EXT1_EXT2_EXT6_ELi2EEES6_PArsT2_sr17xfNPixelsPerCycleIXT6_EEE9datashift_N10StreamTypeIXT7_EE4nameEPN9PixelTypeIXT4_EE4nameESF_SF_PNSC_IXT5_EE4nameESI_RNS7_IXT8_EE4nameESL_tt7ap_uintILi13EERtSO_SM_ILi2EESP_SP_SN_RiSQ_.exit_crit_edge.loopexit</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="zext_ln878_2" lineNumber="878" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="zext_ln878_2_fu_457_p1" coreId="27" contextFuncName="operator_lt_32_true" bitwidth="17" opcode="zext" nodeLabel="4.0" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="878" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="operator&amp;lt;&amp;lt;32, true&amp;gt;"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="icmp_ln878_1" lineNumber="878" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="icmp_ln878_1_fu_461_p2" opType="icmp" coreId="1867859096" contextFuncName="operator_lt_32_true" bitwidth="1" opcode="icmp" nodeLabel="4.0" m_display="0" m_delay="2.43" m_topoIndex="28" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="878" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="operator&amp;lt;&amp;lt;32, true&amp;gt;"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="45" name="br_ln359" lineNumber="359" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreId="1818386793" contextFuncName="xFSobelFilter3x3_0_0_720_1280_1_0_0_1_1_1_1280_false_s" opcode="br" nodeLabel="4.0" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="359" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="xFSobelFilter3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280, false&amp;gt;"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>._crit_edge.loopexit</controlInputObjs>
+      <controlInputObjs>.split8</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h">
+      <validLinenumbers>878</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp">
+      <validLinenumbers>359</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="51" name=".split8" type="BlockType">
+    <controlInputObjs>block_46</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_73</controlOutputObjs>
+    <controlOutputObjs>.split8..lr.ph56_crit_edge</controlOutputObjs>
+    <controlOutputObjs>.fold.split</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="47" name="zext_ln878_1" lineNumber="878" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="zext_ln878_1_fu_466_p1" coreId="0" contextFuncName="operator_lt_32_true" bitwidth="16" opcode="zext" nodeLabel="4.0" m_display="0" m_topoIndex="30" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="878" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="operator&amp;lt;&amp;lt;32, true&amp;gt;"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="50" name="_ln363" lineNumber="363" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreId="8" contextFuncName="xFSobelFilter3x3_0_0_720_1280_1_0_0_1_1_1_1280_false_s" opcode="switch" nodeLabel="4.0" m_display="0" m_delay="1.13" m_topoIndex="31" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="363" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="xFSobelFilter3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280, false&amp;gt;"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <controlInputObjs>block_73</controlInputObjs>
+      <controlInputObjs>.split8..lr.ph56_crit_edge</controlInputObjs>
+      <controlInputObjs>.fold.split</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <fileValidLineNumbers fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h">
+      <validLinenumbers>878</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp">
+      <validLinenumbers>363</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="56" name=".fold.split" type="BlockType">
+    <controlInputObjs>.split8</controlInputObjs>
+    <controlOutputObjs>switch</controlOutputObjs>
+    <controlOutputObjs>.lr.ph56</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="tp_write_ln378" lineNumber="378" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreId="49" contextFuncName="xFSobelFilter3x3_0_0_720_1280_1_0_0_1_1_1_1280_false_s" opcode="store" nodeLabel="4.0" m_display="0" m_delay="1.7" m_topoIndex="32" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="378" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="xFSobelFilter3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280, false&amp;gt;"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="mid_write_ln378" lineNumber="378" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreId="2049" contextFuncName="xFSobelFilter3x3_0_0_720_1280_1_0_0_1_1_1_1280_false_s" opcode="store" nodeLabel="4.0" m_display="0" m_delay="1.7" m_topoIndex="33" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="378" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="xFSobelFilter3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280, false&amp;gt;"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="54" name="bottom_write_ln378" lineNumber="378" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreId="132" contextFuncName="xFSobelFilter3x3_0_0_720_1280_1_0_0_1_1_1_1280_false_s" opcode="store" nodeLabel="4.0" m_display="0" m_delay="1.7" m_topoIndex="34" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="378" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="xFSobelFilter3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280, false&amp;gt;"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="55" name="br_ln378" lineNumber="378" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreId="87" contextFuncName="xFSobelFilter3x3_0_0_720_1280_1_0_0_1_1_1_1280_false_s" opcode="br" nodeLabel="4.0" m_display="0" m_topoIndex="35" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="378" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="xFSobelFilter3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280, false&amp;gt;"/>
+      <controlInputObjs>.lr.ph56</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp">
+      <validLinenumbers>378</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="61" name=".split8..lr.ph56_crit_edge" type="BlockType">
+    <controlInputObjs>.split8</controlInputObjs>
+    <controlOutputObjs>switch</controlOutputObjs>
+    <controlOutputObjs>.lr.ph56</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="tp_write_ln363" lineNumber="363" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreId="49" contextFuncName="xFSobelFilter3x3_0_0_720_1280_1_0_0_1_1_1_1280_false_s" opcode="store" nodeLabel="4.0" m_display="0" m_delay="1.7" m_topoIndex="36" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="363" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="xFSobelFilter3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280, false&amp;gt;"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="58" name="mid_write_ln363" lineNumber="363" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreId="150" contextFuncName="xFSobelFilter3x3_0_0_720_1280_1_0_0_1_1_1_1280_false_s" opcode="store" nodeLabel="4.0" m_display="0" m_delay="1.7" m_topoIndex="37" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="363" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="xFSobelFilter3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280, false&amp;gt;"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="59" name="bottom_write_ln363" lineNumber="363" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreId="1867428953" contextFuncName="xFSobelFilter3x3_0_0_720_1280_1_0_0_1_1_1_1280_false_s" opcode="store" nodeLabel="4.0" m_display="0" m_delay="1.7" m_topoIndex="38" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="363" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="xFSobelFilter3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280, false&amp;gt;"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="60" name="br_ln363" lineNumber="363" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreId="1867431248" contextFuncName="xFSobelFilter3x3_0_0_720_1280_1_0_0_1_1_1_1280_false_s" opcode="br" nodeLabel="4.0" m_display="0" m_topoIndex="39" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="363" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="xFSobelFilter3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280, false&amp;gt;"/>
+      <controlInputObjs>.lr.ph56</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp">
+      <validLinenumbers>363</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="73" name="block_73" type="BlockType">
+    <controlInputObjs>.split8</controlInputObjs>
+    <controlOutputObjs>switch</controlOutputObjs>
+    <controlOutputObjs>.lr.ph56</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="62" name="bottom_load" lineNumber="372" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreId="1866171488" contextFuncName="xFSobelFilter3x3_0_0_720_1280_1_0_0_1_1_1_1280_false_s" bitwidth="2" opcode="load" nodeLabel="4.0" m_display="0" m_topoIndex="40" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="372" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="xFSobelFilter3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280, false&amp;gt;"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="63" name="mid_load" lineNumber="372" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreId="1866172985" contextFuncName="xFSobelFilter3x3_0_0_720_1280_1_0_0_1_1_1_1280_false_s" bitwidth="2" opcode="load" nodeLabel="4.0" m_display="0" m_topoIndex="41" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="372" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="xFSobelFilter3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280, false&amp;gt;"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="64" name="tp_load" lineNumber="372" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreId="49" contextFuncName="xFSobelFilter3x3_0_0_720_1280_1_0_0_1_1_1_1280_false_s" bitwidth="2" opcode="load" nodeLabel="4.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="372" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="xFSobelFilter3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280, false&amp;gt;"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="65" name="icmp_ln870" lineNumber="870" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="icmp_ln870_fu_500_p2" opType="icmp" coreId="0" contextFuncName="operator_eq_32_true" bitwidth="1" opcode="icmp" nodeLabel="4.0" m_display="0" m_delay="2.09" m_topoIndex="43" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="870" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="operator==&amp;lt;32, true&amp;gt;"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="66" name="bottom_1" lineNumber="372" originalName="bottom" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." rtlName="bottom_1_fu_506_p3" coreName="Sel" implIndex="auto_sel" control="auto" opType="select" coreId="73" contextFuncName="xFSobelFilter3x3_0_0_720_1280_1_0_0_1_1_1_1280_false_s" bitwidth="2" opcode="select" nodeLabel="4.0" m_display="0" m_delay="0.99" m_topoIndex="44" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="372" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="xFSobelFilter3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280, false&amp;gt;"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="67" name="mid_1" lineNumber="372" originalName="mid" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." rtlName="mid_1_fu_514_p3" coreName="Sel" implIndex="auto_sel" control="auto" opType="select" coreId="73" contextFuncName="xFSobelFilter3x3_0_0_720_1280_1_0_0_1_1_1_1280_false_s" bitwidth="2" opcode="select" nodeLabel="4.0" m_display="0" m_delay="0.99" m_topoIndex="45" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="372" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="xFSobelFilter3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280, false&amp;gt;"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="68" name="tp_1" lineNumber="372" originalName="tp" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." rtlName="tp_1_fu_522_p3" coreName="Sel" implIndex="auto_sel" control="auto" opType="select" coreId="73" contextFuncName="xFSobelFilter3x3_0_0_720_1280_1_0_0_1_1_1_1280_false_s" bitwidth="2" opcode="select" nodeLabel="4.0" m_display="0" m_delay="0.99" m_topoIndex="46" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="372" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="xFSobelFilter3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280, false&amp;gt;"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="69" name="tp_write_ln372" lineNumber="372" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreId="49" contextFuncName="xFSobelFilter3x3_0_0_720_1280_1_0_0_1_1_1_1280_false_s" opcode="store" nodeLabel="4.0" m_display="0" m_delay="1.7" m_topoIndex="47" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="372" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="xFSobelFilter3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280, false&amp;gt;"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="70" name="mid_write_ln372" lineNumber="372" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreId="1867421424" contextFuncName="xFSobelFilter3x3_0_0_720_1280_1_0_0_1_1_1_1280_false_s" opcode="store" nodeLabel="4.0" m_display="0" m_delay="1.7" m_topoIndex="48" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="372" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="xFSobelFilter3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280, false&amp;gt;"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="71" name="bottom_write_ln372" lineNumber="372" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreId="132" contextFuncName="xFSobelFilter3x3_0_0_720_1280_1_0_0_1_1_1_1280_false_s" opcode="store" nodeLabel="4.0" m_display="0" m_delay="1.7" m_topoIndex="49" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="372" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="xFSobelFilter3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280, false&amp;gt;"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="72" name="br_ln0" coreId="132" opcode="br" nodeLabel="4.0" m_display="0" m_topoIndex="50" m_clusterGroupNumber="-1">
+      <controlInputObjs>.lr.ph56</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h">
+      <validLinenumbers>870</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp">
+      <validLinenumbers>372</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="77" name=".lr.ph56" type="BlockType">
+    <controlInputObjs>.fold.split</controlInputObjs>
+    <controlInputObjs>.split8..lr.ph56_crit_edge</controlInputObjs>
+    <controlInputObjs>block_73</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>block_89</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="74" name="cmp_i_i501_i" lineNumber="878" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="cmp_i_i501_i_fu_545_p2" opType="icmp" coreId="0" contextFuncName="operator_lt_32_true" bitwidth="1" opcode="icmp" nodeLabel="4.0" m_display="0" m_delay="2.42" m_topoIndex="51" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="878" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="operator&amp;lt;&amp;lt;32, true&amp;gt;"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="75" name="trunc_ln228" lineNumber="228" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." rtlName="trunc_ln228_fu_550_p1" coreId="1868550504" contextFuncName="ProcessSobel3x3_0_0_720_1280_1_0_0_1_1_1_1280_s" bitwidth="2" opcode="trunc" nodeLabel="4.0" m_display="0" m_topoIndex="52" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="228" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="ProcessSobel3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280&amp;gt;"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>switch</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="76" name="br_ln222" lineNumber="222" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreId="49" contextFuncName="ProcessSobel3x3_0_0_720_1280_1_0_0_1_1_1_1280_s" opcode="br" nodeLabel="4.0" m_display="0" m_delay="1.58" m_topoIndex="53" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="222" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="ProcessSobel3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280&amp;gt;"/>
+      <controlInputObjs>block_89</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h">
+      <validLinenumbers>878</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp">
+      <validLinenumbers>228</validLinenumbers>
+      <validLinenumbers>222</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="165" name="._ZN2xf2cv15ProcessSobel3x3ILi0ELi0ELi720ELi1280ELi1ELi0ELi0ELi1ELi1ELi1ELi1280EEEvRNS0_3MatIXT_EXT1_EXT2_EXT6_ELi2EEERNS2_IXT0_EXT1_EXT2_EXT6_ELi2EEES6_PArsT2_sr17xfNPixelsPerCycleIXT6_EEE9datashift_N10StreamTypeIXT7_EE4nameEPN9PixelTypeIXT4_EE4nameESF_SF_PNSC_IXT5_EE4nameESI_RNS7_IXT8_EE4nameESL_tt7ap_uintILi13EERtSO_SM_ILi2EESP_SP_SN_RiSQ_.exit_crit_edge.loopexit" type="BlockType">
+    <controlInputObjs>block_89</controlInputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_46</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="156" name="row_V_1" lineNumber="691" originalName="row.V" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="row_V_1_fu_646_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="operator_add_assign_1_false" bitwidth="13" opcode="add" nodeLabel="11.0" m_display="0" m_delay="1.67" m_topoIndex="115" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="691" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="operator+=&amp;lt;1, false&amp;gt;"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="157" name="tmp_V_4" lineNumber="425" originalName="tmp.V" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." rtlName="grp_xFGradientX3x3_0_0_s_fu_387" coreId="0" contextFuncName="xFSobelFilter3x3_0_0_720_1280_1_0_0_1_1_1_1280_false_s" bitwidth="8" opcode="call" nodeLabel="11.0" nodeLatency="1" m_display="0" m_delay="1.91" m_topoIndex="116" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="425" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="xFSobelFilter3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280, false&amp;gt;"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+      <constName>xFGradientX3x3_0_0_s</constName>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="158" name="tmp_V_5" lineNumber="430" originalName="tmp.V" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." rtlName="grp_xFGradientY3x3_0_0_s_fu_403" coreId="65" contextFuncName="xFSobelFilter3x3_0_0_720_1280_1_0_0_1_1_1_1280_false_s" bitwidth="8" opcode="call" nodeLabel="11.0" nodeLatency="1" m_display="0" m_delay="1.91" m_topoIndex="117" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="430" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="xFSobelFilter3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280, false&amp;gt;"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+      <constName>xFGradientY3x3_0_0_s</constName>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="159" name="mat_grad_x_480_write_ln174" lineNumber="174" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" contextFuncName="write" opcode="write" nodeLabel="13.0" m_display="0" m_delay="3.63" m_topoIndex="121" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h" linenumber="174" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="write"/>
+      <dataInputObjs>call</dataInputObjs>
+      <dataOutputObjs>mat_grad_x_480</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="160" name="mat_grad_y_481_write_ln174" lineNumber="174" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" contextFuncName="write" opcode="write" nodeLabel="13.0" m_display="0" m_delay="3.63" m_topoIndex="122" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h" linenumber="174" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="write"/>
+      <dataInputObjs>call</dataInputObjs>
+      <dataOutputObjs>mat_grad_y_481</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="161" name="row_ind_V_1" lineNumber="691" originalName="row_ind.V" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="row_ind_V_1_fu_652_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="operator_add_assign_1_false" bitwidth="13" opcode="add" nodeLabel="11.0" m_display="0" m_delay="1.67" m_topoIndex="118" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="691" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="operator+=&amp;lt;1, false&amp;gt;"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="162" name="icmp_ln870_1" lineNumber="870" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="icmp_ln870_1_fu_658_p2" opType="icmp" coreId="1869029840" contextFuncName="operator_eq_32_true" bitwidth="1" opcode="icmp" nodeLabel="11.0" m_display="0" m_delay="2.09" m_topoIndex="119" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="870" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="operator==&amp;lt;32, true&amp;gt;"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="163" name="row_ind_V_2" lineNumber="450" originalName="row_ind.V" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." rtlName="row_ind_V_2_fu_664_p3" coreName="Sel" implIndex="auto_sel" control="auto" opType="select" coreId="73" contextFuncName="xFSobelFilter3x3_0_0_720_1280_1_0_0_1_1_1_1280_false_s" bitwidth="13" opcode="select" nodeLabel="11.0" m_display="0" m_delay="0.69" m_topoIndex="120" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="450" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="xFSobelFilter3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280, false&amp;gt;"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="164" name="br_ln0" coreId="49" opcode="br" nodeLabel="13.0" m_display="0" m_topoIndex="123" m_clusterGroupNumber="-1">
+      <controlInputObjs>block_46</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h">
+      <validLinenumbers>174</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h">
+      <validLinenumbers>691</validLinenumbers>
+      <validLinenumbers>870</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp">
+      <validLinenumbers>425</validLinenumbers>
+      <validLinenumbers>430</validLinenumbers>
+      <validLinenumbers>450</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="167" name="._crit_edge.loopexit" type="BlockType">
+    <controlInputObjs>block_46</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="166" name="_ln454" lineNumber="454" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreId="2885681280" contextFuncName="xFSobelFilter3x3_0_0_720_1280_1_0_0_1_1_1_1280_false_s" opcode="ret" nodeLabel="4.0" m_display="0" m_topoIndex="54" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="454" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="xFSobelFilter3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280, false&amp;gt;"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp">
+      <validLinenumbers>454</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" id="680" pipe_depth="2" RegionName="Clear_Row_Loop">
+    <basic_blocks id="22" name="block_22" type="BlockType">
+      <controlInputObjs>arrayctor.loop</controlInputObjs>
+      <controlInputObjs>.split11</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>.split11</controlOutputObjs>
+      <controlOutputObjs>._crit_edge88.loopexit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="17" name="col_V" originalName="col.V" coreId="49" bitwidth="13" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <controlInputObjs>arrayctor.loop</controlInputObjs>
+        <controlInputObjs>.split11</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="18" name="col_V_1" lineNumber="691" originalName="col.V" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="col_V_1_fu_428_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="operator_add_assign_1_false" bitwidth="13" opcode="add" nodeLabel="1.0" m_display="0" m_delay="1.67" m_topoIndex="8" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="691" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="operator+=&amp;lt;1, false&amp;gt;"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="19" name="zext_ln878" lineNumber="878" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="zext_ln878_fu_434_p1" coreId="84" contextFuncName="operator_lt_16_false" bitwidth="16" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="878" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="operator&amp;lt;&amp;lt;16, false&amp;gt;"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="20" name="icmp_ln878" lineNumber="878" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="icmp_ln878_fu_438_p2" opType="icmp" coreId="132" contextFuncName="operator_lt_16_false" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="2.42" m_topoIndex="10" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="878" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="operator&amp;lt;&amp;lt;16, false&amp;gt;"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="21" name="br_ln347" lineNumber="347" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreId="273" contextFuncName="xFSobelFilter3x3_0_0_720_1280_1_0_0_1_1_1_1280_false_s" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="347" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="xFSobelFilter3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280, false&amp;gt;"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>._crit_edge88.loopexit</controlInputObjs>
+        <controlInputObjs>.split11</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h">
+        <validLinenumbers>691</validLinenumbers>
+        <validLinenumbers>878</validLinenumbers>
+      </fileValidLineNumbers>
+      <fileValidLineNumbers fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp">
+        <validLinenumbers>347</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="33" name=".split11" type="BlockType">
+      <controlInputObjs>block_22</controlInputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>block_22</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="26" name="zext_ln534" lineNumber="534" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="zext_ln534_fu_443_p1" coreId="0" contextFuncName="operator_unsigned_long_long" bitwidth="64" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="534" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="operator unsigned long long"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="27" name="buf_V_0_addr" lineNumber="353" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreId="401" contextFuncName="xFSobelFilter3x3_0_0_720_1280_1_0_0_1_1_1_1280_false_s" bitwidth="11" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="353" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="xFSobelFilter3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280, false&amp;gt;"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="buf_V_0_addr_write_ln353" lineNumber="353" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreName="RAM_S2P_BRAM" implIndex="bram" control="auto" opType="ram_s2p" coreId="93" contextFuncName="xFSobelFilter3x3_0_0_720_1280_1_0_0_1_1_1_1280_false_s" opcode="store" nodeLabel="1.0" m_display="0" m_delay="3.25" m_topoIndex="14" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="353" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="xFSobelFilter3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280, false&amp;gt;"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="29" name="tmp_V" lineNumber="145" originalName="tmp.V" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" contextFuncName="read" bitwidth="8" opcode="read" nodeLabel="2.0" m_display="0" m_delay="3.63" m_topoIndex="15" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="read"/>
+        <dataInputObjs>img_gray_479</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="30" name="buf_V_1_addr" lineNumber="354" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreId="132" contextFuncName="xFSobelFilter3x3_0_0_720_1280_1_0_0_1_1_1_1280_false_s" bitwidth="11" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="354" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="xFSobelFilter3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280, false&amp;gt;"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="31" name="buf_V_1_addr_write_ln354" lineNumber="354" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreName="RAM_S2P_BRAM" implIndex="bram" control="auto" opType="ram_s2p" coreId="93" contextFuncName="xFSobelFilter3x3_0_0_720_1280_1_0_0_1_1_1_1280_false_s" opcode="store" nodeLabel="2.0" m_display="0" m_delay="3.25" m_topoIndex="17" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="354" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="xFSobelFilter3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280, false&amp;gt;"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="32" name="br_ln0" coreId="1217" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+        <controlInputObjs>block_22</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h">
+        <validLinenumbers>145</validLinenumbers>
+      </fileValidLineNumbers>
+      <fileValidLineNumbers fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h">
+        <validLinenumbers>534</validLinenumbers>
+      </fileValidLineNumbers>
+      <fileValidLineNumbers fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp">
+        <validLinenumbers>353</validLinenumbers>
+        <validLinenumbers>354</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" id="681" pipe_depth="6" RegionName="Col_Loop">
+    <basic_blocks id="89" name="block_89" type="BlockType">
+      <controlInputObjs>.lr.ph56</controlInputObjs>
+      <controlInputObjs>_ZN2xf2cv12xfPackPixelsILi1ELi1ELi0EEEvPN9PixelTypeIXT1_EE4nameERN10StreamTypeIXT0_EE4nameEtsRt.exit413.i</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>.split</controlOutputObjs>
+      <controlOutputObjs>._ZN2xf2cv15ProcessSobel3x3ILi0ELi0ELi720ELi1280ELi1ELi0ELi0ELi1ELi1ELi1ELi1280EEEvRNS0_3MatIXT_EXT1_EXT2_EXT6_ELi2EEERNS2_IXT0_EXT1_EXT2_EXT6_ELi2EEES6_PArsT2_sr17xfNPixelsPerCycleIXT6_EEE9datashift_N10StreamTypeIXT7_EE4nameEPN9PixelTypeIXT4_EE4nameESF_SF_PNSC_IXT5_EE4nameESI_RNS7_IXT8_EE4nameESL_tt7ap_uintILi13EERtSO_SM_ILi2EESP_SP_SN_RiSQ_.exit_crit_edge.loopexit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="78" name="p_Val2_2" originalName="src_buf3.V[0]" coreId="2885681280" bitwidth="8" opcode="phi" nodeLabel="8.0" m_display="0" m_topoIndex="97" m_clusterGroupNumber="-1">
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <controlInputObjs>.lr.ph56</controlInputObjs>
+        <controlInputObjs>_ZN2xf2cv12xfPackPixelsILi1ELi1ELi0EEEvPN9PixelTypeIXT1_EE4nameERN10StreamTypeIXT0_EE4nameEtsRt.exit413.i</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="79" name="p_Val2_1" originalName="src_buf2.V[0]" coreId="0" bitwidth="8" opcode="phi" nodeLabel="8.0" m_display="0" m_topoIndex="98" m_clusterGroupNumber="-1">
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <controlInputObjs>.lr.ph56</controlInputObjs>
+        <controlInputObjs>_ZN2xf2cv12xfPackPixelsILi1ELi1ELi0EEEvPN9PixelTypeIXT1_EE4nameERN10StreamTypeIXT0_EE4nameEtsRt.exit413.i</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="80" name="src_buf3_V_0" originalName="src_buf3.V[1]" coreId="2885681280" bitwidth="8" opcode="phi" nodeLabel="8.0" m_display="0" m_topoIndex="99" m_clusterGroupNumber="-1">
+        <dataInputObjs>mux</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <controlInputObjs>.lr.ph56</controlInputObjs>
+        <controlInputObjs>_ZN2xf2cv12xfPackPixelsILi1ELi1ELi0EEEvPN9PixelTypeIXT1_EE4nameERN10StreamTypeIXT0_EE4nameEtsRt.exit413.i</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="81" name="src_buf1_V_0" originalName="src_buf1.V[1]" coreId="49" bitwidth="8" opcode="phi" nodeLabel="8.0" m_display="0" m_topoIndex="100" m_clusterGroupNumber="-1">
+        <dataInputObjs>mux</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <controlInputObjs>.lr.ph56</controlInputObjs>
+        <controlInputObjs>_ZN2xf2cv12xfPackPixelsILi1ELi1ELi0EEEvPN9PixelTypeIXT1_EE4nameERN10StreamTypeIXT0_EE4nameEtsRt.exit413.i</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="82" name="p_Val2_s" originalName="src_buf1.V[0]" coreId="0" bitwidth="8" opcode="phi" nodeLabel="8.0" m_display="0" m_topoIndex="101" m_clusterGroupNumber="-1">
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <controlInputObjs>.lr.ph56</controlInputObjs>
+        <controlInputObjs>_ZN2xf2cv12xfPackPixelsILi1ELi1ELi0EEEvPN9PixelTypeIXT1_EE4nameERN10StreamTypeIXT0_EE4nameEtsRt.exit413.i</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="83" name="src_buf2_V_0" originalName="src_buf2.V[1]" coreId="0" bitwidth="8" opcode="phi" nodeLabel="8.0" m_display="0" m_topoIndex="102" m_clusterGroupNumber="-1">
+        <dataInputObjs>mux</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <controlInputObjs>.lr.ph56</controlInputObjs>
+        <controlInputObjs>_ZN2xf2cv12xfPackPixelsILi1ELi1ELi0EEEvPN9PixelTypeIXT1_EE4nameERN10StreamTypeIXT0_EE4nameEtsRt.exit413.i</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="84" name="col_V_2" originalName="col.V" coreId="1985" bitwidth="13" opcode="phi" nodeLabel="5.0" m_display="0" m_topoIndex="55" m_clusterGroupNumber="-1">
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <controlInputObjs>.lr.ph56</controlInputObjs>
+        <controlInputObjs>_ZN2xf2cv12xfPackPixelsILi1ELi1ELi0EEEvPN9PixelTypeIXT1_EE4nameERN10StreamTypeIXT0_EE4nameEtsRt.exit413.i</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="85" name="col_V_3" lineNumber="691" originalName="col.V" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="col_V_3_fu_554_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="operator_add_assign_1_false" bitwidth="13" opcode="add" nodeLabel="5.0" m_display="0" m_delay="1.67" m_topoIndex="56" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="691" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="operator+=&amp;lt;1, false&amp;gt;"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="86" name="zext_ln878_3" lineNumber="878" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="zext_ln878_3_fu_560_p1" coreId="4294967295" contextFuncName="operator_lt_16_false" bitwidth="16" opcode="zext" nodeLabel="5.0" m_display="0" m_topoIndex="57" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="878" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="operator&amp;lt;&amp;lt;16, false&amp;gt;"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="87" name="icmp_ln878_2" lineNumber="878" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="icmp_ln878_2_fu_564_p2" opType="icmp" coreId="1866844368" contextFuncName="operator_lt_16_false" bitwidth="1" opcode="icmp" nodeLabel="5.0" m_display="0" m_delay="2.42" m_topoIndex="58" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="878" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="operator&amp;lt;&amp;lt;16, false&amp;gt;"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="88" name="br_ln222" lineNumber="222" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreId="1857" contextFuncName="ProcessSobel3x3_0_0_720_1280_1_0_0_1_1_1_1280_s" opcode="br" nodeLabel="5.0" m_display="0" m_topoIndex="59" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="222" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="ProcessSobel3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280&amp;gt;"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>._ZN2xf2cv15ProcessSobel3x3ILi0ELi0ELi720ELi1280ELi1ELi0ELi0ELi1ELi1ELi1ELi1280EEEvRNS0_3MatIXT_EXT1_EXT2_EXT6_ELi2EEERNS2_IXT0_EXT1_EXT2_EXT6_ELi2EEES6_PArsT2_sr17xfNPixelsPerCycleIXT6_EEE9datashift_N10StreamTypeIXT7_EE4nameEPN9PixelTypeIXT4_EE4nameESF_SF_PNSC_IXT5_EE4nameESI_RNS7_IXT8_EE4nameESL_tt7ap_uintILi13EERtSO_SM_ILi2EESP_SP_SN_RiSQ_.exit_crit_edge.loopexit</controlInputObjs>
+        <controlInputObjs>.split</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h">
+        <validLinenumbers>691</validLinenumbers>
+        <validLinenumbers>878</validLinenumbers>
+      </fileValidLineNumbers>
+      <fileValidLineNumbers fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp">
+        <validLinenumbers>222</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="94" name=".split" type="BlockType">
+      <controlInputObjs>block_89</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>block_119</controlOutputObjs>
+      <controlOutputObjs>block_101</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="93" name="br_ln227" lineNumber="227" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreId="0" contextFuncName="ProcessSobel3x3_0_0_720_1280_1_0_0_1_1_1_1280_s" opcode="br" nodeLabel="5.0" m_display="0" m_topoIndex="60" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="227" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="ProcessSobel3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280&amp;gt;"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>block_101</controlInputObjs>
+        <controlInputObjs>block_119</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp">
+        <validLinenumbers>227</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="101" name="block_101" type="BlockType">
+      <controlInputObjs>.split</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>branch2</controlOutputObjs>
+      <controlOutputObjs>branch0</controlOutputObjs>
+      <controlOutputObjs>branch1</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="95" name="bottom_load_1" lineNumber="230" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreId="2885681280" contextFuncName="ProcessSobel3x3_0_0_720_1280_1_0_0_1_1_1_1280_s" bitwidth="2" opcode="load" nodeLabel="6.0" m_display="0" m_topoIndex="65" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="230" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="ProcessSobel3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280&amp;gt;"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>switch</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="96" name="zext_ln534_2" lineNumber="534" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="zext_ln534_2_fu_569_p1" coreId="132" contextFuncName="operator_unsigned_long_long" bitwidth="64" opcode="zext" nodeLabel="6.0" m_display="0" m_topoIndex="66" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="534" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="operator unsigned long long"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="97" name="buf_V_0_addr_2" lineNumber="230" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreId="4294967295" contextFuncName="ProcessSobel3x3_0_0_720_1280_1_0_0_1_1_1_1280_s" bitwidth="11" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="67" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="230" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="ProcessSobel3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280&amp;gt;"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="98" name="buf_V_1_addr_2" lineNumber="230" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreId="4294967294" contextFuncName="ProcessSobel3x3_0_0_720_1280_1_0_0_1_1_1_1280_s" bitwidth="11" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="68" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="230" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="ProcessSobel3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280&amp;gt;"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="99" name="buf_V_2_addr_1" lineNumber="230" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreId="0" contextFuncName="ProcessSobel3x3_0_0_720_1280_1_0_0_1_1_1_1280_s" bitwidth="11" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="69" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="230" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="ProcessSobel3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280&amp;gt;"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="100" name="_ln230" lineNumber="230" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreId="0" contextFuncName="ProcessSobel3x3_0_0_720_1280_1_0_0_1_1_1_1280_s" opcode="switch" nodeLabel="6.0" m_display="0" m_delay="1.13" m_topoIndex="70" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="230" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="ProcessSobel3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280&amp;gt;"/>
+        <dataInputObjs>load</dataInputObjs>
+        <controlInputObjs>branch2</controlInputObjs>
+        <controlInputObjs>branch0</controlInputObjs>
+        <controlInputObjs>branch1</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <fileValidLineNumbers fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h">
+        <validLinenumbers>534</validLinenumbers>
+      </fileValidLineNumbers>
+      <fileValidLineNumbers fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp">
+        <validLinenumbers>230</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="104" name="branch1" type="BlockType">
+      <controlInputObjs>block_101</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>block_112</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="102" name="buf_V_1_addr_2_write_ln230" lineNumber="230" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreName="RAM_S2P_BRAM" implIndex="bram" control="auto" opType="ram_s2p" coreId="93" contextFuncName="ProcessSobel3x3_0_0_720_1280_1_0_0_1_1_1_1280_s" opcode="store" nodeLabel="6.0" m_display="0" m_delay="3.25" m_topoIndex="71" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="230" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="ProcessSobel3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280&amp;gt;"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="103" name="br_ln230" lineNumber="230" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreId="0" contextFuncName="ProcessSobel3x3_0_0_720_1280_1_0_0_1_1_1_1280_s" opcode="br" nodeLabel="6.0" m_display="0" m_topoIndex="72" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="230" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="ProcessSobel3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280&amp;gt;"/>
+        <controlInputObjs>block_112</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp">
+        <validLinenumbers>230</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="107" name="branch0" type="BlockType">
+      <controlInputObjs>block_101</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>block_112</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="105" name="buf_V_0_addr_2_write_ln230" lineNumber="230" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreName="RAM_S2P_BRAM" implIndex="bram" control="auto" opType="ram_s2p" coreId="93" contextFuncName="ProcessSobel3x3_0_0_720_1280_1_0_0_1_1_1_1280_s" opcode="store" nodeLabel="6.0" m_display="0" m_delay="3.25" m_topoIndex="73" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="230" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="ProcessSobel3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280&amp;gt;"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="106" name="br_ln230" lineNumber="230" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreId="1867542464" contextFuncName="ProcessSobel3x3_0_0_720_1280_1_0_0_1_1_1_1280_s" opcode="br" nodeLabel="6.0" m_display="0" m_topoIndex="74" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="230" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="ProcessSobel3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280&amp;gt;"/>
+        <controlInputObjs>block_112</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp">
+        <validLinenumbers>230</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="110" name="branch2" type="BlockType">
+      <controlInputObjs>block_101</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>block_112</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="108" name="buf_V_2_addr_1_write_ln230" lineNumber="230" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreName="RAM_S2P_BRAM" implIndex="bram" control="auto" opType="ram_s2p" coreId="93" contextFuncName="ProcessSobel3x3_0_0_720_1280_1_0_0_1_1_1_1280_s" opcode="store" nodeLabel="6.0" m_display="0" m_delay="3.25" m_topoIndex="75" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="230" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="ProcessSobel3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280&amp;gt;"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="109" name="br_ln230" lineNumber="230" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreId="741417004" contextFuncName="ProcessSobel3x3_0_0_720_1280_1_0_0_1_1_1_1280_s" opcode="br" nodeLabel="6.0" m_display="0" m_topoIndex="76" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="230" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="ProcessSobel3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280&amp;gt;"/>
+        <controlInputObjs>block_112</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp">
+        <validLinenumbers>230</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="112" name="block_112" type="BlockType">
+      <controlInputObjs>branch1</controlInputObjs>
+      <controlInputObjs>branch0</controlInputObjs>
+      <controlInputObjs>branch2</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>block_149</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="111" name="br_ln0" coreId="49" opcode="br" nodeLabel="5.0" m_display="0" m_topoIndex="61" m_clusterGroupNumber="-1">
+        <controlInputObjs>block_149</controlInputObjs>
+      </node_objs>
+    </basic_blocks>
+    <basic_blocks id="119" name="block_119" type="BlockType">
+      <controlInputObjs>.split</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>branch5</controlOutputObjs>
+      <controlOutputObjs>branch3</controlOutputObjs>
+      <controlOutputObjs>branch4</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="113" name="tmp_V_3" lineNumber="145" originalName="tmp.V" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" contextFuncName="read" bitwidth="8" opcode="read" nodeLabel="6.0" m_display="0" m_delay="3.63" m_topoIndex="77" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="read"/>
+        <dataInputObjs>img_gray_479</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="114" name="zext_ln534_1" lineNumber="534" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="zext_ln534_1_fu_576_p1" coreId="1867167888" contextFuncName="operator_unsigned_long_long" bitwidth="64" opcode="zext" nodeLabel="6.0" m_display="0" m_topoIndex="78" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="534" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="operator unsigned long long"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="115" name="buf_V_0_addr_1" lineNumber="228" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreId="1867169528" contextFuncName="ProcessSobel3x3_0_0_720_1280_1_0_0_1_1_1_1280_s" bitwidth="11" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="79" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="228" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="ProcessSobel3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280&amp;gt;"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="116" name="buf_V_1_addr_1" lineNumber="228" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreId="1867269448" contextFuncName="ProcessSobel3x3_0_0_720_1280_1_0_0_1_1_1_1280_s" bitwidth="11" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="80" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="228" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="ProcessSobel3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280&amp;gt;"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="117" name="buf_V_2_addr" lineNumber="228" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreId="4294967294" contextFuncName="ProcessSobel3x3_0_0_720_1280_1_0_0_1_1_1_1280_s" bitwidth="11" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="81" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="228" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="ProcessSobel3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280&amp;gt;"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="118" name="_ln228" lineNumber="228" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreId="49" contextFuncName="ProcessSobel3x3_0_0_720_1280_1_0_0_1_1_1_1280_s" opcode="switch" nodeLabel="5.0" m_display="0" m_delay="1.13" m_topoIndex="62" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="228" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="ProcessSobel3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280&amp;gt;"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <controlInputObjs>branch5</controlInputObjs>
+        <controlInputObjs>branch3</controlInputObjs>
+        <controlInputObjs>branch4</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <fileValidLineNumbers fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h">
+        <validLinenumbers>145</validLinenumbers>
+      </fileValidLineNumbers>
+      <fileValidLineNumbers fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h">
+        <validLinenumbers>534</validLinenumbers>
+      </fileValidLineNumbers>
+      <fileValidLineNumbers fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp">
+        <validLinenumbers>228</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="122" name="branch4" type="BlockType">
+      <controlInputObjs>block_119</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>block_130</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="120" name="buf_V_1_addr_1_write_ln228" lineNumber="228" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreName="RAM_S2P_BRAM" implIndex="bram" control="auto" opType="ram_s2p" coreId="93" contextFuncName="ProcessSobel3x3_0_0_720_1280_1_0_0_1_1_1_1280_s" opcode="store" nodeLabel="6.0" m_display="0" m_delay="3.25" m_topoIndex="82" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="228" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="ProcessSobel3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280&amp;gt;"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="121" name="br_ln228" lineNumber="228" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreId="49" contextFuncName="ProcessSobel3x3_0_0_720_1280_1_0_0_1_1_1_1280_s" opcode="br" nodeLabel="6.0" m_display="0" m_topoIndex="83" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="228" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="ProcessSobel3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280&amp;gt;"/>
+        <controlInputObjs>block_130</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp">
+        <validLinenumbers>228</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="125" name="branch3" type="BlockType">
+      <controlInputObjs>block_119</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>block_130</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="123" name="buf_V_0_addr_1_write_ln228" lineNumber="228" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreName="RAM_S2P_BRAM" implIndex="bram" control="auto" opType="ram_s2p" coreId="93" contextFuncName="ProcessSobel3x3_0_0_720_1280_1_0_0_1_1_1_1280_s" opcode="store" nodeLabel="6.0" m_display="0" m_delay="3.25" m_topoIndex="84" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="228" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="ProcessSobel3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280&amp;gt;"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="124" name="br_ln228" lineNumber="228" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreId="49" contextFuncName="ProcessSobel3x3_0_0_720_1280_1_0_0_1_1_1_1280_s" opcode="br" nodeLabel="6.0" m_display="0" m_topoIndex="85" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="228" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="ProcessSobel3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280&amp;gt;"/>
+        <controlInputObjs>block_130</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp">
+        <validLinenumbers>228</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="128" name="branch5" type="BlockType">
+      <controlInputObjs>block_119</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>block_130</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="126" name="buf_V_2_addr_write_ln228" lineNumber="228" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreName="RAM_S2P_BRAM" implIndex="bram" control="auto" opType="ram_s2p" coreId="93" contextFuncName="ProcessSobel3x3_0_0_720_1280_1_0_0_1_1_1_1280_s" opcode="store" nodeLabel="6.0" m_display="0" m_delay="3.25" m_topoIndex="86" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="228" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="ProcessSobel3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280&amp;gt;"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="127" name="br_ln228" lineNumber="228" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreId="3649" contextFuncName="ProcessSobel3x3_0_0_720_1280_1_0_0_1_1_1_1280_s" opcode="br" nodeLabel="6.0" m_display="0" m_topoIndex="87" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="228" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="ProcessSobel3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280&amp;gt;"/>
+        <controlInputObjs>block_130</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp">
+        <validLinenumbers>228</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="130" name="block_130" type="BlockType">
+      <controlInputObjs>branch4</controlInputObjs>
+      <controlInputObjs>branch3</controlInputObjs>
+      <controlInputObjs>branch5</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>block_149</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="129" name="br_ln228" lineNumber="228" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreId="1867571560" contextFuncName="ProcessSobel3x3_0_0_720_1280_1_0_0_1_1_1_1280_s" opcode="br" nodeLabel="5.0" m_display="0" m_topoIndex="63" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="228" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="ProcessSobel3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280&amp;gt;"/>
+        <controlInputObjs>block_149</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp">
+        <validLinenumbers>228</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="149" name="block_149" type="BlockType">
+      <controlInputObjs>block_112</controlInputObjs>
+      <controlInputObjs>block_130</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>_ZN2xf2cv12xfPackPixelsILi1ELi1ELi0EEEvPN9PixelTypeIXT1_EE4nameERN10StreamTypeIXT0_EE4nameEtsRt.exit413.i</controlOutputObjs>
+      <controlOutputObjs>_ZN2xf2cv12xfPackPixelsILi1ELi1ELi0EEEvPN9PixelTypeIXT1_EE4nameERN10StreamTypeIXT0_EE4nameEtsRt.exit267.i91</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="131" name="bottom_load_2" lineNumber="233" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreId="1868401264" contextFuncName="ProcessSobel3x3_0_0_720_1280_1_0_0_1_1_1_1280_s" bitwidth="2" opcode="load" nodeLabel="8.0" m_display="0" m_topoIndex="103" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="233" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="ProcessSobel3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280&amp;gt;"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>mux</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="132" name="mid_load_1" lineNumber="232" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreId="1866093024" contextFuncName="ProcessSobel3x3_0_0_720_1280_1_0_0_1_1_1_1280_s" bitwidth="2" opcode="load" nodeLabel="8.0" m_display="0" m_topoIndex="104" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="232" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="ProcessSobel3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280&amp;gt;"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>mux</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="133" name="tp_load_1" lineNumber="231" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreId="0" contextFuncName="ProcessSobel3x3_0_0_720_1280_1_0_0_1_1_1_1280_s" bitwidth="2" opcode="load" nodeLabel="8.0" m_display="0" m_topoIndex="105" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="231" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="ProcessSobel3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280&amp;gt;"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>mux</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="134" name="zext_ln231" lineNumber="231" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." rtlName="zext_ln231_fu_583_p1" coreId="1868810128" contextFuncName="ProcessSobel3x3_0_0_720_1280_1_0_0_1_1_1_1280_s" bitwidth="64" opcode="zext" nodeLabel="7.0" m_display="0" m_topoIndex="88" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="231" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="ProcessSobel3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280&amp;gt;"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="135" name="buf_V_0_addr_3" lineNumber="231" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreId="1868812128" contextFuncName="ProcessSobel3x3_0_0_720_1280_1_0_0_1_1_1_1280_s" bitwidth="11" opcode="getelementptr" nodeLabel="7.0" m_display="0" m_topoIndex="89" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="231" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="ProcessSobel3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280&amp;gt;"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="136" name="buf_V_0_load" lineNumber="231" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreName="RAM_S2P_BRAM" implIndex="bram" control="auto" opType="ram_s2p" coreId="93" contextFuncName="ProcessSobel3x3_0_0_720_1280_1_0_0_1_1_1_1280_s" bitwidth="8" opcode="load" nodeLabel="7.0" nodeLatency="1" m_display="0" m_delay="3.25" m_topoIndex="90" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="231" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="ProcessSobel3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280&amp;gt;"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>mux</dataOutputObjs>
+        <dataOutputObjs>mux</dataOutputObjs>
+        <dataOutputObjs>mux</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="137" name="buf_V_1_addr_3" lineNumber="231" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreId="1868917120" contextFuncName="ProcessSobel3x3_0_0_720_1280_1_0_0_1_1_1_1280_s" bitwidth="11" opcode="getelementptr" nodeLabel="7.0" m_display="0" m_topoIndex="91" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="231" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="ProcessSobel3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280&amp;gt;"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="138" name="buf_V_1_load" lineNumber="231" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreName="RAM_S2P_BRAM" implIndex="bram" control="auto" opType="ram_s2p" coreId="93" contextFuncName="ProcessSobel3x3_0_0_720_1280_1_0_0_1_1_1_1280_s" bitwidth="8" opcode="load" nodeLabel="7.0" nodeLatency="1" m_display="0" m_delay="3.25" m_topoIndex="92" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="231" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="ProcessSobel3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280&amp;gt;"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>mux</dataOutputObjs>
+        <dataOutputObjs>mux</dataOutputObjs>
+        <dataOutputObjs>mux</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="139" name="buf_V_2_addr_2" lineNumber="231" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreId="0" contextFuncName="ProcessSobel3x3_0_0_720_1280_1_0_0_1_1_1_1280_s" bitwidth="11" opcode="getelementptr" nodeLabel="7.0" m_display="0" m_topoIndex="93" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="231" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="ProcessSobel3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280&amp;gt;"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="140" name="buf_V_2_load" lineNumber="231" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreName="RAM_S2P_BRAM" implIndex="bram" control="auto" opType="ram_s2p" coreId="93" contextFuncName="ProcessSobel3x3_0_0_720_1280_1_0_0_1_1_1_1280_s" bitwidth="8" opcode="load" nodeLabel="7.0" nodeLatency="1" m_display="0" m_delay="3.25" m_topoIndex="94" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="231" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="ProcessSobel3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280&amp;gt;"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>mux</dataOutputObjs>
+        <dataOutputObjs>mux</dataOutputObjs>
+        <dataOutputObjs>mux</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="141" name="src_buf1_V_2" lineNumber="231" originalName="src_buf1.V[2]" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." rtlName="mux_32_8_1_1_U108" opType="mux" coreId="0" contextFuncName="ProcessSobel3x3_0_0_720_1280_1_0_0_1_1_1_1280_s" bitwidth="8" opcode="mux" nodeLabel="8.0" m_display="0" m_delay="1.7" m_topoIndex="106" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="231" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="ProcessSobel3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280&amp;gt;"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="142" name="src_buf2_V_2" lineNumber="232" originalName="src_buf2.V[2]" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." rtlName="mux_32_8_1_1_U109" opType="mux" coreId="1563571245" contextFuncName="ProcessSobel3x3_0_0_720_1280_1_0_0_1_1_1_1280_s" bitwidth="8" opcode="mux" nodeLabel="8.0" m_display="0" m_delay="1.7" m_topoIndex="107" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="232" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="ProcessSobel3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280&amp;gt;"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="143" name="src_buf3_V_2" lineNumber="233" originalName="src_buf3.V[2]" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." rtlName="mux_32_8_1_1_U110" opType="mux" coreId="2129" contextFuncName="ProcessSobel3x3_0_0_720_1280_1_0_0_1_1_1_1280_s" bitwidth="8" opcode="mux" nodeLabel="8.0" m_display="0" m_delay="1.7" m_topoIndex="108" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="233" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="ProcessSobel3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280&amp;gt;"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="144" name="call_ret" lineNumber="245" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." rtlName="grp_xFSobel3x3_1_1_0_0_s_fu_370" coreId="1868954144" contextFuncName="ProcessSobel3x3_0_0_720_1280_1_0_0_1_1_1_1280_s" bitwidth="16" opcode="call" nodeLabel="8.0" nodeLatency="1" m_display="0" m_delay="1.91" m_topoIndex="109" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="245" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="ProcessSobel3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280&amp;gt;"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataInputObjs>mux</dataInputObjs>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataInputObjs>mux</dataInputObjs>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataInputObjs>mux</dataInputObjs>
+        <dataOutputObjs>extractvalue</dataOutputObjs>
+        <dataOutputObjs>extractvalue</dataOutputObjs>
+        <constName>xFSobel3x3_1_1_0_0_s</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="145" name="GradientValuesX_V_0" lineNumber="245" originalName="GradientValuesX.V[0]" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreId="0" contextFuncName="ProcessSobel3x3_0_0_720_1280_1_0_0_1_1_1_1280_s" bitwidth="8" opcode="extractvalue" nodeLabel="9.0" m_display="0" m_topoIndex="110" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="245" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="ProcessSobel3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280&amp;gt;"/>
+        <dataInputObjs>call</dataInputObjs>
+        <dataOutputObjs>write</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="146" name="GradientValuesY_V_0" lineNumber="245" originalName="GradientValuesY.V[0]" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreId="1" contextFuncName="ProcessSobel3x3_0_0_720_1280_1_0_0_1_1_1_1280_s" bitwidth="8" opcode="extractvalue" nodeLabel="9.0" m_display="0" m_topoIndex="111" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="245" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="ProcessSobel3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280&amp;gt;"/>
+        <dataInputObjs>call</dataInputObjs>
+        <dataOutputObjs>write</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="147" name="icmp_ln870_2" lineNumber="870" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="icmp_ln870_2_fu_590_p2" opType="icmp" coreId="1868988584" contextFuncName="operator_eq_32_true" bitwidth="1" opcode="icmp" nodeLabel="7.0" m_display="0" m_delay="2.09" m_topoIndex="95" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="870" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="operator==&amp;lt;32, true&amp;gt;"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="148" name="br_ln247" lineNumber="247" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" fileDirectory=".." coreId="1869020857" contextFuncName="ProcessSobel3x3_0_0_720_1280_1_0_0_1_1_1_1280_s" opcode="br" nodeLabel="7.0" m_display="0" m_topoIndex="96" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp" linenumber="247" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="ProcessSobel3x3&amp;lt;0, 0, 720, 1280, 1, 0, 0, 1, 1, 1, 1280&amp;gt;"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>_ZN2xf2cv12xfPackPixelsILi1ELi1ELi0EEEvPN9PixelTypeIXT1_EE4nameERN10StreamTypeIXT0_EE4nameEtsRt.exit267.i91</controlInputObjs>
+        <controlInputObjs>_ZN2xf2cv12xfPackPixelsILi1ELi1ELi0EEEvPN9PixelTypeIXT1_EE4nameERN10StreamTypeIXT0_EE4nameEtsRt.exit413.i</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h">
+        <validLinenumbers>870</validLinenumbers>
+      </fileValidLineNumbers>
+      <fileValidLineNumbers fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp">
+        <validLinenumbers>233</validLinenumbers>
+        <validLinenumbers>232</validLinenumbers>
+        <validLinenumbers>231</validLinenumbers>
+        <validLinenumbers>245</validLinenumbers>
+        <validLinenumbers>247</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="153" name="_ZN2xf2cv12xfPackPixelsILi1ELi1ELi0EEEvPN9PixelTypeIXT1_EE4nameERN10StreamTypeIXT0_EE4nameEtsRt.exit267.i91" type="BlockType">
+      <controlInputObjs>block_149</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>_ZN2xf2cv12xfPackPixelsILi1ELi1ELi0EEEvPN9PixelTypeIXT1_EE4nameERN10StreamTypeIXT0_EE4nameEtsRt.exit413.i</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="150" name="mat_grad_x_480_write_ln174" lineNumber="174" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" contextFuncName="write" opcode="write" nodeLabel="10.0" m_display="0" m_delay="3.63" m_topoIndex="112" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h" linenumber="174" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="write"/>
+        <dataInputObjs>extractvalue</dataInputObjs>
+        <dataOutputObjs>mat_grad_x_480</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="151" name="mat_grad_y_481_write_ln174" lineNumber="174" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" contextFuncName="write" opcode="write" nodeLabel="10.0" m_display="0" m_delay="3.63" m_topoIndex="113" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h" linenumber="174" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="write"/>
+        <dataInputObjs>extractvalue</dataInputObjs>
+        <dataOutputObjs>mat_grad_y_481</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="152" name="br_ln0" coreId="49" opcode="br" nodeLabel="10.0" m_display="0" m_topoIndex="114" m_clusterGroupNumber="-1">
+        <controlInputObjs>_ZN2xf2cv12xfPackPixelsILi1ELi1ELi0EEEvPN9PixelTypeIXT1_EE4nameERN10StreamTypeIXT0_EE4nameEtsRt.exit413.i</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h">
+        <validLinenumbers>174</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="155" name="_ZN2xf2cv12xfPackPixelsILi1ELi1ELi0EEEvPN9PixelTypeIXT1_EE4nameERN10StreamTypeIXT0_EE4nameEtsRt.exit413.i" type="BlockType">
+      <controlInputObjs>block_149</controlInputObjs>
+      <controlInputObjs>_ZN2xf2cv12xfPackPixelsILi1ELi1ELi0EEEvPN9PixelTypeIXT1_EE4nameERN10StreamTypeIXT0_EE4nameEtsRt.exit267.i91</controlInputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>block_89</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="154" name="br_ln0" coreId="28271" opcode="br" nodeLabel="5.0" m_display="0" m_topoIndex="64" m_clusterGroupNumber="-1">
+        <controlInputObjs>block_89</controlInputObjs>
+      </node_objs>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <ScheduleInfo time="7"/>
+  <ScheduleInfo time="8"/>
+  <ScheduleInfo time="9"/>
+  <ScheduleInfo time="10"/>
+  <ScheduleInfo time="11"/>
+  <ScheduleInfo time="12"/>
+  <ScheduleInfo time="13"/>
+  <regnodes realName="row_ind_V_2_reg_804">
+    <nodeIds>163</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln870_2_reg_767">
+    <nodeIds>147</nodeIds>
+  </regnodes>
+  <regnodes realName="img_width_read_reg_672">
+    <nodeIds>9</nodeIds>
+  </regnodes>
+  <regnodes realName="zext_ln534_reg_693">
+    <nodeIds>26</nodeIds>
+  </regnodes>
+  <regnodes realName="bottom_reg_698">
+    <nodeIds>34</nodeIds>
+  </regnodes>
+  <regnodes realName="col_V_reg_248">
+    <nodeIds>17</nodeIds>
+  </regnodes>
+  <regnodes realName="src_buf2_V_2_reg_777">
+    <nodeIds>142</nodeIds>
+  </regnodes>
+  <regnodes realName="tp_reg_715">
+    <nodeIds>36</nodeIds>
+  </regnodes>
+  <regnodes realName="trunc_ln228_reg_736">
+    <nodeIds>75</nodeIds>
+  </regnodes>
+  <regnodes realName="GradientValuesX_V_0_reg_789">
+    <nodeIds>145</nodeIds>
+  </regnodes>
+  <regnodes realName="mid_reg_707">
+    <nodeIds>35</nodeIds>
+  </regnodes>
+  <regnodes realName="p_Val2_1_reg_307">
+    <nodeIds>79</nodeIds>
+  </regnodes>
+  <regnodes realName="col_V_3_reg_740">
+    <nodeIds>85</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln878_2_reg_745">
+    <nodeIds>87</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_V_4_reg_809">
+    <nodeIds>157</nodeIds>
+  </regnodes>
+  <regnodes realName="buf_V_1_addr_3_reg_757">
+    <nodeIds>137</nodeIds>
+  </regnodes>
+  <regnodes realName="buf_V_0_addr_3_reg_752">
+    <nodeIds>135</nodeIds>
+  </regnodes>
+  <regnodes realName="img_height_read_reg_678">
+    <nodeIds>10</nodeIds>
+  </regnodes>
+  <regnodes realName="row_V_reg_259">
+    <nodeIds>41</nodeIds>
+  </regnodes>
+  <regnodes realName="row_ind_V_reg_271">
+    <nodeIds>42</nodeIds>
+  </regnodes>
+  <regnodes realName="src_buf3_V_0_reg_319">
+    <nodeIds>80</nodeIds>
+  </regnodes>
+  <regnodes realName="src_buf3_V_2_reg_783">
+    <nodeIds>143</nodeIds>
+  </regnodes>
+  <regnodes realName="buf_V_2_addr_2_reg_762">
+    <nodeIds>139</nodeIds>
+  </regnodes>
+  <regnodes realName="p_Val2_2_reg_295">
+    <nodeIds>78</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln878_1_reg_728">
+    <nodeIds>44</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_V_5_reg_814">
+    <nodeIds>158</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln878_reg_689">
+    <nodeIds>20</nodeIds>
+  </regnodes>
+  <regnodes realName="cmp_i_i501_i_reg_732">
+    <nodeIds>74</nodeIds>
+  </regnodes>
+  <regnodes realName="src_buf1_V_2_reg_771">
+    <nodeIds>141</nodeIds>
+  </regnodes>
+  <regnodes realName="row_V_1_reg_799">
+    <nodeIds>156</nodeIds>
+  </regnodes>
+  <regnodes realName="p_Val2_s_reg_344">
+    <nodeIds>82</nodeIds>
+  </regnodes>
+  <regnodes realName="src_buf2_V_0_reg_357">
+    <nodeIds>83</nodeIds>
+  </regnodes>
+  <regnodes realName="col_V_2_reg_283">
+    <nodeIds>84</nodeIds>
+  </regnodes>
+  <regnodes realName="op2_assign_reg_723">
+    <nodeIds>38</nodeIds>
+  </regnodes>
+  <regnodes realName="col_V_1_reg_684">
+    <nodeIds>18</nodeIds>
+  </regnodes>
+  <regnodes realName="src_buf1_V_0_reg_332">
+    <nodeIds>81</nodeIds>
+  </regnodes>
+  <regnodes realName="GradientValuesY_V_0_reg_794">
+    <nodeIds>146</nodeIds>
+  </regnodes>
+  <expressionNodes realName="buf_V_1_addr_gep_fu_155">
+    <nodeIds>30</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln870_2_fu_590">
+    <nodeIds>147</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mid_fu_98">
+    <nodeIds>35</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tp_fu_102">
+    <nodeIds>36</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="buf_V_2_addr_1_gep_fu_184">
+    <nodeIds>99</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln878_1_fu_461">
+    <nodeIds>44</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="buf_V_1_addr_2_gep_fu_178">
+    <nodeIds>98</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_Val2_s_phi_fu_348">
+    <nodeIds>82</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="buf_V_2_alloca_fu_90">
+    <nodeIds>13</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln534_2_fu_569">
+    <nodeIds>96</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="buf_V_2_addr_2_gep_fu_241">
+    <nodeIds>139</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="row_V_phi_fu_263">
+    <nodeIds>41</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln878_2_fu_457">
+    <nodeIds>43</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="buf_V_1_addr_3_gep_fu_234">
+    <nodeIds>137</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln228_fu_550">
+    <nodeIds>75</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln878_3_fu_560">
+    <nodeIds>86</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tp_1_fu_522">
+    <nodeIds>68</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="GradientValuesX_V_0_fu_638">
+    <nodeIds>145</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="row_V_1_fu_646">
+    <nodeIds>156</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln878_fu_434">
+    <nodeIds>19</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="op2_assign_fu_451">
+    <nodeIds>38</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mid_1_fu_514">
+    <nodeIds>67</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln231_fu_583">
+    <nodeIds>134</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="src_buf1_V_0_phi_fu_336">
+    <nodeIds>81</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="src_buf2_V_2_fu_612">
+    <nodeIds>142</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="buf_V_0_addr_1_gep_fu_204">
+    <nodeIds>115</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln870_fu_500">
+    <nodeIds>65</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="buf_V_1_addr_1_gep_fu_210">
+    <nodeIds>116</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_Val2_2_phi_fu_299">
+    <nodeIds>78</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="row_ind_V_phi_fu_275">
+    <nodeIds>42</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln534_1_fu_576">
+    <nodeIds>114</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="cmp_i_i501_i_fu_545">
+    <nodeIds>74</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="buf_V_0_addr_3_gep_fu_227">
+    <nodeIds>135</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln878_fu_438">
+    <nodeIds>20</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_Val2_1_phi_fu_311">
+    <nodeIds>79</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="row_ind_V_2_fu_664">
+    <nodeIds>163</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln878_2_fu_564">
+    <nodeIds>87</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bottom_1_fu_506">
+    <nodeIds>66</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="src_buf3_V_0_phi_fu_324">
+    <nodeIds>80</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="buf_V_2_addr_gep_fu_216">
+    <nodeIds>117</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="src_buf1_V_2_fu_599">
+    <nodeIds>141</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="buf_V_0_addr_2_gep_fu_172">
+    <nodeIds>97</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="buf_V_0_alloca_fu_82">
+    <nodeIds>11</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="col_V_1_fu_428">
+    <nodeIds>18</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="img_height_cast_fu_448">
+    <nodeIds>37</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="buf_V_1_alloca_fu_86">
+    <nodeIds>12</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="src_buf3_V_2_fu_625">
+    <nodeIds>143</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln870_1_fu_658">
+    <nodeIds>162</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="src_buf2_V_0_phi_fu_362">
+    <nodeIds>83</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="buf_V_0_addr_gep_fu_138">
+    <nodeIds>27</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="col_V_3_fu_554">
+    <nodeIds>85</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="GradientValuesY_V_0_fu_642">
+    <nodeIds>146</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="col_V_phi_fu_252">
+    <nodeIds>17</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln534_fu_443">
+    <nodeIds>26</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bottom_fu_94">
+    <nodeIds>34</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="col_V_2_phi_fu_287">
+    <nodeIds>84</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="row_ind_V_1_fu_652">
+    <nodeIds>161</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln878_1_fu_466">
+    <nodeIds>47</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_xFGradientX3x3_0_0_s_fu_387">
+    <nodeIds>157</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_xFGradientY3x3_0_0_s_fu_403">
+    <nodeIds>158</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_xFSobel3x3_1_1_0_0_s_fu_370">
+    <nodeIds>144</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="store_ln372_store_fu_535">
+    <nodeIds>70</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln378_store_fu_475">
+    <nodeIds>53</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln372_store_fu_530">
+    <nodeIds>69</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln372_store_fu_540">
+    <nodeIds>71</nodeIds>
+  </ioNodes>
+  <ioNodes realName="img_width_read_read_fu_106">
+    <nodeIds>9</nodeIds>
+  </ioNodes>
+  <ioNodes realName="bottom_load_2_load_fu_596">
+    <nodeIds>131</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln378_store_fu_470">
+    <nodeIds>52</nodeIds>
+  </ioNodes>
+  <ioNodes realName="grp_read_fu_118">
+    <nodeIds>29</nodeIds>
+    <nodeIds>113</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln378_store_fu_480">
+    <nodeIds>54</nodeIds>
+  </ioNodes>
+  <ioNodes realName="grp_write_fu_124">
+    <nodeIds>150</nodeIds>
+    <nodeIds>159</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln363_store_fu_490">
+    <nodeIds>58</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln363_store_fu_485">
+    <nodeIds>57</nodeIds>
+  </ioNodes>
+  <ioNodes realName="grp_write_fu_131">
+    <nodeIds>151</nodeIds>
+    <nodeIds>160</nodeIds>
+  </ioNodes>
+  <ioNodes realName="grp_load_fu_419">
+    <nodeIds>62</nodeIds>
+    <nodeIds>95</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln363_store_fu_495">
+    <nodeIds>59</nodeIds>
+  </ioNodes>
+  <ioNodes realName="grp_load_fu_425">
+    <nodeIds>64</nodeIds>
+    <nodeIds>133</nodeIds>
+  </ioNodes>
+  <ioNodes realName="img_height_read_read_fu_112">
+    <nodeIds>10</nodeIds>
+  </ioNodes>
+  <ioNodes realName="grp_load_fu_422">
+    <nodeIds>63</nodeIds>
+    <nodeIds>132</nodeIds>
+  </ioNodes>
+  <memoryPorts dataString="buf_V_0">
+    <nodeIds>136</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="buf_V_0" portID="1">
+    <nodeIds>28</nodeIds>
+    <nodeIds>105</nodeIds>
+    <nodeIds>123</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="buf_V_1">
+    <nodeIds>138</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="buf_V_1" portID="1">
+    <nodeIds>31</nodeIds>
+    <nodeIds>102</nodeIds>
+    <nodeIds>120</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="buf_V_2">
+    <nodeIds>140</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="buf_V_2" portID="1">
+    <nodeIds>108</nodeIds>
+    <nodeIds>126</nodeIds>
+  </memoryPorts>
+  <ioPorts name="img_gray_479">
+    <contents name="read">
+      <nodeIds>29</nodeIds>
+      <nodeIds>113</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="img_height">
+    <contents name="read">
+      <nodeIds>10</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="img_width">
+    <contents name="read">
+      <nodeIds>9</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="mat_grad_x_480">
+    <contents name="write">
+      <nodeIds>150</nodeIds>
+      <nodeIds>159</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="mat_grad_y_481">
+    <contents name="write">
+      <nodeIds>151</nodeIds>
+      <nodeIds>160</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+    </states>
+    <states id="3">
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+    </states>
+    <states id="4">
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+    </states>
+    <states id="5">
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+      <operations id="47" stage="1" latency="1"/>
+      <operations id="48" stage="1" latency="1"/>
+      <operations id="49" stage="1" latency="1"/>
+      <operations id="50" stage="1" latency="1"/>
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="54" stage="1" latency="1"/>
+      <operations id="55" stage="1" latency="1"/>
+      <operations id="57" stage="1" latency="1"/>
+      <operations id="58" stage="1" latency="1"/>
+      <operations id="59" stage="1" latency="1"/>
+      <operations id="60" stage="1" latency="1"/>
+      <operations id="62" stage="1" latency="1"/>
+      <operations id="63" stage="1" latency="1"/>
+      <operations id="64" stage="1" latency="1"/>
+      <operations id="65" stage="1" latency="1"/>
+      <operations id="66" stage="1" latency="1"/>
+      <operations id="67" stage="1" latency="1"/>
+      <operations id="68" stage="1" latency="1"/>
+      <operations id="69" stage="1" latency="1"/>
+      <operations id="70" stage="1" latency="1"/>
+      <operations id="71" stage="1" latency="1"/>
+      <operations id="72" stage="1" latency="1"/>
+      <operations id="74" stage="1" latency="1"/>
+      <operations id="75" stage="1" latency="1"/>
+      <operations id="76" stage="1" latency="1"/>
+      <operations id="166" stage="1" latency="1"/>
+    </states>
+    <states id="6">
+      <operations id="84" stage="1" latency="1"/>
+      <operations id="85" stage="1" latency="1"/>
+      <operations id="86" stage="1" latency="1"/>
+      <operations id="87" stage="1" latency="1"/>
+      <operations id="88" stage="1" latency="1"/>
+      <operations id="90" stage="1" latency="1"/>
+      <operations id="91" stage="1" latency="1"/>
+      <operations id="92" stage="1" latency="1"/>
+      <operations id="93" stage="1" latency="1"/>
+      <operations id="111" stage="1" latency="1"/>
+      <operations id="118" stage="1" latency="1"/>
+      <operations id="129" stage="1" latency="1"/>
+      <operations id="154" stage="1" latency="1"/>
+    </states>
+    <states id="7">
+      <operations id="95" stage="1" latency="1"/>
+      <operations id="96" stage="1" latency="1"/>
+      <operations id="97" stage="1" latency="1"/>
+      <operations id="98" stage="1" latency="1"/>
+      <operations id="99" stage="1" latency="1"/>
+      <operations id="100" stage="1" latency="1"/>
+      <operations id="102" stage="1" latency="1"/>
+      <operations id="103" stage="1" latency="1"/>
+      <operations id="105" stage="1" latency="1"/>
+      <operations id="106" stage="1" latency="1"/>
+      <operations id="108" stage="1" latency="1"/>
+      <operations id="109" stage="1" latency="1"/>
+      <operations id="113" stage="1" latency="1"/>
+      <operations id="114" stage="1" latency="1"/>
+      <operations id="115" stage="1" latency="1"/>
+      <operations id="116" stage="1" latency="1"/>
+      <operations id="117" stage="1" latency="1"/>
+      <operations id="120" stage="1" latency="1"/>
+      <operations id="121" stage="1" latency="1"/>
+      <operations id="123" stage="1" latency="1"/>
+      <operations id="124" stage="1" latency="1"/>
+      <operations id="126" stage="1" latency="1"/>
+      <operations id="127" stage="1" latency="1"/>
+    </states>
+    <states id="8">
+      <operations id="134" stage="1" latency="1"/>
+      <operations id="135" stage="1" latency="1"/>
+      <operations id="136" stage="2" latency="2"/>
+      <operations id="137" stage="1" latency="1"/>
+      <operations id="138" stage="2" latency="2"/>
+      <operations id="139" stage="1" latency="1"/>
+      <operations id="140" stage="2" latency="2"/>
+      <operations id="147" stage="1" latency="1"/>
+      <operations id="148" stage="1" latency="1"/>
+    </states>
+    <states id="9">
+      <operations id="78" stage="1" latency="1"/>
+      <operations id="79" stage="1" latency="1"/>
+      <operations id="80" stage="1" latency="1"/>
+      <operations id="81" stage="1" latency="1"/>
+      <operations id="82" stage="1" latency="1"/>
+      <operations id="83" stage="1" latency="1"/>
+      <operations id="131" stage="1" latency="1"/>
+      <operations id="132" stage="1" latency="1"/>
+      <operations id="133" stage="1" latency="1"/>
+      <operations id="136" stage="1" latency="2"/>
+      <operations id="138" stage="1" latency="2"/>
+      <operations id="140" stage="1" latency="2"/>
+      <operations id="141" stage="1" latency="1"/>
+      <operations id="142" stage="1" latency="1"/>
+      <operations id="143" stage="1" latency="1"/>
+      <operations id="144" stage="2" latency="2"/>
+    </states>
+    <states id="10">
+      <operations id="144" stage="1" latency="2"/>
+      <operations id="145" stage="1" latency="1"/>
+      <operations id="146" stage="1" latency="1"/>
+    </states>
+    <states id="11">
+      <operations id="150" stage="1" latency="1"/>
+      <operations id="151" stage="1" latency="1"/>
+      <operations id="152" stage="1" latency="1"/>
+    </states>
+    <states id="12">
+      <operations id="156" stage="1" latency="1"/>
+      <operations id="157" stage="2" latency="2"/>
+      <operations id="158" stage="2" latency="2"/>
+      <operations id="161" stage="1" latency="1"/>
+      <operations id="162" stage="1" latency="1"/>
+      <operations id="163" stage="1" latency="1"/>
+    </states>
+    <states id="13">
+      <operations id="157" stage="1" latency="2"/>
+      <operations id="158" stage="1" latency="2"/>
+    </states>
+    <states id="14">
+      <operations id="159" stage="1" latency="1"/>
+      <operations id="160" stage="1" latency="1"/>
+      <operations id="164" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="12" outState="13">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="13" outState="14">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="14" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="7" outState="8">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="8" outState="9">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="10" outState="11">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="11" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="9" outState="12">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="9" outState="10">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="xFSobelFilter3x3_0_0_720_1280_1_0_0_1_1_1_1280_false_s" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="929363" mMaxLatency="929363">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <subRegions>5</subRegions>
+      <subRegions>9</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>16</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="Clear_Row_Loop" mII="1" mDepth="2" mMinTripCount="1280" mMaxTripCount="1280" mMinLatency="1280" mMaxLatency="1280" mType="1">
+      <basicBlocks>22</basicBlocks>
+      <basicBlocks>33</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Region 1" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>40</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="5" mTag="Row_Loop" mII="-1" mDepth="-1" mMinTripCount="720" mMaxTripCount="720" mMinLatency="928080" mMaxLatency="928080" mType="1">
+      <subRegions>6</subRegions>
+      <subRegions>7</subRegions>
+      <subRegions>8</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="6" mTag="Region 2" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>46</basicBlocks>
+      <basicBlocks>51</basicBlocks>
+      <basicBlocks>56</basicBlocks>
+      <basicBlocks>61</basicBlocks>
+      <basicBlocks>73</basicBlocks>
+      <basicBlocks>77</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="7" mTag="Col_Loop" mII="1" mDepth="6" mMinTripCount="1280" mMaxTripCount="1280" mMinLatency="1284" mMaxLatency="1284" mType="1">
+      <basicBlocks>89</basicBlocks>
+      <basicBlocks>94</basicBlocks>
+      <basicBlocks>101</basicBlocks>
+      <basicBlocks>104</basicBlocks>
+      <basicBlocks>107</basicBlocks>
+      <basicBlocks>110</basicBlocks>
+      <basicBlocks>112</basicBlocks>
+      <basicBlocks>119</basicBlocks>
+      <basicBlocks>122</basicBlocks>
+      <basicBlocks>125</basicBlocks>
+      <basicBlocks>128</basicBlocks>
+      <basicBlocks>130</basicBlocks>
+      <basicBlocks>149</basicBlocks>
+      <basicBlocks>153</basicBlocks>
+      <basicBlocks>155</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="8" mTag="Region 3" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="2" mMaxLatency="2">
+      <basicBlocks>165</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="9" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>167</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

@@ -1,0 +1,152 @@
+
+
+================================================================
+== Vitis HLS Report for 'xFGradientY3x3_0_0_s'
+================================================================
+* Date:           Mon Feb 26 05:31:41 2024
+
+* Version:        2020.2.2 (Build 3118627 on Tue Feb  9 05:13:49 MST 2021)
+* Project:        thresholded_sobel_edge_detector
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.135 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        1|        1|  10.000 ns|  10.000 ns|    1|    1|      yes|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 1 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.91>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%b2_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %b2" [/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp:107]   --->   Operation 3 'read' 'b2_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%b1_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %b1" [/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp:107]   --->   Operation 4 'read' 'b1_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%b0_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %b0" [/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp:107]   --->   Operation 5 'read' 'b0_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%t2_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %t2" [/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp:107]   --->   Operation 6 'read' 't2_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%t1_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %t1" [/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp:107]   --->   Operation 7 'read' 't1_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%t0_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %t0" [/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp:107]   --->   Operation 8 'read' 't0_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%M00 = bitconcatenate i9 @_ssdm_op_BitConcatenate.i9.i8.i1, i8 %t1_read, i1 0" [/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp:107]   --->   Operation 9 'bitconcatenate' 'M00' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%zext_ln107 = zext i9 %M00" [/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp:107]   --->   Operation 10 'zext' 'zext_ln107' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%M01 = bitconcatenate i9 @_ssdm_op_BitConcatenate.i9.i8.i1, i8 %b1_read, i1 0" [/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp:108]   --->   Operation 11 'bitconcatenate' 'M01' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%zext_ln108 = zext i9 %M01" [/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp:108]   --->   Operation 12 'zext' 'zext_ln108' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%zext_ln215 = zext i8 %b0_read"   --->   Operation 13 'zext' 'zext_ln215' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%zext_ln215_1 = zext i8 %b2_read"   --->   Operation 14 'zext' 'zext_ln215_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (1.91ns)   --->   "%ret = add i9 %zext_ln215_1, i9 %zext_ln215"   --->   Operation 15 'add' 'ret' <Predicate = true> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%zext_ln215_2 = zext i8 %t0_read"   --->   Operation 16 'zext' 'zext_ln215_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%zext_ln215_3 = zext i8 %t2_read"   --->   Operation 17 'zext' 'zext_ln215_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (1.91ns)   --->   "%ret_5 = add i9 %zext_ln215_3, i9 %zext_ln215_2"   --->   Operation 18 'add' 'ret_5' <Predicate = true> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 19 [1/1] (1.82ns)   --->   "%out_pix_3 = sub i10 %zext_ln108, i10 %zext_ln107" [/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp:113]   --->   Operation 19 'sub' 'out_pix_3' <Predicate = true> <Delay = 1.82> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 6.13>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%zext_ln109 = zext i9 %ret" [/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp:109]   --->   Operation 20 'zext' 'zext_ln109' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%zext_ln110 = zext i9 %ret_5" [/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp:110]   --->   Operation 21 'zext' 'zext_ln110' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%sext_ln114 = sext i10 %out_pix_3" [/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp:114]   --->   Operation 22 'sext' 'sext_ln114' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%out_pix_4 = add i11 %sext_ln114, i11 %zext_ln109" [/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp:114]   --->   Operation 23 'add' 'out_pix_4' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.87> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync>
+ST_2 : Operation 24 [1/1] (3.75ns) (root node of TernaryAdder)   --->   "%out_pix = sub i11 %out_pix_4, i11 %zext_ln110" [/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp:115]   --->   Operation 24 'sub' 'out_pix' <Predicate = true> <Delay = 3.75> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.87> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync>
+ST_2 : Operation 25 [1/1] (0.00ns) (grouped into LUT with out node select_ln120_1)   --->   "%trunc_ln299 = trunc i11 %out_pix"   --->   Operation 25 'trunc' 'trunc_ln299' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i11.i32, i11 %out_pix, i32 10" [/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp:120]   --->   Operation 26 'bitselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%tmp_1 = partselect i3 @_ssdm_op_PartSelect.i3.i11.i32.i32, i11 %out_pix, i32 8, i32 10" [/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp:122]   --->   Operation 27 'partselect' 'tmp_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (1.13ns)   --->   "%icmp_ln122 = icmp_sgt  i3 %tmp_1, i3 0" [/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp:122]   --->   Operation 28 'icmp' 'icmp_ln122' <Predicate = true> <Delay = 1.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 29 [1/1] (0.00ns) (grouped into LUT with out node select_ln120_1)   --->   "%xor_ln120 = xor i1 %tmp, i1 1" [/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp:120]   --->   Operation 29 'xor' 'xor_ln120' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 30 [1/1] (0.00ns) (grouped into LUT with out node select_ln120_1)   --->   "%select_ln120 = select i1 %xor_ln120, i8 255, i8 0" [/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp:120]   --->   Operation 30 'select' 'select_ln120' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 31 [1/1] (0.00ns) (grouped into LUT with out node select_ln120_1)   --->   "%or_ln120 = or i1 %tmp, i1 %icmp_ln122" [/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp:120]   --->   Operation 31 'or' 'or_ln120' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 32 [1/1] (1.24ns) (out node of the LUT)   --->   "%select_ln120_1 = select i1 %or_ln120, i8 %select_ln120, i8 %trunc_ln299" [/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp:120]   --->   Operation 32 'select' 'select_ln120_1' <Predicate = true> <Delay = 1.24> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%ret_ln126 = ret i8 %select_ln120_1" [/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp:126]   --->   Operation 33 'ret' 'ret_ln126' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 1.92ns
+The critical path consists of the following:
+	wire read on port 'b2' (/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp:107) [7]  (0 ns)
+	'add' operation ('ret') [19]  (1.92 ns)
+
+ <State 2>: 6.14ns
+The critical path consists of the following:
+	'add' operation ('out_pix_4', /home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp:114) [27]  (0 ns)
+	'sub' operation ('out_pix', /home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp:115) [28]  (3.76 ns)
+	'icmp' operation ('icmp_ln122', /home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp:122) [32]  (1.13 ns)
+	'or' operation ('or_ln120', /home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp:120) [35]  (0 ns)
+	'select' operation ('select_ln120_1', /home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/imgproc/xf_sobel.hpp:120) [36]  (1.25 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
