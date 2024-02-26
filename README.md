@@ -1,32 +1,35 @@
-# canny-approximate-compute
+# Hardware Accelerated Edge Computing 
+## Introduction 
 
-## Workflow
-Matthias: setup pipeline, testing und benchmarking  
-Florian: Sobel Convolution (sqrt and approximate)  
-Daniel: Gaussian Blurr  
-Oliver: Grayscaler and Edge Thresholds  
+The goal of our project was to implement a hardware accelerated edge computing device. 
+As example, we decided to implement the most popular edge detection algorithm - Canny Edge Detector.
+For hardware platform we chose is the PYNQ Z2 board, which is based on ZynQ 7000 SoC. The choice fell on this platform, 
+because of the support of the PYNQ [framework](http://www.pynq.io/), which simplifies hardware-accelerated designs.
+It provides the HLS Tools, which allow to implement hardware designs in high-level languages like C++.  
 
-## Useful Links
-### PYNQ Pipeline
-provides wrapper templates
-https://github.com/Xilinx/PYNQ_Composable_Pipeline
-
-### Vitis Library
-useful examples
-https://github.com/Xilinx/Vitis_Libraries/blob/b7b347a00e24eacee2870c4a3ff55cd08870f364/vision/L1/include/imgproc/xf_sobel.hpp
-
-### Hello World
-stackoverflow
-https://stackoverflow.com/questions/54349895/how-can-i-do-pixel-wise-computation-with-a-xfmat
 
 ## Getting started
+
+### Preparation
 - Vitis Libraries are developed for Linux and not Windows, therefore, some Linux Distro is required. We worked with Ubuntu 20.04 on the virtual Machine.
 
 - Install Vivado 2020.2 and Vitis HLS 2020.2
 
 - Install & Flash Pynq v2.7 (= a precompiled version of petalinux) on a micro sd card and boot the Pynq Z2 board: [Pynq Boards](http://www.pynq.io/board.html)
 
-### Rebuild HLS IPs & Vivado project
+### Zynq Board direct LAN Connection
+- assign static IP adress of the Ethernet adapter on the PC:
+    - IP address: 192.168.0.1
+    - Netmask: 255.255.255.0
+    - Off/On of the connection might be needed
+- in the browser connect to the PYNQ board by typing
+    - 192.168.0.99:9090
+- if something does not work, try to ping in terminal
+    - ping 192.168.0.99  
+### Zynq Board Connection over WLAN
+- follow [this guide](https://pynq.readthedocs.io/en/v2.3/appendix.html#assign-your-computer-a-static-ip)
+
+## Build the Project
 
 1. Rebuild the HLS IPs:
 
@@ -64,3 +67,16 @@ https://stackoverflow.com/questions/54349895/how-can-i-do-pixel-wise-computation
 - Select `Upload` in the Jupiter web interface again. Select `<Project Dir>/jupiter_notebooks/canny_nb.ipynb`. 
 
 5. Open the Notebook and follow the steps in it. Adapt file paths, if they don't match the setup described in this tutorial.
+
+## Useful Links
+### PYNQ Pipeline
+provides wrapper templates
+https://github.com/Xilinx/PYNQ_Composable_Pipeline
+
+### Vitis Library
+useful examples
+https://github.com/Xilinx/Vitis_Libraries/blob/b7b347a00e24eacee2870c4a3ff55cd08870f364/vision/L1/include/imgproc/xf_sobel.hpp
+
+### Hello World
+stackoverflow
+https://stackoverflow.com/questions/54349895/how-can-i-do-pixel-wise-computation-with-a-xfmat
