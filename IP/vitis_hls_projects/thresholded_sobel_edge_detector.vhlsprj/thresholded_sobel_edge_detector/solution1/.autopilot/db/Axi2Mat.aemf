@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1708954306181">
+  <ports id="1" name="gmem1" type="PortType" coreId="791759919" bitwidth="64" iftype="IfTypeFifo">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="2" name="mat_in_478" type="PortType" coreName="FIFO_SRL" coreId="827076462" bitwidth="24" direction="DirOut" iftype="IfTypeRom">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="3" name="din" type="PortType" coreId="791759919" bitwidth="64">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="4" name="rows" type="PortType" coreId="791759919" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="5" name="cols" type="PortType" originalName="cols_bound_per_npc" coreId="791759919" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <edges id="54" source_obj="//@ports.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="56" source_obj="//@ports.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="59" source_obj="//@ports.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="74" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="75" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="76" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="77" source_obj="//@regions.0/@basic_blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="78" source_obj="//@regions.0/@basic_blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="79" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="82" source_obj="//@regions.0/@basic_blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="83" source_obj="//@regions.0/@basic_blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="84" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="85" source_obj="//@regions.0/@basic_blocks.0/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="86" source_obj="//@regions.0/@basic_blocks.0/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="87" source_obj="//@regions.0/@basic_blocks.0/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="90" source_obj="//@regions.0/@basic_blocks.0/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.16"/>
+  <edges id="93" source_obj="//@regions.0/@basic_blocks.0/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.17"/>
+  <edges id="94" source_obj="//@regions.0/@basic_blocks.0/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.17"/>
+  <edges id="95" source_obj="//@regions.0/@basic_blocks.0/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.17"/>
+  <edges id="96" source_obj="//@regions.0/@basic_blocks.0/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.17"/>
+  <edges id="97" source_obj="//@regions.0/@basic_blocks.0/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.17"/>
+  <edges id="100" source_obj="//@regions.0/@basic_blocks.0/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.18"/>
+  <edges id="103" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.19"/>
+  <edges id="104" source_obj="//@regions.0/@basic_blocks.0/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.19"/>
+  <edges id="105" source_obj="//@regions.0/@basic_blocks.0/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.19"/>
+  <edges id="106" source_obj="//@regions.0/@basic_blocks.0/@node_objs.18" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.19"/>
+  <edges id="109" source_obj="//@regions.0/@basic_blocks.0/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.20"/>
+  <edges id="110" source_obj="//@regions.0/@basic_blocks.0/@node_objs.20" sink_obj="//@ports.1"/>
+  <edges id="111" source_obj="//@regions.0/@basic_blocks.0/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.20"/>
+  <edges id="112" source_obj="//@regions.0/@basic_blocks.0/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.20"/>
+  <edges id="113" source_obj="//@regions.0/@basic_blocks.0/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.20"/>
+  <edges id="453" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.19" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.20"/>
+  <edges id="454" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.17" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.18"/>
+  <edges id="455" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.17" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.20"/>
+  <edges id="456" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.16" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.20"/>
+  <edges id="457" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.17"/>
+  <edges id="458" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.19"/>
+  <edges id="459" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.14" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="460" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.14" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="461" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.17"/>
+  <edges id="462" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.17" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.18"/>
+  <regions anchor_node="-1" region_type="16" typeName="Dataflow" id="252" RegionName="Axi2Mat">
+    <basic_blocks id="51" name="Axi2Mat" type="BlockType">
+      <node_objs xsi:type="cdfg:CdfgNode" id="6" name="cols_read" lineNumber="1161" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" fileDirectory=".." coreId="741357618" contextFuncName="Axi2Mat" bitwidth="32" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" linenumber="1161" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="Axi2Mat"/>
+        <dataInputObjs>cols</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="7" name="rows_read" lineNumber="1161" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" fileDirectory=".." coreId="741357618" contextFuncName="Axi2Mat" bitwidth="32" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" linenumber="1161" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="Axi2Mat"/>
+        <dataInputObjs>rows</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="8" name="din_read" lineNumber="1161" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" fileDirectory=".." coreId="741357618" contextFuncName="Axi2Mat" bitwidth="64" opcode="read" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" linenumber="1161" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="Axi2Mat"/>
+        <dataInputObjs>din</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="9" name="cols_c3" lineNumber="1161" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" fileDirectory=".." rtlName="cols_c3_U" coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" contextFuncName="Axi2Mat" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" linenumber="1161" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="Axi2Mat"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="10" name="rows_c2" rtlName="rows_c2_U" coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="11" name="din_c1" rtlName="din_c1_U" coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" bitwidth="64" opcode="alloca" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="12" name="p_channel" rtlName="p_channel_U" coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" bitwidth="20" opcode="alloca" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="13" name="cols_c15" lineNumber="1161" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" fileDirectory=".." rtlName="cols_c15_U" coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" contextFuncName="Axi2Mat" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" linenumber="1161" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="Axi2Mat"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="14" name="rows_c14" lineNumber="301" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int.h" fileDirectory=".." rtlName="rows_c14_U" coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" contextFuncName="ap_uint" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int.h" linenumber="301" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="ap_uint"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="15" name="last_blk_width_c" lineNumber="1162" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" fileDirectory=".." rtlName="last_blk_width_c_U" coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" contextFuncName="Axi2Mat" bitwidth="4" opcode="alloca" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" linenumber="1162" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="Axi2Mat"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="16" name="cols_c" lineNumber="1161" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" fileDirectory=".." rtlName="cols_c_U" coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" contextFuncName="Axi2Mat" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" linenumber="1161" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="Axi2Mat"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="17" name="rows_c" lineNumber="301" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int.h" fileDirectory=".." rtlName="rows_c_U" coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" contextFuncName="ap_uint" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int.h" linenumber="301" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="ap_uint"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="18" name="din_c" lineNumber="1172" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" fileDirectory=".." rtlName="din_c_U" coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" contextFuncName="Axi2Mat" bitwidth="64" opcode="alloca" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" linenumber="1172" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="Axi2Mat"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="ldata" lineNumber="1160" originalName="ldata" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" fileDirectory=".." rtlName="ldata_U" coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" contextFuncName="Axi2Mat" bitwidth="64" opcode="alloca" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" linenumber="1160" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="Axi2Mat"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="37" name="_ln1161" lineNumber="1161" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" fileDirectory=".." rtlName="Axi2Mat_entry3_U0" coreId="1229070909" contextFuncName="Axi2Mat" opcode="call" m_display="0" m_delay="3.63" m_topoIndex="15" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" linenumber="1161" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="Axi2Mat"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <constName>Axi2Mat_entry3</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="38" name="_ln1161" lineNumber="1161" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" fileDirectory=".." rtlName="Axi2Mat_entry13_U0" coreId="1919252069" contextFuncName="Axi2Mat" opcode="call" nodeLabel="1.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" linenumber="1161" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="Axi2Mat"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <constName>Axi2Mat_entry13</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="41" name="_ln1162" lineNumber="1162" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" fileDirectory=".." rtlName="last_blk_pxl_width_U0" coreId="1109540217" contextFuncName="Axi2Mat" opcode="call" nodeLabel="5.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" linenumber="1162" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="Axi2Mat"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <constName>last_blk_pxl_width</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="46" name="_ln301" lineNumber="301" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int.h" fileDirectory=".." rtlName="addrbound_U0" coreId="1702129263" contextFuncName="ap_uint" opcode="call" nodeLabel="2.0" nodeLatency="1" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int.h" linenumber="301" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="ap_uint"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <constName>addrbound</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="47" name="axibound_V" originalName="axibound.V" rtlName="axibound_V_U" coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" bitwidth="20" opcode="call" nodeLabel="4.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>Axi2Mat_Block_split26_proc</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="48" name="_ln1172" lineNumber="1172" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" fileDirectory=".." rtlName="Axi2AxiStream_U0" coreId="1835627552" contextFuncName="Axi2Mat" opcode="call" nodeLabel="4.0" nodeLatency="1" m_display="0" m_delay="2.44" m_topoIndex="19" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" linenumber="1172" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="Axi2Mat"/>
+        <dataInputObjs>gmem1</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>call</dataInputObjs>
+        <constName>Axi2AxiStream</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="49" name="_ln1173" lineNumber="1173" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" fileDirectory=".." rtlName="AxiStream2MatStream_U0" coreId="1852402798" contextFuncName="Axi2Mat" opcode="call" nodeLabel="6.0" nodeLatency="1" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" linenumber="1173" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="Axi2Mat"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>mat_in_478</dataOutputObjs>
+        <constName>AxiStream2MatStream</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="50" name="_ln1174" lineNumber="1174" fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" fileDirectory=".." coreId="1633890163" contextFuncName="Axi2Mat" opcode="ret" nodeLabel="7.0" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" linenumber="1174" fileDirectory="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/thresholded_sobel_edge_detector.vhlsprj" functionName="Axi2Mat"/>
+      </node_objs>
+      <fileValidLineNumbers fileName="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp">
+        <validLinenumbers>1161</validLinenumbers>
+        <validLinenumbers>1162</validLinenumbers>
+        <validLinenumbers>1172</validLinenumbers>
+        <validLinenumbers>1160</validLinenumbers>
+        <validLinenumbers>1173</validLinenumbers>
+        <validLinenumbers>1174</validLinenumbers>
+      </fileValidLineNumbers>
+      <fileValidLineNumbers fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int.h">
+        <validLinenumbers>301</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <ScheduleInfo time="7"/>
+  <regnodes realName="rows_c2_reg_212">
+    <nodeIds>10</nodeIds>
+  </regnodes>
+  <regnodes realName="din_c_reg_260">
+    <nodeIds>18</nodeIds>
+  </regnodes>
+  <regnodes realName="ldata_reg_266">
+    <nodeIds>22</nodeIds>
+  </regnodes>
+  <regnodes realName="cols_c_reg_248">
+    <nodeIds>16</nodeIds>
+  </regnodes>
+  <regnodes realName="axibound_V_reg_272">
+    <nodeIds>47</nodeIds>
+  </regnodes>
+  <regnodes realName="cols_c15_reg_230">
+    <nodeIds>13</nodeIds>
+  </regnodes>
+  <regnodes realName="rows_c_reg_254">
+    <nodeIds>17</nodeIds>
+  </regnodes>
+  <regnodes realName="din_c1_reg_218">
+    <nodeIds>11</nodeIds>
+  </regnodes>
+  <regnodes realName="p_channel_reg_224">
+    <nodeIds>12</nodeIds>
+  </regnodes>
+  <regnodes realName="cols_c3_reg_206">
+    <nodeIds>9</nodeIds>
+  </regnodes>
+  <regnodes realName="last_blk_width_c_reg_242">
+    <nodeIds>15</nodeIds>
+  </regnodes>
+  <regnodes realName="rows_c14_reg_236">
+    <nodeIds>14</nodeIds>
+  </regnodes>
+  <expressionNodes realName="ldata_fu_122">
+    <nodeIds>22</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="cols_c3_fu_82">
+    <nodeIds>9</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="cols_c15_fu_98">
+    <nodeIds>13</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="cols_c_fu_110">
+    <nodeIds>16</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="din_c1_fu_90">
+    <nodeIds>11</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="rows_c_fu_114">
+    <nodeIds>17</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="last_blk_width_c_fu_106">
+    <nodeIds>15</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_channel_fu_94">
+    <nodeIds>12</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="rows_c14_fu_102">
+    <nodeIds>14</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="rows_c2_fu_86">
+    <nodeIds>10</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="din_c_fu_118">
+    <nodeIds>18</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_Axi2AxiStream_fu_154">
+    <nodeIds>48</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_AxiStream2MatStream_fu_144">
+    <nodeIds>49</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="call_ln1161_Axi2Mat_entry3_fu_172">
+    <nodeIds>37</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="axibound_V_Axi2Mat_Block_split26_proc_fu_200">
+    <nodeIds>47</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="call_ln1161_Axi2Mat_entry13_fu_185">
+    <nodeIds>38</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_addrbound_fu_163">
+    <nodeIds>46</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="call_ln1162_last_blk_pxl_width_fu_195">
+    <nodeIds>41</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="din_read_read_fu_138">
+    <nodeIds>8</nodeIds>
+  </ioNodes>
+  <ioNodes realName="cols_read_read_fu_126">
+    <nodeIds>6</nodeIds>
+  </ioNodes>
+  <ioNodes realName="rows_read_read_fu_132">
+    <nodeIds>7</nodeIds>
+  </ioNodes>
+  <ioPorts name="cols">
+    <contents name="read">
+      <nodeIds>6</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="din">
+    <contents name="read">
+      <nodeIds>8</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="gmem1">
+    <contents name="call">
+      <nodeIds>48</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="mat_in_478">
+    <contents name="call">
+      <nodeIds>49</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="rows">
+    <contents name="read">
+      <nodeIds>7</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="38" stage="1" latency="1"/>
+    </states>
+    <states id="3">
+      <operations id="46" stage="2" latency="2"/>
+    </states>
+    <states id="4">
+      <operations id="46" stage="1" latency="2"/>
+    </states>
+    <states id="5">
+      <operations id="47" stage="1" latency="1"/>
+      <operations id="48" stage="2" latency="2"/>
+    </states>
+    <states id="6">
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="48" stage="1" latency="2"/>
+    </states>
+    <states id="7">
+      <operations id="49" stage="2" latency="2"/>
+    </states>
+    <states id="8">
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+      <operations id="49" stage="1" latency="2"/>
+      <operations id="50" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="7" outState="8">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="Axi2Mat" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="16" mMaxLatency="921615" mIsDfPipe="true">
+      <basicBlocks>51</basicBlocks>
+      <mDfPipe allPipePinInst="//@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.0/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.5/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.6/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@channel_list.0/@sink/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@channel_list.4/@sink/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@channel_list.6/@source/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@channel_list.7/@sink/@inst">
+        <processe_list name="Axi2Mat_entry3_U0" ssdmobj_id="37">
+          <pins>
+            <port name="din" type="SIOType" need_hs="true" top_port_object_id="" top_port_object_id_reference="_100" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Axi2Mat_entry3_U0" ssdmobj_id="37" object_id="_106"/>
+          </pins>
+          <pins>
+            <port name="rows" type="SIOType" need_hs="true" top_port_object_id="" top_port_object_id_reference="_101" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Axi2Mat_entry3_U0" ssdmobj_id="37" object_id="_106"/>
+          </pins>
+          <pins>
+            <port name="cols" type="SIOType" need_hs="true" top_port_object_id="" top_port_object_id_reference="_102" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Axi2Mat_entry3_U0" ssdmobj_id="37" object_id="_106"/>
+          </pins>
+        </processe_list>
+        <processe_list name="Axi2Mat_entry13_U0" ssdmobj_id="38"/>
+        <processe_list name="last_blk_pxl_width_U0" ssdmobj_id="41"/>
+        <processe_list name="addrbound_U0" ssdmobj_id="46"/>
+        <processe_list name="Axi2Mat_Block_split26_proc_U0" ssdmobj_id="47"/>
+        <processe_list name="Axi2AxiStream_U0" ssdmobj_id="48">
+          <pins>
+            <port name="gmem1" type="BUSType" need_hs="true" top_port_object_id="" top_port_object_id_reference="_98" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Axi2AxiStream_U0" ssdmobj_id="48" object_id="_118"/>
+          </pins>
+        </processe_list>
+        <processe_list name="AxiStream2MatStream_U0" ssdmobj_id="49">
+          <pins>
+            <port name="mat_in_478" dir="DirOut" top_port_object_id="" top_port_object_id_reference="_99" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="AxiStream2MatStream_U0" ssdmobj_id="49" object_id="_122"/>
+          </pins>
+        </processe_list>
+        <channel_list depth="2" bitwidth="64" suggested_type="2" suggested_depth="2" name="din_c1" ssdmobj_id="11">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Axi2Mat_entry3_U0" ssdmobj_id="37" object_id="_106"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Axi2Mat_entry13_U0" ssdmobj_id="38" object_id="_128"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="32" suggested_type="2" suggested_depth="2" name="rows_c2" ssdmobj_id="10">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Axi2Mat_entry3_U0" ssdmobj_id="37" object_id="_106"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Axi2Mat_entry13_U0" ssdmobj_id="38" object_id="_128"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="32" suggested_type="2" suggested_depth="2" name="cols_c3" ssdmobj_id="9">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Axi2Mat_entry3_U0" ssdmobj_id="37" object_id="_106"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Axi2Mat_entry13_U0" ssdmobj_id="38" object_id="_128"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="4" bitwidth="64" suggested_type="2" suggested_depth="4" name="din_c" ssdmobj_id="18">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Axi2Mat_entry13_U0" ssdmobj_id="38" object_id="_128"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Axi2AxiStream_U0" ssdmobj_id="48" object_id="_118"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="32" suggested_type="2" suggested_depth="2" name="rows_c" ssdmobj_id="17">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Axi2Mat_entry13_U0" ssdmobj_id="38" object_id="_128"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="addrbound_U0" ssdmobj_id="46" object_id="_149"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="32" suggested_type="2" suggested_depth="2" name="cols_c" ssdmobj_id="16">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Axi2Mat_entry13_U0" ssdmobj_id="38" object_id="_128"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="addrbound_U0" ssdmobj_id="46" object_id="_149"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="6" bitwidth="4" suggested_type="2" suggested_depth="6" name="last_blk_width_c" ssdmobj_id="15">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="last_blk_pxl_width_U0" ssdmobj_id="41" object_id="_158"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="AxiStream2MatStream_U0" ssdmobj_id="49" object_id="_122"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="20" suggested_type="1" suggested_depth="2" name="p_channel" ssdmobj_id="12">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="addrbound_U0" ssdmobj_id="46" object_id="_149"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Axi2Mat_Block_split26_proc_U0" ssdmobj_id="47" object_id="_166"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="4" bitwidth="32" suggested_type="2" suggested_depth="4" name="rows_c14" ssdmobj_id="14">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="addrbound_U0" ssdmobj_id="46" object_id="_149"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="AxiStream2MatStream_U0" ssdmobj_id="49" object_id="_122"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="4" bitwidth="32" suggested_type="2" suggested_depth="4" name="cols_c15" ssdmobj_id="13">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="addrbound_U0" ssdmobj_id="46" object_id="_149"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="AxiStream2MatStream_U0" ssdmobj_id="49" object_id="_122"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="20" suggested_type="1" suggested_depth="2" name="axibound_V" ssdmobj_id="47">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Axi2Mat_Block_split26_proc_U0" ssdmobj_id="47" object_id="_166"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Axi2AxiStream_U0" ssdmobj_id="48" object_id="_118"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="64" suggested_type="0" suggested_depth="2" name="ldata" ssdmobj_id="22">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Axi2AxiStream_U0" ssdmobj_id="48" object_id="_118"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="AxiStream2MatStream_U0" ssdmobj_id="49" object_id="_122"/>
+          </sink>
+        </channel_list>
+      </mDfPipe>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

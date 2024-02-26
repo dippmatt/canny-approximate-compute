@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="thresholded_sobel_edge_detector.cpp" path="/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/src/thresholded_sobel_edge_detector/thresholded_sobel_edge_detector.cpp"/>
+  </source>
+  <testbench/>
+</autopilotfilemapping:AutoPilotFileMapping>

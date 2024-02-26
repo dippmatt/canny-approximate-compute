@@ -1,0 +1,53 @@
+INFO: Applying HLS Y2K22 patch v1.2 for IP revision
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2020.2/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'soc' on host 'ubuntu' (Linux_x86_64 version 5.15.0-97-generic) on Mon Feb 26 04:39:35 PST 2024
+INFO: [HLS 200-10] On os Ubuntu 20.04.6 LTS
+INFO: [HLS 200-10] In directory '/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/approx_edge_detector.vhlsprj'
+Sourcing Tcl script '/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/approx_edge_detector.vhlsprj/approx_edge_detector/solution1/csynth.tcl'
+INFO: [HLS 200-1510] Running: open_project approx_edge_detector 
+INFO: [HLS 200-10] Opening project '/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/approx_edge_detector.vhlsprj/approx_edge_detector'.
+INFO: [HLS 200-1510] Running: set_top approx_edge_detector 
+INFO: [HLS 200-1510] Running: add_files ../../src/approx_edge_detector/approx_edge_detector.cpp -cflags -I/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include -csimflags -I/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include 
+INFO: [HLS 200-10] Adding design file '../../src/approx_edge_detector/approx_edge_detector.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution '/home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/approx_edge_detector.vhlsprj/approx_edge_detector/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog 
+INFO: [HLS 200-1510] Running: set_directive_top -name approx_edge_detector approx_edge_detector 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0.01 seconds. Elapsed time: 0 seconds; current allocated memory: 103.660 MB.
+INFO: [HLS 200-10] Analyzing design file '../../src/approx_edge_detector/approx_edge_detector.cpp' ... 
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: /home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1165:9
+Resolution: For help on HLS 214-114 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=214-114.html
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: /home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1438:9
+Resolution: For help on HLS 214-114 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=214-114.html
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: /home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1448:9
+Resolution: For help on HLS 214-114 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=214-114.html
+WARNING: [HLS 200-471] Dataflow form checks found 3 issue(s) in file ../../src/approx_edge_detector/approx_edge_detector.cpp
+Resolution: For help on HLS 200-471 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-471.html
+WARNING: [HLS 207-5301] unused parameter 'index': /home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:667:87
+WARNING: [HLS 207-5301] unused parameter 'index': /home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:687:60
+WARNING: [HLS 207-5301] unused parameter 'index': /home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1255:102
+WARNING: [HLS 207-5301] unused parameter 'index': /home/soc/Documents/canny-approximate-compute_git_new_ip/IP/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1565:34
+ERROR: [HLS 207-3334] no matching function for call to 'calcThresholedSobelEdges': ../../src/approx_edge_detector/approx_edge_detector.cpp:49:5
+INFO: [HLS 207-4373] candidate function not viable: no known conversion from 'xf::cv::Mat<XF_8UC1, 720, 1280, XF_NPPC8>' to 'xf::cv::Mat<XF_8UC1, 720, 1280, XF_NPPC1> &' for 1st argument: ../../src/approx_edge_detector/approx_edge_detector.hpp:91:7
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 10.1 seconds. CPU system time: 2.94 seconds. Elapsed time: 10.5 seconds; current allocated memory: 106.034 MB.
+Compilation of the preprocessed source 'approx_edge_detector' failed
+    while executing
+"source /home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/approx_edge_detector.vhlsprj/approx_edge_detector/solution1/csyn..."
+    invoked from within
+"hls::main /home/soc/Documents/canny-approximate-compute_git_new_ip/IP/vitis_hls_projects/approx_edge_detector.vhlsprj/approx_edge_detector/solution1/c..."
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$newargs"
+    (procedure "hls_proc" line 16)
+    invoked from within
+"hls_proc [info nameofexecutable] $argv"
+INFO: [HLS 200-112] Total CPU user time: 12.21 seconds. Total CPU system time: 5.08 seconds. Total elapsed time: 13.66 seconds; peak allocated memory: 105.691 MB.

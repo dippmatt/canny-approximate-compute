@@ -1,0 +1,29 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "approx_edge_detector",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "approx_edge_detector"
+              }]
+          }
+        },
+        {
+          "functionName": "approx_edge_detector",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "approx_edge_detector"
+              }]
+          }
+        }
+      ]
+    }]}
